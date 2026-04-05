@@ -119,6 +119,20 @@ def write_error_log(error_msg: str, dest_file: Path) -> None:
     except (OSError, PermissionError) as e:
         logger.error(f"無法寫入錯誤日誌 {log_file}: {e}")
 
+def handle_failed_task(file_path: Path, error_msg: str, log_prefix: str = "[Subscriber] ") -> None:
+    """
+    處理失敗的任務：寫入錯誤日誌並移動到失敗目錄
+    
+    Args:
+        file_path: 失敗的任務檔案路徑
+        error_msg: 錯誤訊息
+        log_prefix: 日誌前綴
+    """
+    dest = FAILED_DIR / file_path.name
+    write_error_log(error_msg, dest)
+    if not move_file_safely(file_path, dest, log_prefix):
+        logger.error(f"{log_prefix}移動失敗任務失敗: {file_path.name}")
+
 # ----------------------------
 # Publisher
 # ----------------------------
@@ -169,22 +183,24 @@ def execute_task(file_path: Path) -> None:
 
             try:
                 # 在臨時目錄中執行任務
-                with tempfile.TemporaryDirectory() as tmpdir:
-                    tmp_task = Path(tmpdir) / file_path.name
-                    shutil.copy(str(file_path), str(tmp_task))
+                # with tempfile.TemporaryDirectory() as tmpdir:
+                # print(file_path.name)
+                # tmp_task = Path(tmpdir) / file_path.name
+                # print(str(tmp_task))
+                # shutil.copy(str(file_path), str(tmp_task))
 
-                    logger.debug(f"在臨時目錄執行: {tmpdir}")
-                    result = subprocess.run(
-                        [OPENCODE_EXE, "run", "Execute this task", "--file", str(tmp_task)],
-                        check=True,
-                        cwd=tmpdir,
-                        capture_output=True
-                    )
-                    stdout_text = result.stdout.decode("utf-8", errors="replace")
-                    logger.debug(f"任務執行輸出: {stdout_text[:200]}...")
-                    if result.stderr:
-                        stderr_text = result.stderr.decode("utf-8", errors="replace")
-                        logger.warning(f"任務執行錯誤輸出: {stderr_text[:200]}...")
+                # logger.debug(f"在臨時目錄執行: {tmpdir}")
+                result = subprocess.run(
+                    [OPENCODE_EXE, "run", "Execute this task", "--file", str(file_path), "--print-logs", "--log-level", "DEBUG"],
+                    check=True,
+                    cwd=DOING_DIR,
+                    capture_output=True
+                )
+                stdout_text = result.stdout.decode("utf-8", errors="replace")
+                logger.debug(f"任務執行輸出: {stdout_text[:200]}...")
+                if result.stderr:
+                    stderr_text = result.stderr.decode("utf-8", errors="replace")
+                    logger.warning(f"任務執行錯誤輸出: {stderr_text[:200]}...")
 
                 # 任務成功，移動到完成目錄
                 dest = DONE_DIR / add_timestamp(file_path, "E")
@@ -201,21 +217,15 @@ def execute_task(file_path: Path) -> None:
                 if e.stderr:
                     logger.debug(f"失敗任務的錯誤: {e.stderr[:500]}")
 
-                # 任務失敗，移動到失敗目錄
-                dest = FAILED_DIR / file_path.name
-                write_error_log(error_msg, dest)
-                if not move_file_safely(file_path, dest, "[Subscriber] "):
-                    logger.error(f"移動失敗任務失敗: {file_path.name}")
+                # 使用新的函數處理失敗任務
+                handle_failed_task(file_path, error_msg)
 
             except Exception as e:
                 error_msg = f"任務執行發生未預期錯誤: {e}"
                 logger.error(error_msg)
 
-                # 任務失敗，移動到失敗目錄
-                dest = FAILED_DIR / file_path.name
-                write_error_log(error_msg, dest)
-                if not move_file_safely(file_path, dest, "[Subscriber] "):
-                    logger.error(f"移動失敗任務失敗: {file_path.name}")
+                # 使用新的函數處理失敗任務
+                handle_failed_task(file_path, error_msg)
 
     except Timeout:
         logger.debug(f"檔案鎖定超時: {lock_file}")
