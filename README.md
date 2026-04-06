@@ -6,6 +6,14 @@
 
 painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publisher-Subscriber 模式來管理任務佇列。系統會監控任務目錄，自動將任務從待處理狀態移動到處理中狀態，並執行任務處理。
 
+## 待辦事項
+
+以下是系統的未來發展方向：
+
+- [ ] **make report skill** - 開發學習技能功能，讓系統能夠處理研究任務
+- [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
+- [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
+
 ## 系統架構
 
 系統包含兩種角色：
