@@ -44,7 +44,7 @@ class Config:
 
         Args:
             config_path: 配置檔案路徑
- 
+
         Raises:
             ValueError: 如果配置檔案缺少必要的區段
             FileNotFoundError: 如果 OpenCode 執行檔不存在
@@ -337,18 +337,18 @@ def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Pat
                 [opencode_exe, "run", "Execute this task", "--file", str(file_path)],
                 check=True, cwd=doing_dir, stdout=f, stderr=f,
             )
- 
+
             # 任務成功執行，移動到完成目錄並添加結束時間戳記
             dest = done_dir / add_timestamp(file_path, "E", timezone)
             logger.info(f"[Subscriber] 執行任務成功: {file_path.name}")
             move_file_safely(file_path, dest, "[Subscriber]")
- 
+
         except subprocess.CalledProcessError as e:
             # OpenCode 命令執行失敗，移動到失敗目錄
             logger.error(f"[Subscriber] 執行任務失敗: {file_path.name}, {e}")
             dest = failed_dir / file_path.name
             move_file_safely(file_path, dest, "[Subscriber]")
- 
+
         except Exception as e:
             # 其他未預期的錯誤，移動到失敗目錄
             logger.error(f"[Subscriber] 執行任務發生未預期錯誤: {file_path.name}, {e}")

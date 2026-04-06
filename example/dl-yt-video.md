@@ -6,6 +6,6 @@ use $PAINTING_GOBLIN_DIR/skills/build_python_cli_tool.md to write a tool for dow
 - Args :
   - VIDEO_ID : target video id in origin youtube video url
   - OUTPUT_DIR : folder for output video file
-- Others : 
-  - if target video has mulitple quility version, download the highest one 
+- Others :
+  - if target video has mulitple quility version, download the highest one
   - output video file should in mp4 format
