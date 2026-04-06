@@ -40,7 +40,7 @@ class Config:
         self.config.read(config_path)
 
         # 驗證必要的區段
-        required_sections = ["task", "publisher", "subscriber"]
+        required_sections = ["task", "runner", "publisher", "subscriber"]
         for section in required_sections:
             if not self.config.has_section(section):
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
@@ -53,8 +53,10 @@ class Config:
         self.failed_dir_name = self.config["task"].get("failed_dir_name", "failed")
         self.log_dir_name = self.config["task"].get("log_dir_name", ".logs")
         self.lock_dir_name = self.config["task"].get("lock_dir_name", ".locks")
-        self.timezone = self.config["task"].get("timezone", "UTC")
         self.opencode_exe = self.config["task"].get("opencode_exe", "")
+
+        # 讀取 runner 設定
+        self.timezone = self.config["runner"].get("timezone", "UTC")
 
         # 驗證 OPENCODE_EXE 是否存在
         if not Path(self.opencode_exe).exists():
