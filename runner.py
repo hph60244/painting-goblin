@@ -60,17 +60,17 @@ class Config:
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
         # 讀取 task 設定
-        self.base_dir_name = self.config["task"].get("base_dir_name", "base")
+        self.base_dir_name = self.config["task"].get("base_dir_name", "task")
         self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
         self.doing_dir_name = self.config["task"].get("doing_dir_name", "doing")
         self.done_dir_name = self.config["task"].get("done_dir_name", "done")
         self.failed_dir_name = self.config["task"].get("failed_dir_name", "failed")
         self.log_dir_name = self.config["task"].get("log_dir_name", ".logs")
         self.lock_dir_name = self.config["task"].get("lock_dir_name", ".locks")
-        self.opencode_exe = self.config["task"].get("opencode_exe", "")
+        self.timezone = self.config["task"].get("timezone", "UTC")
+        self.opencode_exe = self.config["task"].get("opencode_exe", "???")
 
         # 讀取 runner 設定
-        self.timezone = self.config["runner"].get("timezone", "UTC")
         self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "log")
 
         # 驗證 OPENCODE_EXE 是否存在

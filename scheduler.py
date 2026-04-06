@@ -49,14 +49,13 @@ class Config:
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
         # 讀取 task 設定
-        self.base_dir_name = self.config["task"].get("base_dir_name", "base")
+        self.base_dir_name = self.config["task"].get("base_dir_name", "task")
         self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
+        self.timezone = self.config["task"].get("timezone", "UTC")
 
         # 讀取 scheduler 設定
         self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "log")
-
-        # 讀取 runner 設定中的時區
-        self.timezone = self.config["runner"].get("timezone", "UTC")
+        self.scheduler_example_dir_name = self.config["scheduler"].get("example_dir_name", "example")
 
         # 讀取 job 設定
         self.jobs: Dict[str, str] = {}
@@ -71,7 +70,7 @@ class Config:
         self.scheduler_log_dir = root_dir / self.scheduler_log_dir_name
 
         # example 資料夾路徑（相對於專案根目錄）
-        self.example_dir = root_dir / "example"
+        self.scheduler_example_dir = root_dir / self.scheduler_example_dir_name
 
         # 確保所有必要的資料夾都存在
         for d in [self.todo_dir, self.scheduler_log_dir]:
@@ -122,7 +121,7 @@ def copy_task_to_todo(task_name: str, config: Config) -> bool:
     """
     try:
         # 檢查來源檔案是否存在
-        source_file = config.example_dir / f"{task_name}.md"
+        source_file = config.scheduler_example_dir / f"{task_name}.md"
         if not source_file.exists():
             logger.error(f"任務檔案不存在: {source_file}")
             return False
