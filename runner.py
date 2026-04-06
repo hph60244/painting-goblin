@@ -85,7 +85,7 @@ class Config:
         self.subscriber_count = int(self.config["subscriber"].get("count", 1))
         self.subscriber_heartbeat_secs = float(self.config["subscriber"].get("heartbeat_secs", 60))
 
-        # 計算完整的目錄路徑
+        # 計算目錄路徑
         root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))
         self.base_dir = root_dir / self.base_dir_name
         self.todo_dir = self.base_dir / self.todo_dir_name

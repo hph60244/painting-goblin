@@ -1,251 +1,296 @@
+"""
+任務排程系統 - 根據 config.ini 中的 cron 設定，
+定期將 example 資料夾中的任務檔案複製到 todo 資料夾。
+"""
+
 import os
+import sys
 import shutil
-import time
 import logging
-import schedule
-import threading
 from pathlib import Path
-from datetime import datetime
-from zoneinfo import ZoneInfo
 import configparser
-from typing import List, Dict, Optional
-from filelock import FileLock, Timeout
+from typing import Dict, Optional
 
-# ----------------------------
-# 讀取設定檔
-# ----------------------------
-config = configparser.ConfigParser()
-config.read("config.ini")
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.cron import CronTrigger
 
-required_sections = ["task", "scheduler"]
-for section in required_sections:
-    if not config.has_section(section):
-        raise ValueError(f"Missing required section in config.ini: [{section}]")
-
-BASE_DIR = Path(config["task"]["base_dir"])
-TODO_DIR = BASE_DIR / config["task"]["todo_dir"]
-TIMEZONE = config["task"].get("timezone", "UTC")
-
-# Scheduler 配置
-TEMPLATE_DIR = Path(config["scheduler"].get("template_dir", "template"))
-SCHEDULE_INTERVAL = int(config["scheduler"].get("interval_minutes", 60))  # 預設每小時檢查一次
-SCHEDULE_SPECIFIC_TIMES = config["scheduler"].get("specific_times", "").split(",")  # 例如 "09:00,14:00,18:00"
-ENABLE_SCHEDULER = config["scheduler"].getboolean("enabled", True)
-
-# 確保目錄存在
-TEMPLATE_DIR.mkdir(parents=True, exist_ok=True)
-TODO_DIR.mkdir(parents=True, exist_ok=True)
-
-# ----------------------------
-# 設定 logging
-# ----------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('scheduler.log', encoding='utf-8')
-    ]
-)
+# ============================================================================
+# 設定 logging (會在 Config.__init__ 中重新配置)
+# ============================================================================
 logger = logging.getLogger(__name__)
 
-# ----------------------------
-# 工具函數
-# ----------------------------
-def add_timestamp(file_path: Path) -> str:
-    """為檔案名稱添加時間戳記"""
-    now = datetime.now(ZoneInfo(TIMEZONE))
-    ts = now.strftime("B%Y%m%d%H%M%S%f")[:-3]  # B 開頭表示開始時間
-    return f"{file_path.stem}.{ts}{file_path.suffix}"
-
-def copy_template_to_todo(template_file: Path, force_copy: bool = False) -> bool:
+# ============================================================================
+# 配置結構
+# ============================================================================
+class Config:
     """
-    將模板檔案複製到 todo 目錄
+    配置類，儲存所有排程系統設定值
+
+    這個類別負責讀取和驗證配置文件，並提供所有必要的配置參數給排程系統使用。
+    """
+    def __init__(self, config_path: str):
+        """
+        初始化配置物件
+
+        Args:
+            config_path: 配置檔案路徑
+
+        Raises:
+            ValueError: 如果配置檔案缺少必要的區段
+        """
+        self.config_path = config_path
+        self.config = configparser.ConfigParser()
+        self.config.read(config_path)
+
+        # 驗證必要的區段
+        required_sections = ["task", "scheduler", "job"]
+        for section in required_sections:
+            if not self.config.has_section(section):
+                raise ValueError(f"Missing required section in {config_path}: [{section}]")
+
+        # 讀取 task 設定
+        self.base_dir_name = self.config["task"].get("base_dir_name", "base")
+        self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
+
+        # 讀取 scheduler 設定
+        self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "log")
+
+        # 讀取 runner 設定中的時區
+        self.timezone = self.config["runner"].get("timezone", "UTC")
+
+        # 讀取 job 設定
+        self.jobs: Dict[str, str] = {}
+        if self.config.has_section("job"):
+            for key, value in self.config["job"].items():
+                self.jobs[key] = value.strip()
+
+        # 計算目錄路徑
+        root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))
+        self.base_dir = root_dir / self.base_dir_name
+        self.todo_dir = self.base_dir / self.todo_dir_name
+        self.scheduler_log_dir = root_dir / self.scheduler_log_dir_name
+
+        # example 資料夾路徑（相對於專案根目錄）
+        self.example_dir = root_dir / "example"
+
+        # 確保所有必要的資料夾都存在
+        for d in [self.todo_dir, self.scheduler_log_dir]:
+            d.mkdir(parents=True, exist_ok=True)
+
+        # 設置 logging
+        # 清除現有的 handlers
+        for handler in logging.root.handlers[:]:
+            logging.root.removeHandler(handler)
+
+        # 配置 root logger
+        log_file_path = self.scheduler_log_dir / "scheduler.log"
+        logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s | %(levelname)-5s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+            handlers=[
+                logging.StreamHandler(),
+                logging.FileHandler(log_file_path, encoding="utf-8")
+            ],
+            force=True  # 強制重新配置，即使已經有 handlers
+        )
+
+        # 重新獲取 logger 以確保使用新的配置
+        global logger
+        logger = logging.getLogger(__name__)
+
+        logger.info(f"配置載入完成，時區: {self.timezone}")
+        logger.info(f"找到 {len(self.jobs)} 個排程任務")
+        for job_name, cron_expr in self.jobs.items():
+            logger.info(f"  - {job_name}: {cron_expr}")
+
+# ============================================================================
+# 工具函數
+# ============================================================================
+def copy_task_to_todo(task_name: str, config: Config) -> bool:
+    """
+    將任務檔案從 example 複製到 todo 資料夾
+
+    遇到同名檔案時跳過複製，返回 True（不算失敗）
 
     Args:
-        template_file: 模板檔案路徑
-        force_copy: 是否強制複製（即使目標已存在）
+        task_name: 任務名稱（不含 .md 副檔名）
+        config: 配置物件
 
     Returns:
-        bool: 複製是否成功
+        bool: 複製是否成功（遇到同名檔案跳過不算失敗）
     """
     try:
-        # 檢查檔案是否存在
-        if not template_file.exists():
-            logger.warning(f"模板檔案不存在: {template_file}")
+        # 檢查來源檔案是否存在
+        source_file = config.example_dir / f"{task_name}.md"
+        if not source_file.exists():
+            logger.error(f"任務檔案不存在: {source_file}")
             return False
 
-        # 生成帶時間戳記的目標檔案名稱
-        dest_filename = add_timestamp(template_file)
-        dest_path = TODO_DIR / dest_filename
-
-        # 檢查是否已存在相同檔案（除非強制複製）
-        if dest_path.exists() and not force_copy:
-            logger.debug(f"目標檔案已存在，跳過: {dest_path}")
-            return False
+        # 檢查目標檔案是否已存在
+        dest_file = config.todo_dir / f"{task_name}.md"
+        if dest_file.exists():
+            logger.debug(f"目標檔案已存在，跳過複製: {task_name}.md")
+            return True
 
         # 複製檔案
-        shutil.copy2(str(template_file), str(dest_path))
-        logger.info(f"已複製模板到 todo: {template_file.name} -> {dest_filename}")
+        shutil.copy2(source_file, dest_file)
+        logger.info(f"成功複製任務檔案: {task_name}.md")
         return True
 
-    except (OSError, PermissionError, shutil.Error) as e:
-        logger.error(f"複製模板檔案失敗 {template_file}: {e}")
+    except (FileNotFoundError, PermissionError) as e:
+        logger.error(f"檔案操作錯誤: {e}")
+        return False
+    except Exception as e:
+        logger.error(f"複製任務檔案時發生錯誤: {e}")
         return False
 
-def process_all_templates() -> None:
-    """處理所有模板檔案"""
-    logger.info("開始處理模板檔案...")
+def create_job_function(task_name: str, config: Config):
+    """建立 APScheduler 的 job 函數"""
+    def job_function():
+        logger.info(f"執行排程任務: {task_name}")
+        if copy_task_to_todo(task_name, config):
+            logger.info(f"任務 {task_name} 執行成功")
+        else:
+            logger.error(f"任務 {task_name} 執行失敗")
 
-    try:
-        # 獲取所有模板檔案
-        template_files = list(TEMPLATE_DIR.iterdir())
-        if not template_files:
-            logger.debug("模板目錄中沒有檔案")
-            return
+    return job_function
 
-        processed_count = 0
-        for template_file in template_files:
-            if template_file.is_file():
-                if copy_template_to_todo(template_file):
-                    processed_count += 1
-
-        logger.info(f"模板處理完成，共處理 {processed_count} 個檔案")
-
-    except Exception as e:
-        logger.error(f"處理模板時發生錯誤: {e}")
-
-def process_specific_template(template_name: str) -> bool:
+# ============================================================================
+# 排程器設定
+# ============================================================================
+def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
     """
-    處理特定的模板檔案
+    設定 APScheduler
 
     Args:
-        template_name: 模板檔案名稱
+        config: 配置物件
 
     Returns:
-        bool: 處理是否成功
+        BackgroundScheduler: 設定好的排程器，如果設定失敗則返回 None
     """
-    template_file = TEMPLATE_DIR / template_name
-    if not template_file.exists():
-        logger.error(f"指定的模板檔案不存在: {template_name}")
-        return False
+    if not config.jobs:
+        logger.warning("沒有找到任何排程任務，排程器將不會啟動")
+        return None
 
-    return copy_template_to_todo(template_file)
+    try:
+        # 建立排程器
+        scheduler = BackgroundScheduler(timezone=config.timezone)
 
-# ----------------------------
-# 排程任務
-# ----------------------------
-def scheduled_job() -> None:
-    """排程任務：處理所有模板檔案"""
-    logger.info("執行排程任務...")
-    process_all_templates()
+        # 為每個 job 設定 cron 觸發器
+        for task_name, cron_expr in config.jobs.items():
+            try:
+                # 建立 job 函數
+                job_func = create_job_function(task_name, config)
 
-def setup_schedule() -> None:
-    """設定排程任務"""
-    # 清除現有排程
-    schedule.clear()
+                # 解析 cron 表達式
+                # cron 表達式格式: "分 時 日 月 星期"
+                parts = cron_expr.split()
+                if len(parts) != 5:
+                    logger.error(f"無效的 cron 表達式: {cron_expr}")
+                    continue
 
-    # 根據配置設定排程
-    if SCHEDULE_SPECIFIC_TIMES and SCHEDULE_SPECIFIC_TIMES[0]:  # 有指定特定時間
-        for time_str in SCHEDULE_SPECIFIC_TIMES:
-            time_str = time_str.strip()
-            if time_str:
-                schedule.every().day.at(time_str).do(scheduled_job)
-                logger.info(f"已設定排程任務在每天 {time_str}")
-    else:  # 使用間隔時間
-        schedule.every(SCHEDULE_INTERVAL).minutes.do(scheduled_job)
-        logger.info(f"已設定排程任務每 {SCHEDULE_INTERVAL} 分鐘執行一次")
+                minute, hour, day, month, day_of_week = parts
 
-    # 立即執行一次
-    scheduled_job()
+                # 建立 cron 觸發器
+                trigger = CronTrigger(
+                    minute=minute, hour=hour, day=day,
+                    month=month, day_of_week=day_of_week,
+                    timezone=config.timezone
+                )
 
-def run_scheduler() -> None:
-    """執行排程器主循環"""
-    if not ENABLE_SCHEDULER:
-        logger.info("排程器已禁用")
+                # 添加 job 到排程器
+                scheduler.add_job(
+                    create_job_function(task_name, config),
+                    trigger=trigger,
+                    id=f"job_{task_name}",
+                    name=f"Task: {task_name}",
+                    replace_existing=True
+                )
+
+                logger.info(f"已設定排程任務: {task_name} ({cron_expr})")
+
+            except ValueError as e:
+                logger.error(f"設定任務 {task_name} 時發生錯誤: {e}")
+            except Exception as e:
+                logger.error(f"設定任務 {task_name} 時發生未預期錯誤: {e}")
+
+        return scheduler
+
+    except Exception as e:
+        logger.error(f"設定排程器時發生錯誤: {e}")
+        return None
+
+# ============================================================================
+# 主程式
+# ============================================================================
+def scheduler_main(config: Config) -> None:
+    """
+    主程式入口點：啟動任務排程系統
+
+    Args:
+        config: 配置物件
+    """
+    logger.info("[Scheduler] 任務排程系統啟動")
+
+    # 設定排程器
+    scheduler = setup_scheduler(config)
+
+    if scheduler is None:
+        logger.info("[Scheduler] 排程器未啟動，系統結束")
         return
 
-    logger.info("=" * 50)
-    logger.info("模板排程器啟動")
-    logger.info(f"模板目錄: {TEMPLATE_DIR}")
-    logger.info(f"目標目錄: {TODO_DIR}")
-    logger.info(f"時區: {TIMEZONE}")
-    logger.info("=" * 50)
-
-    # 設定排程
-    setup_schedule()
-
-    logger.info("排程器已啟動，按 Ctrl+C 結束")
-
     try:
-        while True:
-            schedule.run_pending()
-            time.sleep(1)  # 每秒檢查一次排程
-    except KeyboardInterrupt:
-        logger.info("收到中斷訊號，正在關閉排程器...")
+        # 啟動排程器
+        scheduler.start()
+        logger.info("[Scheduler] 排程器已啟動")
+
+        # 列出所有已設定的 jobs
+        jobs = scheduler.get_jobs()
+        logger.info(f"[Scheduler] 已設定 {len(jobs)} 個排程任務:")
+        for job in jobs:
+            next_run = job.next_run_time
+            next_run_str = next_run.strftime("%Y-%m-%d %H:%M:%S") if next_run else "N/A"
+            logger.info(f"  - {job.name} (ID: {job.id}), 下次執行: {next_run_str}")
+
+        logger.info("[Scheduler] 系統已啟動，按 Ctrl+C 結束")
+
+        try:
+            import time
+            while True:
+                time.sleep(1)
+        except KeyboardInterrupt:
+            logger.info("[Scheduler] 收到中斷訊號，正在關閉...")
+
     except Exception as e:
-        logger.error(f"排程器發生未預期錯誤: {e}")
+        logger.error(f"[Scheduler] 主程式發生錯誤: {e}")
     finally:
-        logger.info("排程器關閉完成")
+        if scheduler and scheduler.running:
+            scheduler.shutdown(wait=True)
+            logger.info("[Scheduler] 排程器已關閉")
 
-# ----------------------------
-# CLI 介面
-# ----------------------------
-def manual_run() -> None:
-    """手動執行：處理所有模板檔案"""
-    logger.info("手動執行模板處理...")
-    process_all_templates()
-    logger.info("手動執行完成")
-
-def manual_copy(template_name: str) -> None:
-    """手動複製特定模板檔案"""
-    logger.info(f"手動複製模板: {template_name}")
-    if process_specific_template(template_name):
-        logger.info(f"成功複製模板: {template_name}")
-    else:
-        logger.error(f"複製模板失敗: {template_name}")
-
-def list_templates() -> None:
-    """列出所有模板檔案"""
-    logger.info("模板檔案列表:")
-    try:
-        template_files = list(TEMPLATE_DIR.iterdir())
-        if not template_files:
-            logger.info("  沒有模板檔案")
-            return
-
-        for i, template_file in enumerate(template_files, 1):
-            if template_file.is_file():
-                size = template_file.stat().st_size
-                mtime = datetime.fromtimestamp(template_file.stat().st_mtime).strftime("%Y-%m-%d %H:%M:%S")
-                logger.info(f"  {i}. {template_file.name} ({size} bytes, 修改時間: {mtime})")
-    except Exception as e:
-        logger.error(f"列出模板時發生錯誤: {e}")
-
-# ----------------------------
-# 主程式
-# ----------------------------
-def main() -> None:
-    """主程式入口點"""
-    import argparse
-
-    parser = argparse.ArgumentParser(description='模板任務排程器')
-    parser.add_argument('--run', action='store_true', help='執行排程器')
-    parser.add_argument('--manual', action='store_true', help='手動處理所有模板')
-    parser.add_argument('--copy', type=str, help='複製特定模板檔案')
-    parser.add_argument('--list', action='store_true', help='列出所有模板檔案')
-
-    args = parser.parse_args()
-
-    if args.manual:
-        manual_run()
-    elif args.copy:
-        manual_copy(args.copy)
-    elif args.list:
-        list_templates()
-    else:
-        # 預設執行排程器
-        run_scheduler()
+        logger.info("[Scheduler] 任務排程系統關閉完成")
 
 if __name__ == "__main__":
-    main()
+    """
+    程式進入點：當此檔案被直接執行時啟動任務排程系統
+
+    使用方式：
+        python scheduler.py [config_file_path]
+
+    參數：
+        config_file_path: 可選的配置檔案路徑，預設為 "config.ini"
+    """
+    # 讀取命令列參數，如果沒有提供則使用預設配置檔案
+    config_path = sys.argv[1] if len(sys.argv) > 1 else "config.ini"
+
+    try:
+        # 建立配置物件並啟動系統
+        config = Config(config_path)
+        scheduler_main(config)
+    except ValueError as e:
+        print(f"配置錯誤: {e}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"啟動排程器時發生錯誤: {e}")
+        sys.exit(1)
