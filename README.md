@@ -76,12 +76,34 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 
 編輯 `config.ini` 檔案，確保以下重要設定正確：
 
-重要設定說明：
-- `opencode_exe`: OpenCode 執行檔的完整路徑，請根據您的安裝位置調整
-- `timezone`: 系統時區設定
-- `publisher.count`: Publisher worker 數量
-- `subscriber.count`: Subscriber worker 數量（同時處理的任務數量）
-- `heartbeat_secs`: worker 檢查新任務的間隔時間（秒）
+配置檔案包含四個主要區段：
+
+#### [task] 區段
+- `base_dir_name`: 基礎任務目錄名稱（預設：`task`）
+- `todo_dir_name`: 待處理任務目錄名稱（預設：`todo`）
+- `doing_dir_name`: 處理中任務目錄名稱（預設：`doing`）
+- `done_dir_name`: 已完成任務目錄名稱（預設：`done`）
+- `failed_dir_name`: 失敗任務目錄名稱（預設：`failed`）
+- `log_dir_name`: 任務執行日誌目錄名稱（預設：`.log`）
+- `lock_dir_name`: 檔案鎖定目錄名稱（預設：`.lock`）
+- `timezone`: 系統時區設定（預設：`Asia/Taipei`）
+- `opencode_exe`: OpenCode 執行檔的完整路徑（**必須根據您的安裝位置調整**）
+
+#### [runner] 區段
+- `log_dir_name`: runner 系統日誌目錄名稱（預設：`log`）
+- `publisher_count`: Publisher worker 數量（預設：`1`）
+- `publisher_heartbeat_secs`: Publisher 檢查新任務的間隔時間（秒）（預設：`3`）
+- `subscriber_count`: Subscriber worker 數量（同時處理的任務數量）（預設：`3`）
+- `subscriber_heartbeat_secs`: Subscriber 檢查新任務的間隔時間（秒）（預設：`3`）
+
+#### [scheduler] 區段
+- `log_dir_name`: scheduler 系統日誌目錄名稱（預設：`log`）
+- `example_dir_name`: 範例任務目錄名稱（預設：`example`）
+
+#### [job] 區段
+- 定義排程任務，格式為 `任務名稱 = cron表達式`
+- cron 表達式格式：`分 時 日 月 星期`
+- 範例：`print-42 = 8 21 6 4 *` 表示在 4月6日 21:08 執行 `print-42` 任務
 
 ### 7. 目錄結構
 
@@ -89,21 +111,26 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 
 ```
 painting-goblin/
-├── task/           # 基礎任務目錄（由 base_dir_name 設定）
+├── task/           # 基礎任務目錄
 │   ├── todo/       # 待處理任務
 │   ├── doing/      # 處理中任務
 │   ├── done/       # 已完成任務
 │   ├── failed/     # 失敗任務
 │   ├── .log/       # 任務執行日誌
 │   └── .lock/      # 檔案鎖定目錄
-├── log/            # 系統執行日誌（由 runner.log_dir_name 設定）
-├── template/       # 任務模板目錄（用於排程器）
+├── log/            # 系統執行日誌
+├── example/        # 範例任務目錄
+│   ├── print-42.md
+│   ├── ls-tasks.md
+│   └── ...
 └── ...             # 其他專案檔案
 ```
 
 ## 使用方式
 
-### 啟動任務處理系統
+### 啟動任務處理系統 (runner.py)
+
+`runner.py` 是主要的任務處理系統，負責監控任務目錄並執行任務。
 
 ```bash
 python runner.py [config_file_path]
@@ -121,8 +148,31 @@ python runner.py
 python runner.py my_config.ini
 ```
 
+### 啟動任務排程系統 (scheduler.py)
+
+`scheduler.py` 是任務排程系統，根據 config.ini 中的 cron 設定，定期將 example 資料夾中的任務檔案複製到 todo 資料夾。
+
+```bash
+python scheduler.py [config_file_path]
+```
+
+參數：
+- `config_file_path`: 可選的配置檔案路徑，預設為 "config.ini"
+
+範例：
+```bash
+# 使用預設 config.ini
+python scheduler.py
+
+# 使用自訂配置檔案
+python scheduler.py my_config.ini
+```
+
 ### 新增任務
 
+有兩種方式可以新增任務：
+
+#### 1. 手動新增
 將任務檔案（副檔名為 `.md`）放入 `task/todo/` 目錄中。系統會自動偵測並處理。
 
 任務檔案範例 (`example/print-42.md`)：
@@ -130,12 +180,33 @@ python runner.py my_config.ini
 請寫一個 Python 程式，印出數字 42。
 ```
 
+#### 2. 排程新增
+在 `config.ini` 的 `[job]` 區段設定排程任務，系統會自動在指定時間將 `example/` 目錄中的任務檔案複製到 `task/todo/` 目錄。
+
+範例配置：
+```ini
+[job]
+print-42 = 8 21 6 4 *      # 4月6日 21:08 執行
+ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
+```
+
 ### 監控系統狀態
 
-系統執行時會輸出日誌到控制台和 `log/runner.log` 檔案。您可以監控以下資訊：
-- 任務移動狀態
-- 任務執行結果
-- 系統錯誤訊息
+系統執行時會輸出日誌到控制台和日誌檔案。您可以監控以下資訊：
+
+#### runner.py 日誌
+- 控制台輸出
+- 檔案：`log/runner.log`
+- 包含：任務移動狀態、任務執行結果、系統錯誤訊息
+
+#### scheduler.py 日誌
+- 控制台輸出
+- 檔案：`log/scheduler.log`
+- 包含：排程任務執行狀態、檔案複製結果、系統錯誤訊息
+
+#### 任務執行日誌
+- 檔案：`task/.log/任務檔案名.log`
+- 包含：OpenCode 執行輸出、錯誤訊息
 
 ### 停止系統
 
@@ -179,7 +250,16 @@ python runner.py my_config.ini
    - 確認檔案在正確的目錄中（`task/todo/`）
    - 檢查系統日誌是否有錯誤訊息
 
+5. **排程任務未執行**
+   - 檢查 `config.ini` 中的 `[job]` 區段設定是否正確
+   - 確認 cron 表達式格式正確（分 時 日 月 星期）
+   - 檢查 `example/` 目錄中是否有對應的任務檔案
+   - 查看 `log/scheduler.log` 是否有錯誤訊息
+
 ### 日誌位置
 
-- 系統日誌：`log/runner.log`
-- 任務執行日誌：`task/.log/任務檔案名.log`
+系統提供多種日誌檔案，用於監控和除錯：
+
+- **log/runner.log**: `runner.py`日誌，包含任務移動狀態、Publisher/Subscriber 活動、系統錯誤
+- **log/scheduler.log**: `scheduler.py`日誌，包含排程任務執行狀態、檔案複製結果、cron 觸發記錄
+- **task/.log/任務檔案名.log**: 包含 OpenCode 執行輸出、任務執行結果、錯誤訊息

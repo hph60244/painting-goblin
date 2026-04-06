@@ -68,7 +68,7 @@ class Config:
         self.log_dir_name = self.config["task"].get("log_dir_name", ".logs")
         self.lock_dir_name = self.config["task"].get("lock_dir_name", ".locks")
         self.timezone = self.config["task"].get("timezone", "Asia/Taipei")
-        self.opencode_exe = self.config["task"].get("opencode_exe", "???")
+        self.opencode_exe = self.config["task"]["opencode_exe"]
 
         # 驗證 OPENCODE_EXE 是否存在
         if not Path(self.opencode_exe).exists():
