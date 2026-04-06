@@ -1,6 +1,4 @@
-use python to print 42 first, then :
-
-use $PAINTING_GOBLIN_DIR/skills/build_python_cli_tool.md to write a tool for downloading youtube video.
+use $PAINTING_GOBLIN_DIR/skills/build-python-cli-tool.md to write a tool for downloading youtube video.
 
 - Usage : `python dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>`
 - Args :

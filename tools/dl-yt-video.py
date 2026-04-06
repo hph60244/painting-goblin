@@ -1,82 +1,67 @@
 #!/usr/bin/env python3
 """
-Download YouTube video with highest quality and convert to MP4.
-Usage: python dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>
+Download YouTube video with highest quality in MP4 format.
 """
 
-import sys
+import argparse
 import os
 import subprocess
-import logging
-from pathlib import Path
+import sys
 
-def setup_logging():
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s'
-    )
-
-def check_yt_dlp():
-    try:
-        subprocess.run(['yt-dlp', '--version'], capture_output=True, check=True)
-        return True
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        return False
-
-def check_ffmpeg():
-    try:
-        subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)
-        return True
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        return False
-
-def download_video(video_id: str, output_dir: str):
-    output_path = Path(output_dir).absolute()
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    has_ffmpeg = check_ffmpeg()
-    if has_ffmpeg:
-        format_str = 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
-        merge_opt = ['--merge-output-format', 'mp4']
-    else:
-        logging.warning('ffmpeg not found, downloading single MP4 stream (may be lower quality)')
-        format_str = 'best[ext=mp4]'
-        merge_opt = []
-
-    cmd = [
-        'yt-dlp',
-        '-f', format_str,
-        *merge_opt,
-        '-o', str(output_path / '%(title)s.%(ext)s'),
-        f'https://www.youtube.com/watch?v={video_id}'
-    ]
-
-    logging.info(f'Downloading video {video_id} to {output_path}')
-    logging.debug(f'Command: {" ".join(cmd)}')
-
-    try:
-        subprocess.run(cmd, check=True)
-        logging.info('Download completed successfully')
-    except subprocess.CalledProcessError as e:
-        logging.error(f'Download failed with exit code {e.returncode}')
-        sys.exit(1)
 
 def main():
-    if len(sys.argv) != 3:
-        print('Usage: python dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>')
+    parser = argparse.ArgumentParser(
+        description="Download YouTube video by video ID"
+    )
+    parser.add_argument(
+        "video_id",
+        help="YouTube video ID (from URL)"
+    )
+    parser.add_argument(
+        "output_dir",
+        help="Directory where downloaded video will be saved"
+    )
+    args = parser.parse_args()
+
+    # Ensure output directory exists
+    os.makedirs(args.output_dir, exist_ok=True)
+
+    # Construct YouTube URL
+    url = f"https://www.youtube.com/watch?v={args.video_id}"
+
+    # yt-dlp command arguments
+    # -f: format selection: best MP4, fallback to best any format
+    # -o: output template, place in output_dir with video title and extension
+    output_template = os.path.join(args.output_dir, '%(title)s.%(ext)s')
+    cmd = [
+        'yt-dlp',
+        '-f', 'best[ext=mp4]/best',
+        '-o', output_template,
+        url
+    ]
+
+    print(f"Downloading video: {args.video_id}")
+    print(f"Output directory: {args.output_dir}")
+    try:
+        # Run yt-dlp
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        # Print yt-dlp output
+        if result.stdout:
+            print(result.stdout)
+        if result.stderr:
+            print(result.stderr, file=sys.stderr)
+        print("Download completed successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"Download failed with exit code {e.returncode}", file=sys.stderr)
+        if e.stdout:
+            print(e.stdout, file=sys.stderr)
+        if e.stderr:
+            print(e.stderr, file=sys.stderr)
+        sys.exit(1)
+    except FileNotFoundError:
+        print("Error: yt-dlp not found. Please install yt-dlp.", file=sys.stderr)
         sys.exit(1)
 
-    video_id = sys.argv[1]
-    output_dir = sys.argv[2]
 
-    setup_logging()
-
-    if not check_yt_dlp():
-        logging.error('yt-dlp is not installed or not in PATH.')
-        logging.error('Please install it via: pip install yt-dlp')
-        sys.exit(1)
-
-    download_video(video_id, output_dir)
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
