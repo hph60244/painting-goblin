@@ -1,3 +1,13 @@
+"""
+任務處理系統 - Runner
+
+這個模組實現了一個基於檔案系統的任務處理系統，包含 Publisher 和 Subscriber 兩種角色：
+- Publisher: 從待處理目錄 (todo) 移動任務到處理中目錄 (doing)
+- Subscriber: 從處理中目錄執行任務，並根據結果移動到完成或失敗目錄
+
+系統使用檔案鎖定機制來確保任務不會被多個 worker 同時處理。
+"""
+
 import re
 import os
 import sys
@@ -12,7 +22,7 @@ from threading import Thread
 from filelock import FileLock, Timeout
 import subprocess
 import configparser
-from typing import Optional, List, Tuple, Dict, Any
+from typing import Optional, List
 
 # ============================================================================
 # 設定 logging
@@ -23,8 +33,22 @@ logger = logging.getLogger(__name__)
 # 配置結構
 # ============================================================================
 class Config:
-    """配置類，儲存所有設定值"""
+    """
+    配置類，儲存所有系統設定值
+    
+    這個類別負責讀取和驗證配置文件，並提供所有必要的配置參數給系統使用。
+    """
     def __init__(self, config_path: str):
+        """
+        初始化配置物件
+        
+        Args:
+            config_path: 配置檔案路徑
+            
+        Raises:
+            ValueError: 如果配置檔案缺少必要的區段
+            FileNotFoundError: 如果 OpenCode 執行檔不存在
+        """
         self.config_path = config_path
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
@@ -61,7 +85,7 @@ class Config:
         self.subscriber_count = int(self.config["subscriber"].get("count", 1))
         self.subscriber_heartbeat_secs = float(self.config["subscriber"].get("heartbeat_secs", 60))
 
-        # 計算目錄路徑
+        # 計算完整的目錄路徑
         root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))
         self.base_dir = root_dir / self.base_dir_name
         self.todo_dir = self.base_dir / self.todo_dir_name
@@ -72,7 +96,7 @@ class Config:
         self.lock_dir = self.base_dir / self.lock_dir_name
         self.runner_log_dir = root_dir / self.runner_log_dir_name
 
-        # 確保資料夾存在
+        # 確保所有必要的資料夾都存在
         for d in [self.todo_dir, self.doing_dir, self.done_dir, self.failed_dir, self.log_dir, self.lock_dir, self.runner_log_dir]:
             d.mkdir(parents=True, exist_ok=True)
 
@@ -90,21 +114,65 @@ class Config:
 # ============================================================================
 # 工具函數
 # ============================================================================
-def get_oldest_file(folder: Path) -> Optional[Path]:
+
+# 任務檔案副檔名設定
+task_file_extension: str = ".md"
+
+def find_task_files(folder: Path, lock_dir: Path, locked: bool) -> List[Path]:
     """
-    取得資料夾中最舊的檔案（根據修改時間）
+    在指定資料夾中尋找任務檔案，並根據鎖定狀態進行篩選
+    
+    Args:
+        folder: 要搜尋的資料夾路徑
+        lock_dir: 檔案鎖定目錄，用於檢查檔案是否被鎖定
+        locked: 是否要尋找已鎖定的檔案 (True) 或未鎖定的檔案 (False)
+    
+    Returns:
+        List[Path]: 符合條件的任務檔案路徑列表
+    """
+    try:
+        task_files = [
+            f for f in folder.iterdir() 
+            if f.is_file() and f.suffix.lower() == task_file_extension
+        ]
+        result_files = []
+        for task_file in task_files:
+            lock_file = build_lock_file_path(task_file, lock_dir)
+            if locked == lock_file.exists():
+                result_files.append(task_file)
+        return result_files
+    except Exception as e:
+        logger.error(f"取得任務檔案列表時發生未預期錯誤: {e}")
+        return []
+
+def get_oldest_unlocked_task_file(folder: Path, lock_dir: Path) -> Optional[Path]:
+    """
+    取得資料夾中最舊的任務檔案（根據修改時間），並篩選沒被上鎖的檔案
 
     Args:
         folder: 要搜尋的資料夾路徑
+        lock_dir: 檔案鎖定目錄，用於檢查檔案是否被鎖定
 
     Returns:
-        最舊的檔案路徑，如果資料夾為空則返回 None
+        最舊的未鎖定任務檔案路徑，如果資料夾中沒有符合條件的檔案則返回 None
     """
     try:
-        files = sorted(folder.iterdir(), key=lambda f: f.stat().st_mtime)
-        return files[0] if files else None
+        task_files = find_task_files(folder, lock_dir, False)
+
+        if not task_files:
+            logger.debug(f"資料夾 {folder} 中沒有 {task_file_extension} 檔案")
+            return None
+
+        # 根據修改時間排序，取得最舊的檔案
+        oldest_file = min(task_files, key=lambda f: f.stat().st_mtime)
+        logger.debug(f"在資料夾 {folder} 中找到最舊的未鎖定 {task_file_extension} 檔案: {oldest_file.name}")
+        return oldest_file
+        
     except (OSError, PermissionError) as e:
-        logger.debug(f"無法讀取資料夾 {folder}: {e}")
+        logger.warning(f"無法讀取資料夾 {folder}: {e}")
+        return None
+    except Exception as e:
+        logger.error(f"取得最舊檔案時發生未預期錯誤: {e}")
         return None
 
 def strip_time_stamp(file_name: str) -> str:
@@ -158,10 +226,23 @@ def move_file_safely(src: Path, dest: Path, log_prefix: str) -> bool:
         logger.error(f"{log_prefix}移動檔案失敗: {src}, {dest}, {e}")
         return False
 
+def build_lock_file_path(task_file: Path, lock_dir: Path) -> Path:
+    """
+    根據任務檔案路徑和鎖定目錄生成對應的鎖定檔案路徑
+
+    Args:
+        task_file: 任務檔案路徑
+        lock_dir: 鎖定檔案目錄
+
+    Returns:
+        Path: 鎖定檔案路徑
+    """
+    return lock_dir / f"{task_file.name}.lock"
+
 # ============================================================================
 # Publisher
 # ============================================================================
-def publisher(file_path: Path, todo_dir: Path, doing_dir: Path, subscriber_count: int, timezone: str) -> None:
+def publisher(file_path: Path, todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber_count: int, timezone: str) -> None:
     """
     移動單個任務從 todo_dir 到 doing_dir
 
@@ -169,12 +250,14 @@ def publisher(file_path: Path, todo_dir: Path, doing_dir: Path, subscriber_count
         file_path: 要移動的任務檔案路徑
         todo_dir: 待處理任務目錄
         doing_dir: 處理中任務目錄
+        lock_dir: 檔案鎖定目錄，用於檢查檔案是否被鎖定
         subscriber_count: 訂閱者數量（用於檢查是否忙碌）
         timezone: 時區設定
     """
-    doing_file_count = len(list(doing_dir.iterdir()))
+    doing_task_files = find_task_files(doing_dir, lock_dir, True)
+    doing_file_count = len(doing_task_files)
     if doing_file_count >= subscriber_count:
-        logger.debug(f"[Publisher] 所有 subscriber 都忙碌中，doing_dir 有 {doing_file_count} 個檔案")
+        logger.debug(f"[Publisher] 所有 subscriber 都忙碌中，doing_dir 有 {doing_file_count} 個任務檔案")
         return
 
     logger.info(f"[Publisher] 開始移動任務: {file_path.name}")
@@ -182,7 +265,7 @@ def publisher(file_path: Path, todo_dir: Path, doing_dir: Path, subscriber_count
         clean_name = strip_time_stamp(file_path.name)
         dest = doing_dir / add_timestamp(Path(clean_name), "B", timezone)
         if move_file_safely(file_path, dest, "[Publisher]"):
-            logger.error(f"[Publisher] 移動任務成功: {file_path.name}")
+            logger.info(f"[Publisher] 移動任務成功: {file_path.name}")
     except Exception as e:
         logger.error(f"[Publisher] 移動任務發生未預期錯誤: {file_path.name}, {e}")
 
@@ -200,12 +283,12 @@ def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber
     """
     while True:
         try:
-            task_file = get_oldest_file(todo_dir)
+            task_file = get_oldest_unlocked_task_file(todo_dir, lock_dir)
             if task_file:
-                lock_file = lock_dir / f"{task_file.name}.lock"
+                lock_file = build_lock_file_path(task_file, lock_dir)
                 try:
                     with FileLock(str(lock_file), timeout=0):
-                        publisher(task_file, todo_dir, doing_dir, subscriber_count, timezone)
+                        publisher(task_file, todo_dir, doing_dir, lock_dir, subscriber_count, timezone)
                 except Timeout:
                     logger.debug(f"[PublisherWorker] 檔案鎖定超時: {lock_file}")
             else:
@@ -235,21 +318,29 @@ def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Pat
     """
     logger.info(f"[Subscriber] 開始執行任務: {file_path.name}")
     log_file = log_dir / f"{file_path.name}.log"
+    
+    # 開啟日誌檔案以附加模式寫入，確保所有輸出都被記錄
     with open(log_file, "a", encoding="utf-8") as f:
         try:
+            # 執行 OpenCode 命令來處理任務
             result = subprocess.run(
                 [opencode_exe, "run", "Execute this task", "--file", str(file_path)],
                 check=True, cwd=doing_dir, stdout=f, stderr=f,
             )
-            # 任務成功，移動到完成目錄
+            
+            # 任務成功執行，移動到完成目錄並添加結束時間戳記
             dest = done_dir / add_timestamp(file_path, "E", timezone)
-            logger.error(f"[Subscriber] 執行任務成功: {file_path.name}")
+            logger.info(f"[Subscriber] 執行任務成功: {file_path.name}")
             move_file_safely(file_path, dest, "[Subscriber]")
+            
         except subprocess.CalledProcessError as e:
+            # OpenCode 命令執行失敗，移動到失敗目錄
             logger.error(f"[Subscriber] 執行任務失敗: {file_path.name}, {e}")
             dest = failed_dir / file_path.name
             move_file_safely(file_path, dest, "[Subscriber]")
+            
         except Exception as e:
+            # 其他未預期的錯誤，移動到失敗目錄
             logger.error(f"[Subscriber] 執行任務發生未預期錯誤: {file_path.name}, {e}")
             dest = failed_dir / file_path.name
             move_file_safely(file_path, dest, "[Subscriber]")
@@ -270,9 +361,9 @@ def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_e
     """
     while True:
         try:
-            task_file = get_oldest_file(doing_dir)
+            task_file = get_oldest_unlocked_task_file(doing_dir, lock_dir)
             if task_file:
-                lock_file = lock_dir / f"{task_file.name}.lock"
+                lock_file = build_lock_file_path(task_file, lock_dir)
                 try:
                     with FileLock(str(lock_file), timeout=0):
                         subscriber(task_file, log_dir, opencode_exe, doing_dir, done_dir, failed_dir, timezone)
@@ -293,22 +384,27 @@ def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_e
 # ============================================================================
 def runner(config: Config) -> None:
     """
-    主程式入口點
-
+    主程式入口點：啟動任務處理系統
+    
+    這個函數負責：
+    1. 啟動指定數量的 publisher worker 執行緒
+    2. 啟動指定數量的 subscriber worker 執行緒
+    3. 監控系統執行狀態，等待中斷訊號
+    
     Args:
         config: 配置物件，包含所有系統設定
     """
-    # 讀取配置
     logger.info("[Runner] 任務處理系統啟動")
 
     threads: List[Thread] = []
 
-    # 啟動多個 publisher worker
+    # 啟動多個 publisher worker 執行緒
     for i in range(config.publisher_count):
         t = Thread(
             target=publisher_worker,
             args=(
-                config.todo_dir, config.doing_dir, config.lock_dir, config.subscriber_count, config.timezone, config.publisher_heartbeat_secs
+                config.todo_dir, config.doing_dir, config.lock_dir, 
+                config.subscriber_count, config.timezone, config.publisher_heartbeat_secs
             ),
             daemon=True,
             name=f"PublisherWorker{i}"
@@ -317,12 +413,14 @@ def runner(config: Config) -> None:
         threads.append(t)
         logger.info(f"[Runner] 啟動: {t.name}")
 
-    # 啟動多個 subscriber worker
+    # 啟動多個 subscriber worker 執行緒
     for i in range(config.subscriber_count):
         t = Thread(
             target=subscriber_worker,
             args=(
-                config.doing_dir, config.lock_dir, config.log_dir, config.opencode_exe, config.done_dir, config.failed_dir, config.timezone, config.subscriber_heartbeat_secs
+                config.doing_dir, config.lock_dir, config.log_dir, 
+                config.opencode_exe, config.done_dir, config.failed_dir, 
+                config.timezone, config.subscriber_heartbeat_secs
             ),
             daemon=True,
             name=f"SubscriberWorker{i}"
@@ -334,7 +432,7 @@ def runner(config: Config) -> None:
     logger.info("[Runner] 系統已啟動，按 Ctrl+C 結束")
 
     try:
-        # 主執行緒等待所有 worker 執行緒
+        # 主執行緒持續執行，等待中斷訊號
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
@@ -344,7 +442,20 @@ def runner(config: Config) -> None:
     finally:
         logger.info("[Runner] 任務處理系統關閉完成")
 
+
 if __name__ == "__main__":
+    """
+    程式進入點：當此檔案被直接執行時啟動任務處理系統
+    
+    使用方式：
+        python runner.py [config_file_path]
+    
+    參數：
+        config_file_path: 可選的配置檔案路徑，預設為 "config.ini"
+    """
+    # 讀取命令列參數，如果沒有提供則使用預設配置檔案
     config_path = sys.argv[1] if len(sys.argv) > 1 else "config.ini"
+    
+    # 建立配置物件並啟動系統
     config = Config(config_path)
     runner(config)

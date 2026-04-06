@@ -5,7 +5,7 @@
 要新增任務到 `painting-goblin` 系統，只需將任務檔案放入以下目錄：
 
 ```
-C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\
+$PAINTING_GOBLIN_DIR\tasks\todo\
 ```
 
 ## 詳細步驟
@@ -17,7 +17,7 @@ C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\
 ### 2. 放置任務檔案
 將任務檔案複製或移動到：
 ```
-C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\
+$PAINTING_GOBLIN_DIR\tasks\todo\
 ```
 
 ### 3. 系統自動處理
@@ -31,26 +31,26 @@ C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\
 ## 目錄結構說明
 
 根據 `config.ini` 配置：
-- `base_dir`: `C:\Users\fnaith\Documents\Fork\painting-goblin\tasks`
+- `base_dir`: `$PAINTING_GOBLIN_DIR\tasks`
 - `todo_dir`: `todo` - 待處理任務目錄
 - `doing_dir`: `doing` - 執行中任務目錄  
 - `done_dir`: `done` - 已完成任務目錄
 - `failed_dir`: `failed` - 失敗任務目錄
 
 完整路徑：
-- 待處理：`C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\`
-- 執行中：`C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\doing\`
-- 已完成：`C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\done\`
-- 失敗：`C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\failed\`
+- 待處理：`$PAINTING_GOBLIN_DIR\tasks\todo\`
+- 執行中：`$PAINTING_GOBLIN_DIR\tasks\doing\`
+- 已完成：`$PAINTING_GOBLIN_DIR\tasks\done\`
+- 失敗：`$PAINTING_GOBLIN_DIR\tasks\failed\`
 
 ## 範例
 
 ```bash
 # 新增一個任務檔案
-echo "這是一個測試任務" > "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\test_task.txt"
+echo "這是一個測試任務" > "$PAINTING_GOBLIN_DIR\tasks\todo\test_task.txt"
 
 # 查看任務狀態
-dir "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\"
+dir "$PAINTING_GOBLIN_DIR\tasks\todo\"
 ```
 
 ## 注意事項
@@ -64,16 +64,16 @@ dir "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\"
 
 ```bash
 # 查看待處理任務
-dir "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\todo\"
+dir "$PAINTING_GOBLIN_DIR\tasks\todo\"
 
 # 查看執行中任務
-dir "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\doing\"
+dir "$PAINTING_GOBLIN_DIR\tasks\doing\"
 
 # 查看已完成任務
-dir "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\done\"
+dir "$PAINTING_GOBLIN_DIR\tasks\done\"
 
 # 查看失敗任務
-dir "C:\Users\fnaith\Documents\Fork\painting-goblin\tasks\failed\"
+dir "$PAINTING_GOBLIN_DIR\tasks\failed\"
 
 # 查看系統日誌
 type runner.log
