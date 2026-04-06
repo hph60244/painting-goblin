@@ -27,7 +27,21 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 pip install -r requirements.txt
 ```
 
-### 3. 安裝 OpenCode
+### 3. 安裝 pre-commit hooks（可選）
+
+專案包含 pre-commit 配置，可在提交前自動檢查程式碼格式。安裝步驟：
+
+1. 安裝 pre-commit：
+```bash
+pip install pre-commit
+```
+
+2. 安裝 git hooks：
+```bash
+pre-commit install
+```
+
+### 4. 安裝 OpenCode
 
 系統需要 OpenCode CLI 工具來執行任務。請先安裝 OpenCode：
 
@@ -37,7 +51,7 @@ npm install -g opencode-ai
 
 或根據您的系統從 [OpenCode GitHub](https://github.com/opencodeai/opencode) 下載安裝。
 
-### 4. 環境變數設定
+### 5. 環境變數設定
 
 設定 `PAINTING_GOBLIN_DIR` 環境變數，指向專案根目錄：
 
@@ -58,7 +72,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 
 建議將此設定加入您的 shell 設定檔（如 `.bashrc`, `.zshrc`, 或 PowerShell 設定檔）。
 
-### 5. 配置檔案設定
+### 6. 配置檔案設定
 
 編輯 `config.ini` 檔案，確保以下重要設定正確：
 
@@ -69,7 +83,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 - `subscriber.count`: Subscriber worker 數量（同時處理的任務數量）
 - `heartbeat_secs`: worker 檢查新任務的間隔時間（秒）
 
-### 6. 目錄結構
+### 7. 目錄結構
 
 系統啟動時會自動建立以下目錄結構：
 

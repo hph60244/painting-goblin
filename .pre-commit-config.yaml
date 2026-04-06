@@ -1,0 +1,10 @@
+# pre-commit install
+# pre-commit run --all-files
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: trailing-whitespace
+        exclude: .+addons.+
+    -   id: end-of-file-fixer
+        exclude: .+addons.+

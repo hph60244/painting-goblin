@@ -61,11 +61,11 @@ def add_timestamp(file_path: Path) -> str:
 def copy_template_to_todo(template_file: Path, force_copy: bool = False) -> bool:
     """
     將模板檔案複製到 todo 目錄
-    
+
     Args:
         template_file: 模板檔案路徑
         force_copy: 是否強制複製（即使目標已存在）
-    
+
     Returns:
         bool: 複製是否成功
     """
@@ -74,21 +74,21 @@ def copy_template_to_todo(template_file: Path, force_copy: bool = False) -> bool
         if not template_file.exists():
             logger.warning(f"模板檔案不存在: {template_file}")
             return False
-        
+
         # 生成帶時間戳記的目標檔案名稱
         dest_filename = add_timestamp(template_file)
         dest_path = TODO_DIR / dest_filename
-        
+
         # 檢查是否已存在相同檔案（除非強制複製）
         if dest_path.exists() and not force_copy:
             logger.debug(f"目標檔案已存在，跳過: {dest_path}")
             return False
-        
+
         # 複製檔案
         shutil.copy2(str(template_file), str(dest_path))
         logger.info(f"已複製模板到 todo: {template_file.name} -> {dest_filename}")
         return True
-        
+
     except (OSError, PermissionError, shutil.Error) as e:
         logger.error(f"複製模板檔案失敗 {template_file}: {e}")
         return False
@@ -96,32 +96,32 @@ def copy_template_to_todo(template_file: Path, force_copy: bool = False) -> bool
 def process_all_templates() -> None:
     """處理所有模板檔案"""
     logger.info("開始處理模板檔案...")
-    
+
     try:
         # 獲取所有模板檔案
         template_files = list(TEMPLATE_DIR.iterdir())
         if not template_files:
             logger.debug("模板目錄中沒有檔案")
             return
-        
+
         processed_count = 0
         for template_file in template_files:
             if template_file.is_file():
                 if copy_template_to_todo(template_file):
                     processed_count += 1
-        
+
         logger.info(f"模板處理完成，共處理 {processed_count} 個檔案")
-        
+
     except Exception as e:
         logger.error(f"處理模板時發生錯誤: {e}")
 
 def process_specific_template(template_name: str) -> bool:
     """
     處理特定的模板檔案
-    
+
     Args:
         template_name: 模板檔案名稱
-    
+
     Returns:
         bool: 處理是否成功
     """
@@ -129,7 +129,7 @@ def process_specific_template(template_name: str) -> bool:
     if not template_file.exists():
         logger.error(f"指定的模板檔案不存在: {template_name}")
         return False
-    
+
     return copy_template_to_todo(template_file)
 
 # ----------------------------
@@ -144,7 +144,7 @@ def setup_schedule() -> None:
     """設定排程任務"""
     # 清除現有排程
     schedule.clear()
-    
+
     # 根據配置設定排程
     if SCHEDULE_SPECIFIC_TIMES and SCHEDULE_SPECIFIC_TIMES[0]:  # 有指定特定時間
         for time_str in SCHEDULE_SPECIFIC_TIMES:
@@ -155,7 +155,7 @@ def setup_schedule() -> None:
     else:  # 使用間隔時間
         schedule.every(SCHEDULE_INTERVAL).minutes.do(scheduled_job)
         logger.info(f"已設定排程任務每 {SCHEDULE_INTERVAL} 分鐘執行一次")
-    
+
     # 立即執行一次
     scheduled_job()
 
@@ -164,19 +164,19 @@ def run_scheduler() -> None:
     if not ENABLE_SCHEDULER:
         logger.info("排程器已禁用")
         return
-    
+
     logger.info("=" * 50)
     logger.info("模板排程器啟動")
     logger.info(f"模板目錄: {TEMPLATE_DIR}")
     logger.info(f"目標目錄: {TODO_DIR}")
     logger.info(f"時區: {TIMEZONE}")
     logger.info("=" * 50)
-    
+
     # 設定排程
     setup_schedule()
-    
+
     logger.info("排程器已啟動，按 Ctrl+C 結束")
-    
+
     try:
         while True:
             schedule.run_pending()
@@ -213,7 +213,7 @@ def list_templates() -> None:
         if not template_files:
             logger.info("  沒有模板檔案")
             return
-        
+
         for i, template_file in enumerate(template_files, 1):
             if template_file.is_file():
                 size = template_file.stat().st_size
@@ -228,15 +228,15 @@ def list_templates() -> None:
 def main() -> None:
     """主程式入口點"""
     import argparse
-    
+
     parser = argparse.ArgumentParser(description='模板任務排程器')
     parser.add_argument('--run', action='store_true', help='執行排程器')
     parser.add_argument('--manual', action='store_true', help='手動處理所有模板')
     parser.add_argument('--copy', type=str, help='複製特定模板檔案')
     parser.add_argument('--list', action='store_true', help='列出所有模板檔案')
-    
+
     args = parser.parse_args()
-    
+
     if args.manual:
         manual_run()
     elif args.copy:
