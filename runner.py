@@ -19,16 +19,6 @@ from typing import Optional, List, Tuple, Dict, Any
 # ============================================================================
 logger = logging.getLogger(__name__)
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s | %(levelname)-5s | %(name)s:%(funcName)s:%(lineno)d - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('runner.log', encoding='utf-8')
-    ]
-)
-
 # ============================================================================
 # 配置結構
 # ============================================================================
@@ -57,6 +47,7 @@ class Config:
 
         # 讀取 runner 設定
         self.timezone = self.config["runner"].get("timezone", "UTC")
+        self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "log")
 
         # 驗證 OPENCODE_EXE 是否存在
         if not Path(self.opencode_exe).exists():
@@ -71,17 +62,30 @@ class Config:
         self.subscriber_heartbeat_secs = float(self.config["subscriber"].get("heartbeat_secs", 60))
 
         # 計算目錄路徑
-        self.base_dir = Path(os.getenv("PAINTING_GOBLIN_DIR")) / self.base_dir_name
+        root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))
+        self.base_dir = root_dir / self.base_dir_name
         self.todo_dir = self.base_dir / self.todo_dir_name
         self.doing_dir = self.base_dir / self.doing_dir_name
         self.done_dir = self.base_dir / self.done_dir_name
         self.failed_dir = self.base_dir / self.failed_dir_name
         self.log_dir = self.base_dir / self.log_dir_name
         self.lock_dir = self.base_dir / self.lock_dir_name
+        self.runner_log_dir = root_dir / self.runner_log_dir_name
 
         # 確保資料夾存在
-        for d in [self.todo_dir, self.doing_dir, self.done_dir, self.failed_dir, self.log_dir, self.lock_dir]:
+        for d in [self.todo_dir, self.doing_dir, self.done_dir, self.failed_dir, self.log_dir, self.lock_dir, self.runner_log_dir]:
             d.mkdir(parents=True, exist_ok=True)
+
+        # 設置 logging
+        logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s | %(levelname)-5s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+            handlers=[
+                logging.StreamHandler(),
+                logging.FileHandler(self.runner_log_dir / "runner.log", encoding="utf-8")
+            ]
+        )
 
 # ============================================================================
 # 工具函數
@@ -113,9 +117,9 @@ def strip_time_stamp(file_name: str) -> str:
     Returns:
         移除時間戳記後的檔案名稱
     """
-    pattern = r'\.(?:[BE]\d{17})'
+    pattern = r"\.(?:[BE]\d{17})"
     name, ext = os.path.splitext(file_name)
-    new_name = re.sub(pattern, '', name) + ext
+    new_name = re.sub(pattern, "", name) + ext
     return new_name
 
 def add_timestamp(file_path: Path, datetime_prefix: str, timezone: str) -> str:
