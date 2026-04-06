@@ -51,7 +51,7 @@ class Config:
         # 讀取 task 設定
         self.base_dir_name = self.config["task"].get("base_dir_name", "task")
         self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
-        self.timezone = self.config["task"].get("timezone", "UTC")
+        self.timezone = self.config["task"].get("timezone", "Asia/Taipei")
 
         # 讀取 scheduler 設定
         self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "log")

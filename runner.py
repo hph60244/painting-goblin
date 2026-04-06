@@ -54,7 +54,7 @@ class Config:
         self.config.read(config_path)
 
         # 驗證必要的區段
-        required_sections = ["task", "runner", "publisher", "subscriber"]
+        required_sections = ["task", "runner"]
         for section in required_sections:
             if not self.config.has_section(section):
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
@@ -67,23 +67,19 @@ class Config:
         self.failed_dir_name = self.config["task"].get("failed_dir_name", "failed")
         self.log_dir_name = self.config["task"].get("log_dir_name", ".logs")
         self.lock_dir_name = self.config["task"].get("lock_dir_name", ".locks")
-        self.timezone = self.config["task"].get("timezone", "UTC")
+        self.timezone = self.config["task"].get("timezone", "Asia/Taipei")
         self.opencode_exe = self.config["task"].get("opencode_exe", "???")
-
-        # 讀取 runner 設定
-        self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "log")
 
         # 驗證 OPENCODE_EXE 是否存在
         if not Path(self.opencode_exe).exists():
             raise FileNotFoundError(f"OpenCode executable not found: {self.opencode_exe}")
 
-        # 讀取 publisher 設定
-        self.publisher_count = int(self.config["publisher"].get("count", 1))
-        self.publisher_heartbeat_secs = float(self.config["publisher"].get("heartbeat_secs", 60))
-
-        # 讀取 subscriber 設定
-        self.subscriber_count = int(self.config["subscriber"].get("count", 1))
-        self.subscriber_heartbeat_secs = float(self.config["subscriber"].get("heartbeat_secs", 60))
+        # 讀取 runner 設定
+        self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "log")
+        self.publisher_count = int(self.config["runner"].get("publisher_count", 1))
+        self.publisher_heartbeat_secs = float(self.config["runner"].get("publisher_heartbeat_secs", 60))
+        self.subscriber_count = int(self.config["runner"].get("subscriber_count", 1))
+        self.subscriber_heartbeat_secs = float(self.config["runner"].get("subscriber_heartbeat_secs", 60))
 
         # 計算目錄路徑
         root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))

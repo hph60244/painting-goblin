@@ -16,7 +16,7 @@ description: Create a Python script that solves the problem described below.
 
 1. Clarify the problem
 2. Design the interface (CLI arguments)
-3. Implement the script, uses $PAINTING_GOBLIN_DIR/.tmp as temporary workspace
+3. Implement the script, uses $PAINTING_GOBLIN_DIR/.tmp/<name> as temporary workspace
 4. Run and test it
 5. Fix any issues found
 
