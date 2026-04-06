@@ -33,7 +33,7 @@ $PAINTING_GOBLIN_DIR\tasks\todo\
 根據 `config.ini` 配置：
 - `base_dir`: `$PAINTING_GOBLIN_DIR\tasks`
 - `todo_dir`: `todo` - 待處理任務目錄
-- `doing_dir`: `doing` - 執行中任務目錄  
+- `doing_dir`: `doing` - 執行中任務目錄
 - `done_dir`: `done` - 已完成任務目錄
 - `failed_dir`: `failed` - 失敗任務目錄
 

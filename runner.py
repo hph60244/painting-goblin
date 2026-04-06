@@ -25,7 +25,7 @@ import configparser
 from typing import Optional, List
 
 # ============================================================================
-# 設定 logging
+# 設定 logging (會在 Config.__init__ 中重新配置)
 # ============================================================================
 logger = logging.getLogger(__name__)
 
@@ -35,16 +35,16 @@ logger = logging.getLogger(__name__)
 class Config:
     """
     配置類，儲存所有系統設定值
-    
+
     這個類別負責讀取和驗證配置文件，並提供所有必要的配置參數給系統使用。
     """
     def __init__(self, config_path: str):
         """
         初始化配置物件
-        
+
         Args:
             config_path: 配置檔案路徑
-            
+ 
         Raises:
             ValueError: 如果配置檔案缺少必要的區段
             FileNotFoundError: 如果 OpenCode 執行檔不存在
@@ -101,6 +101,11 @@ class Config:
             d.mkdir(parents=True, exist_ok=True)
 
         # 設置 logging
+        # 清除現有的 handlers
+        for handler in logging.root.handlers[:]:
+            logging.root.removeHandler(handler)
+
+        # 配置 root logger
         logging.basicConfig(
             level=logging.INFO,
             format="%(asctime)s | %(levelname)-5s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
@@ -108,8 +113,13 @@ class Config:
             handlers=[
                 logging.StreamHandler(),
                 logging.FileHandler(self.runner_log_dir / "runner.log", encoding="utf-8")
-            ]
+            ],
+            force=True  # 強制重新配置，即使已經有 handlers
         )
+
+        # 重新獲取 logger 以確保使用新的配置
+        global logger
+        logger = logging.getLogger(__name__)
 
 # ============================================================================
 # 工具函數
@@ -121,18 +131,18 @@ task_file_extension: str = ".md"
 def find_task_files(folder: Path, lock_dir: Path, locked: bool) -> List[Path]:
     """
     在指定資料夾中尋找任務檔案，並根據鎖定狀態進行篩選
-    
+
     Args:
         folder: 要搜尋的資料夾路徑
         lock_dir: 檔案鎖定目錄，用於檢查檔案是否被鎖定
         locked: 是否要尋找已鎖定的檔案 (True) 或未鎖定的檔案 (False)
-    
+
     Returns:
         List[Path]: 符合條件的任務檔案路徑列表
     """
     try:
         task_files = [
-            f for f in folder.iterdir() 
+            f for f in folder.iterdir()
             if f.is_file() and f.suffix.lower() == task_file_extension
         ]
         result_files = []
@@ -167,7 +177,7 @@ def get_oldest_unlocked_task_file(folder: Path, lock_dir: Path) -> Optional[Path
         oldest_file = min(task_files, key=lambda f: f.stat().st_mtime)
         logger.debug(f"在資料夾 {folder} 中找到最舊的未鎖定 {task_file_extension} 檔案: {oldest_file.name}")
         return oldest_file
-        
+
     except (OSError, PermissionError) as e:
         logger.warning(f"無法讀取資料夾 {folder}: {e}")
         return None
@@ -318,7 +328,7 @@ def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Pat
     """
     logger.info(f"[Subscriber] 開始執行任務: {file_path.name}")
     log_file = log_dir / f"{file_path.name}.log"
-    
+
     # 開啟日誌檔案以附加模式寫入，確保所有輸出都被記錄
     with open(log_file, "a", encoding="utf-8") as f:
         try:
@@ -327,18 +337,18 @@ def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Pat
                 [opencode_exe, "run", "Execute this task", "--file", str(file_path)],
                 check=True, cwd=doing_dir, stdout=f, stderr=f,
             )
-            
+ 
             # 任務成功執行，移動到完成目錄並添加結束時間戳記
             dest = done_dir / add_timestamp(file_path, "E", timezone)
             logger.info(f"[Subscriber] 執行任務成功: {file_path.name}")
             move_file_safely(file_path, dest, "[Subscriber]")
-            
+ 
         except subprocess.CalledProcessError as e:
             # OpenCode 命令執行失敗，移動到失敗目錄
             logger.error(f"[Subscriber] 執行任務失敗: {file_path.name}, {e}")
             dest = failed_dir / file_path.name
             move_file_safely(file_path, dest, "[Subscriber]")
-            
+ 
         except Exception as e:
             # 其他未預期的錯誤，移動到失敗目錄
             logger.error(f"[Subscriber] 執行任務發生未預期錯誤: {file_path.name}, {e}")
@@ -385,12 +395,12 @@ def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_e
 def runner(config: Config) -> None:
     """
     主程式入口點：啟動任務處理系統
-    
+
     這個函數負責：
     1. 啟動指定數量的 publisher worker 執行緒
     2. 啟動指定數量的 subscriber worker 執行緒
     3. 監控系統執行狀態，等待中斷訊號
-    
+
     Args:
         config: 配置物件，包含所有系統設定
     """
@@ -403,7 +413,7 @@ def runner(config: Config) -> None:
         t = Thread(
             target=publisher_worker,
             args=(
-                config.todo_dir, config.doing_dir, config.lock_dir, 
+                config.todo_dir, config.doing_dir, config.lock_dir,
                 config.subscriber_count, config.timezone, config.publisher_heartbeat_secs
             ),
             daemon=True,
@@ -418,8 +428,8 @@ def runner(config: Config) -> None:
         t = Thread(
             target=subscriber_worker,
             args=(
-                config.doing_dir, config.lock_dir, config.log_dir, 
-                config.opencode_exe, config.done_dir, config.failed_dir, 
+                config.doing_dir, config.lock_dir, config.log_dir,
+                config.opencode_exe, config.done_dir, config.failed_dir,
                 config.timezone, config.subscriber_heartbeat_secs
             ),
             daemon=True,
@@ -446,16 +456,16 @@ def runner(config: Config) -> None:
 if __name__ == "__main__":
     """
     程式進入點：當此檔案被直接執行時啟動任務處理系統
-    
+
     使用方式：
         python runner.py [config_file_path]
-    
+
     參數：
         config_file_path: 可選的配置檔案路徑，預設為 "config.ini"
     """
     # 讀取命令列參數，如果沒有提供則使用預設配置檔案
     config_path = sys.argv[1] if len(sys.argv) > 1 else "config.ini"
-    
+
     # 建立配置物件並啟動系統
     config = Config(config_path)
     runner(config)
