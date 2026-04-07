@@ -330,7 +330,7 @@ def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Pat
         try:
             # 執行 OpenCode 命令來處理任務
             result = subprocess.run(
-                [opencode_exe, "run", "Execute this task", "--file", str(file_path)],
+                [opencode_exe, "run", "Execute this task. Only read the files specifically mentioned.", "--file", str(file_path)],
                 check=True, cwd=doing_dir, stdout=f, stderr=f,
             )
 
