@@ -21,9 +21,11 @@ description: Create a Python script that solves the problem described below.
 5. Fix any issues found
 
 # Deliverable
-- A Python file under $PAINTING_GOBLIN_DIR/tools/
-- The script must be executable like: `python tools/<name>.py args[1] ...`
-- Create a skill in : $PAINTING_GOBLIN_DIR/skills/<name>
+
+Under $PAINTING_GOBLIN_DIR/tools/<name>/ :
+- A <name>.py file
+- A requirements.txt file if needed
+- Create a skill by $PAINTING_GOBLIN_DIR/skills/make-skill-template
 
 # Validation
 After implementation, run the script and verify:

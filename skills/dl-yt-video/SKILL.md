@@ -1,139 +1,72 @@
 ---
-name: dl_yt_video
-description: Download YouTube videos by video ID with highest quality MP4 format. Use this skill when users need to download YouTube videos programmatically or via command line.
+name: dl-yt-video
+description: Download YouTube videos using the dl-yt-video tool. Use when asked to download YouTube videos, fetch video by ID, or save YouTube content as MP4.
 ---
 
-# YouTube Video Download Skill
+# dl-yt-video Skill
 
-This skill enables downloading YouTube videos using the `dl-yt-video.py` command-line tool. The tool downloads the highest quality MP4 version available.
+This skill enables downloading YouTube videos as MP4 files using the `dl-yt-video` Python CLI tool.
 
-## Quick Start
+## When to Use This Skill
 
-Download a YouTube video by its video ID:
+- User requests downloading a YouTube video
+- User provides a YouTube video ID or URL
+- User wants to save a video locally as MP4
+- User needs the highest quality video and audio merged
+
+## Prerequisites
+
+- Python 3.7+ installed
+- `yt-dlp` installed (automatically via `requirements.txt`)
+- The `dl-yt-video` tool located at `$PAINTING_GOBLIN_DIR/tools/dl-yt-video/`
+
+## Installation
+
+If the tool is not yet installed, run:
 
 ```bash
-python $PAINTING_GOBLIN_DIR/tools/dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>
+cd $PAINTING_GOBLIN_DIR/tools/dl-yt-video
+pip install -r requirements.txt
 ```
 
-Example:
-```bash
-python $PAINTING_GOBLIN_DIR/tools/dl-yt-video.py jNQXAC9IVRw ./videos
-```
+## Usage
 
-## Tool Usage
+### Basic Command
 
-### Command Syntax
 ```bash
-python dl-yt-video.py VIDEO_ID OUTPUT_DIR
+python $PAINTING_GOBLIN_DIR/tools/dl-yt-video/dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>
 ```
 
 ### Arguments
-- **VIDEO_ID**: The YouTube video ID (the `v` parameter in YouTube URLs)
-- **OUTPUT_DIR**: Directory where the downloaded video will be saved
 
-### Behavior
-1. The tool downloads the best available MP4 format (single file with audio and video).
-2. If no MP4 format exists, downloads the best available format (any extension).
-3. Output filename is automatically derived from the video title.
-4. The output directory is created if it does not exist.
+- `VIDEO_ID`: The YouTube video ID (the string after `v=` in the URL)
+- `OUTPUT_DIR`: Directory where the downloaded MP4 file will be saved
 
-### Examples
+### Example
 
-**Download a video to current directory:**
-```bash
-python dl-yt-video.py dQw4w9WgXcQ .
-```
-
-**Download a video to a specific folder:**
-```bash
-python dl-yt-video.py M7lc1UVf-VE /path/to/downloads
-```
-
-## How It Works
-
-The tool uses `yt-dlp` internally with the following parameters:
-- Format selection: `best[ext=mp4]/best` (prefers MP4, falls back to any format)
-- Output template: `%(title)s.%(ext)s`
-- No merging required (selects progressive streams when possible)
-
-### Dependencies
-- `yt-dlp` (installed via pip)
-- Python 3.6+
-
-### Installation
-The tool is ready to use if `yt-dlp` is installed. To install missing dependencies:
+To download the video with ID `d3UTywBDSW4` to the `~/Downloads` folder:
 
 ```bash
-pip install yt-dlp
+python $PAINTING_GOBLIN_DIR/tools/dl-yt-video/dl-yt-video.py d3UTywBDSW4 ~/Downloads
 ```
+
+## Features
+
+- Downloads the best available video and audio streams
+- Merges them into a single MP4 file
+- Sanitizes filenames (removes special characters)
+- Provides progress feedback via yt-dlp
+- Gracefully handles errors (invalid ID, network issues, etc.)
 
 ## Troubleshooting
 
-### Common Issues
+- **yt-dlp not found**: Install with `pip install yt-dlp`
+- **Output directory does not exist**: Ensure the directory exists before running
+- **Video unavailable**: Check the video ID and your network connection
+- **Permission errors**: Ensure write access to the output directory
 
-**Error: "yt-dlp not found"**
-- Install yt-dlp: `pip install yt-dlp`
+## Notes
 
-**Error: "HTTP Error 403: Forbidden"**
-- YouTube may have rate‑limited the IP; wait and retry later
-- Consider using `--cookies` option (not yet implemented in this tool)
-
-**Error: "Video unavailable"**
-- The video may be private, deleted, or region‑restricted
-- Verify the video ID is correct and the video is publicly accessible
-
-**Warning: "No supported JavaScript runtime could be found"**
-- YouTube's extraction may be limited; install a JS runtime (deno, node) for full format support
-- This warning does not prevent download but may limit available formats
-
-**Multiple files downloaded instead of a single MP4**
-- The selected format might be video‑only or audio‑only; the tool currently does not merge streams
-- Install `ffmpeg` and adjust the format string to `bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best` with `--merge-output-format mp4` if merging is required
-
-### Debug Mode
-To see detailed yt-dlp output, add `--verbose` flag (not currently implemented). You can modify the script to print stderr.
-
-## Integration with Painting‑Goblin
-
-This tool can be used as part of automated task processing. Example task file:
-
-```markdown
-Download YouTube video with ID jNQXAC9IVRw to ./downloads
-
-- Usage: `python dl-yt-video.py jNQXAC9IVRw ./downloads`
-- Expected output: `./downloads/Me at the zoo.mp4`
-```
-
-Place such a task in `$PAINTING_GOBLIN_DIR/tasks/todo/` for automatic processing.
-
-## Advanced Customization
-
-You can edit the format string in `$PAINTING_GOBLIN_DIR/tools/dl-yt-video.py` to change download behavior:
-
-- **Higher quality (requires ffmpeg)**:
-  ```python
-  '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-  '--merge-output-format', 'mp4',
-  ```
-
-- **Audio‑only**:
-  ```python
-  '-f', 'bestaudio[ext=m4a]/bestaudio',
-  ```
-
-- **Specific resolution**:
-  ```python
-  '-f', 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]',
-  ```
-
-Remember to install `ffmpeg` for merging video and audio streams.
-
-## Support
-
-If the tool fails unexpectedly, check the following:
-1. Internet connectivity
-2. YouTube API changes (yt‑dlp is generally up‑to‑date)
-3. Disk space and write permissions in the output directory
-4. Python environment and yt‑dlp version
-
-Report issues to the repository maintainer.
+- The tool uses `--restrict-filenames` to avoid filesystem issues with special characters.
+- The output filename is derived from the video title.
+- The tool downloads only the single video, not playlists.
