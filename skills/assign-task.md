@@ -83,7 +83,7 @@ The system adds timestamps to track task lifecycle:
 - **B prefix**: Beginning timestamp (when task starts processing)
 - **E prefix**: Ending timestamp (when task completes)
 
-Example: `weekly_report.B20241215143045999.md` means the task started processing at 2024-12-15 14:30:45.999
+Example: `weekly_report.B20241215143045.md` means the task started processing at 2024-12-15 14:30:45
 
 ## Best Practices
 

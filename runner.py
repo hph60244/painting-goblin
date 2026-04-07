@@ -191,7 +191,7 @@ def strip_time_stamp(file_name: str) -> str:
     Returns:
         移除時間戳記後的檔案名稱
     """
-    pattern = r"\.(?:[BE]\d{17})"
+    pattern = r"\.(?:[BE]\d{14})"
     name, ext = os.path.splitext(file_name)
     new_name = re.sub(pattern, "", name) + ext
     return new_name
@@ -209,7 +209,7 @@ def add_timestamp(file_path: Path, datetime_prefix: str, timezone: str) -> str:
         添加時間戳記後的檔案名稱
     """
     now = datetime.now(ZoneInfo(timezone))
-    ts = now.strftime(datetime_prefix + "%Y%m%d%H%M%S%f")[:-3]
+    ts = now.strftime(datetime_prefix + "%Y%m%d%H%M%S")
     return f"{file_path.stem}.{ts}{file_path.suffix}"
 
 def move_file_safely(src: Path, dest: Path, log_prefix: str) -> bool:

@@ -223,10 +223,10 @@ ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
 ## 任務處理流程
 
 1. **任務提交**: 使用者將 `.md` 任務檔案放入 `todo/` 目錄
-2. **Publisher 處理**: Publisher worker 檢查 `todo/` 目錄，將最舊的未鎖定任務移動到 `doing/` 目錄，並添加開始時間戳記（格式：`檔案名.BYYYYMMDDHHMMSSmmm.md`）
+2. **Publisher 處理**: Publisher worker 檢查 `todo/` 目錄，將最舊的未鎖定任務移動到 `doing/` 目錄，並添加開始時間戳記（格式：`檔案名.BYYYYMMDDHHMMSS.md`）
 3. **Subscriber 處理**: Subscriber worker 檢查 `doing/` 目錄，取得任務並使用 OpenCode 執行
 4. **結果處理**:
-   - 成功：任務檔案移動到 `done/` 目錄，並添加結束時間戳記（格式：`檔案名.EYYYYMMDDHHMMSSmmm.md`）
+   - 成功：任務檔案移動到 `done/` 目錄，並添加結束時間戳記（格式：`檔案名.EYYYYMMDDHHMMSS.md`）
    - 失敗：任務檔案移動到 `failed/` 目錄，保留原始檔名
 5. **日誌記錄**: 所有任務執行日誌儲存在 `.log/` 目錄中，檔名為 `任務檔案名.log`
 
