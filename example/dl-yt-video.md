@@ -1,4 +1,4 @@
-use $PAINTING_GOBLIN_DIR/skills/build-python-cli-tool.md to write a tool for downloading youtube video.
+use $PAINTING_GOBLIN_DIR/skills/build-python-cli-tool to write a tool for downloading youtube video.
 
 - Usage : `python dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>`
 - Args :

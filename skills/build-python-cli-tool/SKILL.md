@@ -23,7 +23,7 @@ description: Create a Python script that solves the problem described below.
 # Deliverable
 - A Python file under $PAINTING_GOBLIN_DIR/tools/
 - The script must be executable like: `python tools/<name>.py args[1] ...`
-- A markdown file : $PAINTING_GOBLIN_DIR/skills/<name>.py.md
+- Create a skill in : $PAINTING_GOBLIN_DIR/skills/<name>
 
 # Validation
 After implementation, run the script and verify:
