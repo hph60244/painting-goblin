@@ -10,13 +10,16 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 以下是系統的未來發展方向：
 
+- [ ] fix cli asking user : https://github.com/anomalyco/opencode/issues/5888
 - [ ] **make report skill** - 開發學習技能功能，讓系統能夠處理研究任務
 - [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
 - [ ] https://skills.sh/langchain-ai/deepagents/web-research
 - [ ] https://skills.sh/?q=marp
-- [ ] list-yt-video task
 - [ ] move `Only read the files specifically mentioned.` into config
+- [ ] Tool return error code / task only specify args without example
+- [ ] Watch log for 1min no change as fail
+- [ ] list-yt-ch-video: add limit param, default no download
 
 ## 系統架構
 
