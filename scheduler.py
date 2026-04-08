@@ -1,6 +1,6 @@
 """
 任務排程系統 - 根據 config.ini 中的 cron 設定，
-定期將 example 資料夾中的任務檔案複製到 todo 資料夾。
+定期將 job 資料夾中的任務檔案複製到 todo 資料夾。
 """
 
 import os
@@ -55,7 +55,7 @@ class Config:
 
         # 讀取 scheduler 設定
         self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "log")
-        self.scheduler_example_dir_name = self.config["scheduler"].get("example_dir_name", "example")
+        self.scheduler_job_dir_name = self.config["scheduler"].get("job_dir_name", "job")
 
         # 讀取 job 設定
         self.jobs: Dict[str, str] = {}
@@ -69,8 +69,8 @@ class Config:
         self.todo_dir = self.base_dir / self.todo_dir_name
         self.scheduler_log_dir = root_dir / self.scheduler_log_dir_name
 
-        # example 資料夾路徑（相對於專案根目錄）
-        self.scheduler_example_dir = root_dir / self.scheduler_example_dir_name
+        # job 資料夾路徑（相對於專案根目錄）
+        self.scheduler_job_dir = root_dir / self.scheduler_job_dir_name
 
         # 確保所有必要的資料夾都存在
         for d in [self.todo_dir, self.scheduler_log_dir]:
@@ -108,7 +108,7 @@ class Config:
 # ============================================================================
 def copy_task_to_todo(task_name: str, config: Config) -> bool:
     """
-    將任務檔案從 example 複製到 todo 資料夾
+    將任務檔案從 job 複製到 todo 資料夾
 
     遇到同名檔案時跳過複製，返回 True（不算失敗）
 
@@ -121,7 +121,7 @@ def copy_task_to_todo(task_name: str, config: Config) -> bool:
     """
     try:
         # 檢查來源檔案是否存在
-        source_file = config.scheduler_example_dir / f"{task_name}.md"
+        source_file = config.scheduler_job_dir / f"{task_name}.md"
         if not source_file.exists():
             logger.error(f"任務檔案不存在: {source_file}")
             return False

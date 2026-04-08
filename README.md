@@ -14,6 +14,7 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 - [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
 - [ ] https://skills.sh/langchain-ai/deepagents/web-research
+- [ ] https://skills.sh/?q=marp
 - [ ] list-yt-video task
 - [ ] move `Only read the files specifically mentioned.` into config
 
@@ -109,7 +110,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 
 #### [scheduler] 區段
 - `log_dir_name`: scheduler 系統日誌目錄名稱（預設：`log`）
-- `example_dir_name`: 範例任務目錄名稱（預設：`example`）
+- `job_dir_name`: 範例任務目錄名稱（預設：`job`）
 
 #### [job] 區段
 - 定義排程任務，格式為 `任務名稱 = cron表達式`
@@ -130,7 +131,7 @@ painting-goblin/
 │   ├── .log/       # 任務執行日誌
 │   └── .lock/      # 檔案鎖定目錄
 ├── log/            # 系統執行日誌
-├── example/        # 範例任務目錄
+├── job/        # 範例任務目錄
 │   ├── print-42.md
 │   ├── ls-tasks.md
 │   └── ...
@@ -161,7 +162,7 @@ python runner.py my_config.ini
 
 ### 啟動任務排程系統 (scheduler.py)
 
-`scheduler.py` 是任務排程系統，根據 config.ini 中的 cron 設定，定期將 example 資料夾中的任務檔案複製到 todo 資料夾。
+`scheduler.py` 是任務排程系統，根據 config.ini 中的 cron 設定，定期將 job 資料夾中的任務檔案複製到 todo 資料夾。
 
 ```bash
 python scheduler.py [config_file_path]
@@ -186,13 +187,13 @@ python scheduler.py my_config.ini
 #### 1. 手動新增
 將任務檔案（副檔名為 `.md`）放入 `task/todo/` 目錄中。系統會自動偵測並處理。
 
-任務檔案範例 (`example/print-42.md`)：
+任務檔案範例 (`job/print-42.md`)：
 ```markdown
 請寫一個 Python 程式，印出數字 42。
 ```
 
 #### 2. 排程新增
-在 `config.ini` 的 `[job]` 區段設定排程任務，系統會自動在指定時間將 `example/` 目錄中的任務檔案複製到 `task/todo/` 目錄。
+在 `config.ini` 的 `[job]` 區段設定排程任務，系統會自動在指定時間將 `job/` 目錄中的任務檔案複製到 `task/todo/` 目錄。
 
 範例配置：
 ```ini
@@ -264,7 +265,7 @@ ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
 5. **排程任務未執行**
    - 檢查 `config.ini` 中的 `[job]` 區段設定是否正確
    - 確認 cron 表達式格式正確（分 時 日 月 星期）
-   - 檢查 `example/` 目錄中是否有對應的任務檔案
+   - 檢查 `job` 目錄中是否有對應的任務檔案
    - 查看 `log/scheduler.log` 是否有錯誤訊息
 
 ### 日誌位置
