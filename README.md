@@ -10,7 +10,6 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 以下是系統的未來發展方向：
 
-- [ ] fix cli asking user : https://github.com/anomalyco/opencode/issues/5888
 - [ ] **make report skill** - 開發學習技能功能，讓系統能夠處理研究任務
 - [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
@@ -66,7 +65,33 @@ npm install -g opencode-ai
 
 或根據您的系統從 [OpenCode GitHub](https://github.com/opencodeai/opencode) 下載安裝。
 
-### 5. 環境變數設定
+### 5. OpenCode 配置設定
+
+OpenCode 使用 JSON 配置檔案來控制權限和實驗性功能。預設配置檔案位於 `~/.config/opencode/opencode.json`。
+
+以下是建議的配置範例：
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "external_directory": "deny",
+    "doom_loop": "deny"
+  },
+  "experimental": {
+    "continue_loop_on_deny": true
+  }
+}
+```
+
+配置說明：
+- **permission.external_directory**: 控制是否允許存取外部目錄（建議設定為 `deny` 以增強安全性）
+- **permission.doom_loop**: 防止無限迴圈（建議設定為 `deny`）
+- **experimental.continue_loop_on_deny**: 當權限被拒絕時是否繼續執行（建議設定為 `true`）
+
+您可以根據需要調整這些設定。建立或編輯 `~/.config/opencode/opencode.json` 檔案並貼上上述配置。
+
+### 6. 環境變數設定
 
 設定 `PAINTING_GOBLIN_DIR` 環境變數，指向專案根目錄：
 
@@ -87,7 +112,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 
 建議將此設定加入您的 shell 設定檔（如 `.bashrc`, `.zshrc`, 或 PowerShell 設定檔）。
 
-### 6. 配置檔案設定
+### 7. 配置檔案設定
 
 編輯 `config.ini` 檔案，確保以下重要設定正確：
 
@@ -120,7 +145,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 - cron 表達式格式：`分 時 日 月 星期`
 - 範例：`print-42 = 8 21 6 4 *` 表示在 4月6日 21:08 執行 `print-42` 任務
 
-### 7. 目錄結構
+### 8. 目錄結構
 
 系統啟動時會自動建立以下目錄結構：
 
