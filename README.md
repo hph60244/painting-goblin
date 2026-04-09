@@ -15,7 +15,6 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 - [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
 - [ ] https://skills.sh/langchain-ai/deepagents/web-research
 - [ ] https://skills.sh/?q=marp
-- [ ] move `Only read the files specifically mentioned.` into config
 - [ ] Tool return error code / task only specify args without example
 - [ ] list-yt-ch-video: add limit param, default no download
 
