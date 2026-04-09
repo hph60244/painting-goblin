@@ -1,126 +1,132 @@
 #!/usr/bin/env python3
 """
-List all videos from a YouTube channel and optionally download them.
-Usage: python list-yt-ch-video.py <CHANNEL_ID> <OUTPUT_DIR>
+YouTube Channel Video Lister
+Lists all videos from a YouTube channel with ID, name, and duration.
 """
 
-import sys
-import os
-import subprocess
 import argparse
-import json
 import csv
-from pathlib import Path
-from typing import Optional
+import os
+import sys
+import yt_dlp
+from yt_dlp.utils import DownloadError
 
-def get_channel_url(channel_id: str) -> str:
-    """Convert channel ID to YouTube URL."""
-    # If channel_id starts with '@', it's a handle
-    # If it starts with 'UC', it's a channel ID
-    # yt-dlp can handle both formats directly
-    return f"https://www.youtube.com/{channel_id}/videos"
-
-def fetch_video_list(channel_id: str, limit: Optional[int] = None):
-    """Use yt-dlp to fetch video metadata as JSON."""
-    url = get_channel_url(channel_id)
-    cmd = [
-        'yt-dlp',
-        '--flat-playlist',
-        '-j',
-        '--no-warnings',
-    ]
-    if limit is not None:
-        cmd.extend(['--playlist-end', str(limit)])
-    cmd.append(url)
+def safe_print(text: str, file=sys.stdout):
+    """Print text safely, handling encoding errors."""
     try:
-        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
-        lines = result.stdout.strip().split('\n')
-        videos = []
-        for line in lines:
-            if not line:
-                continue
-            try:
-                data = json.loads(line)
-                video_id = data.get('id')
-                title = data.get('title')
-                duration = data.get('duration')
-                if video_id and title and duration is not None:
+        print(text, file=file)
+    except UnicodeEncodeError:
+        # Replace non-encodable characters with '?'
+        encoding = file.encoding if hasattr(file, 'encoding') else (sys.stdout.encoding or 'utf-8')
+        encoded = text.encode(encoding, errors='replace').decode(encoding)
+        print(encoded, file=file)
+
+def construct_channel_url(channel_id: str) -> str:
+    """Convert channel identifier to YouTube videos URL."""
+    base = None
+    if channel_id.startswith('@'):
+        base = f'https://www.youtube.com/{channel_id}'
+    elif channel_id.startswith('UC'):
+        # Assume channel ID
+        base = f'https://www.youtube.com/channel/{channel_id}'
+    else:
+        # Try as custom handle without @, or assume it's a full URL
+        if channel_id.startswith('http'):
+            base = channel_id
+        else:
+            base = f'https://www.youtube.com/@{channel_id}'
+    # Ensure we target the videos tab, avoid duplicate
+    if '/videos' not in base:
+        # Ensure no double slash
+        if not base.endswith('/'):
+            base += '/'
+        base += 'videos'
+    return base
+
+def get_channel_videos(channel_url: str):
+    """
+    Fetch all video entries from a channel using yt-dlp.
+    Returns list of dicts with keys: id, title, duration.
+    """
+    ydl_opts = {
+        'quiet': True,
+        'extract_flat': True,
+        'force_generic_extractor': False,
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(channel_url, download=False)
+            if not info:
+                safe_print(f'No data retrieved for {channel_url}', file=sys.stderr)
+                sys.exit(1)
+
+            # Determine if info is a channel with entries or a playlist
+            entries = info.get('entries')
+            if not entries:
+                safe_print(f'No videos found for {channel_url}', file=sys.stderr)
+                sys.exit(1)
+
+            videos = []
+            for entry in entries:
+                video_id = entry.get('id')
+                title = entry.get('title')
+                duration = entry.get('duration')
+                if video_id and title:
                     videos.append({
                         'id': video_id,
                         'title': title,
-                        'duration': duration
+                        'duration': duration if duration else 0
                     })
-            except json.JSONDecodeError:
-                print(f"Warning: Failed to parse JSON line: {line[:100]}", file=sys.stderr)
-        return videos
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to fetch video list: {e.stderr}", file=sys.stderr)
+            return videos
+    except DownloadError as e:
+        safe_print(f'Error fetching channel data: {e}', file=sys.stderr)
         sys.exit(1)
-    except FileNotFoundError:
-        print("Error: yt-dlp not found. Please install yt-dlp (pip install yt-dlp)", file=sys.stderr)
+    except Exception as e:
+        safe_print(f'Unexpected error: {e}', file=sys.stderr)
         sys.exit(1)
 
-def write_csv(videos, output_path: Path):
+def write_csv(videos, output_dir: str, channel_id: str):
     """Write video list to CSV file."""
-    with open(output_path, 'w', newline='', encoding='utf-8') as f:
+    os.makedirs(output_dir, exist_ok=True)
+    # Sanitize channel_id for filename (remove @ and other invalid chars)
+    import re
+    safe_name = re.sub(r'[\\/*?:"<>|]', '_', channel_id)
+    if not safe_name.endswith('.csv'):
+        safe_name += '.csv'
+    csv_path = os.path.join(output_dir, safe_name)
+
+    with open(csv_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=['video id', 'video name', 'video duration'])
         writer.writeheader()
-        for v in videos:
+        for video in videos:
             writer.writerow({
-                'video id': v['id'],
-                'video name': v['title'],
-                'video duration': v['duration']
+                'video id': video['id'],
+                'video name': video['title'],
+                'video duration': video['duration']
             })
-
-def download_video(video_id: str, output_dir: Path):
-    """Download a single video with best quality video and audio."""
-    cmd = [
-        'yt-dlp',
-        f'https://www.youtube.com/watch?v={video_id}',
-        '--format', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-        '--merge-output-format', 'mp4',
-        '--output', str(output_dir / '%(title)s.%(ext)s'),
-        '--restrict-filenames',
-        '--no-playlist',
-        '--no-warnings',
-    ]
-    try:
-        subprocess.run(cmd, check=True, capture_output=True, text=True)
-        print(f"Downloaded video {video_id}")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to download video {video_id}: {e.stderr}", file=sys.stderr)
-        # Continue with other videos
+    safe_print(f'CSV saved to {csv_path}')
+    return csv_path
 
 def main():
-    parser = argparse.ArgumentParser(description='List all videos from a YouTube channel and download them.')
-    parser.add_argument('channel_id', help='YouTube channel ID or handle (e.g., @TsunomakiWatame or UC...)')
-    parser.add_argument('output_dir', help='Directory where CSV and videos will be saved')
-    parser.add_argument('--limit', type=int, help='Limit number of videos to fetch')
-    parser.add_argument('--no-download', action='store_true', help='Skip downloading videos')
+    parser = argparse.ArgumentParser(
+        description='List all videos from a YouTube channel and save as CSV.'
+    )
+    parser.add_argument(
+        'channel_id',
+        help='YouTube channel ID (e.g., @TsunomakiWatame or UC...)'
+    )
+    parser.add_argument(
+        'output_dir',
+        help='Output directory for CSV file'
+    )
     args = parser.parse_args()
 
-    channel_id = args.channel_id
-    output_dir = Path(args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Fetch video list
-    print(f"Fetching video list for channel {channel_id}...")
-    videos = fetch_video_list(channel_id, args.limit)
-    print(f"Found {len(videos)} videos.")
-
-    # Write CSV
-    csv_path = output_dir / f"{channel_id.replace('/', '_')}.csv"
-    write_csv(videos, csv_path)
-    print(f"Video list written to {csv_path}")
-
-    # Download videos if requested
-    if not args.no_download:
-        print("Downloading videos...")
-        for video in videos:
-            download_video(video['id'], output_dir)
-        print("Download completed.")
-    else:
-        print("Skipping download (--no-download flag).")
+    channel_url = construct_channel_url(args.channel_id)
+    safe_print(f'Fetching videos from {channel_url}')
+    videos = get_channel_videos(channel_url)
+    safe_print(f'Found {len(videos)} videos')
+    write_csv(videos, args.output_dir, args.channel_id)
 
 if __name__ == '__main__':
     main()
