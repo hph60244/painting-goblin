@@ -77,9 +77,12 @@ class Config:
         # 讀取 runner 設定
         self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "log")
         self.publisher_count = int(self.config["runner"].get("publisher_count", 1))
-        self.publisher_heartbeat_secs = float(self.config["runner"].get("publisher_heartbeat_secs", 60))
+        self.publisher_heartbeat_sec = float(self.config["runner"].get("publisher_heartbeat_sec", 60))
         self.subscriber_count = int(self.config["runner"].get("subscriber_count", 1))
-        self.subscriber_heartbeat_secs = float(self.config["runner"].get("subscriber_heartbeat_secs", 60))
+        self.subscriber_heartbeat_sec = float(self.config["runner"].get("subscriber_heartbeat_sec", 60))
+        self.monitor_timeout_sec = float(self.config["runner"].get("monitor_timeout_sec", 60))
+        self.monitor_terminate_sec = float(self.config["runner"].get("monitor_terminate_sec", 5))
+        self.monitor_heartbeat_sec = float(self.config["runner"].get("monitor_heartbeat_sec", 5))
 
         # 計算目錄路徑
         root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))
@@ -273,9 +276,9 @@ def publisher(file_path: Path, todo_dir: Path, doing_dir: Path, lock_dir: Path, 
         if move_file_safely(file_path, dest, "[Publisher]"):
             logger.info(f"[Publisher] 移動任務成功: {file_path.name}")
     except Exception as e:
-        logger.error(f"[Publisher] 移動任務發生未預期錯誤: {file_path.name}, {e}")
+        logger.error(f"[Publisher] 移動任務錯誤: {file_path.name}, {e}")
 
-def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber_count: int, timezone: str, publisher_heartbeat_secs: float) -> None:
+def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber_count: int, timezone: str, publisher_heartbeat_sec: float) -> None:
     """
     Publisher worker: 持續從 todo_dir 移動任務到 doing_dir
 
@@ -285,7 +288,7 @@ def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber
         lock_dir: 檔案鎖定目錄
         subscriber_count: 訂閱者數量
         timezone: 時區設定
-        publisher_heartbeat_secs: 心跳間隔秒數（當沒有任務時等待的時間）
+        publisher_heartbeat_sec: 心跳間隔秒數（當沒有任務時等待的時間）
     """
     while True:
         try:
@@ -304,12 +307,12 @@ def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber
             break
         except Exception as e:
             logger.error(f"[PublisherWorker] 發生錯誤: {e}")
-            time.sleep(publisher_heartbeat_secs)
+            time.sleep(publisher_heartbeat_sec)
 
 # ============================================================================
 # Subscriber
 # ============================================================================
-def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Path, done_dir: Path, failed_dir: Path, timezone: str) -> None:
+def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Path, done_dir: Path, failed_dir: Path, timezone: str, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
     """
     執行單個任務
 
@@ -321,37 +324,71 @@ def subscriber(file_path: Path, log_dir: Path, opencode_exe: str, doing_dir: Pat
         done_dir: 已完成任務目錄
         failed_dir: 失敗任務目錄
         timezone: 時區設定
+        monitor_timeout_sec: 任務停滯超時時間（秒）
+        monitor_terminate_sec: 終止等待時間（秒）
+        monitor_heartbeat_sec: 監控檢查間隔（秒）
     """
     logger.info(f"[Subscriber] 開始執行任務: {file_path.name}")
-    log_file = log_dir / f"{file_path.name}.log"
+    log_file_name = f"{file_path.name}.log"
+    log_file = log_dir / log_file_name
 
     # 開啟日誌檔案以附加模式寫入，確保所有輸出都被記錄
     with open(log_file, "a", encoding="utf-8") as f:
         try:
             # 執行 OpenCode 命令來處理任務
-            result = subprocess.run(
-                [opencode_exe, "run", "Execute this task. Only read the files specifically mentioned.", "--file", str(file_path)],
-                check=True, cwd=doing_dir, stdout=f, stderr=f,
+            process = subprocess.Popen(
+                [opencode_exe, "run", "Execute this task.", "--file", str(file_path)],
+                cwd=doing_dir, stdout=f, stderr=f,
             )
 
-            # 任務成功執行，移動到完成目錄並添加結束時間戳記
-            dest = done_dir / add_timestamp(file_path, "E", timezone)
-            logger.info(f"[Subscriber] 執行任務成功: {file_path.name}")
-            move_file_safely(file_path, dest, "[Subscriber]")
+            # 監控 log_file 更新時間的執行緒
+            def monitor_log_file():
+                logger.info(f"[Monitor] 監測執行任務: {log_file_name}")
+                last_modified_time = time.time()
+                while process.poll() is None:  # 當程序還在執行時
+                    try:
+                        current_modified_time = os.path.getmtime(log_file)
+                        if current_modified_time > last_modified_time:
+                            last_modified_time = current_modified_time
+                        elif time.time() - last_modified_time > monitor_timeout_sec:  # 超過設定時間沒更新
+                            logger.warning(f"[Monitor] 終止停滯任務: {file_path.name}")
+                            process.terminate()
+                            try:
+                                process.wait(timeout=monitor_terminate_sec)  # 等待設定時間讓程序終止
+                            except subprocess.TimeoutExpired:
+                                process.kill()  # 如果設定時間後還沒終止，強制殺死
+                            break
+                    except (OSError, FileNotFoundError):
+                        # 如果無法取得檔案修改時間，繼續監控
+                        pass
+                    time.sleep(monitor_heartbeat_sec)  # 每設定間隔檢查一次
 
-        except subprocess.CalledProcessError as e:
-            # OpenCode 命令執行失敗，移動到失敗目錄
-            logger.error(f"[Subscriber] 執行任務失敗: {file_path.name}, {e}")
-            dest = failed_dir / file_path.name
-            move_file_safely(file_path, dest, "[Subscriber]")
+            # 啟動監控執行緒
+            monitor_thread = Thread(target=monitor_log_file, daemon=True)
+            monitor_thread.start()
+
+            # 等待程序完成
+            process.wait()
+
+            # 檢查程序退出碼
+            if process.returncode == 0:
+                # 任務成功執行，移動到完成目錄並添加結束時間戳記
+                logger.info(f"[Subscriber] 執行任務成功: {file_path.name}")
+                dest = done_dir / add_timestamp(file_path, "E", timezone)
+                move_file_safely(file_path, dest, "[Subscriber]")
+            else:
+                # 命令執行失敗，移動到失敗目錄
+                logger.error(f"[Subscriber] 執行任務失敗: {file_path.name}, 退出碼: {process.returncode}")
+                dest = done_dir / add_timestamp(file_path, "E", timezone)
+                move_file_safely(file_path, dest, "[Subscriber]")
 
         except Exception as e:
             # 其他未預期的錯誤，移動到失敗目錄
-            logger.error(f"[Subscriber] 執行任務發生未預期錯誤: {file_path.name}, {e}")
-            dest = failed_dir / file_path.name
+            logger.error(f"[Subscriber] 執行任務錯誤: {file_path.name}, {e}")
+            dest = done_dir / add_timestamp(file_path, "E", timezone)
             move_file_safely(file_path, dest, "[Subscriber]")
 
-def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_exe: str, done_dir: Path, failed_dir: Path, timezone: str, subscriber_heartbeat_secs: float) -> None:
+def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_exe: str, done_dir: Path, failed_dir: Path, timezone: str, subscriber_heartbeat_sec: float, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
     """
     Subscriber worker: 持續從 doing_dir 取得並執行任務
 
@@ -363,7 +400,10 @@ def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_e
         done_dir: 已完成任務目錄
         failed_dir: 失敗任務目錄
         timezone: 時區設定
-        subscriber_heartbeat_secs: 心跳間隔秒數（當沒有任務時等待的時間）
+        subscriber_heartbeat_sec: 心跳間隔秒數（當沒有任務時等待的時間）
+        monitor_timeout_sec: 任務停滯超時時間（秒）
+        monitor_terminate_sec: 終止等待時間（秒）
+        monitor_heartbeat_sec: 監控檢查間隔（秒）
     """
     while True:
         try:
@@ -372,18 +412,18 @@ def subscriber_worker(doing_dir: Path, lock_dir: Path, log_dir: Path, opencode_e
                 lock_file = build_lock_file_path(task_file, lock_dir)
                 try:
                     with FileLock(str(lock_file), timeout=0):
-                        subscriber(task_file, log_dir, opencode_exe, doing_dir, done_dir, failed_dir, timezone)
+                        subscriber(task_file, log_dir, opencode_exe, doing_dir, done_dir, failed_dir, timezone, monitor_timeout_sec, monitor_terminate_sec, monitor_heartbeat_sec)
                 except Timeout:
                     logger.debug(f"[SubscriberWorker] 檔案鎖定超時: {lock_file}")
             else:
                 logger.debug("[SubscriberWorker] doing_dir 中沒有待執行的任務")
-            time.sleep(subscriber_heartbeat_secs)
+            time.sleep(subscriber_heartbeat_sec)
         except KeyboardInterrupt:
             logger.info("[SubscriberWorker] 收到中斷訊號，正在關閉...")
             break
         except Exception as e:
             logger.error(f"[SubscriberWorker] 發生錯誤: {e}")
-            time.sleep(subscriber_heartbeat_secs)
+            time.sleep(subscriber_heartbeat_sec)
 
 # ============================================================================
 # 主程式
@@ -410,7 +450,7 @@ def runner(config: Config) -> None:
             target=publisher_worker,
             args=(
                 config.todo_dir, config.doing_dir, config.lock_dir,
-                config.subscriber_count, config.timezone, config.publisher_heartbeat_secs
+                config.subscriber_count, config.timezone, config.publisher_heartbeat_sec
             ),
             daemon=True,
             name=f"PublisherWorker{i}"
@@ -426,7 +466,8 @@ def runner(config: Config) -> None:
             args=(
                 config.doing_dir, config.lock_dir, config.log_dir,
                 config.opencode_exe, config.done_dir, config.failed_dir,
-                config.timezone, config.subscriber_heartbeat_secs
+                config.timezone, config.subscriber_heartbeat_sec,
+                config.monitor_timeout_sec, config.monitor_terminate_sec, config.monitor_heartbeat_sec
             ),
             daemon=True,
             name=f"SubscriberWorker{i}"

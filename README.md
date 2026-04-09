@@ -17,7 +17,6 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 - [ ] https://skills.sh/?q=marp
 - [ ] move `Only read the files specifically mentioned.` into config
 - [ ] Tool return error code / task only specify args without example
-- [ ] Watch log for 1min no change as fail
 - [ ] list-yt-ch-video: add limit param, default no download
 
 ## 系統架構
@@ -132,9 +131,12 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 #### [runner] 區段
 - `log_dir_name`: runner 系統日誌目錄名稱（預設：`log`）
 - `publisher_count`: Publisher worker 數量（預設：`1`）
-- `publisher_heartbeat_secs`: Publisher 檢查新任務的間隔時間（秒）（預設：`3`）
+- `publisher_heartbeat_sec`: Publisher 檢查新任務的間隔時間（秒）（預設：`3`）
 - `subscriber_count`: Subscriber worker 數量（同時處理的任務數量）（預設：`3`）
-- `subscriber_heartbeat_secs`: Subscriber 檢查新任務的間隔時間（秒）（預設：`3`）
+- `subscriber_heartbeat_sec`: Subscriber 檢查新任務的間隔時間（秒）（預設：`3`）
+- `monitor_timeout_sec`: 任務停滯超時時間（秒），當任務日誌超過此時間沒有更新時，系統會認為任務停滯並終止（預設：`60`）
+- `monitor_terminate_sec`: 終止等待時間（秒），當終止任務時等待程序正常結束的時間，超過此時間會強制殺死程序（預設：`5`）
+- `monitor_heartbeat_sec`: 監控檢查間隔（秒），監控執行緒檢查日誌檔案更新時間的間隔（預設：`5`）
 
 #### [scheduler] 區段
 - `log_dir_name`: scheduler 系統日誌目錄名稱（預設：`log`）
@@ -256,7 +258,7 @@ ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
 
 1. **任務提交**: 使用者將 `.md` 任務檔案放入 `todo/` 目錄
 2. **Publisher 處理**: Publisher worker 檢查 `todo/` 目錄，將最舊的未鎖定任務移動到 `doing/` 目錄，並添加開始時間戳記（格式：`檔案名.BYYYYMMDDHHMMSS.md`）
-3. **Subscriber 處理**: Subscriber worker 檢查 `doing/` 目錄，取得任務並使用 OpenCode 執行
+3. **Subscriber 處理**: Subscriber worker 檢查 `doing/` 目錄，取得任務並使用 OpenCode 執行。系統會監控任務執行狀態，如果任務日誌超過設定的時間（`monitor_timeout_sec`）沒有更新，系統會認為任務停滯並終止執行。
 4. **結果處理**:
    - 成功：任務檔案移動到 `done/` 目錄，並添加結束時間戳記（格式：`檔案名.EYYYYMMDDHHMMSS.md`）
    - 失敗：任務檔案移動到 `failed/` 目錄，保留原始檔名
