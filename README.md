@@ -117,7 +117,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 配置檔案包含四個主要區段：
 
 #### [task] 區段
-- `base_dir_name`: 基礎任務目錄名稱（預設：`task`）
+- `base_dir_name`: 基礎任務目錄名稱（預設：`tasks`）
 - `todo_dir_name`: 待處理任務目錄名稱（預設：`todo`）
 - `doing_dir_name`: 處理中任務目錄名稱（預設：`doing`）
 - `done_dir_name`: 已完成任務目錄名稱（預設：`done`）
@@ -128,7 +128,7 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 - `opencode_exe`: OpenCode 執行檔的完整路徑（**必須根據您的安裝位置調整**）
 
 #### [runner] 區段
-- `log_dir_name`: runner 系統日誌目錄名稱（預設：`log`）
+- `log_dir_name`: runner 系統日誌目錄名稱（預設：`logs`）
 - `publisher_count`: Publisher worker 數量（預設：`1`）
 - `publisher_heartbeat_sec`: Publisher 檢查新任務的間隔時間（秒）（預設：`3`）
 - `subscriber_count`: Subscriber worker 數量（同時處理的任務數量）（預設：`3`）
@@ -138,8 +138,8 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 - `monitor_heartbeat_sec`: 監控檢查間隔（秒），監控執行緒檢查日誌檔案更新時間的間隔（預設：`5`）
 
 #### [scheduler] 區段
-- `log_dir_name`: scheduler 系統日誌目錄名稱（預設：`log`）
-- `job_dir_name`: 範例任務目錄名稱（預設：`job`）
+- `log_dir_name`: scheduler 系統日誌目錄名稱（預設：`logs`）
+- `job_dir_name`: 範例任務目錄名稱（預設：`jobs`）
 
 #### [job] 區段
 - 定義排程任務，格式為 `任務名稱 = cron表達式`

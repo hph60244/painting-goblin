@@ -208,5 +208,5 @@ __marimo__/
 
 # custom
 .tmp/
-log/
-task/
+logs/
+tasks/

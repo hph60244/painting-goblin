@@ -25,6 +25,8 @@ description: Create a Python script that solves the problem described below.
 Under $PAINTING_GOBLIN_DIR/tools/<name>/ :
 - A <name>.py file
 - A requirements.txt file if needed
+
+Under $PAINTING_GOBLIN_DIR/skills/<name>/ :
 - Create a skill by $PAINTING_GOBLIN_DIR/skills/make-skill-template
 
 # Validation

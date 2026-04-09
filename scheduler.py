@@ -49,13 +49,13 @@ class Config:
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
         # 讀取 task 設定
-        self.base_dir_name = self.config["task"].get("base_dir_name", "task")
+        self.base_dir_name = self.config["task"].get("base_dir_name", "tasks")
         self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
         self.timezone = self.config["task"].get("timezone", "Asia/Taipei")
 
         # 讀取 scheduler 設定
-        self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "log")
-        self.scheduler_job_dir_name = self.config["scheduler"].get("job_dir_name", "job")
+        self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "logs")
+        self.scheduler_job_dir_name = self.config["scheduler"].get("job_dir_name", "jobs")
 
         # 讀取 job 設定
         self.jobs: Dict[str, str] = {}

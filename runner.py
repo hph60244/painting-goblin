@@ -60,7 +60,7 @@ class Config:
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
         # 讀取 task 設定
-        self.base_dir_name = self.config["task"].get("base_dir_name", "task")
+        self.base_dir_name = self.config["task"].get("base_dir_name", "tasks")
         self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
         self.doing_dir_name = self.config["task"].get("doing_dir_name", "doing")
         self.done_dir_name = self.config["task"].get("done_dir_name", "done")
@@ -75,7 +75,7 @@ class Config:
             raise FileNotFoundError(f"OpenCode executable not found: {self.opencode_exe}")
 
         # 讀取 runner 設定
-        self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "log")
+        self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "logs")
         self.publisher_count = int(self.config["runner"].get("publisher_count", 1))
         self.publisher_heartbeat_sec = float(self.config["runner"].get("publisher_heartbeat_sec", 60))
         self.subscriber_count = int(self.config["runner"].get("subscriber_count", 1))
