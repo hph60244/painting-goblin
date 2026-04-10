@@ -51,11 +51,11 @@ class Config:
         # 讀取 task 設定
         self.base_dir_name = self.config["task"].get("base_dir_name", "tasks")
         self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
-        self.timezone = self.config["task"].get("timezone", "Asia/Taipei")
 
         # 讀取 scheduler 設定
         self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "logs")
         self.scheduler_job_dir_name = self.config["scheduler"].get("job_dir_name", "jobs")
+        self.scheduler_timezone = self.config["scheduler"].get("timezone", "Asia/Taipei")
 
         # 讀取 job 設定
         self.jobs: Dict[str, str] = {}
@@ -98,7 +98,7 @@ class Config:
         global logger
         logger = logging.getLogger(__name__)
 
-        logger.info(f"配置載入完成，時區: {self.timezone}")
+        logger.info(f"配置載入完成，時區: {self.scheduler_timezone}")
         logger.info(f"找到 {len(self.jobs)} 個排程任務")
         for job_name, cron_expr in self.jobs.items():
             logger.info(f"  - {job_name}: {cron_expr}")
@@ -174,7 +174,7 @@ def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
 
     try:
         # 建立排程器
-        scheduler = BackgroundScheduler(timezone=config.timezone)
+        scheduler = BackgroundScheduler(timezone=config.scheduler_timezone)
 
         # 為每個 job 設定 cron 觸發器
         for task_name, cron_expr in config.jobs.items():
@@ -195,7 +195,7 @@ def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
                 trigger = CronTrigger(
                     minute=minute, hour=hour, day=day,
                     month=month, day_of_week=day_of_week,
-                    timezone=config.timezone
+                    timezone=config.scheduler_timezone
                 )
 
                 # 添加 job 到排程器

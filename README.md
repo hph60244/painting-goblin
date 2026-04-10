@@ -10,6 +10,9 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 以下是系統的未來發展方向：
 
+- [ ] env to message
+- [ ] batch job
+- [ ] skill review job
 - [ ] **make report skill** - 開發學習技能功能，讓系統能夠處理研究任務
 - [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
@@ -19,10 +22,10 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 ## 系統架構
 
 系統包含兩種角色：
-- **Publisher**: 從待處理目錄 (todo) 移動任務到處理中目錄 (doing)
-- **Subscriber**: 從處理中目錄執行任務，並根據結果移動到完成或失敗目錄
+- **Publisher**: 從待處理目錄 (todo) 移動任務到處理中目錄 (doing)，使用 UUID 機制避免檔案名稱衝突
+- **Subscriber**: 從處理中目錄執行任務，並根據結果移動到完成或失敗目錄，包含任務執行監控機制
 
-系統使用檔案鎖定機制來確保任務不會被多個 worker 同時處理。
+系統使用檔案鎖定機制來確保任務不會被多個 worker 同時處理，並包含任務執行監控功能，可自動終止停滯的任務。
 
 ## 安裝與設定
 
@@ -120,22 +123,22 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 - `doing_dir_name`: 處理中任務目錄名稱（預設：`doing`）
 - `done_dir_name`: 已完成任務目錄名稱（預設：`done`）
 - `failed_dir_name`: 失敗任務目錄名稱（預設：`failed`）
-- `log_dir_name`: 任務執行日誌目錄名稱（預設：`.log`）
-- `lock_dir_name`: 檔案鎖定目錄名稱（預設：`.lock`）
-- `timezone`: 系統時區設定（預設：`Asia/Taipei`）
+- `log_dir_name`: 任務執行日誌目錄名稱（預設：`.logs`）
+- `lock_dir_name`: 檔案鎖定目錄名稱（預設：`.locks`）
 - `opencode_exe`: OpenCode 執行檔的完整路徑（**必須根據您的安裝位置調整**）
 
 #### [runner] 區段
 - `log_dir_name`: runner 系統日誌目錄名稱（預設：`logs`）
 - `publisher_count`: Publisher worker 數量（預設：`1`）
-- `publisher_heartbeat_sec`: Publisher 檢查新任務的間隔時間（秒）（預設：`3`）
-- `subscriber_count`: Subscriber worker 數量（同時處理的任務數量）（預設：`3`）
-- `subscriber_heartbeat_sec`: Subscriber 檢查新任務的間隔時間（秒）（預設：`3`）
+- `publisher_heartbeat_sec`: Publisher 檢查新任務的間隔時間（秒）（預設：`60`）
+- `subscriber_count`: Subscriber worker 數量（同時處理的任務數量）（預設：`1`）
+- `subscriber_heartbeat_sec`: Subscriber 檢查新任務的間隔時間（秒）（預設：`60`）
 - `monitor_timeout_sec`: 任務停滯超時時間（秒），當任務日誌超過此時間沒有更新時，系統會認為任務停滯並終止（預設：`60`）
 - `monitor_terminate_sec`: 終止等待時間（秒），當終止任務時等待程序正常結束的時間，超過此時間會強制殺死程序（預設：`5`）
 - `monitor_heartbeat_sec`: 監控檢查間隔（秒），監控執行緒檢查日誌檔案更新時間的間隔（預設：`5`）
 
 #### [scheduler] 區段
+- `timezone`: 系統時區設定（預設：`Asia/Taipei`）
 - `log_dir_name`: scheduler 系統日誌目錄名稱（預設：`logs`）
 - `job_dir_name`: 範例任務目錄名稱（預設：`jobs`）
 
@@ -150,15 +153,15 @@ export PAINTING_GOBLIN_DIR=/path/to/painting-goblin
 
 ```
 painting-goblin/
-├── task/           # 基礎任務目錄
+├── tasks/          # 基礎任務目錄
 │   ├── todo/       # 待處理任務
 │   ├── doing/      # 處理中任務
 │   ├── done/       # 已完成任務
 │   ├── failed/     # 失敗任務
-│   ├── .log/       # 任務執行日誌
-│   └── .lock/      # 檔案鎖定目錄
-├── log/            # 系統執行日誌
-├── job/        # 範例任務目錄
+│   ├── .logs/      # 任務執行日誌目錄
+│   └── .locks/     # 檔案鎖定目錄
+├── logs/           # 系統執行日誌目錄
+├── jobs/           # 範例任務目錄
 │   ├── print-42.md
 │   ├── ls-tasks.md
 │   └── ...
@@ -212,15 +215,15 @@ python scheduler.py my_config.ini
 有兩種方式可以新增任務：
 
 #### 1. 手動新增
-將任務檔案（副檔名為 `.md`）放入 `task/todo/` 目錄中。系統會自動偵測並處理。
+將任務檔案（副檔名為 `.md`）放入 `tasks/todo/` 目錄中。系統會自動偵測並處理。
 
-任務檔案範例 (`job/print-42.md`)：
+任務檔案範例 (`jobs/print-42.md`)：
 ```markdown
 請寫一個 Python 程式，印出數字 42。
 ```
 
 #### 2. 排程新增
-在 `config.ini` 的 `[job]` 區段設定排程任務，系統會自動在指定時間將 `job/` 目錄中的任務檔案複製到 `task/todo/` 目錄。
+在 `config.ini` 的 `[job]` 區段設定排程任務，系統會自動在指定時間將 `jobs/` 目錄中的任務檔案複製到 `tasks/todo/` 目錄。
 
 範例配置：
 ```ini
@@ -235,17 +238,17 @@ ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
 
 #### runner.py 日誌
 - 控制台輸出
-- 檔案：`log/runner.log`
-- 包含：任務移動狀態、任務執行結果、系統錯誤訊息
+- 檔案：`logs/runner.log`
+- 包含：任務移動狀態、任務執行結果、系統錯誤訊息、Publisher/Subscriber 活動
 
 #### scheduler.py 日誌
 - 控制台輸出
-- 檔案：`log/scheduler.log`
-- 包含：排程任務執行狀態、檔案複製結果、系統錯誤訊息
+- 檔案：`logs/scheduler.log`
+- 包含：排程任務執行狀態、檔案複製結果、系統錯誤訊息、cron 觸發記錄
 
 #### 任務執行日誌
-- 檔案：`task/.log/任務檔案名.log`
-- 包含：OpenCode 執行輸出、錯誤訊息
+- 檔案：`tasks/.logs/任務檔案名.log`
+- 包含：OpenCode 執行輸出、錯誤訊息、任務執行結果
 
 ### 停止系統
 
@@ -253,20 +256,21 @@ ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
 
 ## 任務處理流程
 
-1. **任務提交**: 使用者將 `.md` 任務檔案放入 `todo/` 目錄
-2. **Publisher 處理**: Publisher worker 檢查 `todo/` 目錄，將最舊的未鎖定任務移動到 `doing/` 目錄，並添加開始時間戳記（格式：`檔案名.BYYYYMMDDHHMMSS.md`）
-3. **Subscriber 處理**: Subscriber worker 檢查 `doing/` 目錄，取得任務並使用 OpenCode 執行。系統會監控任務執行狀態，如果任務日誌超過設定的時間（`monitor_timeout_sec`）沒有更新，系統會認為任務停滯並終止執行。
+1. **任務提交**: 使用者將 `.md` 任務檔案放入 `tasks/todo/` 目錄
+2. **Publisher 處理**: Publisher worker 檢查 `tasks/todo/` 目錄，將最舊的未鎖定任務移動到 `tasks/doing/` 目錄。系統會移除檔案名稱中可能存在的 UUID，然後添加新的 UUID（22個字元）以避免檔案名稱衝突
+3. **Subscriber 處理**: Subscriber worker 檢查 `tasks/doing/` 目錄，取得任務並使用 OpenCode 執行。系統會監控任務執行狀態，如果任務日誌超過設定的時間（`monitor_timeout_sec`）沒有更新，系統會認為任務停滯並終止執行。
 4. **結果處理**:
-   - 成功：任務檔案移動到 `done/` 目錄，並添加結束時間戳記（格式：`檔案名.EYYYYMMDDHHMMSS.md`）
-   - 失敗：任務檔案移動到 `failed/` 目錄，保留原始檔名
-5. **日誌記錄**: 所有任務執行日誌儲存在 `.log/` 目錄中，檔名為 `任務檔案名.log`
+   - 成功：任務檔案移動到 `tasks/done/` 目錄，保留帶有 UUID 的檔案名稱
+   - 失敗：任務檔案移動到 `tasks/failed/` 目錄，保留帶有 UUID 的檔案名稱
+5. **日誌記錄**: 所有任務執行日誌儲存在 `tasks/.logs/` 目錄中，檔名為 `任務檔案名.log`
 
 ## 檔案鎖定機制
 
 為避免多個 worker 同時處理同一個任務，系統使用檔案鎖定機制：
-- 每個任務檔案對應一個 `.lock` 檔案在 `.lock/` 目錄中
-- worker 在處理任務前會嘗試取得鎖定
+- 每個任務檔案對應一個 `.lock` 檔案在 `tasks/.locks/` 目錄中
+- worker 在處理任務前會嘗試取得鎖定（非阻塞模式）
 - 鎖定失敗表示任務正在被其他 worker 處理
+- 鎖定檔案名稱為 `任務檔案名.lock`
 
 ## 疑難排解
 
@@ -286,19 +290,19 @@ ls-tasks = 0 20 * * 1  # 每週一 20:30 執行
 
 4. **任務未處理**
    - 檢查任務檔案副檔名是否為 `.md`
-   - 確認檔案在正確的目錄中（`task/todo/`）
+   - 確認檔案在正確的目錄中（`tasks/todo/`）
    - 檢查系統日誌是否有錯誤訊息
 
 5. **排程任務未執行**
    - 檢查 `config.ini` 中的 `[job]` 區段設定是否正確
    - 確認 cron 表達式格式正確（分 時 日 月 星期）
-   - 檢查 `job` 目錄中是否有對應的任務檔案
-   - 查看 `log/scheduler.log` 是否有錯誤訊息
+   - 檢查 `jobs` 目錄中是否有對應的任務檔案
+   - 查看 `logs/scheduler.log` 是否有錯誤訊息
 
 ### 日誌位置
 
 系統提供多種日誌檔案，用於監控和除錯：
 
-- **log/runner.log**: `runner.py`日誌，包含任務移動狀態、Publisher/Subscriber 活動、系統錯誤
-- **log/scheduler.log**: `scheduler.py`日誌，包含排程任務執行狀態、檔案複製結果、cron 觸發記錄
-- **task/.log/任務檔案名.log**: 包含 OpenCode 執行輸出、任務執行結果、錯誤訊息
+- **logs/runner.log**: `runner.py`日誌，包含任務移動狀態、Publisher/Subscriber 活動、系統錯誤
+- **logs/scheduler.log**: `scheduler.py`日誌，包含排程任務執行狀態、檔案複製結果、cron 觸發記錄
+- **tasks/.logs/任務檔案名.log**: 包含 OpenCode 執行輸出、任務執行結果、錯誤訊息
