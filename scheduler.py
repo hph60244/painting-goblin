@@ -48,9 +48,10 @@ class Config:
             if not self.config.has_section(section):
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
-        # 讀取 task 設定
-        self.base_dir_name = self.config["task"].get("base_dir_name", "tasks")
-        self.todo_dir_name = self.config["task"].get("todo_dir_name", "todo")
+        # 讀取 dir 設定
+        root_dir = Path(self.config["dir"]["root_dir_path"])
+        self.base_dir_name = self.config["dir"].get("base_dir_name", "tasks")
+        self.todo_dir_name = self.config["dir"].get("todo_dir_name", "todo")
 
         # 讀取 scheduler 設定
         self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "logs")
@@ -64,13 +65,12 @@ class Config:
                 self.jobs[key] = value.strip()
 
         # 計算目錄路徑
-        root_dir = Path(os.getenv("PAINTING_GOBLIN_DIR"))
         self.base_dir = root_dir / self.base_dir_name
         self.todo_dir = self.base_dir / self.todo_dir_name
         self.scheduler_log_dir = root_dir / self.scheduler_log_dir_name
 
         # job 資料夾路徑（相對於專案根目錄）
-        self.scheduler_job_dir = root_dir / self.scheduler_job_dir_name
+        self.scheduler_job_dir = root_dir_path / self.scheduler_job_dir_name
 
         # 確保所有必要的資料夾都存在
         for d in [self.todo_dir, self.scheduler_log_dir]:
