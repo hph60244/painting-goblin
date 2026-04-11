@@ -104,7 +104,7 @@ class Config:
                     job_setting = JobSetting(name=job_name, schedule=schedule, params=params)
                     self.job_settings.append(job_setting)
                 else:
-                    logger.warning(f"任務區段 '{section_name}' 缺少 schedule 設定，將跳過此任務")
+                    logger.warning(f"[Scheduler] 任務區段 '{section_name}' 缺少 schedule 設定，將跳過此任務")
 
         # 計算目錄路徑
         self.base_dir = self.root_dir / self.base_dir_name
@@ -138,8 +138,8 @@ class Config:
         # 重新獲取 logger 以確保使用新的配置
         logger = logging.getLogger(__name__)
 
-        logger.info(f"配置載入完成，時區: {self.scheduler_timezone}")
-        logger.info(f"找到 {len(self.job_settings)} 個排程任務")
+        logger.info(f"[Scheduler] 配置載入完成，時區: {self.scheduler_timezone}")
+        logger.info(f"[Scheduler] 找到 {len(self.job_settings)} 個排程任務")
         for job_setting in self.job_settings:
             logger.info(f"  - {job_setting.name}: {job_setting.schedule}")
             if job_setting.params:
@@ -192,7 +192,8 @@ def copy_task_to_todo(task_name: str, config: Config, params: List[Tuple[str, Li
     如果 params 不為空，則為每個參數組合創建一個檔案副本，
     檔案名稱格式為: taskname_參數1-值1_參數2-值2.md
 
-    遇到同名檔案時跳過複製，返回 True（不算失敗）
+    先嘗試複製檔案，如果複製失敗，則檢查目標檔案是否存在，
+    如果存在則視為成功（同名檔案已存在於目標位置）。
 
     Args:
         task_name: 任務名稱（不含 .md 副檔名）
@@ -200,13 +201,13 @@ def copy_task_to_todo(task_name: str, config: Config, params: List[Tuple[str, Li
         params: 參數列表，每個元素是 (參數名稱, 參數值列表)
 
     Returns:
-        bool: 複製是否成功（遇到同名檔案跳過不算失敗）
+        bool: 複製是否成功（已有檔案存在於目標位置也視為成功）
     """
     try:
         # 檢查來源檔案是否存在
         source_file = config.scheduler_job_dir / f"{task_name}.md"
         if not source_file.exists():
-            logger.error(f"任務檔案不存在: {source_file}")
+            logger.error(f"[Scheduler] 任務檔案不存在: {source_file}")
             return False
 
         # 生成參數組合
@@ -223,30 +224,28 @@ def copy_task_to_todo(task_name: str, config: Config, params: List[Tuple[str, Li
             dest_filename = f"{task_name}{suffix}.md"
             dest_file = config.todo_dir / dest_filename
 
-            # 檢查目標檔案是否已存在
-            if dest_file.exists():
-                logger.debug(f"目標檔案已存在，跳過複製: {dest_filename}")
-                continue
-
-            # 複製檔案
+            # 嘗試複製檔案
             try:
                 shutil.copy2(source_file, dest_file)
-                logger.info(f"成功複製任務檔案: {dest_filename}")
+                logger.debug(f"[Scheduler] 成功複製任務檔案: {dest_filename}")
                 copied_count += 1
-            except (FileNotFoundError, PermissionError) as e:
-                logger.error(f"檔案操作錯誤: {e}")
-                success = False
             except Exception as e:
-                logger.error(f"複製任務檔案時發生錯誤: {e}")
-                success = False
+                # 複製失敗，檢查目標檔案是否已存在
+                if dest_file.exists():
+                    logger.debug(f"[Scheduler] 複製失敗但目標檔案已存在，視為成功: {dest_filename}")
+                    # 檔案已存在，視為成功
+                    copied_count += 1
+                else:
+                    logger.error(f"[Scheduler] 複製任務檔案時發生錯誤: {e}")
+                    success = False
 
         if copied_count > 0:
-            logger.info(f"總共複製了 {copied_count} 個檔案變體")
+            logger.info(f"[Scheduler] 總共處理了 {copied_count} 個檔案變體")
 
         return success
 
     except Exception as e:
-        logger.error(f"複製任務檔案時發生錯誤: {e}")
+        logger.error(f"[Scheduler] 複製任務檔案時發生錯誤: {e}")
         return False
 
 def create_job_function(job_setting: JobSetting, config: Config):
@@ -265,11 +264,11 @@ def create_job_function(job_setting: JobSetting, config: Config):
         """實際執行的任務函數（閉包）"""
         task_name = job_setting.name
         params = job_setting.params
-        logger.info(f"執行排程任務: {task_name}")
+        logger.info(f"[Job] 執行排程任務: {task_name}")
         if copy_task_to_todo(task_name, config, params):
-            logger.info(f"任務 {task_name} 執行成功")
+            logger.info(f"[Job] 任務 {task_name} 執行成功")
         else:
-            logger.error(f"任務 {task_name} 執行失敗")
+            logger.error(f"[Job] 任務 {task_name} 執行失敗")
 
     return job_function
 
@@ -287,7 +286,7 @@ def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
         BackgroundScheduler: 設定好的排程器，如果設定失敗則返回 None
     """
     if not config.job_settings:
-        logger.warning("沒有找到任何排程任務，排程器將不會啟動")
+        logger.warning("[Scheduler] 沒有找到任何排程任務，排程器將不會啟動")
         return None
 
     try:
@@ -303,7 +302,7 @@ def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
                 # 解析 cron 表達式（格式: "分 時 日 月 星期"）
                 parts = cron_expr.split()
                 if len(parts) != 5:
-                    logger.error(f"無效的 cron 表達式: {cron_expr}")
+                    logger.error(f"[Scheduler] 無效的 cron 表達式: {cron_expr}")
                     continue
 
                 minute, hour, day, month, day_of_week = parts
@@ -324,17 +323,17 @@ def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
                     replace_existing=True  # 如果已存在相同 ID 的任務，則替換
                 )
 
-                logger.info(f"已設定排程任務: {task_name} ({cron_expr})")
+                logger.info(f"[Scheduler] 已設定排程任務: {task_name} ({cron_expr})")
 
             except ValueError as e:
-                logger.error(f"設定任務 {task_name} 時發生錯誤: {e}")
+                logger.error(f"[Scheduler] 設定任務 {task_name} 時發生錯誤: {e}")
             except Exception as e:
-                logger.error(f"設定任務 {task_name} 時發生未預期錯誤: {e}")
+                logger.error(f"[Scheduler] 設定任務 {task_name} 時發生未預期錯誤: {e}")
 
         return scheduler
 
     except Exception as e:
-        logger.error(f"設定排程器時發生錯誤: {e}")
+        logger.error(f"[Scheduler] 設定排程器時發生錯誤: {e}")
         return None
 
 # ============================================================================
