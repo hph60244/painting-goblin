@@ -108,7 +108,7 @@ Example: `weekly_report.B20241215143045.md` means the task started processing at
 ### Common Issues and Solutions
 
 **Issue: Task not being processed**
-- Check if publisher is running: `python runner.py config.ini`
+- Check if publisher is running: `python executor.py config.ini`
 - Verify task file is in correct directory: `$PAINTING_GOBLIN_DIR\tasks\todo\`
 - Check file permissions: Ensure system can read/write files
 
@@ -125,13 +125,13 @@ Example: `weekly_report.B20241215143045.md` means the task started processing at
 ### System Logs
 
 Logs are stored in:
-- **Runner logs**: `$PAINTING_GOBLIN_DIR\log\runner.log`
+- **Executor logs**: `$PAINTING_GOBLIN_DIR\log\executor.log`
 - **Task execution logs**: `$PAINTING_GOBLIN_DIR\tasks\.log\`
 
 Check logs for detailed error information:
 ```bash
-# View recent runner activity
-tail -f "$PAINTING_GOBLIN_DIR\log\runner.log"
+# View recent executor activity
+tail -f "$PAINTING_GOBLIN_DIR\log\executor.log"
 
 # View specific task execution log
 type "$PAINTING_GOBLIN_DIR\tasks\.log\task_name.md.log"
@@ -140,11 +140,11 @@ type "$PAINTING_GOBLIN_DIR\tasks\.log\task_name.md.log"
 ## Getting Help
 
 If you encounter issues:
-1. Check system logs: `$PAINTING_GOBLIN_DIR\log\runner.log`
+1. Check system logs: `$PAINTING_GOBLIN_DIR\log\executor.log`
 2. Verify configuration: `config.ini`
 3. Ensure OpenCode is installed and accessible
 4. Check file system permissions
 
-For persistent issues, review the runner.py source code or consult system documentation.
+For persistent issues, review the executor.py source code or consult system documentation.
 
 Remember: The painting-goblin system processes tasks in order of modification time (oldest first) and supports parallel processing based on subscriber count configuration.

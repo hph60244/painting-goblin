@@ -1,5 +1,5 @@
 """
-任務處理系統 - Runner
+任務處理系統 - Executor
 
 基於檔案系統的任務處理系統，包含 Publisher 和 Subscriber 兩種角色：
 - Publisher: 從待處理目錄移動任務到處理中目錄
@@ -53,7 +53,7 @@ class Config:
         self.config.read(config_path)
 
         # 驗證必要的區段
-        required_sections = ["dir", "runner"]
+        required_sections = ["dir", "executor"]
         for section in required_sections:
             if not self.config.has_section(section):
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
@@ -69,15 +69,15 @@ class Config:
         self.lock_dir_name = self.config["dir"].get("lock_dir_name", ".lock")
 
         # 讀取執行器相關設定
-        self.runner_log_dir_name = self.config["runner"].get("log_dir_name", "logs")
-        self.publisher_count = int(self.config["runner"].get("publisher_count", 1))
-        self.publisher_heartbeat_sec = float(self.config["runner"].get("publisher_heartbeat_sec", 60))
-        self.subscriber_count = int(self.config["runner"].get("subscriber_count", 1))
-        self.subscriber_heartbeat_sec = float(self.config["runner"].get("subscriber_heartbeat_sec", 60))
-        self.monitor_timeout_sec = float(self.config["runner"].get("monitor_timeout_sec", 60))
-        self.monitor_terminate_sec = float(self.config["runner"].get("monitor_terminate_sec", 5))
-        self.monitor_heartbeat_sec = float(self.config["runner"].get("monitor_heartbeat_sec", 5))
-        self.opencode_exe_path = self.config["runner"]["opencode_exe_path"]
+        self.executor_log_dir_name = self.config["executor"].get("log_dir_name", "logs")
+        self.publisher_count = int(self.config["executor"].get("publisher_count", 1))
+        self.publisher_heartbeat_sec = float(self.config["executor"].get("publisher_heartbeat_sec", 60))
+        self.subscriber_count = int(self.config["executor"].get("subscriber_count", 1))
+        self.subscriber_heartbeat_sec = float(self.config["executor"].get("subscriber_heartbeat_sec", 60))
+        self.monitor_timeout_sec = float(self.config["executor"].get("monitor_timeout_sec", 60))
+        self.monitor_terminate_sec = float(self.config["executor"].get("monitor_terminate_sec", 5))
+        self.monitor_heartbeat_sec = float(self.config["executor"].get("monitor_heartbeat_sec", 5))
+        self.opencode_exe_path = self.config["executor"]["opencode_exe_path"]
 
         # 驗證 OpenCode 執行檔是否存在
         if not Path(self.opencode_exe_path).exists():
@@ -91,10 +91,10 @@ class Config:
         self.failed_dir = self.base_dir / self.failed_dir_name
         self.log_dir = self.base_dir / self.log_dir_name
         self.lock_dir = self.base_dir / self.lock_dir_name
-        self.runner_log_dir = self.root_dir / self.runner_log_dir_name
+        self.executor_log_dir = self.root_dir / self.executor_log_dir_name
 
         # 確保所有必要的資料夾都存在
-        for d in [self.todo_dir, self.doing_dir, self.done_dir, self.failed_dir, self.log_dir, self.lock_dir, self.runner_log_dir]:
+        for d in [self.todo_dir, self.doing_dir, self.done_dir, self.failed_dir, self.log_dir, self.lock_dir, self.executor_log_dir]:
             d.mkdir(parents=True, exist_ok=True)
 
         # 設置 logging 配置
@@ -109,7 +109,7 @@ class Config:
             datefmt="%Y-%m-%d %H:%M:%S",
             handlers=[
                 logging.StreamHandler(),  # 輸出到控制台
-                logging.FileHandler(self.runner_log_dir / "runner.log", encoding="utf-8")  # 輸出到檔案
+                logging.FileHandler(self.executor_log_dir / "executor.log", encoding="utf-8")  # 輸出到檔案
             ],
             force=True  # 強制重新配置，即使已經有 handlers
         )
@@ -532,7 +532,7 @@ def subscriber_worker(doing_dir: Path, root_dir: Path, lock_dir: Path, log_dir: 
 # ============================================================================
 # 主程式
 # ============================================================================
-def runner(config: Config) -> None:
+def executor(config: Config) -> None:
     """
     主程式入口點：啟動任務處理系統
 
@@ -542,7 +542,7 @@ def runner(config: Config) -> None:
     Args:
         config: 系統配置物件
     """
-    logger.info("[Runner] 任務處理系統啟動")
+    logger.info("[Executor] 任務處理系統啟動")
 
     # 啟動多個 publisher worker 執行緒
     for i in range(config.publisher_count):
@@ -556,7 +556,7 @@ def runner(config: Config) -> None:
             name=f"PublisherWorker{i}"
         )
         t.start()
-        logger.info(f"[Runner] 啟動: {t.name}")
+        logger.info(f"[Executor] 啟動: {t.name}")
 
     # 啟動多個 subscriber worker 執行緒
     for i in range(config.subscriber_count):
@@ -572,20 +572,20 @@ def runner(config: Config) -> None:
             name=f"SubscriberWorker{i}"
         )
         t.start()
-        logger.info(f"[Runner] 啟動: {t.name}")
+        logger.info(f"[Executor] 啟動: {t.name}")
 
-    logger.info("[Runner] 系統已啟動，按 Ctrl+C 結束")
+    logger.info("[Executor] 系統已啟動，按 Ctrl+C 結束")
 
     try:
         # 主執行緒持續執行，等待中斷訊號
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        logger.info("[Runner] 收到中斷訊號，正在關閉...")
+        logger.info("[Executor] 收到中斷訊號，正在關閉...")
     except Exception as e:
-        logger.error(f"[Runner] 主程式發生未預期錯誤: {e}")
+        logger.error(f"[Executor] 主程式發生未預期錯誤: {e}")
     finally:
-        logger.info("[Runner] 任務處理系統關閉完成")
+        logger.info("[Executor] 任務處理系統關閉完成")
 
 
 if __name__ == "__main__":
@@ -599,4 +599,4 @@ if __name__ == "__main__":
 
     # 建立配置物件並啟動系統
     config = Config(config_path)
-    runner(config)
+    executor(config)
