@@ -397,7 +397,7 @@ def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber
 # ============================================================================
 # Subscriber
 # ============================================================================
-def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path: str, doing_dir: Path, done_dir: Path, failed_dir: Path, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
+def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path: str, done_dir: Path, failed_dir: Path, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
     """
     執行單個任務，包含監控機制
 
@@ -409,7 +409,6 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
         root_dir: 根目錄路徑
         log_dir: 日誌目錄路徑
         opencode_exe_path: OpenCode 執行檔路徑
-        doing_dir: 處理中目錄
         done_dir: 完成目錄
         failed_dir: 失敗目錄
         monitor_timeout_sec: 監控超時時間（秒）
@@ -432,7 +431,7 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
             # 執行 OpenCode 命令來處理任務
             process = subprocess.Popen(
                 [opencode_exe_path, "run", message, "--file", str(file_path)],
-                cwd=doing_dir, stdout=f, stderr=f,
+                cwd=root_dir, stdout=f, stderr=f,
             )
 
             # 監控 log_file 更新時間的執行緒
@@ -517,7 +516,7 @@ def subscriber_worker(doing_dir: Path, root_dir: Path, lock_dir: Path, log_dir: 
             task_file_and_lock = get_oldest_task_file_lock(doing_dir, lock_dir, "[SubscriberWorker]")
             if task_file_and_lock:
                 task_file, lock = task_file_and_lock
-                subscriber(task_file, root_dir, log_dir, opencode_exe_path, doing_dir, done_dir, failed_dir, monitor_timeout_sec, monitor_terminate_sec, monitor_heartbeat_sec)
+                subscriber(task_file, root_dir, log_dir, opencode_exe_path, done_dir, failed_dir, monitor_timeout_sec, monitor_terminate_sec, monitor_heartbeat_sec)
                 release_lock(lock)
             else:
                 logger.debug("[SubscriberWorker] doing_dir 中沒有待執行的任務")

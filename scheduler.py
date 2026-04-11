@@ -3,14 +3,16 @@
 定期將 job 資料夾中的任務檔案複製到 todo 資料夾。
 """
 
-import os
-import sys
-import shutil
-import logging
-from pathlib import Path
 import configparser
-from typing import Dict, Optional, List, Tuple
+import logging
+import os
+import shutil
+import sys
+import time
 from dataclasses import dataclass
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Dict, Optional, List, Tuple
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -77,6 +79,8 @@ class Config:
         self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "logs")
         self.scheduler_job_dir_name = self.config["scheduler"].get("job_dir_name", "jobs")
         self.scheduler_timezone = self.config["scheduler"].get("timezone", "Asia/Taipei")
+        self.cleaner_schedule = self.config["scheduler"].get("cleaner_schedule", "0 0 * * *")
+        self.cleaner_log_max_day = int(self.config["scheduler"].get("cleaner_log_max_day", "7"))
 
         # 讀取 job 設定
         self.job_settings: List[JobSetting] = []
@@ -272,6 +276,187 @@ def create_job_function(job_setting: JobSetting, config: Config):
 
     return job_function
 
+
+def clean_task_dirs(base_dir: Path, todo_dir_name: str) -> int:
+    """清理任務目錄中的非 .md 檔案
+
+    清理以下目錄：
+    1. todo_dir 裡面不是 .md 的檔案
+    2. doing_dir 裡面不是 .md 的檔案
+    3. done_dir 裡面不是 .md 的檔案
+    4. failed_dir 裡面不是 .md 的檔案
+
+    Args:
+        base_dir: 基礎目錄路徑
+        todo_dir_name: todo 目錄名稱
+
+    Returns:
+        刪除的檔案數量
+    """
+    todo_dir = base_dir / todo_dir_name
+    doing_dir = base_dir / "doing"
+    done_dir = base_dir / "done"
+    failed_dir = base_dir / "failed"
+
+    task_dirs = [
+        (todo_dir, "todo"),
+        (doing_dir, "doing"),
+        (done_dir, "done"),
+        (failed_dir, "failed")
+    ]
+
+    total_deleted = 0
+
+    for dir_path, dir_name in task_dirs:
+        # 確保目錄存在
+        dir_path.mkdir(parents=True, exist_ok=True)
+
+        deleted_count = 0
+        for file_path in dir_path.iterdir():
+            if file_path.is_file() and not file_path.name.endswith('.md'):
+                try:
+                    file_path.unlink()
+                    logger.debug(f"[Cleaner] 刪除 {dir_name} 目錄中的非 .md 檔案: {file_path.name}")
+                    deleted_count += 1
+                except Exception as e:
+                    logger.error(f"[Cleaner] 刪除檔案失敗 {file_path}: {e}")
+
+        if deleted_count > 0:
+            logger.info(f"[Cleaner] 在 {dir_name} 目錄中刪除了 {deleted_count} 個非 .md 檔案")
+            total_deleted += deleted_count
+
+    return total_deleted
+
+
+def clean_log_dir(base_dir: Path, max_days: int) -> int:
+    """清理 log 目錄
+
+    執行以下清理：
+    1. 刪除非 .md.log 的檔案
+    2. 刪除超過指定天數的 .md.log 檔案
+
+    Args:
+        base_dir: 基礎目錄路徑
+        max_days: 保留 log 的最大天數
+
+    Returns:
+        刪除的檔案數量
+    """
+
+    log_dir = base_dir / ".log"
+
+    # 確保目錄存在
+    log_dir.mkdir(parents=True, exist_ok=True)
+
+    deleted_log_count = 0
+    deleted_old_log_count = 0
+
+    # 計算日期閾值
+    cutoff_date = datetime.now() - timedelta(days=max_days)
+
+    for file_path in log_dir.iterdir():
+        if file_path.is_file():
+            # 1. 刪除非 .md.log 檔案
+            if not file_path.name.endswith('.md.log'):
+                try:
+                    file_path.unlink()
+                    logger.debug(f"[Cleaner] 刪除非 .md.log 檔案: {file_path.name}")
+                    deleted_log_count += 1
+                except Exception as e:
+                    logger.error(f"[Cleaner] 刪除檔案失敗 {file_path}: {e}")
+            # 2. 刪除超過天數的 .md.log 檔案
+            elif file_path.name.endswith('.md.log'):
+                try:
+                    # 獲取檔案修改時間
+                    mtime = datetime.fromtimestamp(file_path.stat().st_mtime)
+                    if mtime < cutoff_date:
+                        file_path.unlink()
+                        logger.debug(f"[Cleaner] 刪除超過 {max_days} 天的 log 檔案: {file_path.name}")
+                        deleted_old_log_count += 1
+                except Exception as e:
+                    logger.error(f"[Cleaner] 檢查/刪除 log 檔案失敗 {file_path}: {e}")
+
+    if deleted_log_count > 0:
+        logger.info(f"[Cleaner] 刪除了 {deleted_log_count} 個非 .md.log 檔案")
+
+    if deleted_old_log_count > 0:
+        logger.info(f"[Cleaner] 刪除了 {deleted_old_log_count} 個超過 {max_days} 天的 log 檔案")
+
+    return deleted_log_count + deleted_old_log_count
+
+
+def clean_lock_dir(base_dir: Path) -> int:
+    """清理 lock 目錄中沒上鎖的檔案
+
+    Args:
+        base_dir: 基礎目錄路徑
+
+    Returns:
+        刪除的檔案數量
+    """
+    lock_dir = base_dir / ".lock"
+
+    # 確保目錄存在
+    lock_dir.mkdir(parents=True, exist_ok=True)
+
+    deleted_lock_count = 0
+
+    for file_path in lock_dir.iterdir():
+        if file_path.is_file():
+            try:
+                # 檢查檔案是否被鎖定（嘗試打開檔案）
+                # 在 Windows 上，如果檔案被鎖定，打開會失敗
+                try:
+                    # 嘗試以讀取模式打開檔案
+                    with open(file_path, 'r') as f:
+                        # 如果能打開，表示檔案沒被鎖定
+                        f.read(1)  # 讀取一個字元
+                        # 檔案沒被鎖定，刪除它
+                        file_path.unlink()
+                        logger.debug(f"[Cleaner] 刪除未鎖定的 lock 檔案: {file_path.name}")
+                        deleted_lock_count += 1
+                except (IOError, OSError):
+                    # 檔案被鎖定或其他錯誤，跳過
+                    pass
+            except Exception as e:
+                logger.error(f"[Cleaner] 檢查 lock 檔案失敗 {file_path}: {e}")
+
+    if deleted_lock_count > 0:
+        logger.info(f"[Cleaner] 刪除了 {deleted_lock_count} 個未鎖定的 lock 檔案")
+
+    return deleted_lock_count
+
+
+def run_cleaner_job(config: Config):
+    """執行清理任務
+
+    根據配置執行以下清理工作：
+    1. 清除 todo_dir 裡面不是 .md 的檔案
+    2. 清除 doing_dir 裡面不是 .md 的檔案
+    3. 清除 done_dir 裡面不是 .md 的檔案
+    4. 清除 failed_dir 裡面不是 .md 的檔案
+    5. 清除 log_dir 裡面不是 .md.log 的檔案
+    6. 清除 log_dir 裡面超過 cleaner_log_max_day 的 log
+    7. 清除 lock_dir 裡面沒上鎖的檔案
+    """
+    logger.info("[Cleaner] 開始執行清理任務")
+
+    total_deleted = 0
+
+    # 1-4: 清理任務目錄中的非 .md 檔案
+    deleted_task_files = clean_task_dirs(config.base_dir, config.todo_dir_name)
+    total_deleted += deleted_task_files
+
+    # 5-6: 清理 log 目錄
+    deleted_log_files = clean_log_dir(config.base_dir, config.cleaner_log_max_day)
+    total_deleted += deleted_log_files
+
+    # 7: 清理 lock 目錄中沒上鎖的檔案
+    deleted_lock_files = clean_lock_dir(config.base_dir)
+    total_deleted += deleted_lock_files
+
+    logger.info(f"[Cleaner] 清理任務完成，總共刪除了 {total_deleted} 個檔案")
+
 # ============================================================================
 # 排程器設定
 # ============================================================================
@@ -330,6 +515,36 @@ def setup_scheduler(config: Config) -> Optional[BackgroundScheduler]:
             except Exception as e:
                 logger.error(f"[Scheduler] 設定任務 {task_name} 時發生未預期錯誤: {e}")
 
+        # 添加 cleaner job（如果設定了 cleaner_schedule）
+        if hasattr(config, 'cleaner_schedule') and config.cleaner_schedule:
+            try:
+                # 解析 cleaner cron 表達式
+                parts = config.cleaner_schedule.split()
+                if len(parts) == 5:
+                    minute, hour, day, month, day_of_week = parts
+
+                    # 建立 cron 觸發器
+                    trigger = CronTrigger(
+                        minute=minute, hour=hour, day=day,
+                        month=month, day_of_week=day_of_week,
+                        timezone=config.scheduler_timezone
+                    )
+
+                    # 添加 cleaner 任務到排程器
+                    scheduler.add_job(
+                        lambda: run_cleaner_job(config),
+                        trigger=trigger,
+                        id="cleaner_job",
+                        name="Cleaner: 系統清理任務",
+                        replace_existing=True
+                    )
+
+                    logger.info(f"[Scheduler] 已設定清理任務: {config.cleaner_schedule}")
+                else:
+                    logger.warning(f"[Scheduler] 無效的 cleaner cron 表達式: {config.cleaner_schedule}")
+            except Exception as e:
+                logger.error(f"[Scheduler] 設定清理任務時發生錯誤: {e}")
+
         return scheduler
 
     except Exception as e:
@@ -371,7 +586,6 @@ def scheduler_main(config: Config) -> None:
         logger.info("[Scheduler] 系統已啟動，按 Ctrl+C 結束")
 
         try:
-            import time
             while True:
                 time.sleep(1)
         except KeyboardInterrupt:
