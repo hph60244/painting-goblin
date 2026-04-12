@@ -1,94 +1,105 @@
 ---
 name: video-to-text
-description: Extract speech text from video files using Whisper speech recognition. Use when asked to transcribe video, extract subtitles, convert video to text, or generate transcript from video. Supports multiple languages and model sizes.
+description: Tool for extracting speech text from video with timestamps. Use when asked to transcribe video, extract subtitles, generate transcript from video, or convert video speech to text.
 ---
 
-# Video to Text Skill
+# Video to Text
 
-This skill provides a tool for extracting speech text from video files using OpenAI's Whisper model.
+Extracts speech text from video files using OpenAI Whisper and outputs a transcript with timestamps.
 
 ## When to Use This Skill
 
-- User asks to "extract text from video", "transcribe video", "video to text"
-- User wants to generate subtitles or transcripts from video content
-- User needs to convert speech in video to written text
-- User wants to analyze spoken content in videos
+- You need to extract spoken words from a video file
+- You want a timestamped transcript for subtitles or analysis
+- You need to convert video speech to text for further processing
+- You have a video file and want to generate a text transcript
 
 ## Prerequisites
 
-- Python 3.8+ with pip
-- FFmpeg installed and available in PATH (required for audio extraction)
-- OpenAI Whisper package (installed automatically via requirements.txt)
-
-## Tool Location
-
-The Python script is located at `$AGENT_CWD/tools/video-to-text/video-to-text.py`.
+- Python 3.8+
+- ffmpeg installed and available in PATH
+- Internet connection (for downloading Whisper models on first run)
 
 ## Usage
 
-### Basic Command
+The tool is located at `tools/video-to-text/video-to-text.py`.
+
+### Command Line Arguments
 
 ```bash
-python tools/video-to-text/video-to-text.py <VIDEO_PATH> <OUTPUT_DIR>
+python video-to-text.py <VIDEO_PATH> <OUTPUT_DIR>
 ```
 
-### Arguments
+- `VIDEO_PATH`: Path to the input video file (supports most formats)
+- `OUTPUT_DIR`: Directory where the transcript text file will be saved
 
-- `VIDEO_PATH`: Path to the input video file
-- `OUTPUT_DIR`: Directory where the text file will be saved (created if doesn't exist)
+### Example
 
-### Optional Arguments
+```bash
+python tools/video-to-text/video-to-text.py "path/to/video.mp4" "output/folder"
+```
 
-- `--model`: Whisper model size (`tiny`, `base`, `small`, `medium`, `large`). Default: `base`
-- `--language`: Language code (e.g., `en`, `ja`). If not specified, Whisper auto-detects.
-- `--task`: `transcribe` (default) or `translate` (translate to English)
+The output file will be named after the video file (e.g., `video.txt`) and placed in the output directory.
 
-### Examples
+## Features
 
-1. Extract text from a video with default settings:
-   ```bash
-   python tools/video-to-text/video-to-text.py "input.mp4" "output/"
-   ```
+- Automatically creates output directory if it doesn't exist
+- Extracts audio from video using ffmpeg (mono, 16kHz WAV)
+- Transcribes using OpenAI Whisper (base model by default)
+- Outputs timestamps in `HH:mm:ss` format
+- Handles various video formats supported by ffmpeg
+- Clean error messages and progress indicators
 
-2. Use a larger model for better accuracy:
-   ```bash
-   python tools/video-to-text/video-to-text.py "input.mp4" "output/" --model large
-   ```
+## Output Format
 
-3. Specify language (Japanese):
-   ```bash
-   python tools/video-to-text/video-to-text.py "input.mp4" "output/" --language ja
-   ```
+Each line in the output text file has the format:
 
-4. Translate non-English speech to English:
-   ```bash
-   python tools/video-to-text/video-to-text.py "input.mp4" "output/" --task translate
-   ```
+```
+[HH:mm:ss] Transcribed text here
+```
 
-## Output
-
-The tool creates a text file in the output directory with the same name as the input video (e.g., `input.txt`). The file contains the transcribed text in UTF-8 encoding.
+Example:
+```
+[00:00:00] Hello world
+[00:00:02] This is a test
+```
 
 ## Troubleshooting
 
-### FFmpeg not found
-- Ensure FFmpeg is installed and accessible in PATH
-- On Windows, download from https://ffmpeg.org/download.html
+### Unicode Path Issues on Windows
 
-### Whisper model download fails
-- Check internet connection
-- The tool downloads models on first use (cached locally)
+If the video file path contains non-ASCII characters (e.g., Japanese, Chinese), you may encounter encoding issues on Windows command prompt. Consider:
 
-### No speech detected
-- The video may not contain clear speech
-- Try using a larger model (`--model large`)
-- Ensure audio track is present
+1. Renaming the file to use ASCII characters
+2. Using short paths (8.3 format)
+3. Running from PowerShell or WSL
 
-### Performance issues
-- Smaller models (`tiny`, `base`) are faster but less accurate
-- Larger models require more memory and time
-- Consider using GPU for faster processing (requires CUDA)
+### ffmpeg Not Found
 
-## Dependencies
+Ensure ffmpeg is installed and available in your PATH. You can test with:
 
-See `$AGENT_CWD/tools/video-to-text/requirements.txt` for Python dependencies.
+```bash
+ffmpeg -version
+```
+
+### Whisper Model Download Failures
+
+The first run downloads the Whisper model (base, ~150MB). Ensure you have internet connectivity and sufficient disk space.
+
+### Performance
+
+Transcription speed depends on video length and CPU. For long videos, consider using a smaller model (edit script to use "tiny" or "small").
+
+## Customization
+
+You can modify the script to use different Whisper models by changing the line:
+
+```python
+model = whisper.load_model("base")  # Change to "tiny", "small", "medium", "large"
+```
+
+## References
+
+- [OpenAI Whisper](https://github.com/openai/whisper)
+- [FFmpeg](https://ffmpeg.org/)
+- [MoviePy](https://zulko.github.io/moviepy/)
