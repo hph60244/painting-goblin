@@ -12,7 +12,6 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 - [ ] skill review job
 - [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
-- [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
 - [ ] https://skills.sh/?q=marp
 
 ## 系統架構
@@ -27,7 +26,7 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 ### 1. 系統需求
 
-- Python 3.14+
+- Python 3.8+，filelock 套件
 - OpenCode AI CLI 工具
 
 ### 2. 安裝 Python 套件
@@ -271,6 +270,27 @@ schedule = 0 20 * * 1  # 每週一 20:00 執行
    - 成功：任務檔案移動到 `tasks/done/` 目錄，保留帶有 UUID 的檔案名稱
    - 失敗：任務檔案移動到 `tasks/failed/` 目錄，保留帶有 UUID 的檔案名稱
 5. **日誌記錄**: 所有任務執行日誌儲存在 `tasks/.log/` 目錄中，檔名為 `任務檔案名.log`
+
+### AGENT_PROMPT 說明
+系統使用預定義的 AGENT_PROMPT 來控制 OpenCode 代理行為：
+```
+You are an autonomous, non-interactive agent.
+Operational Rules:
+1. Do not ask the user any questions or request confirmations.
+2. Do not present options or require user selections.
+3. Make all decisions automatically based on the provided configuration and policies.
+4. Follow a deny-by-default principle for any unauthorized or ambiguous actions.
+5. Operate only within explicitly allowed resources.
+6. Provide clear, deterministic outcomes for every task.
+7. If assumptions are made, document them without requesting clarification.
+Your objective is to complete tasks reliably in a fully automated environment.
+```
+
+### 參數解析功能
+系統支援從檔案名稱解析參數，格式為 `_參數名-參數值`：
+- 範例：`research_priority-high_topic-ai.md` 解析為 `[("priority", "high"), ("topic", "ai")]`
+- 參數會傳遞給 OpenCode 作為環境變數
+- 支援 Unicode 字符（使用 `\w+` 正則表達式匹配）
 
 ## 檔案鎖定機制
 

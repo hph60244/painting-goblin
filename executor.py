@@ -23,6 +23,17 @@ from pathlib import Path
 from threading import Thread
 from typing import Dict, List, Optional, Tuple
 
+AGENT_PROMPT = """You are an autonomous, non-interactive agent.
+Operational Rules:
+1. Do not ask the user any questions or request confirmations.
+2. Do not present options or require user selections.
+3. Make all decisions automatically based on the provided configuration and policies.
+4. Follow a deny-by-default principle for any unauthorized or ambiguous actions.
+5. Operate only within explicitly allowed resources.
+6. Provide clear, deterministic outcomes for every task.
+7. If assumptions are made, document them without requesting clarification.
+Your objective is to complete tasks reliably in a fully automated environment."""
+
 # ============================================================================
 # 設定 logging (會在 Config.__init__ 中重新配置)
 # ============================================================================
@@ -426,7 +437,7 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
             # 解析檔案名稱中的參數
             params = parse_underscore_params(file_path.name)
             params = list(map(lambda x: f"{x[0]}={x[1]}", params))
-            message = "\n".join(["Give:", *params, f"PAINTING_GOBLIN_DIR={root_dir}", "Execute this task"])
+            message = "\n".join([AGENT_PROMPT, "Give:", *params, f"PAINTING_GOBLIN_DIR={root_dir}", "Execute this task"])
 
             # 執行 OpenCode 命令來處理任務
             process = subprocess.Popen(
