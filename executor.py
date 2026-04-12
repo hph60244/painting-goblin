@@ -429,7 +429,7 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
             # 解析檔案名稱中的參數
             params = parse_underscore_params(file_path.name)
             params = list(map(lambda x: f"{x[0]}={x[1]}", params))
-            message = "\n".join([AGENT_PROMPT, "Give:", *params, f"AGENT_CWD={root_dir}", "Execute this task"])
+            message = "\n".join([AGENT_PROMPT, "Give:", f"AGENT_CWD={opencode_cwd_path}", f"PAINTING_GOBLIN_DIR={root_dir}", *params, "Execute this task"])
 
             # 執行 OpenCode 命令來處理任務
             process = subprocess.Popen(

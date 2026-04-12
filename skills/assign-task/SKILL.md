@@ -12,7 +12,7 @@ This skill guides you through creating and assigning tasks to the painting-gobli
 To add a task to the painting-goblin system, simply place a task file in the todo directory:
 
 ```
-$AGENT_CWD\tasks\todo\
+$PAINTING_GOBLIN_DIR\tasks\todo\
 ```
 
 ## Understanding the System Architecture
