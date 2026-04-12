@@ -64,23 +64,15 @@ class Config:
         self.config.read(config_path)
 
         # 驗證必要的區段
-        required_sections = ["dir", "executor"]
+        required_sections = ["executor"]
         for section in required_sections:
             if not self.config.has_section(section):
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
-        # 讀取目錄相關設定
-        self.root_dir = Path(self.config["dir"]["root_dir_path"])
-        self.base_dir_name = self.config["dir"].get("base_dir_name", "tasks")
-        self.todo_dir_name = self.config["dir"].get("todo_dir_name", "todo")
-        self.doing_dir_name = self.config["dir"].get("doing_dir_name", "doing")
-        self.done_dir_name = self.config["dir"].get("done_dir_name", "done")
-        self.failed_dir_name = self.config["dir"].get("failed_dir_name", "failed")
-        self.log_dir_name = self.config["dir"].get("log_dir_name", ".log")
-        self.lock_dir_name = self.config["dir"].get("lock_dir_name", ".lock")
-
-        # 讀取執行器相關設定
-        self.executor_log_dir_name = self.config["executor"].get("log_dir_name", "logs")
+        # 讀取 executor 設定
+        self.root_dir = Path(self.config["executor"]["root_dir_path"])
+        self.opencode_exe_path = self.config["executor"]["opencode_exe_path"]
+        self.opencode_cwd_path = self.config["executor"].get("opencode_cwd_path", str(self.root_dir))
         self.publisher_count = int(self.config["executor"].get("publisher_count", 1))
         self.publisher_heartbeat_sec = float(self.config["executor"].get("publisher_heartbeat_sec", 60))
         self.subscriber_count = int(self.config["executor"].get("subscriber_count", 1))
@@ -88,21 +80,20 @@ class Config:
         self.monitor_timeout_sec = float(self.config["executor"].get("monitor_timeout_sec", 60))
         self.monitor_terminate_sec = float(self.config["executor"].get("monitor_terminate_sec", 5))
         self.monitor_heartbeat_sec = float(self.config["executor"].get("monitor_heartbeat_sec", 5))
-        self.opencode_exe_path = self.config["executor"]["opencode_exe_path"]
 
         # 驗證 OpenCode 執行檔是否存在
         if not Path(self.opencode_exe_path).exists():
             raise FileNotFoundError(f"OpenCode executable not found: {self.opencode_exe_path}")
 
         # 計算完整的目錄路徑
-        self.base_dir = self.root_dir / self.base_dir_name
-        self.todo_dir = self.base_dir / self.todo_dir_name
-        self.doing_dir = self.base_dir / self.doing_dir_name
-        self.done_dir = self.base_dir / self.done_dir_name
-        self.failed_dir = self.base_dir / self.failed_dir_name
-        self.log_dir = self.base_dir / self.log_dir_name
-        self.lock_dir = self.base_dir / self.lock_dir_name
-        self.executor_log_dir = self.root_dir / self.executor_log_dir_name
+        self.base_dir = self.root_dir / "tasks"
+        self.todo_dir = self.base_dir / "todo"
+        self.doing_dir = self.base_dir / "doing"
+        self.done_dir = self.base_dir / "done"
+        self.failed_dir = self.base_dir / "failed"
+        self.log_dir = self.base_dir / ".log"
+        self.lock_dir = self.base_dir / ".lock"
+        self.executor_log_dir = self.root_dir / "logs"
 
         # 確保所有必要的資料夾都存在
         for d in [self.todo_dir, self.doing_dir, self.done_dir, self.failed_dir, self.log_dir, self.lock_dir, self.executor_log_dir]:
@@ -408,7 +399,7 @@ def publisher_worker(todo_dir: Path, doing_dir: Path, lock_dir: Path, subscriber
 # ============================================================================
 # Subscriber
 # ============================================================================
-def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path: str, done_dir: Path, failed_dir: Path, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
+def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path: str, opencode_cwd_path: str, done_dir: Path, failed_dir: Path, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
     """
     執行單個任務，包含監控機制
 
@@ -420,6 +411,7 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
         root_dir: 根目錄路徑
         log_dir: 日誌目錄路徑
         opencode_exe_path: OpenCode 執行檔路徑
+        opencode_cwd_path: OpenCode 工作目錄路徑
         done_dir: 完成目錄
         failed_dir: 失敗目錄
         monitor_timeout_sec: 監控超時時間（秒）
@@ -437,12 +429,12 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
             # 解析檔案名稱中的參數
             params = parse_underscore_params(file_path.name)
             params = list(map(lambda x: f"{x[0]}={x[1]}", params))
-            message = "\n".join([AGENT_PROMPT, "Give:", *params, f"PAINTING_GOBLIN_DIR={root_dir}", "Execute this task"])
+            message = "\n".join([AGENT_PROMPT, "Give:", *params, f"AGENT_CWD={root_dir}", "Execute this task"])
 
             # 執行 OpenCode 命令來處理任務
             process = subprocess.Popen(
                 [opencode_exe_path, "run", message, "--file", str(file_path)],
-                cwd=root_dir, stdout=f, stderr=f,
+                cwd=opencode_cwd_path, stdout=f, stderr=f,
             )
 
             # 監控 log_file 更新時間的執行緒
@@ -502,7 +494,7 @@ def subscriber(file_path: Path, root_dir: Path, log_dir: Path, opencode_exe_path
             dest = failed_dir / file_path.name
             move_file_safely(file_path, dest, "[Subscriber]")
 
-def subscriber_worker(doing_dir: Path, root_dir: Path, lock_dir: Path, log_dir: Path, opencode_exe_path: str, done_dir: Path, failed_dir: Path, subscriber_heartbeat_sec: float, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
+def subscriber_worker(doing_dir: Path, root_dir: Path, lock_dir: Path, log_dir: Path, opencode_exe_path: str, opencode_cwd_path: str, done_dir: Path, failed_dir: Path, subscriber_heartbeat_sec: float, monitor_timeout_sec: float, monitor_terminate_sec: float, monitor_heartbeat_sec: float) -> None:
     """
     Subscriber worker: 持續從 doing_dir 取得並執行任務
 
@@ -515,6 +507,7 @@ def subscriber_worker(doing_dir: Path, root_dir: Path, lock_dir: Path, log_dir: 
         lock_dir: 鎖定檔案目錄
         log_dir: 日誌目錄路徑
         opencode_exe_path: OpenCode 執行檔路徑
+        opencode_cwd_path: OpenCode 工作目錄路徑
         done_dir: 完成目錄
         failed_dir: 失敗目錄
         subscriber_heartbeat_sec: 心跳間隔（秒）
@@ -527,7 +520,7 @@ def subscriber_worker(doing_dir: Path, root_dir: Path, lock_dir: Path, log_dir: 
             task_file_and_lock = get_oldest_task_file_lock(doing_dir, lock_dir, "[SubscriberWorker]")
             if task_file_and_lock:
                 task_file, lock = task_file_and_lock
-                subscriber(task_file, root_dir, log_dir, opencode_exe_path, done_dir, failed_dir, monitor_timeout_sec, monitor_terminate_sec, monitor_heartbeat_sec)
+                subscriber(task_file, root_dir, log_dir, opencode_exe_path, opencode_cwd_path, done_dir, failed_dir, monitor_timeout_sec, monitor_terminate_sec, monitor_heartbeat_sec)
                 release_lock(lock)
             else:
                 logger.debug("[SubscriberWorker] doing_dir 中沒有待執行的任務")
@@ -574,7 +567,7 @@ def executor(config: Config) -> None:
             target=subscriber_worker,
             args=(
                 config.doing_dir, config.root_dir, config.lock_dir, config.log_dir,
-                config.opencode_exe_path, config.done_dir, config.failed_dir,
+                config.opencode_exe_path, config.opencode_cwd_path, config.done_dir, config.failed_dir,
                 config.subscriber_heartbeat_sec,
                 config.monitor_timeout_sec, config.monitor_terminate_sec, config.monitor_heartbeat_sec
             ),

@@ -12,7 +12,7 @@ This skill guides you through creating and assigning tasks to the painting-gobli
 To add a task to the painting-goblin system, simply place a task file in the todo directory:
 
 ```
-$PAINTING_GOBLIN_DIR\tasks\todo\
+$AGENT_CWD\tasks\todo\
 ```
 
 ## Understanding the System Architecture
@@ -46,7 +46,7 @@ Copy or move your task file to the todo directory:
 
 ```bash
 # Example: Create a simple task
-echo "Generate weekly sales report" > "$PAINTING_GOBLIN_DIR\tasks\todo\print-42.md"
+echo "Generate weekly sales report" > "$AGENT_CWD\tasks\todo\print-42.md"
 ```
 
 ### Step 3: System Processing
@@ -65,16 +65,16 @@ Once a file is placed in the `todo` directory, the system automatically:
 
 ```bash
 # View pending tasks
-dir "$PAINTING_GOBLIN_DIR\tasks\todo\"
+dir "$AGENT_CWD\tasks\todo\"
 
 # View tasks in progress
-dir "$PAINTING_GOBLIN_DIR\tasks\doing\"
+dir "$AGENT_CWD\tasks\doing\"
 
 # View completed tasks
-dir "$PAINTING_GOBLIN_DIR\tasks\done\"
+dir "$AGENT_CWD\tasks\done\"
 
 # View failed tasks
-dir "$PAINTING_GOBLIN_DIR\tasks\failed\"
+dir "$AGENT_CWD\tasks\failed\"
 ```
 
 ### Understanding Timestamps
@@ -109,7 +109,7 @@ Example: `weekly_report.B20241215143045.md` means the task started processing at
 
 **Issue: Task not being processed**
 - Check if publisher is running: `python executor.py config.ini`
-- Verify task file is in correct directory: `$PAINTING_GOBLIN_DIR\tasks\todo\`
+- Verify task file is in correct directory: `$AGENT_CWD\tasks\todo\`
 - Check file permissions: Ensure system can read/write files
 
 **Issue: Task stuck in doing directory**
@@ -118,29 +118,29 @@ Example: `weekly_report.B20241215143045.md` means the task started processing at
 - Look for errors in task execution logs
 
 **Issue: Task moved to failed directory**
-- Check `$PAINTING_GOBLIN_DIR\tasks\.log\` for execution logs
+- Check `$AGENT_CWD\tasks\.log\` for execution logs
 - Review task content for errors or missing information
 - Verify all dependencies are available
 
 ### System Logs
 
 Logs are stored in:
-- **Executor logs**: `$PAINTING_GOBLIN_DIR\log\executor.log`
-- **Task execution logs**: `$PAINTING_GOBLIN_DIR\tasks\.log\`
+- **Executor logs**: `$AGENT_CWD\log\executor.log`
+- **Task execution logs**: `$AGENT_CWD\tasks\.log\`
 
 Check logs for detailed error information:
 ```bash
 # View recent executor activity
-tail -f "$PAINTING_GOBLIN_DIR\log\executor.log"
+tail -f "$AGENT_CWD\log\executor.log"
 
 # View specific task execution log
-type "$PAINTING_GOBLIN_DIR\tasks\.log\task_name.md.log"
+type "$AGENT_CWD\tasks\.log\task_name.md.log"
 ```
 
 ## Getting Help
 
 If you encounter issues:
-1. Check system logs: `$PAINTING_GOBLIN_DIR\log\executor.log`
+1. Check system logs: `$AGENT_CWD\log\executor.log`
 2. Verify configuration: `config.ini`
 3. Ensure OpenCode is installed and accessible
 4. Check file system permissions

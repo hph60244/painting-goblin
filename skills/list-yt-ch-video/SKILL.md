@@ -21,12 +21,12 @@ This skill provides a Python CLI tool to fetch all videos from a YouTube channel
 
 ## Tool Location
 
-The tool is located at `$PAINTING_GOBLIN_DIR/tools/list-yt-ch-video/list-yt-ch-video.py`.
+The tool is located at `$AGENT_CWD/tools/list-yt-ch-video/list-yt-ch-video.py`.
 
 ## Usage
 
 ```bash
-python $PAINTING_GOBLIN_DIR/tools/list-yt-ch-video/list-yt-ch-video.py <CHANNEL_ID> <OUTPUT_DIR>
+python $AGENT_CWD/tools/list-yt-ch-video/list-yt-ch-video.py <CHANNEL_ID> <OUTPUT_DIR>
 ```
 
 ### Arguments

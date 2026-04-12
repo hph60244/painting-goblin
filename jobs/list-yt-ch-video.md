@@ -1,4 +1,4 @@
-Use $PAINTING_GOBLIN_DIR/skills/build-python-cli-tool to write a tool for querying all video data from youtube channel.
+Use $AGENT_CWD/skills/build-python-cli-tool to write a tool for querying all video data from youtube channel.
 
 - Args :
   - CHANNEL_ID : target channel id for querying

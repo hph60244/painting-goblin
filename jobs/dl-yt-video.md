@@ -1,4 +1,4 @@
-Use $PAINTING_GOBLIN_DIR/skills/build-python-cli-tool to write a tool for downloading youtube video.
+Use $AGENT_CWD/skills/build-python-cli-tool to write a tool for downloading youtube video.
 
 - Args :
   - VIDEO_ID : target video id in origin youtube video url

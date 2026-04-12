@@ -1,1 +1,1 @@
-print full path of $PAINTING_GOBLIN_DIR
+print full path of $AGENT_CWD

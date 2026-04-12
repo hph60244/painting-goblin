@@ -20,14 +20,14 @@ This skill enables downloading YouTube videos with best quality video and audio 
 - Python 3.7+ installed
 - `yt-dlp` installed (automatically via `requirements.txt`)
 - `ffmpeg` installed (for merging video and audio streams)
-- The `dl-yt-video` tool located at `$PAINTING_GOBLIN_DIR/tools/dl-yt-video/`
+- The `dl-yt-video` tool located at `$AGENT_CWD/tools/dl-yt-video/`
 
 ## Installation
 
 If the tool is not yet installed, run:
 
 ```bash
-cd $PAINTING_GOBLIN_DIR/tools/dl-yt-video
+cd $AGENT_CWD/tools/dl-yt-video
 pip install -r requirements.txt
 ```
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ### Basic Command
 
 ```bash
-python $PAINTING_GOBLIN_DIR/tools/dl-yt-video/dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>
+python $AGENT_CWD/tools/dl-yt-video/dl-yt-video.py <VIDEO_ID> <OUTPUT_DIR>
 ```
 
 ### Arguments
@@ -49,7 +49,7 @@ python $PAINTING_GOBLIN_DIR/tools/dl-yt-video/dl-yt-video.py <VIDEO_ID> <OUTPUT_
 To download the video with ID `d3UTywBDSW4` and save it to `~/videos`:
 
 ```bash
-python $PAINTING_GOBLIN_DIR/tools/dl-yt-video/dl-yt-video.py d3UTywBDSW4 ~/videos
+python $AGENT_CWD/tools/dl-yt-video/dl-yt-video.py d3UTywBDSW4 ~/videos
 ```
 
 ## Features

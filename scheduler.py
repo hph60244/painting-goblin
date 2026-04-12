@@ -60,24 +60,18 @@ class Config:
             ValueError: 如果配置檔案缺少必要的區段
         """
         global logger
-        self.config_path = config_path
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
 
         # 驗證必要的區段
-        required_sections = ["dir", "scheduler"]
+        required_sections = ["scheduler"]
         for section in required_sections:
             if not self.config.has_section(section):
                 raise ValueError(f"Missing required section in {config_path}: [{section}]")
 
-        # 讀取 dir 設定
-        self.root_dir = Path(self.config["dir"]["root_dir_path"])
-        self.base_dir_name = self.config["dir"].get("base_dir_name", "tasks")
-        self.todo_dir_name = self.config["dir"].get("todo_dir_name", "todo")
-
         # 讀取 scheduler 設定
-        self.scheduler_log_dir_name = self.config["scheduler"].get("log_dir_name", "logs")
-        self.scheduler_job_dir_name = self.config["scheduler"].get("job_dir_name", "jobs")
+        self.root_dir = Path(self.config["scheduler"]["root_dir_path"])
+        self.job_dir_path = Path(self.config["scheduler"]["job_dir_path"])
         self.scheduler_timezone = self.config["scheduler"].get("timezone", "Asia/Taipei")
         self.cleaner_schedule = self.config["scheduler"].get("cleaner_schedule", "0 0 * * *")
         self.cleaner_log_max_day = int(self.config["scheduler"].get("cleaner_log_max_day", "7"))
@@ -111,12 +105,10 @@ class Config:
                     logger.warning(f"[Scheduler] 任務區段 '{section_name}' 缺少 schedule 設定，將跳過此任務")
 
         # 計算目錄路徑
-        self.base_dir = self.root_dir / self.base_dir_name
-        self.todo_dir = self.base_dir / self.todo_dir_name
-        self.scheduler_log_dir = self.root_dir / self.scheduler_log_dir_name
-
-        # job 資料夾路徑（相對於專案根目錄）
-        self.scheduler_job_dir = self.root_dir / self.scheduler_job_dir_name
+        self.base_dir = self.root_dir / "tasks"
+        self.todo_dir = self.base_dir / "todo"
+        self.scheduler_log_dir = self.root_dir / "logs"  # 寫死的值
+        self.scheduler_job_dir = self.job_dir_path  # 從配置檔案讀取
 
         # 確保所有必要的資料夾都存在
         for d in [self.todo_dir, self.scheduler_log_dir]:
@@ -277,7 +269,7 @@ def create_job_function(job_setting: JobSetting, config: Config):
     return job_function
 
 
-def clean_task_dirs(base_dir: Path, todo_dir_name: str) -> int:
+def clean_task_dirs(base_dir: Path) -> int:
     """清理任務目錄中的非 .md 檔案
 
     清理以下目錄：
@@ -288,12 +280,11 @@ def clean_task_dirs(base_dir: Path, todo_dir_name: str) -> int:
 
     Args:
         base_dir: 基礎目錄路徑
-        todo_dir_name: todo 目錄名稱
 
     Returns:
         刪除的檔案數量
     """
-    todo_dir = base_dir / todo_dir_name
+    todo_dir = base_dir / "todo"
     doing_dir = base_dir / "doing"
     done_dir = base_dir / "done"
     failed_dir = base_dir / "failed"
@@ -444,7 +435,7 @@ def run_cleaner_job(config: Config):
     total_deleted = 0
 
     # 1-4: 清理任務目錄中的非 .md 檔案
-    deleted_task_files = clean_task_dirs(config.base_dir, config.todo_dir_name)
+    deleted_task_files = clean_task_dirs(config.base_dir)
     total_deleted += deleted_task_files
 
     # 5-6: 清理 log 目錄
