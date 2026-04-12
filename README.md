@@ -11,10 +11,8 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 以下是系統的未來發展方向：
 
 - [ ] skill review job
-- [ ] **make report skill** - 開發學習技能功能，讓系統能夠處理研究任務
 - [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - [ ] **allow opencode agent setting** - 允許 OpenCode 代理設定，提供更靈活的 AI 代理配置選項
-- [ ] https://skills.sh/langchain-ai/deepagents/web-research
 - [ ] https://skills.sh/?q=marp
 
 ## 系統架構
