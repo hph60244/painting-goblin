@@ -12,35 +12,6 @@ import whisper
 import tempfile
 from pathlib import Path
 
-def get_short_path(path: str) -> str:
-    """
-    Convert a path to its short (8.3) form on Windows to avoid encoding issues.
-    Returns the original path on non-Windows or if conversion fails.
-    """
-    if os.name != 'nt':
-        return path
-
-    try:
-        import ctypes
-        from ctypes import wintypes
-
-        GetShortPathNameW = ctypes.windll.kernel32.GetShortPathNameW
-        GetShortPathNameW.argtypes = [wintypes.LPCWSTR, wintypes.LPWSTR, wintypes.DWORD]
-        GetShortPathNameW.restype = wintypes.DWORD
-
-        # Convert to absolute path first
-        abs_path = os.path.abspath(path)
-
-        # Buffer for short path
-        buffer = ctypes.create_unicode_buffer(260)  # MAX_PATH
-        result = GetShortPathNameW(abs_path, buffer, len(buffer))
-
-        if result == 0 or result > len(buffer):
-            return abs_path
-        return buffer.value
-    except:
-        return path
-
 def safe_print(text: str, file=sys.stdout):
     """Print text safely, handling encoding errors."""
     try:
@@ -133,8 +104,6 @@ def extract_speech_text(video_path: str, output_dir: str):
     """
     # Convert to absolute path to avoid encoding issues
     video_path = os.path.abspath(video_path)
-    # Convert to short path on Windows to handle Unicode characters
-    video_path = get_short_path(video_path)
 
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
