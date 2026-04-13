@@ -25,8 +25,6 @@ description: Create a Python script that solves the problem described below.
 Under $AGENT_CWD/tools/<name>/ :
 - A <name>.py file
 - A requirements.txt file if needed
-
-Under $AGENT_CWD/skills/<name>/ :
 - Create a skill by $AGENT_CWD/skills/make-skill-template
 
 # Validation
