@@ -8,11 +8,17 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 ## 待辦事項
 
-以下是系統的未來發展方向：
-
-- [ ] skill review job
-- [ ] **build app skill** - 建立應用程式開發技能，支援更複雜的應用程式建置任務
-- [ ] https://skills.sh/?q=marp
+- publisher,subscriber(args) => config
+- simplify readme.md
+- linebot???
+- study: text ui
+- Tiddlyhost => painting-goblin
+- build app skill: 建立應用程式開發技能，支援更複雜的應用程式建置任務
+- https://skills.sh/github/awesome-copilot/create-implementation-plan
+- https://skills.sh/obra/superpowers/writing-plans
+- https://skills.sh/obra/superpowers/executing-plans
+- https://skills.sh/?q=marp
+- Study Opencode auto change model
 
 ## 系統架構
 
