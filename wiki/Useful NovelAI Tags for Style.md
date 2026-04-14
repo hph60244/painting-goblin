@@ -1,0 +1,53 @@
+---
+tags: ['#fn-ref']
+---
+
+- [Style Tags](https://web.archive.org/web/20221023141705/https://i.redd.it/cjoquuyg9ku91.jpg)
+- 官方藝術 : official art
+- 人物簡介,人物表 : character_profile, character sheet
+- 圖表,示意圖,藍圖 : diagram, schematic, blueprint
+- 設計文件，人物概念 : design document, character concept
+- 參考表 : reference sheet
+- 像素藝術 : pixel art
+- 現實的陰影 : realistic shadows
+- 素描藝術，素描紙，鉛筆 : sketch art, sketch paper, pencils
+- 水彩 : Watercolor
+- 水彩鉛筆 : watercolor pencil
+- 平色 : flat color
+- 褪色的邊界 : fading border
+- 濃重的對比 : heavy contrast
+- 遊戲cg : game cg
+- 雜志封面 : magazine cover
+- 雜志內頁 : magazine scan
+- 海報 : poster
+- 征兵海報 : recruitment poster
+- 抽象的背景 : abstract background
+- 照片真實感 : photorealistic
+- 逼真 : realistic
+- 半寫實 : semi-realistic
+- 銳化 : sharpened
+- 傳統媒體風格 : faux traditional media
+- 唯美主義繪畫 : Aestheticism Painting
+- 新藝術 : art nouveau
+- 動畫截圖 : anime screeshot
+- 油畫 : oil painting
+- 黑白 : black and white
+- 素描、灰度、石墨（中） : sketch, greyscale, graphite (medium)
+- 黑白，草圖 : monochrome,posing sketch
+- 現實主義 : realism
+- 高低格子的地圖 : isometric, isometric view
+- 炭筆素描，墨水塗鴉 : charcoal sketch,ink doodle
+- 80年代風格 : 80s (style)
+- 90年代 : 1990s (style)
+- Q版 : chibi
+- 粗線條 : thick lines
+- 純色背景 : sample color bcakground
+- 畫師風格-奇幻厚塗色彩瑰麗 : by Wadim Kashin
+- 畫師風格-厚塗 : by Gaston Bussiere, by Sophie Anderson, by WLOP
+- 由著名藝術家 : by famous artist
+- 增強的風格 : Akihiko Yoshida,Gaston Bussière,Rebecca guay
+- 特別的風格 : by Helene Knoop Mark Arian Marc Simonetti Jon Foster
+- 童話感 : by jean-honore fragonard, by francois boucher, by jacques philippe caresme, by jean-antoine watteau Undesired content,
+- 吉卜力工作室 : Studio Ghibli
+- 風格特別 : by Steve Henderson, by Paul Hedley, by Andrew Atroshenko, by Rebecca Guay, by William Holman Hunt, Max Beckmann, Milton Avery
+-

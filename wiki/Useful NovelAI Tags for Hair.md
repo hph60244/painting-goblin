@@ -1,0 +1,33 @@
+---
+tags: ['#fn-ref']
+---
+
+- 呆毛：ahoge（兩根以上antenna hair）
+- 大號呆毛：huge ahoge（胸也會變大，自行調整如small breasts等）
+- 馬尾：ponytail
+- 長鬢角，邊落：sidelocks
+- 側馬尾：side ponytail或one side up
+- 單編發：single braid
+- 鉆頭辮：drill hair
+- 斜劉海：swept bangs
+- 內卷發：hair intakes
+- 側面編發：side braid
+- 短發，部分長發：short hair with long locks
+- 編發：french braid
+- Half-up：half updo/updo
+- 編發馬尾：braid ponytail
+- 公主切：hime cut
+- 長劉海：hair between eyes / pointy hair / long bangs
+- 背頭：hair slicked back
+- 盤發：bun / braided bun
+- 隱藏染：colored inner hair
+- 露出耳朵：hair behind ear
+- 部分染發：streaked hair
+- 頭發飄起：floating hair
+- handled hair
+- 皮筋：hair bobbles
+- 花冠：head wreath
+- 發飾(X/星/心/蝴蝶/新月/葉/骷髏/胡蘿卜/蝙蝠 ) ：hair ornament / (x / star / heart / butterfly / crescent / leaf / skull / carrot / bat ) 
+- 花的發飾：hair flower
+- 鈴鐺發飾：hair bell
+- 頭飾：headpiece

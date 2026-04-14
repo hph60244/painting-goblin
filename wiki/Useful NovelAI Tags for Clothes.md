@@ -1,0 +1,130 @@
+---
+tags: ['#fn-ref']
+---
+
+- 浸濕 : soaked
+- 暴露的衣服：revealing clothes
+- 不暴露的衣服：unexposed
+- 勒痕：skindentation
+- 絲襪：stocking
+- 緊身衣：skin tight
+- 寬松：baggy clothes / baggy pants
+- 毛巾：towel
+- 棵體毛巾：naked towel
+- 稞體圍裙：naked apron
+- 稞體大衣：naked coat
+- 連體衣：bodystocking
+- 膠衣：latex
+- 穿衣捆綁：shibari over clothes
+- 脫衣：undressing
+- 無肩帶：strapless
+- 透視：see-through silhouette/see-through
+- 有毛皮裝飾的什麽什麽：fur trimmed XX
+- 帶蕾絲的什麽什麽：lace trim XX
+- 開肩式上衣：detached sleeves
+- 水手服：serafuku
+- 吊帶內褲：side tie bikini bottom(泳裝) / side tie panties(內褲)
+- 破碎的衣服：torn clothes
+- 童貞殺手：cleavage cutout
+- BDSM：BDSM
+- 袴：hakama
+- 和服：kimono
+- 婚紗手套：bridal gauntlets
+- 婚紗：wedding dress
+- 無肩帶禮服：bridal gauntlets
+- 露肩連衣裙：off shoulder dress
+- 帶字的衣服：clothes writing
+- 微型比基尼：micro bikini / string bikini
+- 競賽泳裝：competition swimsuit
+- 無肩帶比基尼：bandeau
+- 前系帶比基尼：front tie top
+- 聖誕比基尼：santa bikini
+- 時尚洛麗塔：lolita fashion
+- 哥特式洛麗塔：gothic lolita
+- 體操服：gym uniform
+- 長袍：robe
+- 紋章戰袍：tabard
+- 盔甲上穿的衣服：surcoat
+- 睡衣：pajamas
+- 露背裝：backless outfit
+- 白大褂：labcoat
+- 白色連衣裙：sundress
+- 雙排扣：double breasted
+- 細腰裙：pinafore dress
+- 棒球衫：raglan sleeves
+- 疊層裙：layered dress
+- 無袖高領毛衣：sleeveless turtleneck
+- 運動服：track suits / track pants
+- 夏服：summer uniform
+- 身體束帶：harness / chest harness
+- 裙裝睡衣，娃娃裙：nightgown / negligee / chemise / babydoll
+- 阿蘭毛衣：aran sweater
+- 小號衣服：undersized clothes
+- 多肩帶比基尼：multi strapped bikini（可能過多）
+- 燕尾服：tailcoat
+- 睡衣：sleepwear
+- 網球服：tennis uniform
+- 店員制服：employee uniform
+- 賽車女郎：race queen
+- 僵屍：jiangshi
+- 摔跤服：wrestling outfit
+- 喪屍：zombie pose
+- 海盜：pirate
+- 軍服：military jacket
+- 校服：gakuran
+- 兔女郎：playboy bunny / bunny suits
+- 迷你帽：mini hat
+- 官帽：peaked cap
+- 軍帽：military hat / cap
+- 遮陽帽：visor cap
+- 水手帽：sailor hat
+- 草帽：straw hat
+- 針織帽：beanie / knitted hat
+- 前進帽：cabbie hat
+- 禮帽：top hat
+- 耳罩：earmuffs
+- 眼罩：blindfold
+- 眼帶：eyepatch
+- 半框眼鏡：semi rimless eyewear
+- 眼鏡戴在頭上：eyewear on head
+- 圓形眼鏡：round eyewear
+- 絲帶：ribbon / bow
+- 環形耳環：hoop earrings
+- 動物頭套：animal hood
+- 項圈/黑項圈/紅項圈/皮帶項圈：leash / blak collar / red collar / belt collar
+- 圍巾：scarf / hair in scarf
+- 領結：traditional bowtie
+- 透視袖：see-through sleeves
+- 腰帶：belt / buckle / belt buckle
+- 服務員圍裙：waist apron
+- 胸牌：breastplate
+- 運動內衣：sports bra
+- （襯衫）扣子間隙：unbuttoned / button gap
+- 袖口：cuffs
+- 萌袖：sleeves past wrists
+- 臂章：armlet
+- 肩章：epaulettes
+- 袖子卷起：sleeves rolled up
+- 爪式手套：爪式手套
+- 無指手套：fingerless glove / partially fingerless glove
+- 串珠手鐲：bead bracelet
+- 毛衣卷在腰間：sweater around waist
+- 背帶短褲：suspender shorts
+- 運動短褲：dolphin shorts / gym shorts
+- 喇叭褲：bloomers
+- 高腰裙：high waist skirt
+- 緊身裙：pencil skirt / skirt suit
+- 連褲襪：pantyhose
+- 掛頸式吊帶：halterneck
+- 吊帶襪：garter straps
+- 赤腳：barefoot（如果只穿襪子no shoes）
+- 牛仔褲：jeans / denim
+- 打底褲：bike shorts / bike shorts under skirt
+- 網襪：fishnets
+- 襠部前面的布：pelvic curtain / loincloth
+- 系帶靴：cross laced footwear / lace up boots
+- 不對稱襪子：asymmetrical legwear
+- 寬松的襪子：loose socks
+- 拉鏈：zipper/unzipped
+- 條紋的XX：striped XX
+- 花卉圖案/動物圖案/菱形圖案/奶牛圖案/爪子圖案/星星圖案/老虎圖案/迷彩圖案/旗幟圖案/藪貓圖案 印花/藪貓印花/圓點的XX：floral print / animal print / argyle / cow print / paw print / star print / tiger print / camouflage / flag print / serval print / polka dot XX

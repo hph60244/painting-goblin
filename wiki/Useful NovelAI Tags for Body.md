@@ -1,0 +1,35 @@
+---
+tags: ['#fn-ref']
+---
+
+- 汗：sweatdrop
+- 貓耳:cat ear
+- 肌肉：muscular
+- 微胖：curvy
+- 曬痕：tanlines
+- 連衣裙的曬痕：one piece tan
+- 低身高：minigirl
+- 豐滿：plump
+- 傷痕：injury / scar on face
+- 紋身/陰部紋身/面部紋身/手臂紋身/肩部紋身：tattoo / pubic tattoo / facial tattoo / arm tattoo / shoulder tattoo
+- 頸背：nape
+- 肩胛骨：shoulder blades
+- 腋窩：armpits
+- 胸大小：small breasts / meidum breasts / large breasts / huge breasts / gigantic breasts
+- 側乳：sideboob
+- 下乳：underboob
+- 抱胸：breast hold
+- 無O頭：pasties
+- 肋骨：ribs
+- 孕肚：pregnant
+- 肚子：stomach
+- 馬甲線：linea alba
+- 美甲：nail polish
+- 駱駝趾：cameltoe
+- 大腿間隙：thigh gap
+- 絕對領域：zettai ryouiki
+- 大腿內側：pigeon toed
+- 小P股：flat ass
+- P股半露：butt crack
+- 腳底：soles
+- 腳趾甲：toenail polish

@@ -1,0 +1,21 @@
+---
+tags: ['#fn-ref']
+---
+
+- [PAD emotional state model - Wikipedia](https://en.wikipedia.org/wiki/PAD_emotional_state_model)
+- [KI09_OCC_revisited.pdf](https://people.idsia.ch/~steunebrink/Publications/KI09_OCC_revisited.pdf)
+- [[ Fandom|https://sims.fandom.com/wiki/Category:Simology|Category:Simology , The Sims Wiki ]]
+- [Category:Game mechanics - Dwarf Fortress Wiki](https://dwarffortresswiki.org/index.php/Category:Game_mechanics)
+- [[ Fandom|https://sims.fandom.com/wiki/Mood|Mood , The Sims Wiki ]]
+- [[ Fandom|https://sims.fandom.com/wiki/Emotion|Emotion , The Sims Wiki ]]
+- [Emotion - Dwarf Fortress Wiki](https://dwarffortresswiki.org/index.php/Emotion)
+- [Attribute - Dwarf Fortress Wiki](https://dwarffortresswiki.org/index.php/Attribute)
+- [Personality traits, values, and dreams - Dwarf Fortress Wiki](https://dwarffortresswiki.org/index.php?title=Personality_traits,_values,_and_dreams&redirect=no)
+- [Memory (thought) - Dwarf Fortress Wiki](https://dwarffortresswiki.org/index.php/Memory_(thought))
+- [Thought - Dwarf Fortress Wiki](https://dwarffortresswiki.org/index.php/Thought)
+- [[ Fandom|https://sims.fandom.com/wiki/Moodlet|Moodlet , The Sims Wiki ]]
+- [Emotion - Wikipedia](https://en.wikipedia.org/wiki/Emotion)
+- [Emotion classification - Wikipedia](https://en.wikipedia.org/wiki/Emotion_classification)
+- [Affect (psychology) - Wikipedia](https://en.wikipedia.org/wiki/Affect_(psychology))
+- [人格 - 維基百科，自由的百科全書](https://zh.wikipedia.org/wiki/%E4%BA%BA%E6%A0%BC)
+- [[GDC 2024]為什麼NPC會愛上玩家？故事中的吸引力設計法則 , IGDSHARE](https://igdshare.org/content/gdc-2024-Recipes-for-Attraction-in-Narrative-Design)

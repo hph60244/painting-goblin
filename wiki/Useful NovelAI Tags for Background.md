@@ -1,0 +1,46 @@
+---
+tags: ['#fn-ref']
+---
+
+- [Example Background](https://docs.google.com/document/d/11sb3AOCE4B5CZeMELNL8PwWoIae2jkrdcz-UEJw_Ayc/edit)
+
+-
+
+- 簡單背景 : simple background
+- 米色背景 : beige background
+- 簡單花纹背景 : Simple pattern background
+- 宇宙 : space background
+- 前景焦點 : foreground focus
+- 模糊背景 : blurred focus
+- 魚眼鏡頭 : fish eye lens
+- 景深 : depth of field
+- 色差 : chromatic aberration
+- 光線追蹤 : ray tracing
+- 焰火：fireworks
+- 花田：flower field
+- 水下：underwater
+- 爆炸：explosion
+- 欄桿：railing
+- 溫泉：onsen
+- 榻榻米：tatami
+- 浴室：bathing
+- 淋浴：showering / shower
+- 走廊：hallway
+- 更衣室：locker room
+- 電車內：train / train interior
+- 地平線：horizon/mountainous horizon
+- 被褥：futon
+- 斑駁的陽光：dappled sunlight
+- 浴缸：bathtub
+- 電線桿：power lines / utility pole/telephone pole
+- 路燈：lamppost / street light
+- 沙發：couch / sofa
+- 輝光 : bloom
+- 陰影 : dramatic shadows
+- 光點 : light particles
+- 聖光 : god rays
+- 鏡頭耀班 : lens flare
+- 散景 : bokeh
+- 霓虹燈 : neon lights
+- 背光 : backlighting
+- 電影燈光 : cinematic lighting

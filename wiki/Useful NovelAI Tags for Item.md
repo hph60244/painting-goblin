@@ -1,0 +1,25 @@
+---
+tags: ['#fn-ref']
+---
+
+- 音符：musical note
+- 煙霧：steam
+- 扇子：hand fan
+- 觸手：tentacles
+- 棒棒糖：lolipop
+- 油紙傘：oil paper umbrella
+- 包/手提包/背包/單肩包/挎包：bag / handbag / backpack / shoulder bag / satchel
+- 巫女：miko
+- 護士：nurse / nurse cap
+- 警察：police
+- 口罩：mask / mouth mask
+- 面罩：anklet
+- 花束：bouquet
+- 情人節：valentine
+- 萬聖節：halloween
+- 聖誕節：christmas
+- 婚禮：wedding
+- 頭上的鳥：bird on head
+- 沖浪板：surfboard
+- 刨冰：shaved ice
+- 余燼：embers

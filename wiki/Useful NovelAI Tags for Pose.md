@@ -1,0 +1,112 @@
+---
+tags: ['#fn-ref']
+---
+
+- 幾個女/男孩：Xgirl/boy（比如2女既是2girl，3男既是3boy）
+- 六人以上：6+girls
+- 多人：multiple girls/boys
+- 特寫 : close up shot
+- 動態姿勢 : dynamic pose
+- 動態角度 : dynamic angle
+- 電影角度 : cinematic angle
+- 水平角度 : camera level, parallel angles, horizontal view angle
+- 向下看：looking down （加from below就是從上往下看）
+- 向上看：looking up （加from above就是從下往上看）
+- 身高差：height difference（2girls不生效，但是1girl and 1boy可以）
+- 玩水：wading
+- 浸在水中：partially submerged
+- 浮在水上：afloat
+- 腳在水里：soaking feet
+- 側面：silhouette
+- 頭/足部在畫外：head/feet out of frame
+- 在XX里：in container XX（在紙箱里 in container cardboard box）
+- 狙擊：aiming at viewer
+- 逃跑：fleeing（畫會變得比較有動作感）
+- 彎腰，自然站立：contrapposto
+- 抱枕：dakimakura
+- 戰鬥姿勢：fighting stance
+- 自拍：selfie
+- 透過玻璃：through glass/against glass
+- 鍛煉：exercise（服裝，動作會變為運動系）
+- 伸展姿勢：stretching
+- 唱歌：singing
+- 跳舞：dancing
+- 拳打：punching（在負面里加boxing gloves）
+- 腳踢：kicking
+- 嬰兒的姿勢：fetal position（腳容易崩）
+- 胸貼在一起：symmetrical docking
+- 正面相對：asymmetrical docking
+- 互看：eye contact
+- 面對面：face to face / heads together
+- 跨坐：straddling
+- 仰面躺著：on stomach
+- 側臥：on side
+- 不知道怎麽說總之是orz的姿勢：all fours
+- 跪著：prostration
+- 拘束：restrained
+- 背著：piggyback（四肢容易崩）
+- 袖口卷起：clothes lift / shirt lift / skirt lift / sweater lift / lifted by self / dress lift
+- 狗：doggystyle
+- jack-o'_challenge：top down bottom up（上身著地，雙腿張開，臀部高高翹起的姿勢）
+- 站立一字馬：standing split
+- 貼墻：against wall
+- 背靠背：back to back
+- 喂食：feeding（要兩個人）
+- 睡覺：sleeping
+- 躺著：reclining（比較微妙）
+- 玩牌：playing card
+- 敬禮：salute
+- 緊縛：bound / bondage / breast bondage / shibari
+- 拿著槍：polearm
+- 抱腿坐：knees up
+- 頭發過肩的構圖：hair over shoulder
+- 用手整理頭發：hand in own hair
+- 手放頭上：hand on own face
+- 手放頭發里：hands in hair
+- 手插兜：hands in pockets
+- 手在大腿之間：between legs
+- 手放背後：arm behind back
+- 手遮臉：hand over own mouth
+- 手放帽子上：hand on headwear
+- 手放下顎：hand on own chin
+- 手放臉頰：hand on own cheek
+- 臉貼臉：cheek to cheek
+- 雙手抱胸：crossed arms
+- 向外伸手：outstretched hand
+- 等待親吻：imminent kiss
+- 點讚：thumbs up
+- 紮頭發：adjusting hair / tying hair
+- 拍頭：headpat
+- 扶正帽子：adjusting headwear
+- 身體前傾：leaning forward
+- 更加前傾：bent over
+- 彎腰：squatting
+- 從背後抱住：hug from behind
+- 蓋著被：under covers
+- 嘴口有血：blood from mouth（會令其他部位也帶血）
+- 扶正眼鏡：adjusting eyewear
+- 抱著枕頭：pillow hug
+- 貓一樣的姿勢：claw pose（會生成爪子所以負面加上claw）
+- 剪刀手：peace sign
+- 牽手：holding hands
+- 雙手支撐：arm support
+- 張開雙手：outstretched arms/spread arms
+- 抱著玩偶：stuffed toy / stuffed animal
+- 攥拳：clenched hand
+- 雙手緊握：interlocked fingers
+- 噓🤫：index finger raised
+- 手指向（觀眾/向上/自己/另一個人/向前/武器/向下/劍/向側）：pointing (at viewer / up / at self / another / forward / weapon / down / sword / to the side)
+- 胸前兩手緊握：own hands together
+- 舔手指：finger to mouth
+- 抱著什麽：object hug
+- 胸放桌子上：breasts rest on table
+- 掐腰：hands on hips
+- 翹尾巴：tail raised
+- 挽手：arm hug
+- 擡腿：leg lift
+- 二郎腿：crossed legs
+- 金雞獨立：standing on one leg
+- 單膝跪地：one knee
+- 躺著擡腿：feet up（和lying, on stomach一起用。腳容易崩）
+- 跪地直立：kneeling
+- 盤腿坐：indian style

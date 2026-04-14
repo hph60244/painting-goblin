@@ -1,0 +1,58 @@
+---
+tags: ['#fn-ref']
+---
+
+- wink：one eye closed
+- 笑：grin
+- 害羞：embarrassed
+- 汗水四濺：flying sweatdrops
+- 臉上有大片陰影：shaded face
+- 震驚：surprised
+- 皺眉：frown / furrowed brow / wince
+- 頑皮：naughty face
+- 哭泣：crying with eyes open
+- 認真：serious
+- 傲慢地笑：smirk
+- 慍怒：pout
+- 得意：smug
+- 煩惱不安：annoyance
+- 悲傷：sad
+- 尖叫：shouting / screaming
+- 因緊張或恐怖大量出汗：sweating profusely
+- 銳利：glaring / scowl
+- 短眉毛：short eyebrows
+- 粗眉毛：thick eyebrows
+- 額頭有記號：forehead mark
+- 眉毛被劉海遮擋： eyebrows hidden by hair
+- 俊眉：v shaped eyebrows
+- 垂眼角：tareme
+- 高眼角：tsurime
+- 盯著人的樣子/半睜眼：jitome / half closed eyes
+- 眼淚：tearing up
+- 心型眼：tearing up
+- 貓眼：slit pupils
+- 遮住一支眼：hair over one eye / one eye covered
+- 異色瞳：heterochromia
+- 長睫毛：long eyelashes
+- 可愛臉：blush stickers
+- 波形嘴：waby mouth / :3
+- 顔文字：:D、:o、:<、:p、:q、:/、:I、:X、:C
+- 咬牙切齒：slenched teeth
+- 虎牙：skin fang
+- 上牙：upper teeth
+- 尖牙：upper teeth
+- 露出牙齒：round teeth
+- 咬緊牙：clenched teeth
+- 遮住嘴：covering mouth
+- 塞口器（口球）：bit gag
+- 咧嘴：lip biting
+- 嘟嘴：puckered lips
+- 伸出舌頭：tongue out
+- 精靈耳：pointy ears / elves
+- 淚痣：mole under eye
+- 搖頭晃腦：head tilt
+- 美人痣：mole under mouth
+- 哈欠：yawning
+- 傲嬌：tsundere
+- 表情集：expressions
+- 垂耳：floppy ears
