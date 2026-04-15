@@ -8,8 +8,11 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 ## 待辦事項
 
+- Wiki/Base folder
+- Report skill => wiki
+- wayback machine skill
+- epub to vault
 - sunset Tiddlyhost
-- epub to markdown
 - simplify readme.md
 - linebot???
 - study: text ui
