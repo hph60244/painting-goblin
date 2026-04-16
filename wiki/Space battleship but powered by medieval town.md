@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game']
+tags: ['#idea', '#game']
 ---
 
 - PvE battleship build like Backpack Battles

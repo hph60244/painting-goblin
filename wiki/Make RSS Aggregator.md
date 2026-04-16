@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - https://liuzhenglaichn.gitbook.io/system-design/news-feed/design-a-news-feed-system

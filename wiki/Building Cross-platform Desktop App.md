@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - https://github.com/nwjs/nw.js

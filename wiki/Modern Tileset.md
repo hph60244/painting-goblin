@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - https://limezu.itch.io/moderninteriors/devlog

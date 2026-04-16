@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - 幾個女/男孩：Xgirl/boy（比如2女既是2girl，3男既是3boy）

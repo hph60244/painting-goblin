@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - wink：one eye closed

@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [營業項目分類](https://gcis.nat.gov.tw/cod/codeSearch)

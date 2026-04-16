@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-concept']
+tags: ['#concept']
 ---
 
 - [[Local-first Software]]

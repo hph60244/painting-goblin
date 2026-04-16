@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game', '#fn-wip']
+tags: ['#idea', '#game', '#wip']
 ---
 
 Plot is controlled CPU

@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref', '#fn-wip']
+tags: ['#ref', '#wip']
 ---
 
 已經用於 [[Custom Headache App]] ，能夠製作包含資料庫的簡單介面

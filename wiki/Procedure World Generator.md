@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref', '#fn-wip']
+tags: ['#ref', '#wip']
 ---
 
 - https://www.youtube.com/c/Artifexian

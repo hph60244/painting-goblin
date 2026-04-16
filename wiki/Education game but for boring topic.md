@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game']
+tags: ['#idea', '#game']
 ---
 
 - Double-entry Bookkeeping, etc

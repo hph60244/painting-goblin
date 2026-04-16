@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game']
+tags: ['#idea', '#game']
 ---
 
 - gacha can reward mini game

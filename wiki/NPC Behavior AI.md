@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [Driving Emotionally Expressive NPC Animations and Behaviors with a Designer-Friendly Pipeline - YouTube](https://www.youtube.com/watch?v=WFnCTxHcB5s)

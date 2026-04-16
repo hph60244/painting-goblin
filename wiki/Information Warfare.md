@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref', '#fn-wip']
+tags: ['#ref', '#wip']
 ---
 
 # 反烏托邦遊戲

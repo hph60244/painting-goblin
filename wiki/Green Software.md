@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref', '#fn-wip']
+tags: ['#ref', '#wip']
 ---
 
 - https://stratoflow.com/efficient-and-environment-friendly-programming-languages/

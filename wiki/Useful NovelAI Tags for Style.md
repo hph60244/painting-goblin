@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [Style Tags](https://web.archive.org/web/20221023141705/https://i.redd.it/cjoquuyg9ku91.jpg)

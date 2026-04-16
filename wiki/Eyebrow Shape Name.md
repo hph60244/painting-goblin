@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - https://www.bebeautiful.in/all-things-makeup/everyday/types-of-eyebrow-shapes-that-suit-all-face-types-and-ages

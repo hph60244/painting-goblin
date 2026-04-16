@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [まいにち詰将棋 , 詰将棋・次の一手 , 日本将棋連盟](https://www.shogi.or.jp/tsume_shogi/everyday)

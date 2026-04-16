@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [The AI of Dark Souls Revealed , AI and Games #75 - YouTube](https://www.youtube.com/watch?v=PrHKzKQdZxY)

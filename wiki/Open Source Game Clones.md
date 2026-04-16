@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref', '#fn-game']
+tags: ['#ref', '#game']
 ---
 
 - https://osgameclones.com/

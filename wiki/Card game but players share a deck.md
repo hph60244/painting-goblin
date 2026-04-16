@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game']
+tags: ['#idea', '#game']
 ---
 
 - https://www.reddit.com/r/gameideas/comments/dtin86/competitive_card_game

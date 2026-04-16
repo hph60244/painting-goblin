@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [[ RPGnet Forums|https://forum.rpg.net/index.php?threads/pbta-games-with-playbook-generation-systems.872833|[PbtA] Games with Playbook Generation systems? , Tabletop Roleplaying Open ]]

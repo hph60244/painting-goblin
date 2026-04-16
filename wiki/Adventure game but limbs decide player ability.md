@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game']
+tags: ['#idea', '#game']
 ---
 
 - https://www.reddit.com/r/gameideas/comments/krm1l3/bones_management

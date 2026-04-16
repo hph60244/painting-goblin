@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [初心者でも分かる居飛車穴熊！組み方のコツ、手順と戦い方 , ゼロから始める将棋研究所](https://shogi-joutatsu.com/archives/7339)

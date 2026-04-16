@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [Utility system - Wikipedia](https://en.wikipedia.org/wiki/Utility_system)

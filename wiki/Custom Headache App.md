@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-wip', '#fn-app']
+tags: ['#idea', '#wip', '#app']
 ---
 
 已經可以自用了，就不需要再花時間正式上架

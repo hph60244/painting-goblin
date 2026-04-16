@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref', '#fn-game']
+tags: ['#ref', '#game']
 ---
 
 - [The Chess Variant Pages -- Query Results](https://www.chessvariants.com/index/mainquery.php?type=Any&category=Oriental&orderby=LinkText&displayauthor=1&displayinventor=1&usethisheading=Oriental+Chess+Variants)

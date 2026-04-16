@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [冒險模組轉換 - 地城世界](https://hazmole.github.io/Dungeon-World-HTML-SRD-release/appendices/conversion)

@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [CLIP STUDIO PAINT 為創作者繪圖而生的程式](https://www.clipstudio.net/tc)
@@ -15,7 +15,7 @@ tags: ['#fn-ref']
 - [R-18 ポーズ集 - Google 搜尋](https://www.google.com/search?q=R-18+%E3%83%9D%E3%83%BC%E3%82%BA%E9%9B%86&tbm=isch&ved=2ahUKEwjVh_jVtqODAxX6ZvUHHTQhDfcQ2-cCegQIABAA&oq=R-18+%E3%83%9D%E3%83%BC%E3%82%BA%E9%9B%86&gs_lcp=CgNpbWcQAzoECCMQJ1CVDViVDWClEGgAcAB4AIABMogBXpIBATKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=UrSFZdWWF_rN1e8PtMK0uA8&bih=955&biw=1920#imgrc=xY4xogtuQfW_tM)
 - [3Pポーズ集28 - CLIP STUDIO ASSETS](https://assets.clip-studio.com/ja-jp/detail?id=1827967)
 - [エロ い ポーズ イラスト - Sexy Media Girls on ce-connect.net](https://ce-connect.net/%E3%82%A8%E3%83%AD+%E3%81%84+%E3%83%9D%E3%83%BC%E3%82%BA+%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88)
-- [#ポーズ 自由に使えるポーズ集「セックスシーンポーズ」 - ティービースター的插畫 - pixiv](https://www.pixiv.net/artworks/87354067)
+- [ポーズ 自由に使えるポーズ集「セックスシーンポーズ」 - ティービースター的插畫 - pixiv](https://www.pixiv.net/artworks/87354067)
 - [バズ猫工務店（バズネココウボウ） サークルプロフィール , 作品一覧「DLsite 同人 - R18」](https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG53789.html)
 - [搜尋 - CLIP STUDIO ASSETS](https://assets.clip-studio.com/zh-tw/search?word=%E3%83%9D%E3%83%BC%E3%82%BA&order=new)
 - [PoseMy.Art](https://app.posemy.art)

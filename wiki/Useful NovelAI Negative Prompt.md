@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 worst quality, low quality, normal quality, lowres, blurry, censored, mosaic,

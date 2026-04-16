@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-app']
+tags: ['#idea', '#app']
 ---
 
 - [[Poor man's self-hosted]]

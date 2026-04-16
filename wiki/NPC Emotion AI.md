@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - [PAD emotional state model - Wikipedia](https://en.wikipedia.org/wiki/PAD_emotional_state_model)

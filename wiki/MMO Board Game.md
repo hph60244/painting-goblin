@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-game', '#fn-ref']
+tags: ['#game', '#ref']
 ---
 
 - [Steam - Puzzles and Board Games Mega Collection](https://store.steampowered.com/app/898340/Puzzles_and_Board_Games_Mega_Collection/?l=tchinese)

@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-idea', '#fn-game', '#fn-wip']
+tags: ['#idea', '#game', '#wip']
 ---
 
 想不到提高中毒性的玩法

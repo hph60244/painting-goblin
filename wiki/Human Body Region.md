@@ -1,5 +1,5 @@
 ---
-tags: ['#fn-ref']
+tags: ['#ref']
 ---
 
 - Anatomy A Regional Atlas of the Human Body, Sixth Edition ( etc.) (Z-Library)
