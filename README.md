@@ -10,11 +10,8 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 - idea => wiki
 - bookmark => wiki
-- wayback machine skill
-- epub to vault
 - simplify readme.md
 - linebot???
-- study: text ui
 - build app skill: 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - https://skills.sh/github/awesome-copilot/create-implementation-plan
 - https://skills.sh/obra/superpowers/writing-plans
