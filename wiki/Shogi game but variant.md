@@ -28,3 +28,4 @@ tags: ['#idea', '#task/suspend', '#game', '#wip']
 
 - [[Shogi Opening]]
 - [[Tsume Shogi]]
+- [[Shogi Tool]]
