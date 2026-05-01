@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - secretly send morse code by interacting with scene

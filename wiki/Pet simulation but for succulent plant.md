@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - in the end, the plant walk and replace you

@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - PvE battleship build like Backpack Battles

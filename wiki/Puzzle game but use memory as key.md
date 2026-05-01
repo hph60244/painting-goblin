@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - puzzle use lock and key mechanism

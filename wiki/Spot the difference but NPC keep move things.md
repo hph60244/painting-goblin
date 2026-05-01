@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - NPC stays out of the player’s sight and sets up traps and moves things around since the player would assume it's just the game programming

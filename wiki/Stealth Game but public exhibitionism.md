@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game', '#wip']
+tags: ['#idea', '#task/suspend', '#game', '#wip']
 ---
 
 - [[Job Description]]

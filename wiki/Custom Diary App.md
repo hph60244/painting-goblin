@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#app']
+tags: ['#idea', '#task/suspend', '#app']
 ---
 
 - [[Poor man's self-hosted]]

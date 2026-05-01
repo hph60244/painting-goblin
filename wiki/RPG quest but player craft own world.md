@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - https://www.reddit.com/r/gameideas/comments/loixod/card_based_world_generator

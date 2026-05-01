@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - https://www.reddit.com/r/gameideas/comments/dtin86/competitive_card_game

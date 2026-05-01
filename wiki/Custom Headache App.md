@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#wip', '#app']
+tags: ['#idea', '#task/suspend', '#wip', '#app']
 ---
 
 已經可以自用了，就不需要再花時間正式上架

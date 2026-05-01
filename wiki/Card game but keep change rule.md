@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game']
+tags: ['#idea', '#task/suspend', '#game']
 ---
 
 - https://www.reddit.com/r/gameideas/comments/ah8kar/seasons_change_a_card_game_where_the_rules_change

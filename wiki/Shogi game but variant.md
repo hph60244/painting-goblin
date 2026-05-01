@@ -1,5 +1,5 @@
 ---
-tags: ['#idea', '#game', '#wip']
+tags: ['#idea', '#task/suspend', '#game', '#wip']
 ---
 
 想不到提高中毒性的玩法
