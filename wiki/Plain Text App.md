@@ -1,0 +1,24 @@
+---
+tags: ['#ref']
+---
+
+- [File Over App: A Philosophy for Digital Longevity](https://rishikeshs.com/file-over-app)
+- [The Unreasonable Effectiveness Of Plain Text](https://www.youtube.com/watch?v=WgV6M1LyfNY)
+- [Plain Text](https://www.youtube.com/watch?v=4mRxIgu9R70)
+- [There's No Such Thing As Plain Text](https://www.youtube.com/watch?v=ajfb5LSbQVM)
+- [Asciidoctor](https://github.com/asciidoctor/asciidoctor)
+- [PlantUML](https://github.com/plantuml/plantuml)
+- [Mermaid](https://github.com/mermaid-js/mermaid)
+- [AsciiMath: An easy-to-write markup language for mathematics](https://asciimath.org)
+- [hledger: About Robust, fast, intuitive plain text accounting tool](https://github.com/simonmichael/hledger)
+- [markmap: Build mindmaps with plain text](https://github.com/markmap/markmap)
+- [penrose: Create beautiful diagrams just by typing notation in plain text](https://github.com/penrose/penrose)
+- [My productivity app is a never-ending .txt file](https://jeffhuang.com/productivity_text_file)
+- [Paper Apps](https://gladdendesign.com/collections/paper-apps)
+- [Sidekick Pocket is the portable notebook](https://cottonbureau.com/people/cortex-brand)
+- [MonoSketch: Unleash your ideas with ASCII](https://monosketch.io)
+- [Mockdown: ASCII Wireframe Editor](https://www.mockdown.design)
+- [Wiretext: Unicode Wireframe Design Tool](https://wiretext.app)
+- [Monodraw allows you to easily create text-based art](https://monodraw.helftone.com)
+- [ASCIIFlow: Infinite ASCII diagrams](https://files.littlebird.com.au/ascii-sketch.html)
+- [Firm: A text-based work management system for technologists](https://github.com/42futures/firm)

@@ -4,11 +4,14 @@ tags: ['#ref']
 
 - [Obsidian](https://obsidian.md)
 - [Notion](https://www.notion.com)
-- [Heptabase](https://heptabase.com)
 - [Miro](https://miro.com)
+- [Org Mode](https://orgmode.org)
+- [Heptabase](https://heptabase.com)
 - [AFFiNE](https://affine.pro)
 - [AppFlowy](https://appflowy.com)
+- [draw.io](https://app.diagrams.net)
 - [Excalidraw](https://excalidraw.com)
+- [Hashcards: A Plain-Text Spaced Repetition System](https://borretti.me/article/hashcards-plain-text-spaced-repetition)
 * https://www.inkandswitch.com/potluck
 * https://www.inkandswitch.com/capstone
 * https://www.inkandswitch.com/muse
