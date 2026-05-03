@@ -8,10 +8,10 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 
 ## 待辦事項
 
+- mini game => pygame
 - idea => wiki
+- game idea => pygame
 - bookmark => wiki
-- simplify readme.md
-- linebot???
 - build app skill: 建立應用程式開發技能，支援更複雜的應用程式建置任務
 - https://skills.sh/github/awesome-copilot/create-implementation-plan
 - https://skills.sh/obra/superpowers/writing-plans
