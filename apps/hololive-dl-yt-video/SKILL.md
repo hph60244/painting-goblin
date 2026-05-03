@@ -28,12 +28,14 @@ sync_yt_video_task_cooldown_minutes = 1440
 dl_yt_video_task_cron_schedule = * * * * *
 dl_yt_video_task_timeout_minutes = 5
 dl_yt_video_task_output_folder_path = downloads
+verify_dl_yt_video_task_cron_schedule = 0 0 * * *
 ```
 
 ## How It Works
 
 1. **sync_yt_video_task** (cron: `*/5 * * * *`): For each channel in `hololive_channel`, fetches video list from YouTube, creates download tasks (under 10 min videos only).
 2. **dl_yt_video_task** (cron: `* * * * *`): Downloads one pending video at a time to `downloads/<talent_name>/<title>.mp4`.
+3. **verify_dl_yt_video_task** (cron: `0 0 * * *`): Checks completed downloads daily, marks tasks as FAILED if files are missing or invalid.
 
 ## Adding a Channel
 

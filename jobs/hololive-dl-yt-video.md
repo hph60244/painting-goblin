@@ -6,7 +6,7 @@ Use $AGENT_CWD/skills/build-python-cli-app to write a app for:
 
 # Constraints
 
-## 實作時如果需要做決策，要根據Constraint或Problem做決策並明確註解
+## 實作時註解要與Constraint或Problem的關聯
 - 避免Coding Agent在無人監督的狀況下做無關的決策
 - 避免Coding Agent在長期任務中遺忘Constraint
 - 避免Coding Agent在長期任務中遺忘Problem
@@ -82,6 +82,7 @@ Use $AGENT_CWD/skills/build-python-cli-app to write a app for:
   - dl_yt_video_task_cron_schedule: dl_yt_video_task的cron週期，預設為`* * * * *`
   - dl_yt_video_task_timeout_minutes: dl_yt_video_task的超時分鐘數，預設為5
   - dl_yt_video_task_output_folder_path: dl_yt_video_task下載檔案的根資料夾路徑，預設為`downloads`
+  - verify_dl_yt_video_task_cron_schedule: verify_dl_yt_video_task的cron週期，預設為`0 0 * * *`
 
 ### Acceptance
 - <config_file_path>檔案有[general] section時: 正常執行
@@ -217,7 +218,7 @@ Use $AGENT_CWD/skills/build-python-cli-app to write a app for:
         - 在`dl_yt_video_task`資料表裡面找一個`updated_at`最舊的，`status=COMPLETED||FAILED`的task
         - 把task的`status`標記為`STARTED`，`updated_at`更新為現在時間
         - 根據task的`channel_id`在`hololive_channel`資料表裡面找到`talent_name`
-        - 根據task的`video_id`從YouTube下載最高品質的.mp4到`dl_yt_video_task_output_folder_path/<talent_name>/<video_title>.mp4`，`video_title`為影片標題
+        - 根據task的`video_id`從YouTube下載最高品質的.mp4到`<dl_yt_video_task_output_folder_path>/<talent_name>/<video_title>.mp4`，`video_title`為影片標題
         - 如果task的執行失敗:
             - 把task的`status`標記為`FAILED`，`updated_at`更新為現在時間
             - 強制結束task
@@ -229,4 +230,24 @@ Use $AGENT_CWD/skills/build-python-cli-app to write a app for:
             - 正常結束task
 
 ### Acceptance
-- 可在`hololive_channel`資料表裡加上 `channel_id=UCqm3BQLlJfvkTsX_hvm0UmA, talent_name=tsunomaki-watame`，在`dl_yt_video_task`資料表裡加上 `channel_id=UCqm3BQLlJfvkTsX_hvm0UmA, video_id=d3UTywBDSW4`測試，`dl_yt_video_task_output_folder_path/tsunomaki-watame`資料表能找到新的影片
+- 可在`hololive_channel`資料表裡加上 `channel_id=UCqm3BQLlJfvkTsX_hvm0UmA, talent_name=tsunomaki-watame`，在`dl_yt_video_task`資料表裡加上 `channel_id=UCqm3BQLlJfvkTsX_hvm0UmA, video_id=d3UTywBDSW4`測試，`<dl_yt_video_task_output_folder_path>/tsunomaki-watame`資料表能找到新的影片
+
+## 註冊verify_dl_yt_video_task
+
+### Contract
+- 根據`verify_dl_yt_video_task_cron_schedule`設定`verify_dl_yt_video_task`
+- `verify_dl_yt_video_task`步驟:
+    1. 標記影片檔錯誤的任務為失敗
+        - 搜尋`dl_yt_video_task`資料表裡所有`status=COMPLETED`的task
+        - 在`dl_yt_video_task`資料表裡面找一個`updated_at`最舊的，`status=COMPLETED||FAILED`的task
+        - 對每一個task:
+            - 根據task的`channel_id`在`hololive_channel`資料表裡面找到`talent_name`
+            - 根據task的`video_id`組合出影片的檔案路徑`video_file_path`: `<dl_yt_video_task_output_folder_path>/<talent_name>/<video_title>.mp4`
+            - 如果`video_file_path`檔案不存在:
+                - 把task的`status`標記為`FAILED`，`updated_at`更新為現在時間，`talent_name`更新為空
+            - 如果`video_file_path`檔案不為合法的mp4:
+                - 移除`video_file_path`檔案
+                - 把task的`status`標記為`FAILED`，`updated_at`更新為現在時間，`talent_name`更新為空
+
+### Acceptance
+- 可正常執行

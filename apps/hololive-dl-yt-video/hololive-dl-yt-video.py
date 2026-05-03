@@ -37,6 +37,7 @@ sync_yt_video_task_cooldown_minutes = 1440
 dl_yt_video_task_cron_schedule = * * * * *
 dl_yt_video_task_timeout_minutes = 5
 dl_yt_video_task_output_folder_path = downloads
+verify_dl_yt_video_task_cron_schedule = 0 0 * * *
 """
 
 
@@ -83,6 +84,9 @@ def parse_config(config_file_path):
         ),
         "dl_yt_video_task_output_folder_path": general.get(
             "dl_yt_video_task_output_folder_path", "downloads"
+        ),
+        "verify_dl_yt_video_task_cron_schedule": general.get(
+            "verify_dl_yt_video_task_cron_schedule", "0 0 * * *"
         ),
     }
     return settings
@@ -422,6 +426,72 @@ def dl_yt_video_task(
         conn.close()
 
 
+def is_valid_mp4(file_path):
+    try:
+        with open(file_path, "rb") as f:
+            header = f.read(8)
+        if len(header) < 8:
+            return False
+        return header[4:8] == b"ftyp"
+    except (OSError, IOError):
+        return False
+
+
+def verify_dl_yt_video_task(sqlite_file_path, output_folder_path):
+    conn = get_task_connection(sqlite_file_path)
+    cursor = conn.cursor()
+    try:
+        cursor.execute(
+            "SELECT t.video_id, t.channel_id, t.video_name, h.talent_name "
+            "FROM dl_yt_video_task t "
+            "LEFT JOIN hololive_channel h ON t.channel_id = h.channel_id "
+            "WHERE t.status='COMPLETED'"
+        )
+        rows = cursor.fetchall()
+
+        fixed_count = 0
+        for video_id, channel_id, video_name, talent_name in rows:
+            if not video_name or not talent_name:
+                now = now_iso()
+                cursor.execute(
+                    "UPDATE dl_yt_video_task SET status='FAILED', updated_at=?, video_name=? WHERE video_id=?",
+                    (now, '', video_id),
+                )
+                fixed_count += 1
+                continue
+
+            video_file_path = os.path.join(output_folder_path, talent_name, video_name)
+
+            if not os.path.exists(video_file_path):
+                logger.warning("Video file not found: %s", video_file_path)
+                now = now_iso()
+                cursor.execute(
+                    "UPDATE dl_yt_video_task SET status='FAILED', updated_at=?, video_name=? WHERE video_id=?",
+                    (now, '', video_id),
+                )
+                fixed_count += 1
+            elif not is_valid_mp4(video_file_path):
+                logger.warning("Invalid MP4 file, removing: %s", video_file_path)
+                try:
+                    os.remove(video_file_path)
+                except OSError as e:
+                    logger.error("Failed to remove invalid MP4: %s", e)
+                now = now_iso()
+                cursor.execute(
+                    "UPDATE dl_yt_video_task SET status='FAILED', updated_at=?, video_name=? WHERE video_id=?",
+                    (now, '', video_id),
+                )
+                fixed_count += 1
+
+        conn.commit()
+        if fixed_count > 0:
+            logger.info("Fixed %d video tasks", fixed_count)
+        else:
+            logger.info("All completed videos verified successfully")
+    finally:
+        conn.close()
+
+
 def setup_logging():
     logging.basicConfig(
         level=logging.INFO,
@@ -445,6 +515,7 @@ def main():
     dl_cron = settings["dl_yt_video_task_cron_schedule"]
     dl_timeout = settings["dl_yt_video_task_timeout_minutes"]
     output_folder = settings["dl_yt_video_task_output_folder_path"]
+    verify_cron = settings["verify_dl_yt_video_task_cron_schedule"]
 
     init_sqlite_db(sqlite_file_path)
     conn = connect_sqlite_db(sqlite_file_path)
@@ -494,6 +565,25 @@ def main():
         )
         logger.info(
             "Registered dl_yt_video_task with cron schedule: %s", dl_cron
+        )
+
+    verify_cron_parts = verify_cron.strip().split()
+    if len(verify_cron_parts) == 5:
+        scheduler.add_job(
+            verify_dl_yt_video_task,
+            CronTrigger(
+                minute=verify_cron_parts[0],
+                hour=verify_cron_parts[1],
+                day=verify_cron_parts[2],
+                month=verify_cron_parts[3],
+                day_of_week=verify_cron_parts[4],
+            ),
+            args=[sqlite_file_path, output_folder],
+            id="verify_dl_yt_video_task",
+            replace_existing=True,
+        )
+        logger.info(
+            "Registered verify_dl_yt_video_task with cron schedule: %s", verify_cron
         )
 
     scheduler.start()
