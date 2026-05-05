@@ -2,7 +2,7 @@ Use $AGENT_CWD/skills/build-python-cli-app to write a app for:
 
 # Problem
 
-製作Snake遊戲原型
+製作Snake遊戲原型，遊戲進行速度不要太快
 
 # Constraints
 

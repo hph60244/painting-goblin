@@ -1,269 +1,268 @@
-"""
-Snake game prototype using Pygame.
-
-Problem: 製作Snake遊戲原型
-Constraint: 使用Pygame - 適合製作2D遊戲原型, 輕量化
-Constraint: 用極簡風格呈現 - 強調玩法概念, 節省製作時間
-Constraint: 使用logger輸出訊息 - 用於人類跟AI除錯
-"""
-
 import argparse
 import logging
-import random
 import sys
+import random
 
 import pygame
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
-)
-logger = logging.getLogger(__name__)
+WINDOW_TITLE = "Snake"
+FPS = 60
+CELL_SIZE = 30
+GRID_COLS = 20
+GRID_ROWS = 15
+WINDOW_WIDTH = GRID_COLS * CELL_SIZE
+WINDOW_HEIGHT = GRID_ROWS * CELL_SIZE
+MOVE_INTERVAL = 0.15
 
-# Constraint: 用極簡風格呈現 - 使用基本顏色常數，不引入複雜主題
-BLACK = pygame.Color(0, 0, 0)
-WHITE = pygame.Color(255, 255, 255)
-GREEN = pygame.Color(0, 255, 0)
-RED = pygame.Color(255, 0, 0)
-GRAY = pygame.Color(128, 128, 128)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GREEN = (0, 200, 0)
+RED = (200, 0, 0)
+GRAY = (40, 40, 40)
+
+UP = (0, -1)
+DOWN = (0, 1)
+LEFT = (-1, 0)
+RIGHT = (1, 0)
 
 
 class Snake:
-    """
-    Contract: Snake - Grid movement, growing linked list, self-collision
-    """
-
-    def __init__(self, grid_width: int, grid_height: int):
-        self.grid_width = grid_width
-        self.grid_height = grid_height
-        # Contract: Growing linked list - 使用list模擬linked list表示蛇身
-        self.body: list[tuple[int, int]] = [
-            (grid_width // 2, grid_height // 2)
-        ]
-        # Contract: Grid movement - 方向以(dx, dy)表示
-        self.direction: tuple[int, int] = (1, 0)
-        self.next_direction: tuple[int, int] = (1, 0)
+    def __init__(self, cols, rows):
+        start_x = cols // 2
+        start_y = rows // 2
+        self.segments = [(start_x, start_y)]
+        self.direction = RIGHT
+        self.next_direction = RIGHT
         self.growing = False
+        self.cols = cols
+        self.rows = rows
 
-    def set_direction(self, dx: int, dy: int) -> None:
-        """防止反向移動 (Constraint: 實作時註解要與Constraint或Problem的關聯)"""
-        if (dx, dy) != (-self.direction[0], -self.direction[1]):
-            self.next_direction = (dx, dy)
+    def set_direction(self, direction):
+        opposite = (direction[0] * -1, direction[1] * -1)
+        if opposite != self.direction:
+            self.next_direction = direction
 
-    def move(self) -> bool:
-        """
-        Move snake one step. Returns True if alive, False on collision.
-        Contract: Grid movement, self-collision
-        """
+    def move(self):
         self.direction = self.next_direction
-        head = self.body[0]
+        head = self.segments[0]
         new_head = (
-            (head[0] + self.direction[0]) % self.grid_width,
-            (head[1] + self.direction[1]) % self.grid_height,
+            head[0] + self.direction[0],
+            head[1] + self.direction[1],
         )
 
-        # Contract: Self-collision - 檢查新頭部是否與身體碰撞
-        # Constraint: 使用logger輸出訊息
-        if new_head in self.body:
-            logger.info("Snake collided with itself at %s", new_head)
-            return False
-
-        self.body.insert(0, new_head)  # Contract: Growing linked list
-
-        if not self.growing:
-            self.body.pop()
-        else:
+        if self.growing:
+            self.segments.insert(0, new_head)
             self.growing = False
+        else:
+            self.segments.insert(0, new_head)
+            self.segments.pop()
 
-        return True
-
-    def grow(self) -> None:
-        """Trigger growth on next move."""
+    def grow(self):
         self.growing = True
 
-    def get_head(self) -> tuple[int, int]:
-        return self.body[0]
+    def check_wall_collision(self):
+        head = self.segments[0]
+        return head[0] < 0 or head[0] >= self.cols or head[1] < 0 or head[1] >= self.rows
+
+    def check_self_collision(self):
+        head = self.segments[0]
+        return head in self.segments[1:]
+
+    def get_head(self):
+        return self.segments[0]
+
+    def draw(self, surface, cell_size):
+        for i, segment in enumerate(self.segments):
+            rect = pygame.Rect(
+                segment[0] * cell_size,
+                segment[1] * cell_size,
+                cell_size,
+                cell_size,
+            )
+            if i == 0:
+                pygame.draw.rect(surface, (0, 255, 0), rect)
+            else:
+                pygame.draw.rect(surface, GREEN, rect)
+            pygame.draw.rect(surface, BLACK, rect, 1)
 
 
 class Food:
-    """Randomly placed food on the grid."""
+    def __init__(self, cols, rows):
+        self.cols = cols
+        self.rows = rows
+        self.position = (0, 0)
 
-    def __init__(self, grid_width: int, grid_height: int):
-        self.grid_width = grid_width
-        self.grid_height = grid_height
-        self.position: tuple[int, int] = (0, 0)
+    def spawn(self, snake_segments):
+        available = []
+        for x in range(self.cols):
+            for y in range(self.rows):
+                if (x, y) not in snake_segments:
+                    available.append((x, y))
+        if available:
+            self.position = random.choice(available)
+            return True
+        return False
 
-    def respawn(self, snake_body: list[tuple[int, int]]) -> None:
-        """Place food at a random position not occupied by the snake."""
-        while True:
-            pos = (
-                random.randint(0, self.grid_width - 1),
-                random.randint(0, self.grid_height - 1),
-            )
-            if pos not in snake_body:
-                self.position = pos
-                break
+    def draw(self, surface, cell_size):
+        rect = pygame.Rect(
+            self.position[0] * cell_size,
+            self.position[1] * cell_size,
+            cell_size,
+            cell_size,
+        )
+        pygame.draw.rect(surface, RED, rect)
+        pygame.draw.rect(surface, BLACK, rect, 1)
 
 
 class Game:
-    """
-    Main game controller.
-
-    Task: 使腳本接收輸入參數
-    """
-
-    def __init__(
-        self,
-        grid_width: int = 20,
-        grid_height: int = 20,
-        cell_size: int = 30,
-        fps: int = 10,
-    ):
-        self.grid_width = grid_width
-        self.grid_height = grid_height
-        self.cell_size = cell_size
-        self.fps = fps
-        self.screen_width = grid_width * cell_size
-        self.screen_height = grid_height * cell_size
-
-        # Constraint: 使用logger輸出訊息
-        logger.info(
-            "Initializing game: %dx%d grid, %dpx cells, %d FPS",
-            grid_width, grid_height, cell_size, fps,
-        )
+    def __init__(self, args):
+        self.logger = logging.getLogger("Snake")
+        self.logger.setLevel(getattr(logging, args.log_level.upper(), logging.INFO))
+        self.cell_size = args.cell_size
+        self.cols = args.cols
+        self.rows = args.rows
+        self.window_width = self.cols * self.cell_size
+        self.window_height = self.rows * self.cell_size
+        self.move_interval = args.speed
+        self.move_timer = 0.0
+        self.score = 0
+        self.game_over = False
 
         pygame.init()
-        # Constraint: 用極簡風格呈現 - 基本視窗設定，無多餘裝飾
-        self.screen = pygame.display.set_mode(
-            (self.screen_width, self.screen_height)
-        )
-        pygame.display.set_caption("Snake")
+        self.screen = pygame.display.set_mode((self.window_width, self.window_height))
+        pygame.display.set_caption(WINDOW_TITLE)
         self.clock = pygame.time.Clock()
-        self.font = pygame.font.Font(None, 36)
-
-        self.snake = Snake(grid_width, grid_height)
-        self.food = Food(grid_width, grid_height)
-        self.food.respawn(self.snake.body)
-        self.score = 0
+        self.font = pygame.font.Font(None, 28)
         self.running = True
 
-    def handle_events(self) -> None:
-        """
-        Contract: Grid movement - 處理方向鍵輸入
-        Constraint: 實作時註解要與Constraint或Problem的關聯
-        """
+        self.snake = Snake(self.cols, self.rows)
+        self.food = Food(self.cols, self.rows)
+        if not self.food.spawn(self.snake.segments):
+            self.logger.warning("No space to spawn food")
+
+        self.logger.info(
+            "Game initialized: %dx%d grid, cell=%dpx, speed=%.2fs per move",
+            self.cols, self.rows, self.cell_size, self.move_interval,
+        )
+
+    def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_UP:
-                    self.snake.set_direction(0, -1)
-                elif event.key == pygame.K_DOWN:
-                    self.snake.set_direction(0, 1)
-                elif event.key == pygame.K_LEFT:
-                    self.snake.set_direction(-1, 0)
-                elif event.key == pygame.K_RIGHT:
-                    self.snake.set_direction(1, 0)
-                elif event.key == pygame.K_ESCAPE:
+                if event.key == pygame.K_ESCAPE:
                     self.running = False
+                elif event.key == pygame.K_r and self.game_over:
+                    self.reset_game()
+                elif event.key == pygame.K_UP:
+                    self.snake.set_direction(UP)
+                elif event.key == pygame.K_DOWN:
+                    self.snake.set_direction(DOWN)
+                elif event.key == pygame.K_LEFT:
+                    self.snake.set_direction(LEFT)
+                elif event.key == pygame.K_RIGHT:
+                    self.snake.set_direction(RIGHT)
 
-    def update(self) -> None:
-        """Update game state."""
-        alive = self.snake.move()
-        if not alive:
-            # Constraint: 使用logger輸出訊息
-            logger.info("Game over! Final score: %d", self.score)
-            self.running = False
+    def reset_game(self):
+        self.logger.info("Game reset")
+        self.snake = Snake(self.cols, self.rows)
+        self.food.spawn(self.snake.segments)
+        self.score = 0
+        self.game_over = False
+        self.move_timer = 0.0
+
+    def update(self, dt):
+        if self.game_over:
             return
 
-        # Check food collision
+        self.move_timer += dt
+        if self.move_timer < self.move_interval:
+            return
+        self.move_timer = 0.0
+
+        self.snake.move()
+
+        if self.snake.check_wall_collision():
+            self.logger.debug("Snake hit wall at head=%s", self.snake.get_head())
+            self.game_over = True
+            return
+
+        if self.snake.check_self_collision():
+            self.logger.debug("Snake hit itself at head=%s", self.snake.get_head())
+            self.game_over = True
+            return
+
         if self.snake.get_head() == self.food.position:
             self.snake.grow()
             self.score += 1
-            logger.info("Food eaten! Score: %d", self.score)
-            self.food.respawn(self.snake.body)
+            self.logger.debug("Food eaten. Score=%d", self.score)
+            if not self.food.spawn(self.snake.segments):
+                self.logger.info("No space left for food. Player wins!")
+                self.game_over = True
 
-    def draw(self) -> None:
-        """Render the game."""
+    def draw_grid(self):
+        for x in range(0, self.window_width, self.cell_size):
+            pygame.draw.line(self.screen, GRAY, (x, 0), (x, self.window_height))
+        for y in range(0, self.window_height, self.cell_size):
+            pygame.draw.line(self.screen, GRAY, (0, y), (self.window_width, y))
+
+    def draw(self):
         self.screen.fill(BLACK)
+        self.draw_grid()
+        self.snake.draw(self.screen, self.cell_size)
+        self.food.draw(self.screen, self.cell_size)
 
-        # Draw grid lines (極簡風格 - 只用淺灰線條區隔格子)
-        for x in range(0, self.screen_width, self.cell_size):
-            pygame.draw.line(self.screen, GRAY, (x, 0), (x, self.screen_height))
-        for y in range(0, self.screen_height, self.cell_size):
-            pygame.draw.line(self.screen, GRAY, (0, y), (self.screen_width, y))
+        score_text = self.font.render(f"Score: {self.score}", True, WHITE)
+        self.screen.blit(score_text, (10, 10))
 
-        # Draw snake (極簡風格 - 純色方塊)
-        for segment in self.snake.body:
-            rect = pygame.Rect(
-                segment[0] * self.cell_size,
-                segment[1] * self.cell_size,
-                self.cell_size,
-                self.cell_size,
-            )
-            pygame.draw.rect(self.screen, GREEN, rect)
-
-        # Draw food (極簡風格 - 純色圓形)
-        center = (
-            self.food.position[0] * self.cell_size + self.cell_size // 2,
-            self.food.position[1] * self.cell_size + self.cell_size // 2,
-        )
-        pygame.draw.circle(self.screen, RED, center, self.cell_size // 2 - 2)
+        if self.game_over:
+            text = self.font.render("Game Over! (R to restart, ESC to quit)", True, WHITE)
+            text_rect = text.get_rect(center=(self.window_width // 2, self.window_height // 2))
+            self.screen.blit(text, text_rect)
 
         pygame.display.flip()
 
-    def run(self) -> None:
-        """Main game loop."""
-        # Constraint: 使用logger輸出訊息
-        logger.info("Game started. Use arrow keys to move, ESC to quit.")
+    def run(self):
+        self.logger.info("Game started")
         while self.running:
+            dt = self.clock.tick(FPS) / 1000.0
             self.handle_events()
-            self.update()
+            self.update(dt)
             self.draw()
-            self.clock.tick(self.fps)
-
+        self.logger.info("Game ended")
         pygame.quit()
-        # Constraint: 使用logger輸出訊息
-        logger.info("Game closed. Final score: %d", self.score)
+        sys.exit()
 
 
-def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    """
-    Task: 使腳本接收輸入參數
-    Constraint: 實作時註解要與Constraint或Problem的關聯
-    """
-    parser = argparse.ArgumentParser(description="Snake game prototype")
+def parse_args(argv):
+    parser = argparse.ArgumentParser(description=WINDOW_TITLE)
+    parser.add_argument("--cell-size", type=int, default=CELL_SIZE, help="Cell size in pixels (default: %(default)s)")
+    parser.add_argument("--cols", type=int, default=GRID_COLS, help="Number of grid columns (default: %(default)s)")
+    parser.add_argument("--rows", type=int, default=GRID_ROWS, help="Number of grid rows (default: %(default)s)")
     parser.add_argument(
-        "--grid-width", "-gw", type=int, default=20,
-        help="Number of cells horizontally (default: 20)",
+        "--speed", type=float, default=MOVE_INTERVAL,
+        help="Time in seconds between snake moves (default: %(default)s). Lower = faster.",
     )
     parser.add_argument(
-        "--grid-height", "-gh", type=int, default=20,
-        help="Number of cells vertically (default: 20)",
-    )
-    parser.add_argument(
-        "--cell-size", "-cs", type=int, default=30,
-        help="Pixel size of each cell (default: 30)",
-    )
-    parser.add_argument(
-        "--fps", "-f", type=int, default=10,
-        help="Game speed in frames per second (default: 10)",
+        "--log-level",
+        type=str,
+        default="INFO",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        help="Logging level (default: %(default)s)",
     )
     return parser.parse_args(argv)
 
 
-def main(argv: list[str] | None = None) -> None:
-    """
-    Task: 使腳本接收輸入參數
-    """
+def main(argv=None):
+    if argv is None:
+        argv = sys.argv[1:]
     args = parse_args(argv)
-    game = Game(
-        grid_width=args.grid_width,
-        grid_height=args.grid_height,
-        cell_size=args.cell_size,
-        fps=args.fps,
+    logging.basicConfig(
+        format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
+        level=getattr(logging, args.log_level.upper(), logging.INFO),
+        datefmt="%H:%M:%S",
     )
+    game = Game(args)
     game.run()
 
 
