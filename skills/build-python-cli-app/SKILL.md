@@ -43,5 +43,6 @@ description: Create a Python script that solves the problem below. It should fol
         - Try again
     5. If things fail too many times:
         - Rollback and restart from previous task
-6. Create a $AGENT_CWD/apps/<name>/requirements.txt file if needed
-7. Create a skill under $AGENT_CWD/apps/<name> by $AGENT_CWD/skills/make-skill-template
+6. Create a $AGENT_CWD/apps/<name>/requirements.txt
+7. Create a $AGENT_CWD/apps/<name>/<name>.bat to start script
+8. Create a skill under $AGENT_CWD/apps/<name> by $AGENT_CWD/skills/make-skill-template
