@@ -9,6 +9,7 @@ painting-goblin 是一個基於檔案系統的任務處理系統，使用 Publis
 ## 待辦事項
 
 - mini game => pygame
+- opensopec skill
 - idea => wiki
 - game idea => pygame
 - bookmark => wiki
