@@ -1,6 +1,62 @@
 ---
-tags: ['#idea', '#task/suspend', '#game']
+tags: ['#idea', '#task/suspend', '#game', '#wip']
 ---
 
 - one dimension rpg
 - goal is beating people in the waiting line for prize
+- 需要排隊遊戲獨特的挑戰
+    - 群落發展
+    - 排隊時抵抗環境變化
+        - project zomboid
+            - [https://pzwiki.net/wiki/Moodles/zh](https://pzwiki.net/wiki/Moodles/zh)
+            - [https://playgame.wiki/projectzomboid/gonglue/all](https://playgame.wiki/projectzomboid/gonglue/all)
+            - 失血
+            - 感冒
+            - 負重
+            - 過熱
+            - 受寒
+            - 飢餓 Hunger
+            - 受傷 [https://pzwiki.net/wiki/Health#Types_of_Injuries](https://pzwiki.net/wiki/Health#Types_of_Injuries)
+            - 生病
+            - 口渴 Thirst
+            - 淋濕
+        - don't starve
+            - 機制
+                - [https://dontstarve.fandom.com/zh/wiki/生命](https://dontstarve.fandom.com/zh/wiki/%E7%94%9F%E5%91%BD)
+                - [https://dontstarve.fandom.com/zh/wiki/理智](https://dontstarve.fandom.com/zh/wiki/%E7%90%86%E6%99%BA)
+                - [https://dontstarve.fandom.com/zh/wiki/潮濕](https://dontstarve.fandom.com/zh/wiki/%E6%BD%AE%E6%BF%95)
+                - [https://dontstarve.fandom.com/zh/wiki/過熱](https://dontstarve.fandom.com/zh/wiki/%E9%81%8E%E7%86%B1)
+                - [https://dontstarve.fandom.com/zh/wiki/寒冷](https://dontstarve.fandom.com/zh/wiki/%E5%AF%92%E5%86%B7)
+                - [https://dontstarve.fandom.com/zh/wiki/飢餓](https://dontstarve.fandom.com/zh/wiki/%E9%A3%A2%E9%A4%93)
+                - [https://dontstarve.fandom.com/zh/wiki/光源類](https://dontstarve.fandom.com/zh/wiki/%E5%85%89%E6%BA%90%E9%A1%9E)
+                - [https://dontstarve.fandom.com/zh/wiki/中毒](https://dontstarve.fandom.com/zh/wiki/%E4%B8%AD%E6%AF%92)
+            - 環境
+                - [https://dontstarve.fandom.com/zh/wiki/日夜週期](https://dontstarve.fandom.com/zh/wiki/%E6%97%A5%E5%A4%9C%E9%80%B1%E6%9C%9F)
+                - [https://dontstarve.fandom.com/zh/wiki/雨天](https://dontstarve.fandom.com/zh/wiki/%E9%9B%A8%E5%A4%A9)
+                - [https://dontstarve.fandom.com/zh/wiki/強風](https://dontstarve.fandom.com/zh/wiki/%E5%BC%B7%E9%A2%A8)
+                - [https://dontstarve.fandom.com/zh/wiki/閃電](https://dontstarve.fandom.com/zh/wiki/%E9%96%83%E9%9B%BB)
+                - [https://dontstarve.fandom.com/zh/wiki/火山](https://dontstarve.fandom.com/zh/wiki/%E7%81%AB%E5%B1%B1)
+    - 選定道具，可贈與點到的夥伴，強化他們的抗性
+        - 每個夥伴顯示需求按鈕，減少查看操作
+    - 狀態影響
+        - progress bar ui
+        - game control script
+        - day and night : sanity
+        - item ui
+        - 插隊系統
+        - rain : stamina
+        - ice land and snow : hp
+        - desert and heat : hp
+        - lightening : hp
+        - load : stamina
+        - storm : stamina
+        - fog : hp
+- 可郵購道具ubersheep, 晚上發生插隊事件, 限量
+- Reference
+    - [pet](https://assetstore.unity.com/packages/3d/characters/animals/animal-pack-deluxe-v2-144071)
+    - [define game goal](https://assetstore.unity.com/packages/vfx/shaders/heat-haze-effect-53714)
+    - [https://www.youtube.com/watch?v=0jexhkwCGOc&ab_channel=阿津](https://www.youtube.com/watch?v=0jexhkwCGOc&ab_channel=%E9%98%BF%E6%B4%A5)
+- iso map
+    - [https://blog.unity.com/technology/isometric-2d-environments-with-tilemap](https://blog.unity.com/technology/isometric-2d-environments-with-tilemap)
+    - [https://www.youtube.com/watch?v=tW744Zgc1YY&ab_channel=Sykoo](https://www.youtube.com/watch?v=tW744Zgc1YY&ab_channel=Sykoo)
+    - [https://www.youtube.com/watch?v=tywt9tOubEY&ab_channel=Unity](https://www.youtube.com/watch?v=tywt9tOubEY&ab_channel=Unity)
