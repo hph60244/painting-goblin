@@ -1,0 +1,836 @@
+Greetings, adventurer. I am Leroy the
+Ludomancer, and I wish to invite you on
+a tour of my realm, a magical kingdom of
+the mind. Hello.
+>> [music]
+>> This is a video about game design theory
+and about the theories which [music]
+game designers use.
+>> Confusingly, these are slightly
+different things.
+>> We're examining the role of theory in
+design, [music] what it's actually for,
+what it's not for, and if talking a
+little bit about where it comes [music]
+from.
+>> In order to do this, we're going to take
+a trip to the mythical land of Ludorum
+Designatio, a fantasy continent [music]
+where different forces battle for
+control of the field of game design.
+[music]
+>> Because if there's one thing I like more
+than a visual metaphor, it is a silly
+one that I can draw using a Dungeons &
+Dragons map-making software. Oh, yeah.
+Before we start, I have one major
+caveat. If you go into like Amazon
+reviews or Reddit, you'll find lots of
+people dismissing textbooks like this by
+saying that they are not practical. And
+that kind of depends what you mean.
+Jesse Schell's book actually contains
+quite a lot on the practices and
+processes that you do as part of game
+design. But what it doesn't do is tell
+you how to actually make a game. It
+doesn't tell you how to use a game
+engine or a programming language. If
+this was going to tell us how to use
+Unity or Unreal, it would need to be
+updated every 6 months.
+Here are some negative Amazon reviews of
+this book turned into a rap for some
+reason.
+>> [music]
+>> Great content but contains little to no
+programming. It's hard to find any
+useful, let alone practical, information
+in this book. [music] There's so much
+nonsense here, it's hard to decipher
+what exactly there is to learn about
+[music] game design.
+>> Someone who has no experience in game
+development but trying to learn the work
+getting into the technical [music]
+aspects of video game development, this
+book really isn't it. I am looking to
+learn [singing] the how to [music]
+create a game and not really getting to
+the fine nuances of why and what.
+Game design isn't programming or drawing
+art assets in the same way that music
+theory isn't about playing the piano and
+architecture isn't about bricklaying.
+It's very common to find people who have
+picked up a book like this who have not
+yet developed some sort of basic
+technical competence to be able to make
+games, and they're expecting this to do
+that for them. And that's not what it
+does, and they end up disillusioned with
+theory [music] because they went to it
+for the wrong thing.
+Ultimately, the value that you get from
+game design theory is going to depend on
+your expectations of what it's for and
+what it can [music] do for you.
+>> There is a book you can read that will
+teach you how to use a game engine, and
+it's called the of manual.
+>> You need some level of technical
+competence in order to make a game, but
+you're not going to get that from a game
+design book.
+>> I could probably do a whole other video
+on the distinction between design and
+development. It's a very misunderstood
+topic generally. Designing [music]
+something is not every part of creating
+it. It's the thought that goes into it.
+>> Designation, making decisions about
+something.
+>> If you're making games in a smaller
+team, it becomes job, and that's kind of
+why it's so hard for people to talk
+about design and development as two
+separate things.
+>> Of course, books like these can be
+helpful for non-developers, too, because
+game design is about understanding games
+and why people play them.
+>> The audience for game design theory is
+way bigger than just people [music] who
+want to or are making games.
+Understanding how games are made or how
+they work or having the right kind of
+language to talk about what makes them
+fun or interesting [music] is helpful to
+a way broader group of people than just
+game developers.
+>> Skills we use in game design have a
+broader usage than just in video games.
+This is why you will often find people
+that design video games, but they also
+design tabletop role-playing games. I
+tend to think of a video game designer
+less as [music] a special sort of
+software developer that makes games and
+more like a product designer that
+specializes in interactivity and
+engaging [music] people and making them
+have some sort of fun, whether it's
+whoop-de-do fun or scary fun or
+whatever.
+>> [music]
+>> Designing a game is a process of posing
+questions about your game and its
+players and then answering those
+questions through prototyping [music]
+and playtesting.
+>> So, when you make a game, you are
+testing some theories that you have
+about what makes something fun or
+interesting, and the game you make is
+your experiment to test that [music]
+theory. And these bigger theories that
+we're going to talk about that come from
+game design textbooks and other places,
+they're just there to help you out in
+those processes. [music] What game
+design theory is not going to do is help
+you decide what game to make in the
+first place or build your game for you.
+And it's not a magic wand to help you
+[music] de-risk the decision to quit
+your day job and make games full-time.
+So, you're [music] going to get more
+from it if you're realistic about what
+it's for and what it's not for,
+basically. What a good game design book
+should do is introduce you to game
+design [music] as a field. When we talk
+about a profession or a craft being a
+field, [music]
+>> it's not really a field. If it were a
+field, there would be some grass, some
+dandelions, maybe the odd moo cow here
+and there.
+>> It's like a spatial metaphor. A field is
+a a physical place that you can go to
+and walk around and discover. I want to
+go one further. And in this video, we're
+going to talk about game design as if it
+were not just a little field, but an
+entire realm.
+We're going to imagine that game design
+is a real place.
+>> Theory is just a map of that place.
+>> And the thing about a map is you don't
+necessarily need one. You can just go
+and wander around and discover things on
+your own, but it can be helpful to know
+that the map's there if you need it.
+>> Just in case you get into any trouble.
+[music]
+If you're lucky, the map provided by
+theory can help point you towards things
+that you perhaps aren't naturally
+inclined to think about. Show you your
+own cognitive biases, your blind spots,
+your weaknesses. Pre-warn you about the
+unseen dangers ahead of you on the road.
+>> is a type of diagram, i.e., it's [music]
+a picture which serves a particular
+purpose. But a diagram that you look at
+with no intentionality is just a funny
+picture, [music] really, isn't it? It
+stops being useful, which is why a lot
+of people bounce off of theory [music]
+when they expect it to do something for
+them which it can't do. Like, for
+example, looking at a paper map to find
+out the weather. If you are using a map
+or any sort of diagram for the wrong
+purpose, it stops being a useful
+picture, and it starts just just being a
+weird picture, really. Speaking of weird
+pictures, Great content but contains
+[music] little to no programming.
+Welcome to Ludorum Designatio, a fantasy
+realm where all aspects of game design
+theory are considered. But all is not
+well here in Ludorum Designatio. For
+while the center of the kingdom may seem
+settled and serene, hostile forces await
+the borderlands ready [music] to engulf
+the capital and to seek revenge for what
+was stolen
+Excuse me. So, can you can you maybe
+dial it down a little bit, please?
+>> Very well, oh boring one. Yeah, thanks.
+>> So, when we talk about game design
+theory, there are things which would
+make up the core curriculum of a good
+game design course. And these are the
+things that most developers probably
+need to spend some time thinking about.
+I'm going to split our magical realm
+into three areas. These aren't agreed
+upon by some team of academic game
+design wizards or anything like that.
+They are just broad categories that I
+feel like most
+fits into. Most game design textbooks
+would cover all three of these areas as
+well.
+Craft.
+Players.
+Games.
+Now, it might be a bit weird to have an
+area called games. You'd think, "Well,
+surely this is all games." But we'll get
+onto that in a minute.
+>> There's an entire region dedicated just
+to understanding players. It's
+incredibly common to see posts like this
+one in game design forums where the OP
+doesn't understand why something's fun,
+and the most common responses are these
+more experienced people pointing them in
+the direction of studies into player
+types. This is a great example of
+someone stumbling into a territory
+without the map, and then members of the
+game design community very kindly
+saying, "Don't worry, there's a map for
+this area."
+>> [music]
+>> Yeah.
+Post in our Reddit.
+r/gamedesign
+>> [music]
+>> Noticed a lot of things we [music] just
+love like collecting collectibles, cars,
+photos, [singing] etc. I'm referring to
+[music] when it's not part of the main
+gameplay. Doesn't give like crazy
+Do people enjoy that?
+I'm not a big [music] fan of them,
+mostly cuz I find it tedious, but this
+isn't a complaint post.
+But I see people I can praise and
+suspect, especially [music]
+the 100% completionists. So, I want to
+know if [music] it's actually a really
+loved game design
+or what people like about [music]
+it.
+Are you familiar with Bartle's taxonomy
+of players?
+So, we've got studies like Richard
+Bartle's early work on online
+communities, Quantic Foundry's more
+recent work on player archetypes. And
+all of this would be positioned
+somewhere near the middle because it's
+stuff that most people who work in games
+would understand [music] as being game
+design theory. These are all insights
+into players and their minds and the
+different things that they enjoy which
+[music] we can use to make better games
+and we don't have to recreate that
+research from scratch because someone
+else has already drawn it out here on
+the map for us.
+>> [music]
+>> The things at the center of the field, I
+mean realm, the things at the center of
+the realm are the things that most
+people would consider core game design
+theory. So here we have all of the
+studies into players that you would be
+taught about on a game design course or
+you would find mention of in a game
+design textbook. But most of these take
+their theory from further afield or
+further a realm, they take their theory
+from out here and then they bring it in.
+So for example, Quantic Foundry uses
+self-determination theory which comes
+from psychology of the 1970s which as
+far as I'm aware didn't have anything to
+do with video games. Another example of
+external theory making its way from
+another field into game design would be
+flow theory. Flow is a term that you
+might have heard talked about in game
+design textbooks like this one but it's
+also such a common phrase in [music]
+games culture that you probably even
+hear it and use it and don't even think
+of it as being a theoretical term. So in
+our map which explains game design as a
+physical [music]
+realm, we would have this whole section
+dedicated to just understanding players
+and their experiences. You will find
+sections on it in nearly every game
+design book that you read but they are
+all drawing theory from psychology,
+[music] anthropology, sociology and
+bringing it in and that means that if
+you ever find yourself dealing with a
+more unusual game design problem, you
+might find yourself going a bit further
+afield. For example, designer Jeff
+Engelstein has [music] written an entire
+book on the psychology of loss aversion
+and how that relates to game design.
+[music] Daniel Cook has written and
+presented quite extensively on prosocial
+game design, i.e. how do you encourage
+players to actually be nice to each
+other? I I I like
+sort of tying together different groups
+different different ideas from different
+fields.
+>> The more unique or unusual your game
+design is and your game design problem,
+the more likely it is that you might
+have to stray a little bit further
+afield and go away from [music] the
+capital. You might have to go and borrow
+some theory from somewhere else. If
+theory is a big map of all of the stuff
+that people have already thought about
+in game design, you're not going to need
+all of that map. You will need parts of
+that map depending on the type of game
+that you are trying to make. Most of the
+stuff in the middle of this map is going
+to be relevant to nearly every game
+designer but the stuff on the edge,
+those theories that peek in from other
+disciplines, you're going to need them
+more or less depending on what sort of
+game you're making.
+Over in this slightly more austere and
+industrial section of the map, we have
+craft methodologies. Although we said
+that game design isn't necessarily about
+the practical part of making a game,
+there are processes and practices which
+all game designers do whether they're
+making a video game or a tabletop board
+game or an escape room and these are
+things like prototyping, they're things
+like playtesting.
+>> Most game design textbooks contain
+[music]
+a lot of this kind of stuff. That's kind
+of what makes them textbooks, how to
+playtest, how to prototype, how to
+collaborate with people, all of that
+kind of stuff. Raph Koster's theory of
+fun for game design doesn't actually
+tell you how to design games. So I
+wouldn't necessarily classify this as a
+game design textbook. [music]
+>> No.
+>> It still covers a lot of these areas
+that we have in the middle of our map
+here. And the thing about methodologies
+is it's method plus the ology, it's
+>> [music]
+>> what you do and an understanding of what
+you do. If someone is telling you to do
+something [music]
+but you don't come away with a clear
+sense of the rationale of why you would
+do it [music] that way, you've been
+given a method but you don't understand
+the methodology and that can be
+dangerous [music] because well, you're
+back to stumbling around without a map
+again. Here at the center, we've got the
+craft processes which are very specific
+to video games but if we go further out,
+we might explore general software
+development craft processes, Agile Scrum
+or Kanban over here in the in the murky
+mountains of computer science. Now
+depending on your background, you might
+think of video games as software or you
+might think of them as media art or you
+might think of them as somewhere in
+between [music] but we might also think
+about games as being sort of interactive
+products. We might go over and get some
+theory [music] on practices and
+processes from like general product
+design. For example, Don Norman's Design
+of Everyday Things or the double diamond
+design methodology that I only very
+recently learned about.
+>> [music]
+>> The point isn't that you need to go and
+explore all of these things and
+understand all of them. So don't look at
+this map and get overwhelmed and think,
+"Oh my god, I need to learn all of these
+things." The point of having a map
+[music] isn't to go to every place on
+the map, it's so that you know what's
+there and then if you need a particular
+thing, you can look at the map and go,
+"Oh yeah,
+that's already there." And depending on
+where your particular weaknesses are as
+a developer, you're going to find
+different areas of this section of the
+map more or less useful. So that's what
+this section of the map is about, it's
+about practices and processes and that's
+what I mean by craft methodologies. It's
+like, what do we actually do to design a
+game? And you could go quite far out
+with this. Let's say for example, we're
+thinking about ideas and how you decide
+if an idea is a good [music] or bad
+idea. This is where you might go out
+into like philosophy, you know, stuff
+like Nassim Taleb's work on antifragile
+ideas. That's a really good place to go
+[music] to look for answering these
+deeper questions of like, what should I
+make in the first place or like, which
+of my ideas is a good idea? There's a
+whole branch of philosophy that [music]
+is linked to these ideas about like
+innovation that you can go and explore
+as well. You could also include playing
+games. As a game developer, you need to
+learn this special additional skill of
+being able to like play a game and enjoy
+it like a player would while also
+watching yourself from the outside and
+being able to analyze your own feelings
+and responses to the game and understand
+>> [music]
+>> why the game is doing these things to
+you which is basically what I do as a
+day job when I stream other people's
+games and give them feedback. [music]
+That is a skill that I would fit into
+this area of being craft methods but
+maybe [music] it belongs on one of these
+borderlines, maybe actually belongs in
+the next [music] part of the country
+which is the part that is confusingly
+dedicated just to games.
+>> [music]
+>> This third of the map is all the stuff
+where we are focusing on what's actually
+in the games rather than thinking about
+the players' experience of the games or
+the designers' processes for making
+them. Anything here is just to do with
+what's in the games themselves. So for
+example, we could have [music] a subarea
+here very close to the center called
+ludology. Now ludology is broadly
+speaking the formalist study of games.
+So anytime are breaking games down into
+their parts and talking about the rules,
+systems, mechanics, the [music]
+interactive thing that actually makes a
+game a game, you are doing ludology. You
+are studying the
+>> [music]
+>> gaminess of the game. Most game design
+textbooks have some aspect of ludology
+in them either attempting to define what
+games are or to discuss parts of games
+and sometimes that's a much larger
+portion of the book like for example, in
+Salen and Zimmerman's Rules of Play. As
+the title suggests, this is a book that
+is predominantly about ludology.
+Sometimes it's a much smaller thing.
+Also included in this area, something
+that is more or less important to you
+depending on the sort of games you're
+trying to make and why you're trying to
+make them, ludo narratology. So anything
+that is to do with understanding how
+story works in the context of a game.
+And of course, the further you go in
+that direction and the more that your
+game includes traditional elements of
+drama or literature, the more likely you
+are to venture out here from the center
+and to go and see what they have to say
+over in literary theory or over in
+dramaturgy because those are going to
+have helpful things to say about the
+type of game that you're interested in
+making.
+>> Tracy Fullerton's Game Design Workshop
+has a heavy emphasis on dramaturgy and
+explores how the roleplay elements of
+games enhance the formal parts that we'd
+normally associate with a more
+ludological understanding [music] of
+games.
+Here I am in a tranquil glade between
+ludology and ludo narratology. It's a
+lovely place to come and just sit and
+reflect. Nothing bad has ever happened
+here.
+When we're over here thinking about the
+game itself, we can be here at the
+center where we're thinking about the
+game as a game like a an interactive
+thing that someone does but we've also
+got the game as a story, we've got the
+game as a piece of visual media. So a
+little bit further out from the center,
+we might have some theory that comes
+from that. The more unusual your game
+is, the more likely you are to have game
+design problems which aren't answered
+here in the capital of Ludorium
+Designatio. If you're making a very
+cinematic 3D game with a lot of fancy
+camera work, you're probably going to
+need to understand the 180° rule from
+cinematography. If you're making a very
+story-heavy game with a lot of character
+dialogue in, studying literature will
+probably be more useful to you, and this
+is why these aspects of storytelling
+sometimes take a little bit of a
+backseat in game design literature. Most
+of the time, when we write dialogue for
+game characters, we're following the
+same rules established in literature,
+cinematography, drama, and we can use
+theory from over there to write good
+dialogue. It only becomes very video
+game specific when we're dealing with
+very video game specific forms of
+dialogue, like writing a tutorial in a
+character's [music] voice, or writing
+barks, or procedurally generated
+dialogue. Those are things where we
+might need game specific theory for it.
+We've got that as well. How wonderful.
+Your average game design textbook is
+going to cover the core of the field,
+the capital of the realm.
+Now, there's a good chance that you've
+seen this map, and you thought, "My
+goodness, what a vast kingdom. I can't
+possibly take in all of that. I cannot
+read all of those tomes. I cannot
+explore all of those many hills and
+valleys." But, you don't have to,
+because video games are so diverse. And
+when you choose to make your small indie
+project, you are not making a game with
+every single part of the game in it.
+You're making a game with selective
+parts of different games in, and that
+means that you do not need to understand
+every [music] possible thing there is to
+understand about games or video games.
+But, there's also the fact that you
+probably know some of this stuff from
+elsewhere already. You know, I
+personally don't look at that and think,
+"Oh, that's really intimidating. That's
+really daunting." I think it's cool.
+Every time I read a book or listen to
+like a slightly more highbrow podcast or
+something, I could be learning something
+that helps me as a game designer. That's
+great. Like, everything is game design.
+We've solved it, guys. Everything is
+game design. Everything is game design
+now, and [music]
+the more that you become sort of an
+interdisciplinary creative person who is
+interested in all of the arts, the more
+you'll notice that things just [music]
+tend to cross over between them all.
+Things from the study of film aren't
+actually just to do with film, they're
+to do with how humans interpret images.
+And things from the study or dance
+aren't just about music, sometimes
+they're about how humans respond to
+things like repetition versus surprise.
+Or, Swink's book about game feel, which
+uses metaphors from music technology to
+explain players' perceptions of what's
+happening on screen and their
+interactions with the controls and
+interface of the game. Uses a model from
+somewhere else to explain something in
+games, because, hey, if ain't broke,
+don't fix it. The study of semiotics,
+which is about how humans see and hear
+things and interpret those things as
+signs and make meaning out of them,
+originates in linguistics, and then is
+later imported into media studies, art
+analysis, and product design. In game
+design, it's a crucial element of
+understanding how games communicate
+visually, whether we're thinking about
+the icons in an interface, [music]
+any environmental storytelling, or even
+just how the color of a specific visual
+effect communicates information about
+who are the goodies and the baddies in
+this game, or what kind of elemental
+damage is happening. Oh, I do love a bit
+of elemental damage. Whenever you hear
+someone talk about how something is
+signifying something, they're using
+language from semiotics. And it's come
+all the way through those different
+fields into media studies and product
+design and game design, and I would just
+use it as part of our everyday language
+without having to go, "Ooh, look at me.
+I know what semiotics is.
+But, you you can still do that if you
+want to.
+There's also a tendency to talk about
+theory books as if they're written by
+out-of-touch academics [music] in
+university research departments. These
+books were all created by people who had
+quite extensive experience of working
+professionally as game designers before
+they created the book. Vocational
+textbooks like these don't really meet
+the criteria for being academic work in
+the strictest sense of the word. If this
+was written by someone who was working
+at a university as a researcher, it
+would be considered a professional
+training textbook, and not a piece of
+academic research. Now, if you really
+want to drill down into this, we can get
+into the politics of academic research
+publishing, which is really boring, but,
+hey, it's my video, so let's do it
+anyway. If you worked as an academic in
+a university, and you went to the
+research department, [music] and you
+told them, "I want to make a vocational
+textbook, a textbook that teaches
+[music] people how to get better at a
+professional field," they would probably
+say to you,
+>> [music]
+>> "We're not going to support you to do
+that." The reason for that has to do
+with how research departments are
+incentivized to produce and support
+different types of work. In the UK, by
+something called the Research Excellence
+Framework, and the Carnegie [music]
+Classification System in the US.
+>> [music]
+>> Now, if you were to write something like
+Jesse Schell's The Art of Game Design,
+yes, you might be able to get it
+published by a university [music] press
+and have it as part of the reading list
+for an academic course in game design,
+but this wouldn't actually be considered
+an academic [music] text and part of the
+university's research output, because
+it's vocational training.
+>> This is dedicated to taking a bunch of
+theory from different places, like
+psychology and mathematics, and applying
+it to the creation of games through
+Jesse Schell's practice as a game
+designer. Game design [music] textbooks
+are created using theory from other
+disciplines, and they're taking the bits
+of theory which they feel explain things
+they've seen
+>> [music]
+>> in their career as they design and
+create games. They are passing on
+>> [music]
+>> perspectives and advice about what they
+think good game design is, [music] and
+they are pulling in theory from other
+places in order to do that. And that
+means that to dismiss stuff like this as
+being too academic kind of [music]
+misses the point of what academic
+research is really do, cuz in the
+context of a university research
+department, books like this are actually
+looked down upon, and you would be
+discouraged from writing a book like
+this if you were a full-time academic at
+a university. I would not even going to
+bother with that, because it's not going
+to get us a shiny research medal.
+>> [music]
+>> A thirst for knowledge is a sign of a
+curious person, and that is a
+prerequisite for making anything
+interesting in the first place. With
+this video, I'm not trying to guilt you
+or shame you into going and reading
+loads of books or feeling bad that you
+don't read all of these books.
+I would just like you to not be
+dismissive of them in the first place.
+To go back to that Reddit post from
+earlier, that's a wonderful example of
+how you don't know what you don't know.
+You don't need to know all of this, but
+it can be very helpful to know of it, so
+that when you get stuck with a
+particular type of problem, you know
+where to go and look. Most of the time,
+people are just sort of stumbling into
+very well-charted terrain without a map,
+and they're going, "Oh, I'm completely
+lost. Oh, no one's ever made a map for
+this place." And they have made a map,
+it's just the maps are called
+>> [music]
+>> books, and that person has decided that
+books don't have anything useful to tell
+you about game design. Like some sort of
+vain glorious dad that throws away the
+IKEA instruction manual before building
+the desk. When you're designing a game,
+you are testing out your own personal
+theories about what is fun or what is
+interesting. The process of design is
+working out which idea is a good one,
+and you do that a little bit through
+your own taste and intuition, which
+develops over time, and you do it
+through processes [music] like
+playtesting and prototyping. And all of
+this theory that's out there in the
+world about how games work, or about how
+stories or media work, or about player
+psychology, or about how to make
+software, or how to design products, or
+about the philosophy of ideas, or all of
+that theory exists [music] in order for
+you to build your own little theories
+about what you're trying to do with that
+game that you're working on. So,
+hopefully, when you see a big map like
+this of the field of the realm, you
+don't find it daunting, because this is
+just like a treasure map packed full
+with X's. These are all opportunities
+for you to learn something that would be
+helpful for the game that you're working
+on. And I think the deeper you are into
+your career, the better you're going to
+understand where to go and look. Whether
+it's this literal map, or like any kind
+of guide to a academic field, it's going
+to be much more useful to you if you
+come to it with a specific set of
+problems and a specific set of things
+that you are trying to do, rather than
+just the vague notion of, "Oh, I want to
+be a game dev. Oh, I want I want to dev
+a game. I want to be a full-time game
+dev." You don't have to read it all. You
+don't have to know it all.
+Just know that it's there if you need
+it. And I think sometimes there's an
+attitude, programmer machismo, or just
+plain old anti-intellectualism,
+where people want to [music] reject the
+insights that are already out there,
+because they're really attached to the
+idea of like finding all out for
+themselves and working everything out
+from first principles. And hey, I get
+it. I'm kind of like that myself.
+Hopefully, if you're one of those
+people, you can take something from this
+video. [music] You don't have to use a
+map everywhere you go. Sometimes it's
+fun to get lost. Sometimes it's fun to
+go off the beaten track and just find
+things of your own accord. But the map
+is there if you need it. And the one
+that I've drawn today in this video has
+a lot of stuff on it. And it still
+doesn't actually include all of the
+things that a game designer might need
+to learn about in their lifetime.
+>> [music]
+>> Cheers.
+>> [music]
+[music]
+[music]
+[music]
+[music]
+[music]
+[music]
+[music]
+>> patreon.com/indiegameclinic

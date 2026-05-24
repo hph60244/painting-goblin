@@ -1,0 +1,784 @@
+game design documents there is no one set way of
+how to do these I know that's really frustrating
+I know you want someone to go do this then do
+this then do this the approach I want to show
+you today is a very minimalistic approach and it
+works around a general principle of giving a rough
+description of every area of the game that you can
+think of so that you can check that they all work
+together because one of the issues that we have if
+you're a solo developer or an indie working in a
+small team you will have biases towards focusing
+on particular things right if you're a story
+person you get to the story bit of your document
+and then you'll kind of go into a weird fug State
+write a million words and then wake up the next
+day and you've basically written the Lord of the
+Rings and then meanwhile you haven't thought about
+you haven't thought about level design you haven't
+thought about how your game will be monetized
+you haven't thought about the art style but
+you've spent a million Pages making making this
+narrative Bible I don't want you to take that
+approach I want you to to have a list of areas
+of the game that need to be thought about and
+then to describe your initial thinking in as few
+words as possible and try and make it multimedia
+use diagrams use images make it interesting for
+someone else to look at because that's a downfall
+of big game design documents is you spend ages
+pouring all of this thought and time into a thing
+and then no one else wants to look at it because
+we we're all programmers and artists with you know
+various different kind of neurological types
+and we don't want to read a massive document
+when we could be making things pretty colors or
+or programming explosions right so you you need
+to respect your team or just your future version
+of yourself whoever this is for by making sure
+that this document isn't bigger than it needs to
+be and is focused on what it's trying to achieve
+and what it's trying to achieve is saying here's
+what we want to make is that a good idea right
+um you shouldn't go into any kind of design with
+the foregone conclusion that what you're making
+is good because design is an iterative process
+and it is a process of co-creation between the
+designer and the audience or in this case The
+Gamers this approach this minimalistic approach
+to game design documents is meant to take you
+as quickly as possible to having a prototype of
+a game that you can describe and talk about very
+well and play test with people and then just to
+map out the areas of the game where you might need
+to think about the longer term plan of of like
+what are all the levels what are all the systems
+what is all the content in this game without deep
+diving too far into the details of those things up
+front because otherwise you spend weeks and weeks
+writing this thing and then 90% of that writing
+will be irrelevant later on when your game either
+dramatically changes or gets canned and never gets
+finished so please bear all of that in mind mind
+I know people are going to jum jump up in the
+comments and go you left this out you left that
+out this is just about having a brief think about
+all of the different elements so that you can see
+if they make sense together and make sure that
+you thought about them all at least a little bit
+so the game I'm going to be documenting today
+is called prophecy I'm sure there's already a
+game called that if you can think of a better name
+for this game as I describe it please let me know
+prophecy is a top- down multiplayer simulation
+game where each player represents a profit
+followed by a growing swarm of followers their
+goal is to Traverse a procedurally generated World
+converting followers conquering foes obtaining
+resources and surviving for as long as possible
+the game Blends some elements of traditional God
+games like populace and black and white with a
+simplified Battle Royale model similar to agario
+this is the thing that your game design document
+or any document should start with the broadest
+description of the game now there's some writerly
+issues here I've used reused the word followers
+growing swarm of followers converting followers
+that should be converting non-believers maybe
+this describes the idea for the game but there's
+no um what's the word there's no superlatives
+here there's no it will be the best it will be
+the most Wonder wonderful it will be the most
+fantastic it it's just describing the game and
+trying to describe what's unique about it and do
+not be afraid to make references to other games
+I know that this kind of elevator pitch format of
+saying it's this thing plus this thing can feel a
+bit cheesy but it can also be a really helpful
+way to explain your game idea to someone else
+and that's why I've also got these images here
+so if someone can't remember what agar.io is
+there's an image of it there and before we move
+on to our second section I want to introduce
+another General principle of all documentation and
+that is that you always start with the broadest
+part possible the the most um you always you
+always start with the most Broad and general
+thing possible and then after that move into
+things that are more specific so if you've got
+anything in your game that's specific like talking
+about a specific piece of content like a specific
+level or a specific character or a specific
+weapon whatever your game has as content that
+should never be what you start with you should
+always start with the most General thing now the
+type of game you're making is going to determine
+some of this stuff because if we're making a very
+narrative driven game about a character then
+we might want to talk about the character early
+on but if your game is primarily a game about
+gameplay and things like characters and locations
+are secondary to that then they shouldn't be up
+the top of the document the start of the document
+needs to tell us what the player is doing now
+one of the things I like to introduce early on
+is design pillars game design pillars are there to
+help guide a project so that it stays on track and
+is moving towards a specific type of experience
+so if you think of you know pillars as a metaphor
+it's like what things are holding up this project
+what things are Central to the success of this as
+a product now some people will put just like the
+genre here they might put like the art style here
+those things are not necessarily design pillars
+what design pillars are supposed to help us do is
+focus on the experience that the user or audience
+is getting so I've put here we use design pillars
+to focus our design choices as we move through
+the project for the purpose of this project we
+want our design pillars to identify the types
+of fun or enjoyment which are key to the user
+experience so I've actually put an explanation
+within the document of why I'm doing this and that
+means that if I give this game design document
+to a programmer or a artist they're not going to
+just going to see the pillars and go oh whatever
+don't care about that game designer nonsense and
+one of the things I would advise you do is use
+this framework called the 14 forms of fun this
+is a really helpful tool especially if you're
+working in a team because fun is too much of a
+a sort of vague um word it's a moving Target it
+means different things to different people this
+list is a really good way to pick out things to
+put in your pillars now I would usually miss a few
+off here like Beauty well everyone kind of wants
+their game to be visually appealing in some way
+even if it's most supposed to to look kind of
+goofy and child like beauty is still a goal of
+most video games so I would leave that one out cuz
+it's redundant but you can start to look through
+this list and pick out the three things that you
+think are the most important for this document is
+power competition and problem solving and the
+sections underneath this in the table explain
+why and also sort of hint at how these things link
+into each other and reinforce each other so under
+power I've got satisfaction will come from players
+seeing their flock grow larger and larger as gaml
+progresses your player character your Empire
+whatever it is gets stronger that's a central
+part of lots of types of games of rtss RPGs lots
+of different genres there's a competitive element
+the game is online it's in the same format as
+agario so we've got that competitive genre uh
+blueprint already there for us and players are
+constantly under threat from the followers of
+the other player characters they need to seek out
+the least occupied areas of the world and compete
+for resources to grow their flock and be able to
+fight so you're constantly moving around if you're
+strong you're hunting down the weak if you're weak
+you're trying to get away from stronger characters
+and find resources elsewhere so you've got that
+mix of kind of a battle royale with a very very
+light 4X game and then the last section is problem
+solving some elements of resource management
+and selection of appropriate upgrades will give
+players opportunities to feel satisfyingly clever
+is what you're doing every time you give
+players like a upgrade tree and you say
+do you want this next or this next you're giving
+them a intellectual problem to solve where they
+can look ahead strategically and say well if I
+get this now I can get this upgrade later and
+they compound and do this thing notice I'm not
+going into loads of detail about what any of
+these things are yet I'm just saying how these
+main types of experience exist in the game and
+how they link together right you can see that
+the problem solving element of picking upgrades
+is going to feed into the sense of power that the
+player has and make them more competitive so these
+things are all linked together here they don't
+have to be but doing this exercise is helping
+me to Think Through the mechanics and systems
+that I want in this game and understand how they
+work together next section I've got audience and
+Market lots of people on Game Dev YouTube at the
+moment I've noticed are doing this thing where
+you conflate marketing with advertising now ad
+iing is obviously a big part of marketing I'm
+not going to deny that but marketing is much
+broader than that um if you think of a traditional
+Market where someone goes and yells and says buy
+my bananas marketing is everything to do with how
+that business person operates in that market it's
+what they're selling it's the way they're talking
+to people the way they're addressing people when
+they try and sell it it's how they look it's even
+what Market they go to in the first place and one
+of the reasons why so many smaller games fail is
+you just make what you want to make and you don't
+think about who this is for or where you going to
+sell it you make you know a game that is the wrong
+genre for the platform you make a casual mobile
+Style game and try and sell it on Steam you make a
+very hardcore game and try and sell it on the App
+Store whatever work out who your audience is put
+it early in your gdd because everything else about
+your design will rotate around that and this is
+obvious if you're making something like a a
+free-to-play game with uh loot boxes in right
+that your game design would be revolving around
+that business model that monetization model but
+it's true of every genre on every platform that
+you have to fit what you're making to where you
+are eventually going to try and sell it so here
+I've again it's very light very very minimalistic
+I've just put the game is designed to be played
+online with other players via steam a single
+player casual mode without the competitive element
+will also be made available and here's here's the
+important bit never never design something that
+is for everyone right because that it doesn't work
+the thing that you're making has to be for someone
+and if you can't work out who it's for work out
+who it's not for and from there you will start
+to work out who your audience is so I've put here
+for example the game will contain some irreverent
+humor about religion right so it's going to annoy
+people that don't like things where religion
+is presented as something silly or bad right
+so I'm already excluding people in my marketing
+by designing this game and I'm acknowledging that
+from the get-go right it will also contain some
+brutal slapstick violence it be aimed at a teen to
+adult audience so the religious theme the violence
+the kind of irreverence that this game has to that
+subject matter is going to exclude some people
+and it's going to make the G feel like it's not
+appropriate for small children all of these things
+are part of my audience and marketing section and
+they need to be in there from the GetGo because
+it helps to set the tone for what we're making you
+know how much blood is there going to be in this
+game what kind of sound effects will there be all
+of that stuff comes out of these considerations
+now biggest section so far and it should be core
+gameplay what do actually happening when a player
+plays this game the player Maneuvers their prop
+profit around the game World by using the wires
+controls then using uses pointand click mouse
+commands to give orders to the followers in the
+flock followers start out as neutral peasants who
+can be developed into different follower types
+each having different behaviors and simple AI
+I've listed them now right a good thing to learn
+about documentation is when and how to use bullet
+points you should only really have bullet points
+if you have a leading sentence saying why there is
+a list of bullet points so here it says each have
+different behaviors and simple Ai and then each
+bullet point tells me about the the behaviors
+and simple AI of of one of the followers right
+don't just randomly go into bullet points when
+you don't have any reason to the bullet points
+have a particular logic to them and all the things
+in a list of bullet points should be in the same
+category I've also put other follower types might
+be developed at a later date but this list is
+considered the MVP minimum viable product version
+for the base game so I'm already delimiting what
+I'm trying to build at the moment and instead
+of making the 200 Page version of this document
+where I spend days and days imagining all the
+variations of upgrades and units and stuff that
+I could do which would be a good exercise to do
+later on because this is a document that is kind
+of saying here's what we're going to make at
+a prototype level I'm not putting that detail
+in I'm leaving it out and I'm pointing to a gap
+for me to come back later and fill it in so many
+people just make too much of their game before
+they've tested it and checked its fun and this is
+why like I've said a lot of times on this channel
+I'm encouraging you to build a prototype get it
+in front of people test it and don't make more
+than a level's worth of content don't make more
+than half an hour's worth of gaml until your game
+has been tested by 10 or 20 people that testing
+process will show you what parts of your core idea
+are worth continuing with and which parts need to
+be thrown away or changed radically and that is
+the reason why I would recommend not making those
+big reams of descriptions of all all the content
+and all the levels and all the story until you're
+at that point where you feel like those Central uh
+those Central game mechanics those Central systems
+has been thoroughly tested and and works I've also
+put here as the player gains faith and followers
+they'll be able to access and improve a tech
+tree similar to the divine inspiration Tree in
+Cult of the Lamb again directly referencing games
+that this is like here they'll be able to improve
+the passive attributes of different follower
+types and augment their skills and abilities
+this is kind of a good approach I think I
+explained what the value of this feature is
+this provides strategic choices making gaml feel
+different each time while also increasing the
+religious theme by tying these Tech Tree choices
+into Concepts like the development over time of
+religious Doctrine that's quite a wordy sentence
+but I'm basically saying here is why this system
+is in the game here's why it's in the game from a
+gameplay point of view and here's how it fits with
+the theme and we're always trying to marry the
+theme and the mechanics as game designers every
+time there's a believable excuse for something
+being in your game it's easier for people to
+understand if we have a tech tree but we call it
+something like the religious Dogma uh development
+tree whatever then it explains that mechanic
+explains that system in a way that fits into
+the world and will make it make sense to players
+as you're outlining your core game play maybe
+think about how you justify some of it don't just
+describe what will happen in the game if you can
+come up with reasons why then include that as well
+just remember that part of the exercise here is
+being concise and saying as much as you can in as
+few words as possible because that is one of the
+core most important skills that a game designer
+can have I've listed the controls these are
+obviously subject to change with with prototyping
+but at least I've thought it through you know
+if if this project got a bit further on I might
+pad this out with diagrams and things to make it
+visual again respect your reader's Time by making
+your document easy to digest one of the reasons
+why I do things like break off into a into a table
+here is because someone who is looking at this who
+initially doesn't want to read it right like a
+programmer or an artist or whoever maybe someone
+like a publisher to fund a game the more you break
+up the content and um make it appeal to a bunch of
+different brain Styles people who are more visual
+people who for tables and diagrams the easier
+it's going to be for other people to get on board
+with your idea because they'll find your document
+easier to digest making game design documents is
+very similar to making learning materials you need
+to appeal to different learning styles you need
+to make sure that there are some images in there
+as long as those images aren't misleading as long
+as those images help to explain the points you're
+making then put imagery into your document you
+know just to show you a quick example one of the
+famous old '90s gdds that's actually more of a
+pitch than a gdd but look at this from Diablo
+in 1994 it's filled with all these little bits
+of royaltyfree medieval artwork that really kind
+of set the tone for the game and even things like
+these headings are in a kind of slightly medieval
+gravestone font uh is a legible font but it does
+add flavor to the document and that's a thing that
+you can think about doing as you are working on
+your game design documents is start to think about
+the graphic design of the project start to think
+about your type of graphic choices and incorporate
+them into the document you don't need to go wild
+with it but it will start to make you kind of
+think about these elements of your game and the
+visual branding of your game I've got a bit here
+about balance right again it's just outlining the
+broad approach I don't go into a massive Excel
+sheet with all the balancing on at this stage
+because I know I can do that I've done it before
+and it will be its own document but at this stage
+we just talk about what is what the key things
+to think about now in a multiplayer versus game
+balancing is important to make sure people don't
+feel like they're getting bullied by other players
+so I've put here because the game is a survival
+King of the Hill game uh one player can get really
+really powerful and just smush everyone so it
+might be worth having some elements to prevent
+players getting too far ahead right I put there
+should be be some elements which prevent players
+getting too far ahead and I've put one example of
+this could be coling areas of the map at certain
+times you get countdown every 30 seconds there's a
+firestorm here there's a flood here and obviously
+the larger you're following is the more little
+characters that following you around the more
+of them will get taken out by that now this is
+an important thing to pay attention to when you're
+doing any kind of technical writing is words like
+should could will that infer different levels of
+intention right so here I've put there should be
+some elements which prevent players getting too
+far ahead that's not as strong as saying there
+will be then afterwards I've got one example of
+this could be culling areas of the map so could is
+a less certain word than should I know this might
+sound super obvious to you but this is a technical
+document and in order to describe things clearly
+and objectively you need to be careful with how
+you use words like will should and could and the
+degree of promise that exists in those different
+words so this section is a is an example of that
+moving from General to specific that talked about
+earlier there should be some elements which
+prevent players getting too far ahead right
+that's General and it's reasonably committ
+to the idea of having a balanced game where
+players can't get too far ahead of everyone else
+and then one example of this could be doing this
+is moving to a more specific solution but it's
+not presenting it as the only solution of like
+this is definitely what we'll do okay that's all
+I've got in my balance and pacing area whatever
+game you're making it's going to be a different
+sort of thing depending on what genre of game it
+is but it's an important area to talk about and at
+least have that initial thinking through of what
+your approach is for this game cuz all of these
+sections are about that they're about just kind of
+loosely saying here's what our approach is going
+to be to this thing and particularly if you're
+working in a team that's the most important thing
+you can Define at the beginning of the project is
+not loads of detail about every individual part
+it's more the approaches the next section that I
+have here is character designs now remember unless
+you are an artist who is also the game designer
+then art is not game design but it does overlap
+with game design whenever it sort of influences
+the gaml in some way so that's what I focused on
+in this section the art style of the game needs
+to be simple and easy to read right there's a
+functional aspect of this art where if these
+characters don't look a particular way players
+won't be able to play as well given that this
+is a God game in which the player characters are
+meant to see humans just as a tool for their own
+power the human characters need to be small and to
+appear somewhat insignificant right this is like
+a a generic Convention of God games we don't have
+players with a big face and a name who we kind of
+know who they are not players characters it's part
+of the god game genre that they should look like
+ants that's kind of part of the fantasy I put
+some examples from Age of Empire and populace
+Age of Empire is not really a go game but that's
+similar to the design I'm thinking about no more
+detailed than this the units in Prophecy should
+be small and the visual style needs to support
+the following elements of the game design and then
+we've got bullet points cuz we've got a list of
+things within the same C category they should be
+visually distinct enough to have classes like for
+F farmer Hunter the units need to have team
+color clothes as this will be a multiplayer
+game with lots of players so like a lot of these
+older RTS and God games had we need to be able to
+see which player they belong to by having some
+colorcoded clothing and the characters need to
+look human enough to care about but abstract and
+small enough to not care too much about it's a
+quite a difficult brief for an artist but you can
+see this again this isn't a det detailed breakdown
+of everything about the character designs is just
+Loosely defining here's what what's important to
+the game design about how the characters in this
+game might look the visual style of the game can
+be 2D or 3D but needs to allow for the above
+gameplay considerations I don't even care if
+it's 2D or 3D this is what I care about this
+is the stuff that impacts the gameplay more
+setting and world right remember earlier I talked
+about using the game design document to limit the
+project so that you don't make too much too early
+that's what I'm doing here so the game will aim
+to eventually have a procedurally generated World
+which changes with each new game however and this
+is a big however right the Prototype and vert
+vertical slice versions of the game should aim
+to have one persistent world with set locations
+for biomes resources etc for Speed of production
+this world would simply have the layout of the
+real planet Earth with the goal being to prototype
+using real world land masses and then switch to
+a more procedurally LED or customized World later
+on if you are making a game with procedural
+generation in it like a Rog likee platform or
+any kind of Rog like I would always recommend that
+you do this because you will fall into this pit of
+just spending ages on your generation algorithms
+before you even know if there's a game there so
+in this I'm basically suggesting well I'm taking
+that one further right I'm not saying let's not
+procedurally generate it I'm saying let's not
+even design it let's just copy the real world
+there's a there's a map we've got a map already
+now I might have to build the uh what was it
+called the Arctic Shelf that went between North
+America and Europe to make sure it all joins up
+and you can get across the map but I think that
+would basically cut out some production time and
+allow us to focus on designing the core gameplay
+rather than spending a lot of time thinking about
+level design and procedural generation and any
+of of that stuff before we know that the the game
+we're designing is a good game right tone and
+Aesthetics again this might be something that
+needs its own document we usually make like an
+art style guide or an art Bible which collects
+mood boards and references and stuff I'm trying
+to put everything in one document here to keep
+with this minimalistic approach so I've just put
+some small bits of inspiration here we had our
+character designs from our other games and I'm
+now I'm starting to bring in okay here are some
+movies I've seen that I think this game should
+evoke so I've got the historic epic I've got
+the Charon hon movie where he plays Moses here in
+the Ten Commandments and you can already see that
+these movies have a very specific color palette
+that I could imagine this game using and then
+over here I've got retr Grim Dark Fantasy so I've
+got a Conan and I've got whatever this is and you
+can already see that there were some kind of color
+palette choices here here that give this kind of
+Classic Cinema look and I've picked them out as
+a Swatch up here and this is a gameplay relevant
+thing whether you think it is or not because
+making a game where there are potentially 12 or 20
+different players on the map with different player
+characters like a a group of yellow characters
+here a group of green characters we really need
+those player character colors to pop out and
+having a quite dark uh neutrally toned world for
+that will actually help with the visibility of the
+overall game so this isn't just a cosmetic thing
+and it's not me like dictating to the artist oh
+this the game has to look like these movies it's
+more using them as a reference point to help us
+generate certain things like what the characters
+are wearing what the colors of the backgrounds are
+all of that kind of stuff so there is a reason
+for doing this even if it's not not explicitly
+game design now I've cheated here because the
+type of game that I'm talking about means I can
+have a narrative section that just says not
+doing one mate uh because this does not have
+any explicit narrative when I say explicit here I
+mean overt there's no there's no story being told
+in the game except what the players do the game
+should provide memorable moments for emergent
+storytelling but besides some tutorial text we do
+not intend to have dialogue or character speaking
+now if you are making a very heavily di if you
+are making a very heavily narrative driven game
+you're going to have a bigger narrative section
+and it's going to have subsections and it might
+even be better to have its own document but if you
+need to do that then think about the principles I
+told you about earlier start with the broad start
+with the general move on to the specific right so
+your narrative design document needs to start
+with the broad stuff about the story and not
+get into specific events until it's Divi defined
+the the story in a loose way right that's why we
+have things like the threea structures you
+can you can talk about what happens in these
+different thirds of the story in quite general
+terms without listing every scene right and then
+as you move through that document you get to more
+specific things like listing characters listing
+locations listing scenes but you always start with
+the general and then move to the specific and then
+lastly another one of these things that indie game
+developers seem to have to and lastly another one
+of these things that indie game developers seem to
+hate doing and that's having a business model now
+this is not necessarily a good business model
+but it's at least workable it's something that
+I've thought about and it seems like in a kind
+of 30 second blah blah blah whatever it seems
+like it might work for this game okay this is a
+premium game which users will purchase once and
+then own for good that's what most indie games are
+but it's an online only game and those are heavy
+dependent on larger user bases if you don't have
+enough players playing I don't know Among Us or
+any kind of heavily online game you have to do
+Bots and you have to do different approaches
+you have to add single player modes so we have
+to have a business model that accounts for this
+and uh gets enough players into the game in the
+first place so I've put this three-step thing one
+an initial limited features free demo release to
+gain initial interest and traction right so give
+the game away for free first but missing a bunch
+of stuff it's like the old shareware model then
+secondly a Kickstarter campaign to raise funds to
+develop all features and content which are beyond
+the scope of this initial design document right so
+you let people play the game you say this is fun
+isn't it wouldn't it be better if you could put a
+little hat on your profit wouldn't it be better if
+your profit could set thems on fire wouldn't
+it be better if you could Smite people with
+giant eagles or something like that and then and
+then that becomes the basis for the kickstarter
+people have already played the game they like it
+hopefully and then they become Kickstarter backers
+because they've seen the game and they want
+to see it grow and then lastly a full premium
+release in the under $10 category with Kickstarter
+backers receiving steam Keys plus whatever in game
+rewards have been arranged right they might want
+to design their own emblems that people can have
+on their banners in the game I don't know what
+ever again that's too specific for the purpose of
+this document as the full version of the game will
+include Tech trees and some carryover features so
+you play a session of the game you die after
+15 minutes or 5 minutes or 45 minutes you keep
+some upgrades or some Co cosmetic items between
+games kind of like rounds in Hades um it will be
+relatively simple to craft an appealing set of
+Kickstarter rewards up to and including backer
+Design Elements and this is not a video about
+Kickstarter but remember what I said earlier about
+your game will have an audience it it will have
+an audience small or big whatever that audience
+is so you may as well work out what it is from day
+one or start to think about it at least the same
+is true of your business model of your funding
+model how you get money and if Kickstarter is part
+of that if something like uh you know asking for
+donations to build the game as part of that then
+you need to build rewards and that means that you
+need a game where digital rewards where players
+can put something in the game or whatever are
+easy to add in right um so it all it's all tied
+together and I think overall what you need to
+understand about the purpose of a game design
+document or there are lots of benefits to creating
+one but one of the big benefits is to force you
+to think through the areas of the game that you
+are not naturally drawn to right and you know it
+whatever section I've put on here that is for you
+it might be this stuff of like thinking about how
+to make the character stand out in the game
+World it might be the controls whatever it is
+going through all the aspects of the game in this
+systematic way and just writing a simple paragraph
+or making a table about each of them just as a
+starter exercise is really helpful because there
+will be an area of game design that you personally
+try to run away from and avoid and that's why I'm
+saying like it's not about finding which area of
+the game you find the most interesting and writing
+a 100 pages about it it's about thoroughly
+covering every aspect of the game in a small
+section initially and once you've got all that you
+can then step back for a minute and you can see
+does all this link together does it make sense
+that I've made this potentially offensive game
+and then aimed it at 5year olds oh yeah maybe I
+maybe these parts don't work together right it's
+it's like it's like a sketch initially of of like
+Loosely here's all the parts do they look right
+together kind of compose them move them around and
+if you want a list of these sections I'll put them
+in the time stamps for this video so you got easy
+access for if you want to do your own but this is
+kind of the most stripped down approach to game
+design documents I think you can do and naturally
+if you get to a point where you are writing
+lots of narrative and working out different
+characters or you're doing very numerical game
+design like balancing lots of units or lots of
+items that's when you need a spreadsheet or you
+need a different kind of document and that is a
+game design document as well but this is the top
+level minimalist like simple first approach that
+you should do for pretty much any project and
+I would say before this even there's another
+approach of writing a one pager which is like
+a a pitch which just a page long one image and
+uh here's what I want to make and here's what it
+would be successful but this is kind of the first
+kind of game design document I would encourage you
+to make nothing more detailed than this until you
+know that the game is worth making and you don't
+know that the game is worth making until you got
+a prototype and people are playing it and saying
+yeah I'd play that again um and and they're being
+honest and not just lying to you cuz I don't know
+they're your mom and they're proud of their proud
+of their little game developer that they that
+they gave birth to here's my little plug for
+this episode if you've watched all this and you
+found it helpful but you also so thinking oh I
+still want someone else to do it for me um and
+and and you want someone to directly help you
+with your game design documents then I now have a
+profile on Fiverr where you can hire me to do that
+I've got a a gig on here called I will review your
+game design document and there are different kind
+of pricing levels in there the most basic one
+is where I just read your document and I leave
+comments on the document and email it back to you
+there are more enhanced ones where you can have a
+call with with me and I can take you through the
+main issues whether it's with the documentation
+itself or the you know what I think about the
+actual design you're proposing um that's kind
+of up to you but have a look on there if that
+interests you I might be able to help you or
+your studio out um and it's a relatively small
+price tag for something that might cost a bit
+more if I was doing it for a big studio so thank
+you so much for joining me today I hope this has
+been helpful and I hope I haven't upset anyone
+too much because you've already made a 5,000-word
+game design document and you feel like I've just
+undermined your approach that's not what this is
+about this is about trying to give you the the
+kind of minimalist approach that gets you to
+the point of making the game you should be making
+as quickly as possible and sometimes the only way
+to learn that is to plan a game very quickly make
+the game and then fail and realize that you need
+to make something else right that that's just part
+of any creative or technical thing um but taking
+this approach where your game design documents
+are initially quite minimalistic helps you to
+do that process of comparing all the parts and
+making sure they fit together before you go into
+lots of detail I'm also a big believer in treating
+a game design document as a working document and
+basically leaving it open to change um and also
+not NE treating the whole project as one document
+now these are all things that are going to change
+for you depending on the type of project you're
+making but let's say for example you're making a
+game that has loads of information about different
+levels that needs to be stored in a document it
+may be better for that to have its own separate
+document and for your game design document to
+be a series of documents in folders so bear
+all that in mind the larger the project the more
+complex the more reason there might be to break
+your game design documentation up into several
+different parts with different focuses there's
+no hard and fast rule about how to do one of
+these it's really about just making sure you've
+addressed all of the key design questions that you
+have before you go into full production for a game

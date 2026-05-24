@@ -1,0 +1,484 @@
+this video I'm really going to focus on
+what is a demo, what should a demo do,
+different terminology that gets used
+around demos, and how to understand what
+people mean by those different terms.
+So, we're going to be talking about a
+vertical slice,
+the less often spotted horizontal slice,
+and the difference between demoing
+something in order to play test it
+versus demoing something in order to
+sell it. The current games ecosystem has
+really muddied the water around what a
+demo is and that is making it confusing
+for game developers when they try and
+put together a demo.
+I want to start off with a case study of
+a good way to do this. There is a game
+called Underboard that I played recently
+on the channel. There is also a earlier
+build of it on it.io and it's branded
+slightly differently. So, what the
+developers did here is they used Itch
+IIO as a testing bed for their game.
+They're just trying to get people to
+play it and tell them if it's good. Only
+after they've done that do they put the
+game on Steam. The reason I think this
+is a good example is there's a clear
+split between this early development
+phase where they're trying to get people
+to play the game just to work out hints
+and bugs of the game and make sure that
+it's of a high enough quality to bother
+even considering it as a commercial
+product. No one's asking for any wish
+lists or anything like that until we
+know that people find it fun.
+There are occasions when I have been
+quite harsh towards games that have been
+submitted for my review stream on this
+channel. It's because the game is being
+positioned as a commercial demo to try
+and sell the game to try and get people
+to wishlist the game. And I don't think
+it's at that stage yet. The reason I
+think this is a example of very good
+practice is the game doesn't become a
+demo until it's had people playing it
+and giving feedback on it. Everyone who
+played this version, they were doing the
+developers a favor. They were helping
+make this game better. When your game is
+in its early stages, it's an early alpha
+for play testing. Everyone who plays
+that game and gives you feedback is
+doing you a favor. Maybe those people
+will be a potential customer further
+down the line and they'll give you some
+money and stuff like that. But at this
+stage of your development process, when
+you're in early development, what you
+are getting from people isn't money. It
+is R&D time. Those early adopters, those
+people who are the earliest to get
+excited about your game idea, to sort of
+jump on the train, to test it out, even
+when it's in a slightly shoddy early
+condition, those people are doing you a
+favor. And that is the value they
+provide to your game. They help you
+develop it. They help you see the things
+that are wrong with it. What are you
+supposed to be finding out from this?
+You know, that's what a play test is.
+It's a It's like a science experiment.
+You can have a graybox prototype and you
+can give people like a really ugly
+prototype and you can say what about
+this is appealing to you. But this is a
+game where we've already steamed really
+far ahead with this and we've kind of
+decided what we're going to do. So the
+play test needs to identify the things
+that the players have the most problem
+with. Your play test needs to have a
+goal, but the more problems you leave in
+your play test that you already know
+about, the more feedback you're going to
+get that's not particularly helpful
+because it's just pointing out what you
+already know. fix the stuff that you
+already know isn't really working.
+And what a demo was in the '9s was very,
+very clear. This game has been finished
+and we have cut up a section of it to
+give out for free. And then when you
+finish playing that, you go, "Yeah, I
+want to give these developers money. I
+want to play the rest of this game." But
+fundamentally, what you play in that
+demo is the same as the full game you're
+going to get.
+>> You've played the sharewware. Now buy
+the game in the retail version. I'm much
+funnier.
+>> The project timeline of the game I'm
+currently working on, I intend to put
+out a public alpha of it in December,
+like a proper official public alpha
+where you can play through the main loop
+of the game and get a feel for it. And
+my intention with that public alpha is
+to gather information. I want to know
+what people find frustrating about the
+game. I want to know what people find
+fun about the game. But even at that
+stage, I will still be testing the
+viability of the game rather than just
+assuming that what I'm making is a
+potential product and putting it
+straight on Steam. All this said, it's
+already been play tested. I've already
+had people in our Discord have a look at
+it very kindly send me a video of them
+playing it. And one of the things that's
+helped me with is seeing things I
+couldn't see a problem with myself. So,
+for example, you collect keys and then
+you spend keys whenever you open a door
+to generate the next room. and then you
+pick the next room from a deck of cards.
+And the play tester that sent me a video
+was not making those connections. They
+didn't understand that it was a onetoone
+relationship between spending the keys
+and opening the doors. So, this was a
+mechanic that needed a little bit more
+communication in the game. So, I added
+this animation when you spend a key to
+open a door. I didn't wait until I've
+been making the game for 6 months before
+I gave it to someone to get that insight
+from them. I got to a point where I felt
+like the game was enjoyable to play for
+a couple of minutes and then immediately
+started getting people to play test it.
+If we come back to that central question
+of what is a demo and how will it make
+you a better game developer if you have
+a clearer definition of a demo. If I
+start with the assumption that the
+intention of a demo is to sell a game.
+Whereas a play testing prototype like an
+early alpha or something like that at
+that stage of development, we haven't
+yet made the assumption that the game
+we're making is going to be a viable
+commercial product. And please don't
+think I'm just being some sort of word
+police language pedant about this. I do
+not care how you use these terms. But I
+do think you will become a better game
+developer if you think of this
+distinction. A demo is there to sell a
+game. What type of games do we sell? We
+sell games that we know people are
+finding fun. You don't just assume that
+every project you start has the capacity
+to be a commercially released game for
+sale on Steam. Now, there will be some
+of you watching this who think that
+everything I'm saying here is blindingly
+obvious basic gamedev stuff. And then
+there will be people who are going,
+"Huh?"
+>> They've sort of got this idea in their
+head that a game is anything you make in
+a game engine, right?
+>> I made it in Unity, so it must be a
+game.
+>> No, the process of game development is
+taking a bunch of code and art and ideas
+and gradually shaping those into a game.
+And you do that by going back and forth
+with players and getting them to play
+it. Because you're always going to play
+test your own game in the sort of
+intended way that the game is meant to
+be played.
+[Music]
+What is a vertical slice?
+What most people expect to see when they
+play a demo of a game is a vertical
+slice. In games industry terminology, a
+vertical slice wouldn't necessarily
+always be a public demo. It's a
+particular state that a build can be in.
+And that might be used for internal
+testing. It might be that you get the
+game or a section of the game to a
+vertical slice level and then you show
+that to your publisher or you show that
+to internal QA or whatever. It's not
+simply a form of public demo. But what
+most people expect to see and play when
+they play a demo of a game, whether the
+game is actually finished, is a vertical
+slice. So, I'm going to talk a little
+bit about what that means, and then I'm
+going to talk about what horizontal
+slice would be, which is a thing in
+product design. and it's just not used
+as often in game design. But I do think
+horizontal slice can solve the problem
+that certain types of games have with
+building a demo that properly conveys
+what their game is about. The point of a
+vertical slice is if you imagine the
+game as a timeline of the player
+experience from when they first start
+playing the game till the 10th hour or
+the 100th hour or the thousandth hour
+when all of the game is finished. It's
+it's in a horizontal timeline, right? So
+you can imagine it like this, like
+you're editing a video or animating a
+timeline in a game engine. It's a it's a
+horizontal line. That's the game. Now
+the vertical slice, we cut across that
+line and we take a slice of the game and
+we say this is 5% of the full final
+game. But as you play this section of
+the game, it will feel like you're just
+playing a section of the final game in
+terms of the overall quality, the art
+style, how everything feels. You're
+giving people a sense of what the final
+game will be like by having this little
+slice. Generally, that's what people
+expect when they play a demo. There
+might be a few things missing, but they
+expect a vertical slice pretty much.
+Now, one of the things I've seen in
+demos before which felt a bit
+uninspiring and made me feel like the
+developer was trying to trick me a
+little bit was having features that seem
+to be necessary for the whole game to
+work that hinted at that are there in
+the interface and then they're just sort
+of handwaved because the developer has
+just decided to give this first tutorial
+section as the vertical slice and in
+that section we don't have any of these.
+For example, this game I played a few
+months ago. We get to pick up a lot of
+items in this tutorial level, and they
+go into an inventory. There also seems
+to be some sort of magic system, but
+because the demo is a very narrow
+vertical slice of just this first
+tutorial level, we don't get to see any
+of these features in action. How does
+this all work? Like, what else is there
+to buy? You know, showing me that
+there's an inventory system, but not
+necessarily showing me items. That's
+that's a problem, I think. And as a
+player who's quite critical and has
+maybe been stung before by early access
+games, this is not helping to convince
+me that all of these subsystems and
+features are actually in the game yet
+and it's not letting me play with them.
+So I can't actually see if the whole
+game is something I would like. So if
+you make a demo and your approach for
+making a vertical slice demo is to have
+the first level, is to have what you
+consider the tutorial, the first time
+user experience, the onboarding as the
+demo for your game. It kind of needs to
+contain everything that the game is
+because if you make a game that has two
+parts, like there's a shooting part and
+then there's a base building part and
+the base building part doesn't come into
+way later and you don't include it in
+the demo, then you haven't really given
+people a proper understanding of what
+the game is. The demo for We Harvest
+Shadows is quite long and it did a very
+thorough job of convincing me that the
+way it had combined together cozy and
+horror was very interesting. So that's
+an example of the demo really doing its
+job to find someone who might be the
+ideal audience for the game and then
+prove to that person that the game is
+what it says it's going to be. So a
+vertical slice is a state a game can be
+in that helps to convey the final
+quality of all of the parts of the game.
+There are two big mistakes that lots of
+indie developers make. One is that they
+start treating their game as a
+commercial demo for a project when it's
+not actually at this stage yet. It's
+still a rough prototype. And the second
+one is that they do try and make a
+vertical slice the final target quality
+of the game, but they make it too
+narrow. And that means that the vertical
+slice is more like a diagonal slice. It
+kind of misses stuff out and it doesn't
+really give the player a full sense of
+what all of these systems are. Another
+way to think of your demo and what
+should be in a vertical slice of your
+game. Imagine someone who wants to play
+your game. They like the central idea of
+it, but they're going to have some
+doubts about it. What would those doubts
+be? And then what can you make sure you
+show to alleviate those doubts? That's
+kind of really what design is. That how
+do we make sure that this thing we're
+making actually fits the audience for it
+and and makes them happy in some way?
+Now, the problem with the vertical slice
+approach kind of assumes that your game
+is this straight line timeline. And
+ideally, all of the parts of the game
+can exist in this one chunk. Like there
+there's an hour of the game where you
+can experience everything in that time.
+You can fight a boss, you can craft a
+dog or whatever it is you do in your
+game. You can do it all together in this
+hour of game. And this is why there are
+certain genres of games where this might
+not be as appropriate. If you have a
+game that is very slow and is very much
+about unlocking lots of things, then
+this is where you might go for a
+horizontal slice instead. We've got our
+horizontal timeline of our game
+experience. A vertical slice is when we
+cut across that timeline and we show
+everything working together for a
+certain amount of time. A horizontal
+slice is when we cut across the
+timeline,
+but we cut out some of this content
+either side. Example of this would be
+something like when people release a
+sandbox game, you can't really give
+people a sandbox game and just let them
+play it for 30 minutes and go, "Yeah,
+that's it. That's the end." Because
+they're not really going to have
+achieved enough to get a sense of what
+the game is about. There's usually a bit
+too much sort of investment in
+collecting things and building them into
+other things. So with a sandbox game or
+a game that is very crafty buildy, very
+based on sort of progression or things
+that the player builds, it might be more
+sensible to create a horizontal slice
+where we sort of create all of the game
+but only through 30 or 40% of the game
+systems and then we leave stuff out
+either side. When Prison Architect went
+into early access, it only had a sandbox
+mode. It didn't have a campaign mode. So
+that is an example of giving people
+enough of the game to actually be able
+to play a game of it. Right? This is
+very relevant for things like management
+games, city builders, anything where you
+sit down for like four, five, 6 hours
+and you play like a little campaign of
+one thing like building a city or
+playing a scenario out in a 4X game. For
+people to understand what this type of
+game is like, they really need to be
+able to play a full session. So, the
+best way to demo that really is to allow
+them to play a full session, but just
+don't give them the whole tech tree. In
+this case, what you're making is
+actually a horizontal slice because
+you're giving them what feels like a
+full experience of playing the game, but
+you're kind of cutting out sections of
+it. So, this might be an RTS where you
+can play a scenario, but you can only
+play a scenario as one faction. It might
+be a crafty buildy survival game where
+there are entire tech trees or resource
+types that are just not included, but
+you can still get a really good sense of
+what is in that game. And the stuff that
+you leave out, you kind of message that
+it's in there and you tease that this is
+something you'll get in the full game,
+but fundamentally the player has done
+all of the basic stuff in the game. It's
+not like the example earlier where
+you've got a vertical slice tutorial
+that goes, "Oh, yeah, and there's magic
+later on. I don't know, whatever.
+There's an inventory. There's crafting.
+I I'll do that later." is giving you all
+of the core mechanics and then it's just
+saying, "Oh, there's other content using
+these." And you get these in the full
+version. A demo is for selling a game. A
+prototype is for validating and testing
+an idea to decide whether you want to
+take it to market as a full game. A good
+demo should answer any doubts that the
+core audience for that game have. Give
+the audience confidence in your ability
+to make the full game, even if you
+haven't actually finished making it.
+What the demo needs to not do is
+handwave features that the core audience
+for that game really care about and cast
+doubt over your operation. Because if
+you if you do that thing of just, oh
+yeah, maybe there'll be some magic. I
+don't know. Your game is undercooked. It
+shouldn't be at that demo stage if
+you're still doing that kind of stuff.
+Ultimately, what your demo needs to do
+is answer the questions, answer the
+doubts that a fan of that type of game
+might have when they approach your game.
+All of those questions should be
+answerable by playing your demo. And if
+at any point your demo feels like it's
+trying to hide the answers to these
+questions from your players, they will
+know. They will sniff it out. The thing
+about making indie games is that
+whatever space you're working in,
+whether you're making the next Tiny
+Glade or the next Vampire Survivors or
+Coffee Talk, fans of that genre will
+have played more of those games than you
+have. logistical reality of the fact
+that all the time you spend making games
+they spend playing them. So if your demo
+feels like you're not really a fan of
+that genre, you don't know what you're
+doing, you're feeling your way in the
+dark and you're trying to hide things,
+it is not going to convince those people
+to play your games. And those people,
+those those genre sickos that are the
+ones that really really like that type
+of game, they are the people that will
+be the earliest adopters. There will be
+the people that are like content
+creators and have a have a YouTube
+channel about that type of game or write
+a blog about that type of game.
+Everything you do that feels like it is
+trying to cheat them in some way is a
+death sentence for your game. Which is
+good because there are too many games
+anyway.
+[Music]
+[Music]
+I'm feeling
+Heat. Heat.
+[Music]
+Heat. Heat.
+[Music]
+[Music]
+[Music]

@@ -1,0 +1,217 @@
+Games are made of chains. Did you know that?
+I bet you didn't. I bet you've been listening
+to those nerds who tell you that games are made
+out of loops. Well, they're not. They're made of
+chains. Do you understand? Chains. Chains on our
+hands, and our minds. Sorry, I got a bit carried
+away there. I'm just so excited about chains.
+You might have heard of the idea of a game loop.
+When you do the same thing over and over and
+over in a game, the most fundamental basic
+type of loop is a reward and investment loop. I
+kill a guy, I get some coins, I spend the coins,
+I get a bigger sword, I kill another guy, he's got
+more coins, and I do things over and over again.
+Game loops are a helpful conceptual tool for us
+to be able to look at a game and go, "Oh, yeah,
+you do that over and over again, don't you?"
+Despite how I started this video, we're not
+really trying to cancel game loops. They're just a
+theoretical tool. The thing about design theory is
+it's a series of metaphors for things that don't
+really exist. We can look at a game and we can see
+certain types of shapes and patterns in the game
+itself or the way it makes players behave and we
+can describe them. We can say that's a loop and
+that's a chain. Oh, that's interesting. Maybe we
+can reproduce that when we make our own games.
+but they don't really exist. It's kind of like
+music. If someone understands musical notation,
+they can write down notes or they can read notes
+and they can say that note is an A. That note is
+an F. That note is a Q. The music exists. We can
+hear it. We can recognize it as music. But the
+way of describing it is culturally specific and
+it's arbitrary. Game design theory is like that.
+is a series of metaphors to help you understand
+the reception of the art when you listen to it or
+play it and the creation of the art. Like what are
+we trying to do when we make this thing? How have
+other bits of art done it? Me. The problem with
+game loops is game loops don't really get us to
+an understanding of anything other than, oh yeah,
+games are repetitive, aren't they? Do something
+over and over again and then you play someone's
+game and you go, oh well nice collecting coins,
+but it would be good to have something to spend
+them on. What you need is a game loop. Wow.
+Feels like it's of limited insight. It can be
+quite helpful to look at existing games and see
+how their loops work. See how celebration and
+ritual fit into those things. You know, think of
+Dark Souls. It has a kind of negative celebration
+around death. Both in terms of the way it's
+announced when it happens and then how that
+modifies your next run of Get Your Stuff Back. I
+don't want to talk about loops anymore. I want to
+talk about chains. Now, this would be a really
+good place to have The Chain by Fleetwood Mac
+playing, but I can't afford the license for that.
+So, I'm going to do my own little cover version.
+I think chains in games are interesting
+because of how they map on to emotion.
+And the the most simple chain that I can think
+of that most people would probably think of if
+you said a chain of actions in a game would
+be like executing a combo in a fighting game.
+When you commit to doing a specific set or
+string of actions in a particular order,
+what happens is every one that you successfully
+complete raises the stakes about what's coming
+next. If you're trying to complete five actions in
+a row and you get the first or second one wrong,
+you're going to feel a bit bummed out. Oh no. When
+you're getting wrong on the fourth or fifth one,
+that is when it starts to feel like an epic fail.
+Oh, I almost had it. There is a emotional arc to
+a chain. You're not button bashing. You're
+trying to hit a very specific list of things
+in a specific order. It creates this rising sense
+of emotional investment with each thing you do.
+This is not just relevant to trying to execute
+a combo in a fighting game. There is an essay by
+game designer Dan Cook. I will link it in the
+description. You should go and read it. It is
+about value chains. If you've got a economic chain
+in a game, like you collect these things and you
+use them for this. It's the what you use them for
+that gives the collection meaning and makes you
+feel something about it. So the the example that
+Dan gives is picking up sticks is not inherently
+fun. You can make it as fun as you can. You
+can make it feel really toyike and they could
+be really sparkly sticks or whatever, but it's
+not an inherently fun activity. It's not enough
+to carry a game. What makes the activity enjoyable
+is what the player plans to do with the sticks and
+how that fulfills the like core fantasy of the
+game, the core emotional thing that the game is
+pulling at. whether it's like building something
+beautiful or some sort of utility value that the
+thing that they're building has. Another really
+good example of this would be there was a little
+bit of crafting in Fallout 3 and then in Fallout
+New Vegas there was a little bit more crafting
+and then in Fallout 4 you're now like the mayor of
+Boston and you need to rebuild Boston using twigs
+and super glue. There are people that don't like
+those base building mechanics. quite possible to
+play the game while ignoring those mechanics.
+But my experience of it was personally being
+able to build stuff out of the junk in the game
+changed everything. It meant that objects that
+previously were just a piece of junk to be
+collected and sold and maybe you would think
+a little bit about like the cost to weight ratio
+of different objects as you picked them up, they
+were now imbued with a different sort of meaning
+because now I'm trying to build the lighting for
+my 1950s Hawaiian Aloha bar and I need to look out
+for items that have uh copper wiring in them. So,
+I'm learning which fans and telephones have copper
+wiring in them. the destination of the chain that
+we know we're working towards changes the feel
+of engaging with mechanics earlier on because
+knowing that I'm trying to rebuild Boston with
+twigs and glue means that every time I go into
+a place and I'm looting it, the decision space
+of what do I pick up, what do I leave behind
+is suddenly richer because I'm not just taking
+every gun to sell at the merchant because that
+has the best weight to cost ratio or something
+like that. having a kind of forward destination
+for these resources I'm collecting. The action of
+collecting the stuff becomes more meaningful and
+interesting and exciting to do because the player
+understands what they are trying to achieve by
+doing it. But there's another type of chain I want
+to talk to you about. Spelunky has a chain in it
+of interesting secrets that lead up to kind of
+the proper ending of the game. It's not the only
+game that's done this. Castlevania Symphony
+of the Night had a similar thing. Basically,
+in both games, you can do what you think is
+completing the game. And then there's a hidden
+better way of completing the game. In order to
+do it, you'd have to stumble across this chain of
+secrets or you'd have to read about it online or
+something like that. I think that's cool. That's
+a chain where the player doesn't really know it's
+a chain. And I've been trying to incorporate some
+of these into the game that I'm currently working
+on. There are these fairies. They're reasonably
+trivial to spawn, but the first few times
+the player manages to spawn these fairies,
+they're not actually going to know what triggered
+it unless they read it on the internet. They won't
+really know how they did it. And the fairies
+will be part of a chain where if the player,
+and by doing that, they'll have unlocked that and
+then they'll feel really good about themselves.
+But they'll probably encounter the fairies quite
+a few times before they realize that they're part
+of a chain. and that there is a very simple way
+to start that chain and to spawn the fairies.
+They just they'll be doing it by accident
+to start off with. I have a similar plan
+for this horrific mouth monster. This is going
+to be the start of a chain. And if you feed it
+a I think this type of design is interesting
+in a systemic game like a rogike because the
+player is doing lots and lots of runs of doing
+the same thing and that vastly increases their
+chance of just stumbling across the solution
+to one of these things. It's kind of how the
+chains work in Spalunky. It's how some of the
+puzzle chains work in blueprints. I really,
+really like that feeling of you walk past
+something dozens of times before you realize
+that it's significant and it's been under your
+nose all this time and then you put the pieces
+together and there's something really pleasing
+about that. And I love the depth that that can add
+to a game which has relatively simple controls.
+The game I'm working on is just you jump around,
+you can punch stuff, you can pick stuff up and
+throw it. That's basically it. So, these kind of
+mechanics where you have to spot an opportunity
+and you have to spot what conditions spawn the
+fairies. All of these kind of things are where
+my game is getting its depth really. All right,
+then. Keep your secrets. Look, guys, I know
+that you love loops. You love loops. Love doing
+the same thing over and over again, but you've
+got to give chains a chance. You can get clear
+chains where players know where they're going and
+the the feeling of the chain is defined by the
+player's motivation to build a particular thing.
+Or you can get these weird secret chains where
+the player feels smart because aha now I realized
+that I was actually making the fairies spawn by
+chains are cool and good. But you know what's
+even better than chains? I I I actually don't
+you know why I like chains and actually why I like
+loops. I like visual spatial metaphors that help
+people to understand interaction design because
+without them game design would be really hard.
+Thanks to everyone who supports this channel
+via YouTube memberships and Patreon. If you like
+this sort of thing, then give me some money.
+If you can't afford to give me some money,
+then just just say something nice cuz there's
+going to be some dick below going, "Oh, this
+doesn't tell me how to make six figures. I don't
+care about game design." And thank you to everyone
+who is supporting this channel and allowing me to
+make almost UK minimum wage doing entertainment.
+[Music]

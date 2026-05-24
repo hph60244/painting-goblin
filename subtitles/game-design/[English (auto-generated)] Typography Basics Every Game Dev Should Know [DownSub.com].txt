@@ -1,0 +1,1053 @@
+hi today I'm going to give you a sort of
+crash course in typography and as this
+is a game Design Channel it's largely
+going to be aimed at game developers but
+it could be a helpful refresher if
+you're coming from another background
+and and you need to know about this
+aspect of graphic design typography is
+the sort of craft of understanding text
+and how text is kind of shown to people
+and how to make it look good basically
+uh so we're going to cover a few key
+topics that I think are most important
+for someone to think about if they're
+using typography for games and then to
+sort of show you some of this applied
+I'm going to look at some examples from
+games both indie games and AAA games and
+then I'm going to give you a a guided
+tour of some signs in my hometown uh so
+that you can see all of these things
+applied together because the thing about
+typography is there are multiple things
+to think about there's kind of like the
+the the kind of emotional layer that of
+kind of what vibe does this font give me
+and some of that is to do with culture
+and history as well and then there's a
+kind of formal you know how are the
+letters spaced and all of that kind of
+stuff and there's also legibility so the
+three areas really that I want to talk
+about are
+legibility uh which might be a bit
+ironic because I know this animated
+background is going to get in the way
+occasionally throughout this but um you
+know do do as I say not as I do you know
+what sort of things can you do to make
+sure en your text is easy to read the
+the second category is kind of the
+cultural element and what we call
+semiotics which is the study of meaning
+right so when we talk about semiotics
+we're talking about what does this mean
+and why does it mean that so there's
+lots of cultural baggage that can come
+along with a font or a type face and the
+kind of style and what we associate it
+with and kind of different time periods
+that it might come from all of that kind
+of stuff that you need to bear in mind
+when you're doing this kind of work and
+the last category is on here because it
+is important but I'm not going to spend
+a whole lot of time talking about it
+because um the the symbol there the V
+and the a is to represent kerning which
+is like the spacing of letters and this
+is a rabbit hole that if you're doing
+traditional print based graphic design
+you could fall down forever there is so
+much um kind of to learn about how
+letters are put together what the names
+of the different parts of the letters
+are and so on and as I said they're kind
+of spacing and curing now if if letters
+are spaced incorrectly you can it can
+lead to strange things like it looking
+like there are gaps between words when
+there aren't and all of that kind of
+stuff but generally speaking when we're
+using a game engine we don't have a
+great deal of control over this so I'm
+not going to spend a lot of time talking
+about this area although there will be
+some key things to kind of point
+out now the simplest rule of thumb that
+I wish people started from when they are
+making a game is to just use two fonts
+and to have a clear idea of what each
+one is for you know so this is the font
+that we use for headings and this is the
+font that we use for any kind of large
+chunk of text that we would call like
+the body of of a document now I'm sure
+you can find examples of things that
+look great that use more than two fonts
+but by and large this is a good rule of
+thumb to start with because it starts
+you thinking in this way which is kind
+of the more advanced way of thinking of
+it which is that when you add a new text
+style there should be a logical reason
+for it so every time you introduce a new
+font or you introduce a variant of an
+existing font like you add italics or
+bold or underlining it there should be a
+reason why you're doing that in games
+there are kind of specific use cases for
+when we might do this we might have uh
+damage numbers that pop up during combat
+that's an example of a of a special use
+case where we might apply a different
+font or a different set of rules for a
+font there might be explanations for how
+an item works and when there is a
+keyword word like you get poisoned right
+that's a status change that's a key word
+that might be something that we use bold
+for flavor text in games presented in
+italics or in a different style of font
+and that is to help players quickly
+glance at it and know that that is kind
+of story information it's not what I
+need to know in order to play the game
+but generally speaking every time you
+introduce some new type face there
+should be a logical reason for it and
+this should become part of the visual
+language of your your game whereby if
+there's italic text then italic text
+means the same thing across the whole
+game if there's an underline it means
+the same thing across the whole game
+collectible card games are a really good
+example of this and they kind of bridge
+the gap between print graphic design and
+what we see in video games and if you
+look at these like the Hearthstone
+example on the right that's closest to
+me um you've got the same text used for
+the title of the card the big numbers
+and the type of Minion it is at the
+bottom where it says beast and that's
+this big chunky white text with a black
+outline it's kind of a more decorative
+font it has serifs which are the little
+sticky out feet and stuff and generally
+speaking fonts with serifs make us think
+of like older time periods because they
+come from a time when we were printing
+with uh physical machines and so the
+letters were designed to have these
+corners on um to prevent the ink from
+running and and to kind of prevent wear
+on the machine as well you can see the
+bit underneath where it says Rush
+poisonous and that's an example of
+keywords being highlighted in a
+particular way like I mentioned a moment
+ago but all of that rule text that's in
+that bottom rectangle you notice it's in
+a very clean straight font it doesn't
+have serifs all of that makes it easier
+to read and it needs to be easier to
+read because it's presenting more
+complex information it's presenting a
+whole sentence of of information you can
+see some of some similar rules in the
+magic the Gathering card on the left
+we've got a slightly different text
+that's used for the heading the the name
+of the creature and then we've got a
+kind of simpler text used for the body
+which actually is a serif font here but
+it's not a kind of fancy decorative one
+and then that bit where it says there
+once was a player named Quinn and you'll
+often see that in Magic the Gathering
+cards they use italics to tell a bit of
+story about the world or make some
+strange little joke about that
+particular card two of the most popular
+card games to have ever been made
+we don't see loads and loads of fonts we
+see fonts that are used in very specific
+ways and kind of a sense of There are
+rules about when something is bold or
+when it's italic and and all of this
+kind of stuff and that's what you need
+to develop for your game is a set of
+rules a set of visual language that you
+use consistently throughout all of the
+typography all of the text that's shown
+in your game now there are several
+really common legibility CR s that kind
+of make things hard to read and as I
+said some of this is going to be ironic
+because the animated background I've got
+on behind my slides is probably getting
+in the way of this but the first one and
+the most common one I see is having full
+sentences in all capitals this is bad
+for multiple reasons one is it does look
+like you're shouting a lot of us have
+sort of built up this Association on the
+internet and private messaging that
+someone typing in or caps is shouting at
+us but more importantly it makes your
+your text harder to read and it's
+particularly um difficult for people who
+have dyslexia or a visual impairment and
+the reason for that is that capital
+letters tend to all kind of go up and
+down to the same point in the line so if
+you look at that sentence where it says
+full sentences in all capitals and you
+compare it to the other legibility
+crimes it's very kind of blocked out in
+a straight line cuz the letters are all
+the same size that makes it very
+difficult to discern the letters if you
+have some difficult reading so whenever
+you use all caps it should only really
+be to emphasize one thing or maybe for
+something like you know the name of an
+item or the heading of something where
+it's never going to be a long sentence
+it's always just a block of text that's
+maybe five words long at the most as
+soon as you're writing full sentences
+that have multiple Parts in you're going
+to make it hard to read if it's in all
+caps and one of the worst responses you
+can have to this complaint is to say
+well the font I used is only capital
+letters well get a different font then
+you don't have to use that one there
+there are some kind of edge cases where
+sometimes for stylistic reasons you want
+to use all caps for example it's very
+difficult to do something with a comic
+book font and make it look authentic
+without doing it in all caps cuz comic
+books have been in all caps for you know
+50 60 years but that is starting to
+change now now the second one on the
+list using fonts that are very
+decorative unne necessarily so I'm not
+talking about like the title of your
+game on the splash screen I'm talking
+about text that's actually in the game
+once you start playing it if you use a
+very curly font like that it's going to
+it's going to be hard to read I'm going
+to give you an example of why this is
+important in a minute if if you don't
+care about it yet maybe the next slide
+is going to is going to make you care
+about it the other one is varying the
+size of your text too much so to go back
+to the playing cards there is a tiny
+piece of text in the corner of the magic
+the Gathering card that is the kind of
+copyright information and the name of
+the artist it's okay that that is really
+small because it's very rare that you're
+actually going to need to read it and
+you almost certainly don't need to read
+it as part of the game play but if we'd
+made that jump in size on the card
+itself on the gameplay important
+information then that kind of creates
+this moment where players need to read
+the larger text and then when they go to
+read the smaller text they sort of have
+to refocus in I used to see this issue
+quite a lot not just in students games
+but also in documents like pitch
+documents if you have you know one slide
+in a deck of slides and it has three
+sentences on it and they're nice big
+text and then the next slide you switch
+to loads of text and it's all really
+tiny that kind of creates this moment of
+H in in in the audience's brain and and
+kind they they're more likely to switch
+off at that moment and not want to read
+the next bit cuz you've made them have
+to kind of read refocus from one text
+size to another so try not to have
+massive differences in the size of text
+it's okay to have much smaller text if
+it's for something that is kind of you
+know small text you know copyright
+information stuff like that but not for
+things that players actually need to
+read in order to play and then the last
+one is poor contrast so in this example
+I've put it in a pale text that is not
+going to show up very well on my blue
+background um but it could be the
+opposite problem it could be like red
+text on a green background it could be
+something that creates like visual
+Distortion and of course in games this
+issue can be particularly pronounced
+because you're often putting text over
+something that is moving around in a
+background and that can be why you might
+need to bring in something like
+outlining or drop shadow on your text or
+putting a a transparent vignette behind
+it so that whatever is moving around
+behind that and exploding what whatever
+is happening in the game isn't hurting
+the legibility of that text I think most
+of the things on this list are pretty
+obvious the capitals one is the one that
+usually catches people out there is a
+fantastic book about design and it's not
+specifically about game design I think
+it is more aimed at sort of graphic
+design as web designers and stuff but
+this is a fantastic book and I do
+recommend every game designer pick it up
+Susan Vin shank's 100 things every
+designer needs to know about people
+there's quite a few things in this about
+legibility and how to do Tech display
+well uh but one of my favorite tip bits
+of information here is this this
+basketball study that they did um where
+basically they would give people an
+instruction on paper to do a particular
+you know set of throws in a basketball
+court and they gave people different
+writing on the paper that was easier or
+harder to read and they tended to find
+that when you gave people the harder to
+read instruction they performed worse at
+the task right so if they were kind of
+using a bad decorative font like the one
+I showed you there and the and the kind
+of people in the experiment couldn't
+read it very easily then when they tried
+to when they'd eventually read it and
+tried to do the basketball throws they
+performed worse at it so there's there's
+some kind of psychological thing going
+on where when you give people an
+instruction in text if they can't read
+it properly then they perform worse when
+they try and carry out that instruction
+which is really interesting and I think
+there are other examples of this in the
+book every time you present text to
+people that has poor legibility you're
+sort of setting them up to react
+negatively to that in a way that has
+some sort of knock on effect with what
+they're trying to do and it might just
+kind of make them not like you as well
+if you're kind of giving uh giving
+someone who who struggles to read anyway
+like someone with a visual impairment or
+dyslexia giving them a massive uh re of
+text to read and it's all in capitals
+you you kind of have all of this
+psychological KnockOn effect your
+audience is kind of scrunching up their
+face getting grumpy about it and that's
+going to impact everything about how
+they interact with the thing that you've
+designed them to do so moving on to the
+sort of cultural element of typography
+and what it all means whenever you hear
+me refer to semiotics in this video I'm
+talking about this it's semiotics is the
+study of what symbols mean and why they
+mean what they mean so like I said when
+you look at a a piece of typography and
+you go oh that's a Sci-Fi one or that's
+a fantasy one that's what's going on
+there's some semiotics happening there's
+a there's a set of cultural symbols
+attached to that typography attached to
+that type face that you're able to read
+and interpret based on media that you've
+seen in the past so on one level there's
+this kind of tone emotional aspect which
+is does the typography looks serious or
+does it look friendly it could be a
+dichotomy like does it look Whimsical or
+kind of playful or does it look formal
+you can kind of guess the sort of genre
+and the tone of these games from looking
+at the typography the bottom one looks
+very serious it looks like it might be
+in a kind of sci-fi area or maybe some
+sort of spy Thriller type thing and the
+top one looks a lot kind of Cozier and
+friendlier and if you look at the shape
+of the fonts as well the top one is a
+lot more decorative it's got a lot more
+round shapes in it kind of looks
+friendlier than the one at the bottom
+which looks something more kind of
+formal and serious and if I were to show
+you these and you didn't know what games
+they were from we could infer so many
+things from these about which of these
+games contains the most uh fighting and
+all of that kind of stuff it's all there
+embedded in in the way the font looks
+and and fonts we've seen in the past and
+the associations we have with them and
+some of that comes from this which is
+the kind of historical aspect of
+typography when we see particular types
+of writing we have associations from
+like where do they come from in history
+so you've got the Roman numerals there
+that are made using a chisel and the way
+that Roman numerals are written it's
+kind of very straight lines and we
+associate it with something that is
+carved in stone that is made with a
+chisel and then you've got medieval
+black letter which is associated with
+using a a quill to write and writing in
+a very decorative style because this was
+a time in history when the only writing
+that was happening in in kind of big
+books were kind of monks creating these
+ill at manuscripts and so on over on the
+right we've got the example that
+definitely breaks my two font rule which
+is kind of like these Victorian uh
+bottle labels and stuff and they have
+loads and loads of decorative use of
+typography so if you plan making a game
+set in that era era which is like
+Victorian or sort of wild west then you
+sort of have to look at all this and and
+work out how you're going to do it and
+it could start to get uh very
+complicated in terms of any inworld
+posters and stuff like that that you
+need to do the the point is that even if
+we're not consciously aware of it lots
+of typography has a kind of attachment
+to a particular point in history and the
+sort of materials and processes that we
+use to make it and some of this can come
+from other media like films music and so
+on over here you've got it came from the
+desert which is a pretty good uh game
+from around 1990 and you can see how the
+front of that box is designed to look
+like a old 1950s B movie they always had
+that kind of Dripping uh text sometimes
+it would be small on one side and big on
+the other and it would be this kind of
+big decorative if you imagine like the
+Indiana Jones titles that's kind of what
+we associate with certain genres of Pulp
+film apal all of the graphic design and
+the use of typography in this is based
+on 1960s and onward like film intros by
+an artist called s bass so it's kind of
+this association between the the jazz
+music that's in the game and all of
+these kind of visual Styles including
+the typography tying into uh like
+graphic design stuff from the' 60s and
+then with Bioshock we've got this kind
+of 1920s Cabaret Art Deco style which is
+telling us the time period that the game
+set in it's going to tell us the sort of
+uh architecture we're going to see in
+the game and again the typography
+follows that all the way through these
+are using audience's understanding of
+other art movements from history other
+types of pop culture and kind of putting
+it into games like I said before I'm not
+going to spend long on form and shape
+because all of this stuff is stuff that
+you maybe don't have so much control
+over in a game engine right if there are
+issues with the spacing of specific
+characters often in a game engine you
+just need to pick another font because
+you can't individually uh types set the
+the different letters in every piece of
+of writing some examples from games I
+was sent power Champions to review a few
+month ago and I think this one just felt
+a little bit messy in terms of how many
+fonts there are they're they're going to
+be a bit small on your screen but you've
+got this very sci-fi looking font used
+all along the top uh which sort of
+reminds me of uh if you saw like a '90s
+sci-fi movie like a a Terminator or
+something like that or like a Michael
+Bay movie and it's kind of difficult to
+read I don't like those zeros with the
+crosses through the middle there's a lot
+of things that make that text hard to
+read particularly when it's changing and
+then there's some story texts where the
+character is speaking that is in a very
+different style they sort of don't look
+like they go together and then in the
+bottom right we've got that kind of more
+plain serif style being used again but
+it doesn't have the outlines it's just
+there are there's a lot going on here in
+terms of fonts being used and I can't
+always tell why a particular font is
+being used for a particular thing here's
+what I think is an excellent example
+mini Metro is a game about building
+Metro stations and you can probably
+Inuit it this from looking here but if
+you've ever been on a train station
+they've based the graphic design of this
+game on that I think it was specifically
+based on the uh graphic design of the
+signs and and leaflets and all the
+brochures for the New York transport
+system so this is a good example of a
+process you can go through if your game
+or whatever project you're working on is
+set in a particular time and space you
+can go and try and find the style guides
+that are associated with that and and
+see like what kind of graphic design
+rules and typographic rules were used in
+Subway systems or restaurants or
+whatever it is you're doing go and look
+at examples of the typography used from
+that time here's an example from Diablo
+I and you can see the sort of um
+signature typography from Diablo that
+has those sort of Gothic crosses in o
+it's very kind of over-the-top stylized
+goth and it's just something that I
+think people associate very heavily with
+the game since the first one so they've
+kept it in there they've used it for the
+peder but all of the text that we need
+to read to understand what this weapon
+does and its rules is in a very plain
+font and that might not look great to
+you it does make it a lot quicker to
+read because you don't have serifs and
+serifs are another typ of graphic
+element that basically slow readers down
+it doesn't look pretty but it it does
+what it needs to do which is give
+information in a very clear way and I
+think if you were to break down that
+image that we're looking at even more
+you could start to think about how is
+color used the white text pops out at
+you more than the gray text and there
+are there's some other color symbolism
+going on to do with Rarity and stuff
+like that so there's lots of potential
+things to think about in this image I
+just want to stop briefly in the
+midpoint of the video to let you know
+about our Discord everyone on it is
+basically either a developer whose game
+I've reviewed on this show or someone
+who is supporting the channel via
+patreon so if you're able to do that if
+you're able to support us via patreon or
+a YouTube subscription then you do get
+access to my Discord um and it it's
+basically a place where you can get
+support from other game developers you
+can kind of show people your ideas get
+feedback on there I'm on there on a
+daily basis giving people feedback from
+my kind of experience of working in the
+games industry and making my own games
+and teaching game developers at
+University um and I think it's quite a
+special Community because it is all game
+developers and that means we don't get
+kind of flooded with which engine should
+I use and how to get started like
+beginner 101 questions it's much more
+focused on people who are already making
+games and want to sort of learn game
+design so that they can make better
+games rather than just how do I get
+started kind of stuff cuz I tend to find
+that the open forums on places like
+Reddit and Facebook often they do get a
+bit bit kind of saturated with beginner
+level questions about what's the first
+thing I should do to get started making
+games so if you're already making games
+and that Community sounds appealing to
+you you can join us via patreon you can
+also join via a YouTube subscription and
+kind of become one of the founding
+members of that Discord group cuz we're
+still at under 100 members so you'll be
+getting in early and and you'd be
+helping support this channel so that I
+can keep on pumping out videos and
+providing educational resources for game
+designers that are free rather than you
+know having to go down the route of
+making private courses and and and
+selling them which I I don't really want
+to have to do okay here's the fun bit
+we've seen a couple of examples in games
+um I just want to take you through sort
+of a guided tour of some signs that I've
+seen in my own town as I go around and
+this will help you to kind of see uh
+typography being analyzed and I promise
+you by the end of this video you'll be
+so typography pilled that you won't be
+able to stop doing this kind of analysis
+and every time you go outside of the
+house and you see a sign uh you'll be
+doing this Sunrise Cafe first thing that
+jumps to mind is that it is friendly
+right there these big like balloon
+letters they kind of look friendly they
+look chubby they've got serifs on which
+kind of make it look a bit old-fashioned
+this is kind of a typography I have a
+very strong association with like the
+1970s in Britain with and the use of the
+warm colors kind of gives you that as
+well but it it it does what it needs to
+do right it's welcoming it's it's for a
+cafe where you go and buy some sausages
+and eggs and and stuff this one is
+strange Raj's Asian supermarket this
+type face I would associate with circus
+posters and maybe they used for like
+Carnival in the states and these are
+like big wooden block printed letters
+that you would have got in Victorian
+times but for me it's a very strong
+association with the circus I wouldn't
+have used it for this sign and I'm not
+sure if the owner knows that there's
+that Association but you know it is what
+it is it it's eye-catching at the very
+least now what do you think when you see
+this one it's a sand serif font it's got
+no serifs kind of makes it look a bit
+more modern it's kind of slick looking
+there's no capital letter which as well
+is a choice that kind of makes you read
+it in a particular way this is the kind
+of sign you have when you want to assure
+people that this is a classy pizza place
+now it is no longer the most violent Pub
+in the Town Center I really don't know
+what's going on here why would you do
+that I'm scared and confused this is
+where you go to sell your jewelry when
+you're in debt it does what it needs to
+it kind of looks
+formal uh there's something about the
+the the kind of squareness of the
+letters and and how tall they are that
+makes it kind of come across as quite
+formal you got an inconsistency see
+there between the typography used on the
+main sign and the typography used down
+at the bottom where it's got wanted for
+cash that has like a gradient on it and
+it's in a very different style but
+overall the color scheme ties it
+together and it doesn't stand out too
+bad but you will see examples later on
+where the more different type faces are
+used the more kind of tacky and chaotic
+it ends up looking
+lmani I think this is a fashion shop
+it's really low contrast compared to the
+other place is um you almost don't
+notice the sign at the top because the
+sign on the window stands out more uh
+but this kind of lower contrast it's
+it's meant to look retro it's meant to
+look like something quite old it's kind
+of got a classy Vibe it looks
+handpainted as well which which gives us
+a different vibe than seeing like big
+plastic letters that have a light behind
+them or something this this kind of
+feels like it's going for a kind of
+demure uh retro kind of thing which
+makes sense if it's if it's fashion shop
+like a boutique look at this it's
+beautiful we used to live in a proper
+Society where people had elegant
+decorative Windows outside their
+businesses no more now this one I have
+to go back and forth between these two
+images because it has the orange sign
+the blue and white sign that red and
+white sign and the silver one it's got
+like four different signs all the way
+around so that you you cannot go past
+this business buiness and come away from
+it without a sense of what it does yeah
+it it it it's got lots of signs none of
+them are in the same style um but they
+they are informative and we know what we
+can get here I I just like the idea that
+they're just going to add a new one
+every 5 years and never get rid of the
+old ones and the signs are just going to
+gradually go up and up the building
+until it has like 20 Harbor Gallery
+another hand painted one it's got like a
+a sort of it's not even a drop shadow
+it's like a 3D embossment thing coming
+out of the back of it and then there's
+also a line between that and the other
+one so if you were imagining trying to
+render some of this in an engine you
+would have to outline the yellow with
+the red of the sign and then put the the
+the gray blue one behind it um it's it's
+really nice technique it sort of looks
+like it's meant to replicate if the sign
+was made out of wood and or if the
+letters were made out of wood and it
+sort of extruded from the sign is it's
+giving that kind of impression but it
+it's it's very pretty and again if you
+were making a game set in a particular
+time period you might have to generate
+lots of these right if you say oh my my
+game is set in a in a Victorian Town
+you've made yourself a lot of work in
+terms of generating this kind of
+typography but it it does give you a
+sense of of of of that kind of time
+period i to be honest this one is just
+on here because I thought the name was
+funny and I wanted to show you this tiny
+little door um which is like I'm only
+5'8 and I would have to stoop to go in
+this tiny little Gallery so that's cute
+this one I feel a bit beused by because
+that typography to me is sort of XCOM
+right it's like a sci-fi thriller thing
+it's uh it's the Michael Bay one again
+it's like opening scenes of Transformers
+and it's telling you this is happening
+on Unicron Prime and it comes up in this
+text so I can't really work out how that
+relates to boats unless unless they sell
+really like high-tech cyber boats uh
+that might turn against their owner this
+one is lovely you can see they've used
+kind of the shape of traditional Greek
+letters to to kind of get the greekness
+in there um and then you've got the the
+the sign is made in mosaics just think
+about what we said earlier on about
+there being this kind of cultural this
+layer of cultural associations when you
+look at text you've got the shape you've
+got the material you've got the set of
+colors it's all doing greekness you know
+they're trying to Market this as come
+here to eat you will get a genuine Greek
+experience not like that mck they serve
+down the road right and it it it's
+giving all of this kind of authenticity
+and even though you've got the Greek
+Arch and then like a sign above it that
+doesn't really match it kind of doesn't
+matter cuz it kind of adds to this sort
+of Bohemian sense to have have the
+multiple different ways of presenting
+the text like I said the the two two
+font rule is really a rule of thumb
+there are contexts where having lots of
+different types of typography do do
+something beneficial like often it's
+done to create a sense of something
+being retro or Bohemian to have lots of
+different types of text that doesn't
+mean that you should necessarily do that
+in games for text that is supposed to be
+easy for people to read like the dialog
+or the tutorials but when you're
+designing materials that appear in a
+world like shop signs and posters and
+things like that you might want to think
+about you know what context is it
+appropriate to have lots of different
+types of typography because sometimes it
+is a stylistic choice and if you want
+your game worlds to feel believable then
+you need to sort of see when that
+happens in the real world and and copy
+it as appropriate here's another very
+retr look one and again you can think of
+the the typographies that you can see
+there which are different from each
+other but they both got a similar sort
+of vibe they've both got very curly s
+and they sort of walk the line between
+feeling like formal and old fashion but
+being slightly Whimsical at the same
+time flowers have these associations
+with like you know Romanticism and and
+kind of particular types of values that
+we also associate with like the good old
+days and if you're interested in graphic
+design more generally you can start to
+think about how the color combination of
+that sort of dull gold color um and the
+dark green and those things combine with
+the typography to create this feeling
+and also the borders as well if you look
+at the border on that window there's
+this kind of rounded Edge border that
+that is kind of playing into that as
+well it's evoking particular time
+periods and it's is kind of helping to
+create associations emotional
+associations with the business corby's
+t- rooms are sadly not open anymore but
+you can see this has the same type of
+borders around the frames as the last
+one it has those little rounded bits in
+cuz it's evoking a specific time period
+and again we've got that hand painted
+style very very decorative there's
+almost a sense here that you couldn't
+create text like this without having
+someone hand design it and that kind of
+in turn creates a sense of quality of
+like this wasn't just typed in with a
+computer this was made by a crafts
+person right rip K's t-
+rooms Mariners bar you can see there
+very very cons consistent use of this uh
+quite bold sanser font in the sign and
+it's above the door there as well uh and
+on the hanging signs it's very
+consistent like I said The more
+different typographies you use unless
+it's done in a very deliberate stylistic
+way like those Victorian bottle labels
+we saw earlier having a a kind of noisy
+chaos of different typography does tend
+to end up looking tacky so when you look
+at this building from a distance you see
+that the sign above the door matches the
+other signs it looks clean it looks
+professional there are other bits of
+typography like um advertising events
+and stuff that are on posters when you
+get closer in and they don't really
+match they kind of look uh like they
+haven't really looked at the the rest of
+the graphic design associated with the
+building when they've done those Royal
+Harbor Emporium kind of hard to read in
+this Gothic black letter but you can
+sort of see how there are some cultural
+associations being built up here between
+the gothic black letter is old and this
+is a shop where you would go to buy old
+an antique things and there's also
+perhaps an association between that kind
+of medieval um like visual style and
+motorbikes so the idea of like bikers
+being associated with kind of things
+that are medieval looking there's a sort
+of a biker SL Knight kind of Association
+that goes on in biker culture and you
+will see it in like the the kind of
+chapter patches that people have on
+their leather jackets and stuff like
+that and that's kind of what's being
+evoked here big old stencil
+font very hard to find a stencil font
+that isn't all in caps uh but it does
+kind of evoke particular things and
+you'll have an association probably with
+the military and particularly like
+military things set in Vietnam or in a
+kind of jungle based regions the worms
+games uh where a lot of the time they
+use this this kind of typography but
+there's also an association with sort of
+of imports and exports and the type of
+stamps that you'd get on like a crate of
+bananas or something so that's why
+they're drawing on it for this
+association with the the tropical right
+it it kind of makes total sense that
+it's been used in this context and even
+the the front of the business looks like
+a big a big wooden crate so hopefully
+now you are typography pilled enough
+that you can do this exercise in your
+own town and go around and point at
+everyone's signs and go uh look at that
+why did they do that we'll go oh that's
+a nice one and just stand outside of
+business clapping their sign and and and
+saying Bravo these are the kind of key
+considerations you've got legibility can
+I read it particularly in a game where
+you're reading instructions and you're
+reading how to play just having large
+blocks of text that are hard to read is
+you're just setting yourself up to fail
+as a designer If You're Expecting
+players to jump through that hoop of
+squinting at some writing that's hard to
+read and you just don't to do that so so
+don't don't do it this second point
+about the kind of cultural baggage that
+typography has is probably the the more
+fun area to dabble in when you are
+making a game that is set in the wild
+west how do you convey that through the
+typography when you're making a game
+that's set in in the Caribbean with
+pirates and so on there are typographic
+choices that are going to help to
+immerse the player in the world cuz it
+will evoke the association that they as
+players have with other media and other
+art movements and so on throughout
+history and you need to be able to do
+that but you also need to balance that
+with legibility so going back to the
+Diablo example that's a brilliant
+example of a game that has a a very
+stylized decorative font that evokes a
+very specific thing it's like you know
+Gothic medievalism this is the type of
+font that you would see on a plaque in a
+cathedral or on a gravestone and it's
+giving all those dark Gothic Vibes that
+are important to what Diablo is and is
+about but then the the functional text
+the text that the player really needs to
+read lots of to understand the game is
+in a a sansur font it's in a very clear
+clean font and that makes it easier to
+read and it's always this Balancing Act
+between you know which text in your game
+is there to provide some artistic flare
+and which just needs to be easy to read
+because every time you ask players to
+switch between focusing on one type of
+writing and then read in a different
+font it's like creating a little uh
+cognitive roadblock in their mind a
+little bump for them to get over those
+of you who speak more than one language
+will have been in situations before
+where you're listening to a speaker and
+they speak in one language and then
+someone else speaks in another language
+and you have to do this kind of Double
+Take in your brain to switch to
+listening to a different language and
+switching between reading very different
+types of type faces in a short period of
+time is is very similar to that your
+it's a it's a like a a bump uh mentally
+in terms of your understanding of what
+you're looking at if you're making a
+game and you found this helpful perhaps
+if you're new to the channel then say hi
+drop a comment below please subscribe
+all of that stuff uh but I've also got
+an email address where you can get in
+contact with me indiam Clinic gmail.com
+and there's a number of things I can
+help you with the first one is if you
+send me a game and I play on a stream
+and I think it's interesting and I think
+there's something that other game
+developers can learn from it then I may
+incorporate into a video don't just send
+me games expecting me to cover them like
+a games journalist because this is a
+game Design Channel so I tend to look
+for games that you know are good
+examples of something or games I can
+analyze in a way that will be helpful to
+other designers so you know don't just
+send me random stuff you need to be
+looking for design advice rather than
+just kind of positive feedback cuz I'm
+I'm not really about that you can also
+contact me for freelance design help so
+if you're stuck with a project and you
+want to know what to do next or you want
+me to kind of read through your design
+documents and point out any danger areas
+and stuff like that I can do that with
+you and the LA last point is any sort of
+coaching and mentoring stuff if you want
+someone to speak to on a regular basis
+could be once a week could be once a
+month to sort of talk through things
+that you're stuck with creatively
+whether it's games or another medium
+then I do provide this coaching and
+mentoring service and remember this
+comes from someone with a background of
+working in the games industry but also
+like at least 5 years teaching adults
+how to make games and how to do other
+types of creative Pursuits like graphic
+design and and music and so on I've
+worked with lots of people in lots of
+different disciplines to kind of help
+them get better at what they're trying
+to do the thing about coaching is it's
+not teaching so I don't do onetoone
+lessons showing you how to use a game
+engine you need to already be doing that
+yourself but if you're working on
+projects and you want some guidance to
+you know maybe help you develop better
+habits or maybe point you in the
+direction of things it would be good for
+you to play or read as research for what
+you're doing then I can help with that
+kind of stuff and I can do it on a kind
+of rolling basis with you if you're if
+you're looking for a coach or Mentor in
+in games or any kind of adjacent
+creative area so thanks for listening
+today I I look forward to uh seeing your
+new games with much better typ of
+graphic choices made in them after this
+video
+[Music]
+he
+[Music]

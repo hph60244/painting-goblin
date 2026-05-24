@@ -1,0 +1,1068 @@
+Today I want to talk to you a little bit
+about game genres and two other terms
+I'm going to use mood and mood. So today
+when we're talking about genre and
+classifying games the purpose of this is
+so that we can try to make better games
+or to understand what we're making a bit
+better so that we can do a better job as
+game developers. It's about thinking
+about the categories we use and whether
+they are helpful to us as designers. And
+the approach that I'm going to show you
+today is aimed at trying to help you to
+avoid some really common pitfalls that I
+see developers get into. One of those is
+genre mashups that are unsuccessful
+because the things don't fit together or
+they can't make them fit together. The
+second one is prematurely adding a lot
+of content and systems that your game
+doesn't need because you've set out to
+make a particular type of game and you
+assume that it needs certain things in
+it. So you start with them and perhaps
+they weren't the best things to start
+with when you're in the early stages of
+making your game. And thirdly, a really
+common issue is starting a game that
+you're not really equipped to make at
+the moment based on your current skills
+in art and technology. All of these are
+really common issues that I see on this
+channel. And you might be thinking, what
+qualifies this guy to tell me all of
+this? You know, I've worked as a game
+designer professionally for a decade.
+I've taught design to university
+students and I like to think that's kind
+of what I do here on YouTube as well.
+The the content I produce is aimed at
+that level. It's aimed at adults who
+already know a fair bit about game
+design and want to learn more. Most
+importantly for the purpose of this
+video is that I've reviewed more than 80
+of your games in the last 10 months. So,
+in the under a year that this channel
+has been running, you have sent me
+dozens and dozens of your games and I've
+reviewed them. And some of the issues
+I'm talking about in this video come
+from my observations about the games
+that I've played while making this
+channel. So when we think about genre
+and what it's for, we often think of it
+in terms of consumers trying to identify
+the things they like. So you go into a
+bookshop and you know you like horror
+and because horror is a recognized
+category of books, they can have a
+horror section and you can go over there
+and find what you want in the horror
+section. Right. On Steam, we have tags
+which are a lot broader than the concept
+of genre. And if I look at this list of
+tags, I would say 3D platformer to me
+that reads as a game genre. But these
+other things are something else. They're
+different types of categorization of
+games. But in order to have a helpful
+conversation about genre, we have to
+understand why we're doing it. And as I
+said, this is a channel for game
+designers. And as a game designer, when
+you have questions and thoughts about
+genre, they are going to be maybe
+different from the kinds of questions
+and thoughts that a gamer might have.
+When gamers have debates about game
+genres, they're often doing it as a sort
+of fun intellectual exercise. If you go
+on a forum for rogue likes, there will
+be people having these kind of fun
+philosophical debates or arguments about
+what is or isn't a rogike and so on. And
+the stakes of that for them are maybe
+winning an argument, maybe arguing for
+argument's sake. And that is not really
+what we're interested in doing here.
+We're not interested in the concept of
+genre so that we can say strictly this
+is this type of game. That might be a
+helpful thing to do, but as developers,
+we have other concerns. Maybe looking at
+the type of game we're trying to make
+and understanding other games in the
+same category so that we can say, how
+does this game work? because I want to
+do as well as that popular game. I want
+to do better than that game. I want to
+understand, you know, what people expect
+from this genre, what the problems with
+the genre are and how I can fix it. We
+have a different set of concerns to the
+average gamer. We might share some
+concerns, but that's because developers
+are gamers and generally we pick genres
+to make that we like playing. So, of
+course, there is some overlap. Point is
+that this is not a video that is
+interested in having one of those kind
+of forum conversations about strictly
+putting things in pigeon hole boxes like
+a paleontologist would do with dinosaur
+bones. What we're trying to do here is
+identify some common issues that game
+developers have with the concept of
+genre which often lead to them making
+games which don't do as well as they
+thought they would. Most of you will
+have heard this ethmology before. Genre
+comes from genus which is a Latin word
+meaning a category or type of things
+that are the same in some way. And
+nowadays we tend to use genre for a
+category of media. So hip-hop is a genre
+of music. Western is a genre of movie
+and so on. In film studies we've had
+people theorizing about this for
+decades. So Rick Alman gave us these top
+two types of genre. So, a semantic genre
+is a genre of film where we can identify
+it by seeing the things in the film. We
+see the characters, what they're
+wearing, uh where the film is set, and
+we say, "Oh, that's a western because
+it's in a desert and someone's wearing a
+cowboy hat." So, that would be a
+semantic genre, a genre that is defined
+by its individual parts that you can
+see. And then in Alman's model, you've
+got syntactic genres, genres that are
+defined by the shape of the story,
+what's happening in the story, and what
+the story is about. So something like a
+mystery would be an example of a
+syntactic genre because it is defined by
+its structure rather than its
+iconography. But eventually gave in and
+introduced this third category called
+pragmatic genres which basically means
+that genres are whatever fans and
+critics say they are. Which kind of
+brings us back to the idea of fans
+debating things on forums because they
+enjoy it. This is a sort of I'll know it
+when I see it approach to genre. And
+when you think of the ways that we
+classify games, you could think of a
+category like cozy as being something
+like this. There isn't really a clear
+structural definition of what makes a
+cozy game. There's elements of both of
+these. Really, it is something that is
+kind of it's cozy because people that
+like cozy games say it's a cozy game
+type thing. In literature studies, we
+get genre, which is what we were talking
+about before. you know things like
+fantasy, horror, western um that are to
+do with what the story is loosely about
+and the things it contains. And then we
+have this other concept of mode which is
+more like the structure of the story,
+how the story is told to us and framed.
+It's much broader than the genre. So
+something like realism or magical
+realism or social realism are examples
+of modes. Something like satire is a
+mode. Now, these two terms are used
+quite differently by different literary
+theorists, and I don't want to get into
+too much detail about that now, but the
+point is that I'm going to be using this
+concept of mode to help us come up with
+better classifications for games where
+we're not thinking of every different
+type of game as being a different genre.
+So, just to give you another example of
+genre and mode, here we have Bram
+Stoker's Dracula, which is a horror
+novel. Most of us know that even if
+we've never read it, that is the genre
+that it fits in. And we can tell that
+from like films that have been made of
+it and so on. But the thing that is
+different about this book that you
+perhaps don't get when you watch a film
+of Dracula is that it is in the mode of
+an episttolary novel. Now, if you've
+never heard that term, it's another word
+for a book of letters, a story that is
+constructed from documents by characters
+who are sending each other letters and
+and so on. It's a different format for
+telling a story. So again, we could have
+the story of everything that happens in
+Dracula, all of this gothic horror genre
+stuff of vampires and spooky castles and
+so on, and we could have it in a
+different mode. We could make it into a
+fake documentary movie or so on. The
+medium is the book. The genre is the
+type of book it is in terms of its
+contents and what it's about. And then
+the mode is the kind of type of book it
+is in terms of how the story is framed
+and presented to us. And a more recent
+example of a book that uses a similar
+combination of genre and mode is World
+War Z, which is a zombie book, but it is
+written as a series of documents or
+reports from the UN following a a zombie
+apocalypse. Same sort of combination of
+things going on there as in Dracula.
+Now, another way of explaining this
+difference, perhaps a bit of a strange
+one, is if you go to have Mexican food,
+Mexican is like the genre of the food is
+the type of food that you are getting.
+And regardless of whether I go to the
+Mexican restaurant or the taco truck, I
+am getting Mexican food. It's the same
+genre of food, but the way that the food
+is kind of presented to me and delivered
+to me is the mode. And in this case, the
+mode is a taco truck, and I eat it on
+the side of the street. And in this
+case, it's sat down in a restaurant. The
+point I'm really trying to get to here
+is that genre is not the only way of
+classifying media. And the more ways
+that you have of classifying media, the
+better you can understand sort of
+nuances between different types of
+things. Like then you can understand
+that Dracula is a horror novel, but it's
+also another type of novel and these
+things are working together in a
+particular way. So this brings us on to
+the idea of mode in video games and how
+and why is this distinction useful for
+developers. Now I have not come across
+the idea of genre versus mode being used
+in video games in the way I'm going to
+use it today. And that's not me trying
+to brag and say I came up with a theory.
+If you read any designers talk about
+this before and they've used a similar
+distinction, then by all means, please
+leave a comment. But again, the point
+here is to try and avoid some common
+pitfalls that designers have when
+they're trying to think about what type
+of game they're making and they're
+thinking that they've got the genre of
+their game nailed down, and they haven't
+really. What they've got is a mode or a
+mood. So, for the purpose of this video,
+I want to define a game genre as
+something which tells us what the player
+is doing moment to moment. A game genre
+usually tells us something about the
+three C's of the game. The character,
+the camera, and the controls. How am I
+controlling the game? how is the camera
+positioned and and like who am I
+controlling if I'm controlling a person
+or am I controlling lots of people? You
+can already start to think of how
+real-time strategy and platformer those
+terms they already put a picture in your
+mind as a gamer of where the camera is
+in this game. Where is the camera
+angled? Am I controlling a character?
+What kind of controls am I using? Right?
+Real-time strategy. I'm controlling all
+of these little characters and buildings
+from a camera placed above using a mouse
+and a keyboard. Unless you're a sicko
+like me who played the entirety of
+Command and Conquer 1 on a PlayStation
+because you're an absolute legend. But
+mostly a real-time strategy game is a
+point-and-click game. A platformer
+you're thinking of controlling a little
+character jumping around and you're
+looking at them from the side. And I
+know some of you Hollow Knight fans are
+going to see this and say, "Hol's not a
+platformer. It's a Metroid vania." That
+is kind of leading into something we're
+going to get on to in a minute, but I
+would say it is still a platformer, but
+Metroid Vania is a type of platformer
+that it is. So, a game genre is usually
+going to tell us what the player is
+doing moment to moment in the game. And
+it's going to tell us about these three
+C's of character, camera, and controls.
+And three C's is an industry term for
+this particular type of design focus on
+the camera and how characters move and
+how the game controls. In bigger AAA
+game studios, you get game designers
+where this is their whole job and they
+don't touch level design or systems or
+economies or anything like that. Now,
+what I'm going to be arguing is that if
+you're using a game genre to guide your
+design and you're saying what I'm making
+is a card battler or what I'm making is
+a cozy farming game. Whatever you
+describe your game as is going to inform
+your game design because it's going to
+give you ideas about what you should
+make based on what fans of that genre
+expect. But some of the things that we
+tend to call genres do not do all of
+this stuff. They don't tell us about the
+momentto moment gameplay. They don't
+tell us how the game is supposed to
+control, what characters are supposed to
+involved, how they're supposed to move
+around, and so on. And this can be an
+issue cuz it generates some of those
+problems that I talked about right at
+the start of this video. I'm going to
+argue that it's not helpful for game
+designers to think of genre in terms of
+the mood of their game like cozy or
+horror or the mode of their game which
+is things like rogue like Metroid Vania
+and Deck Builder. And we'll get into why
+I consider these modes in a minute. Now
+I want you to imagine that this pyramid
+represents the three important parts of
+a game. And they're sort of colorcoded
+here. Now, the core mechanics of what
+you're doing in the game are the bottom
+of the pyramid. These help define what
+the player is doing over and over again
+in the game, and they are the foundation
+of the pyramid. Because if people don't
+enjoy the main activity that they're
+doing over and over again, then the rest
+of the pyramid falls down, right? The
+next step up the pyramid are things like
+your progression mechanics. So, what are
+you collecting? What are you upgrading?
+What are you investing your time in by
+playing this game? And these progression
+mechanics are important because they
+give you a reason to do things. Why am I
+doing these things? What is the reward?
+What is the investment? But again, this
+part of the pyramid cannot stand up if
+the bottom part is not in place. So, if
+the bottom part is not fun or it doesn't
+appeal to people or people just don't
+enjoy doing that core activity over and
+over again, they're not going to care
+about this next tier up. they're not
+going to care about getting rewards or
+investing points or currency into
+things, right? So, this sits on top of
+the core mechanics. And then right at
+the top, we've got all of the stuff is
+kind of vibes. We've got the aesthetic,
+the theme, and the mood. And it's
+important. It could be like the deciding
+factor in whether someone buys one game
+or someone prefers one game over
+another. But again, a game is an
+activity. A game is a set of things that
+you do over and over again. So having a
+strong aesthetic, having a good
+interesting mood or theme for your game
+is not going to save a game where the
+bottom and middle of the pyramid are not
+strong. And you will notice at the
+bottom of each of these chunks, I've
+added one of the three words that this
+video is about. Genre, mood, and mood.
+Now, if we go from my strict definition
+of genre from earlier, where it needs to
+be something that tells us what the
+player is doing moment to moment, then
+genre is where we get our core
+mechanics, right? So a platformer is a
+genre and the core mechanics are things
+like jumping or breaking things in the
+environment or jumping on enemies to
+defeat them. Those are core mechanics
+that come out of the genre. Now if we
+take Hollow Knight as an example, the
+genre of platformer is where we get the
+jumping and the kind of side view
+fighting and so on. And that's what
+makes Hollow Night a platformer and
+that's what contributes to enjoying
+playing 30 seconds or a minute of Hollow
+Knight. Now, once we've got those core
+mechanics that people enjoy, then people
+might want to explore a world. They
+might want to upgrade things or find
+secrets. And that's when we move into
+the next stage of the pyramid, the
+progression mechanics, which here I'm
+referring to as the mode. If we take
+Hollow Knight as an example, again, the
+mode is it's a Metroid vania and it's a
+Soulslike, right? Those two terms don't
+do enough to tell you what the player is
+doing moment to moment. You can guess
+from the term Metroid Vania that it's
+also going to be a platformer, but you
+know, saying a game is a Souls like,
+well, you know, the original Souls games
+are 3D brawlers. I've seen Souls likes
+that are card games. Souls like is a
+mode because it doesn't tell us about
+the core mechanics. It's not a genre,
+it's a mode. So, in this case, I would
+put Souls like and Metroid Vania in the
+purple category. They're in the middle.
+They define why players are doing
+things, what the rewards are, what the
+kind of longerterm goals of the game
+are. If the Souls like Metroid Vania
+stuff doesn't work, then you don't care
+if it looks pretty. And if the core
+mechanics, that kind of 30 seconds of
+fun of the game of jumping around and
+fighting doesn't work, then you don't
+care that it's a Souls like or a Metroid
+vania. these things stack on top of each
+other. If you're a game developer and
+you don't nail this core stuff of how it
+feels to do the basic activity that
+you're doing over and over again in your
+game and you invest a lot of time in
+these other two things, there is a good
+chance that you are wasting time and
+throwing away more work than you need
+to. So, if you're designing a game and
+you start with mood, you start at the
+top of the triangle, you are going to
+maybe spend a lot of time in limbo,
+confused about what the structure of
+your game is, how players are supposed
+to progress. But more importantly,
+you're not going to know what your core
+mechanics are, what's fun about your
+game, and so on. And I see this happen a
+lot because we have a lot of game
+developers decide that they want to make
+a cozy game or decide that they want to
+make a horror game and they don't really
+know what is meant to be fun in that
+game moment to moment. So they've
+started with an aesthetic. So how the
+game looks and how it's supposed to make
+people feel. And of course, if you're
+smart and you really study cozy games or
+you really study horror games, you study
+the best in genre, you can kind of learn
+from studying them what kind of game
+structures that they have that make them
+work, that make them feel cozy or make
+them feel scary, and you can sort of
+study what kind of core mechanics they
+have. But if you're thinking about the
+practical process of making a game, if
+you haven't worked out what is fun about
+moving the character around, about the
+way the camera controls, about the basic
+activities that you do every minute of
+the game, you could spend a long time
+putting blood on wolves or making
+beautiful flowers sway in the wind and
+you're not going to get that time back.
+And that means that if you then later on
+try and make these more integral parts
+of your game that are the parts that
+actually make it a game and you've
+already spent loads of time making
+beautiful art, you're going to be too
+attached to it to see that it's bad. And
+often you're going to just end up having
+done a lot more work that you need to
+throw away when eventually you realize
+the project is not going anywhere. Now,
+I'm not saying you should start
+developing a game with no sense of what
+the theme is. Some people are mechanics
+first designers and they can design
+mechanics in a total abstract way and
+add a theme later. Some people say, "I
+want to make a game about X." And they
+start with the theme and then they work
+out mechanics that go with it. What you
+shouldn't be doing is spending ages up
+here and sort of delaying working out
+what your core mechanics are. You need
+to work out what they are early, even if
+you have an idea for what you want the
+end sort of mood, theme, and aesthetic
+of the game to be. Now, there are some
+success stories of people accidentally
+making a cozy game. Good example of this
+I saw recently uh Advanced 9, the
+developer of Nights put up this video
+called How to Accidentally Make a Cozy
+Game where he basically tells the story
+of developing this cute openw world game
+where he never necessarily intended it
+to be a cozy game cuz he wasn't aware of
+that as a type of game. When he started
+showing it to people, people were
+saying, "Oh, this is cozy." So then he
+kind of learned more about that market
+and learned more about what they want
+from a game and then pivoted the game
+towards that. So this is an example of,
+you know, designing the core gameplay of
+the game and then finding the mood of
+the game as you go along. Now this is a
+bit of an extreme example, but to be
+honest, I've seen it enough times that
+I'm now worried every time someone tells
+me their game is a rogike. And what they
+really mean is that something in the
+game is randomized and that is supposed
+to increase the possible play time
+because of novelty of it being
+different. And then you look at the game
+and it's something like this and you
+think, well, yeah, you've got a
+structure for your game. You've got some
+sort of progression mechanics of, you
+know, playing through randomized levels
+and collecting things or something. But
+the basic thing that you're doing here
+is not appealing and wouldn't be
+appealing to the majority of players of
+indie games because it's too simple.
+What I'm really trying to get you to
+think of with this pyramid model here is
+that designing a game is creating an
+activity for someone. You are giving
+people something to do and the thing
+that they are doing needs to be
+compelling enough that they want to do
+it over and over again. And in some
+games they are basically collections of
+mini games. So if we think back to the
+example of cozy games, often we get a a
+set of mechanics where none of them is
+super challenging or interesting on its
+own, but you put together, you know,
+planting crops and fishing and lots of
+little mini games about managing
+different things and then the kind of
+meta game of working out how to manage
+all these things and find enough hours
+in the day that becomes the game. But in
+order to have enough activities to kind
+of create that interesting tension
+between do I do this today or do I do
+this? What can I fit into my day, you
+need to have the set of mechanics in
+place in the first place or you at least
+need to have a good idea of what they're
+going to be because designing a game is
+creating an activity for people to do.
+Maybe you're building a world, maybe
+you're telling a story. Those are
+reasons to make a game as well. But if
+the main activity of what the player is
+doing in the game is not interesting,
+then it's just not going to be enough.
+Again, if you're thinking of rogike or
+rogue light as a genre, really all that
+does is define how the game plays over a
+series of sessions, right? There are
+randomized levels and perma death. That
+doesn't really tell us what we're doing
+moment to moment. So, you have this sort
+of situation. You know, the levels built
+themselves way. What can you do in them?
+Uh, jump, right? And this might seem
+like an exaggeration, but I often see
+people and they say, you know, I'm
+working on a rogike, so they spend a lot
+of time focusing on the generation of
+things and they haven't really solved
+what the player is doing moment to
+moment that is supposed to make the game
+fun. All of this is bringing us back to
+what I said at the beginning of remember
+a gamer has different reasons for
+putting things in a category to a
+designer. We might end up with the same
+categories and the same definitions of
+what is a cozy game or what is a rogike
+or whatever. But as designers, we need
+to think a little bit more deeply about
+why these things we often refer to as
+game genres work. What the kind of main
+parts of them that make them work or
+make them appealing. And I've talked
+about this before in my video, your
+rogue likes are wrong. Where again,
+people release games and they call them
+rogue likes, but they don't really nail
+the thing that people really enjoy about
+rogue likes, which is often the build
+variety rather than just randomized
+levels. which is another example of why
+as a game designer, you need to think of
+genres in a way that goes beyond just
+putting things in categories and starts
+to nail down the basics of what makes
+different genres appealing or what makes
+them work or not work. Spelunky is a
+great example of a game that nails what
+we would call a genre mashup. Nowadays,
+the idea of a platformer with
+procedurally generated levels is
+probably not that amazing, but when this
+game came out, it really was one of the
+first of its kind. And Derek used
+Spelunky Book has some excellent
+insights into this. Um, quick plug, I'm
+starting a new podcast this month that
+you will see pop up on the channel
+called The Game Developers Library. And
+this is the first book that myself and
+my guest are going to be covering on
+this podcast. We're going to take you
+through it and draw out some of the
+things that we think would be helpful
+for game developers to learn from. So,
+if you're watching this and you're not
+subscribed to the channel and you want a
+kind of cliffnotes version of a really
+really good book about making indie
+games, then do subscribe to the channel
+and and watch or listen to that when it
+comes up. So, in the next set of quotes,
+Derek Yu talks about his reasons for
+putting platformer and rogike together.
+I asked myself, what is it that I like
+about platformers? I'm a more
+actionoriented game player and I like
+how easy they are to pick up and play. I
+like the tension behind each jump. What
+didn't I like about platformers? I
+didn't like the repetitiveness of
+playing the same levels over and over
+and the reliance on memorizing level
+layouts to
+succeed. What did I like about rogue
+likes? I liked the variety that the
+randomly generated levels offer and how
+more meaningful death is in them. What
+didn't I like about rogue likes? I
+didn't like the repetitiveness of
+certain tasks that were required to
+succeed like poly piling and the
+reliance on memorizing commands. You
+have to remember here that you is
+talking about old school rogue likes
+where it is like a top-down grid-based
+game. And what you see here is not just
+a developer putting two things together
+because he likes them. He's putting two
+things together that he likes and using
+the strengths of each one to try and
+counter or fix some of the problems with
+the other one. He's making a genre
+mashup in order to solve design problems
+rather than just because he likes these
+two things. So, hey, let's put them
+together and hope that they work. So,
+this is an example where something that
+we would think of as a genre mashup is
+not just a case of putting two things
+together to create novelty because they
+haven't been put together before. It is
+putting them together to help solve
+problems with each of those things. What
+is it about platformers that can help
+make a rogike more interesting? And what
+is it about rogue likes that can help
+make a platformer better in some way?
+And I've put genre mashup in scare
+quotes here because in the model I'm
+trying to present to you today,
+platformer is the genre, but rogike or
+rogike is the mode. So think back to the
+pyramid from earlier. The platforming is
+the momentto- moment thing we're
+actually doing in the game. And the
+rogike thing is something we would only
+notice if we played the game for longer.
+It's to do with the overall structure of
+the game. Right? So, I would argue that
+the reason these things work so well
+together is because it's not actually
+putting two genres of games together. It
+is putting a platformer as the genre of
+the game. What you're doing moment to
+moment and then using rogike as a mode
+to structure the game and how it feels
+to play it over and over again or how it
+feels to play a single session of it.
+So, in the model I'm presenting, if you
+think back to the pyramid from earlier,
+the platformer mechanics are the base of
+that pyramid. They're the thing that
+you're doing moment to moment that you
+think is fun. If you only played
+Spalunky once, you would never know
+about the modal stuff. You would never
+know it was a rogike. So, all of this
+stuff is structural. It's about what it
+means to play Spelunky over and over
+again. And the platformer stuff is there
+to make sure it is fun. And if it's not
+fun, we don't care about this modal
+stuff. And remember, nothing in this
+video is about word policing. I'm not
+saying this to say, "Oh, you should
+never refer to rogue as a genre." You
+know, you should only ever think of
+genres as stuff like this. What I'm
+saying is in the context of this game,
+what makes it successful as a mix of
+things is that each of these things is
+holding up a different section of that
+pyramid. more examples here of things
+that could be considered genre mashups,
+but when you actually realize that one
+of those genres is a mode rather than a
+genre, the game makes a lot more sense.
+Spelunky is a platformer in the rogike
+mode. You are platforming and the game
+is a rogike, which means that if you
+play it for a long time, you will notice
+structural differences to it compared to
+Mario, which looks like the same kind of
+game. It's a platformer, but it is not
+in the same structural mode. Then you've
+got Enter the Dungeon, which is a top-
+down action game or a twin stick
+shooter, whatever you want to classify
+it as. You can tell that from looking at
+this picture that that is the type of
+game it is. You can see characters from
+a particular camera angle and they're
+shooting in directions. And then the rog
+light again is the structure, right?
+Rogue Legacy 2 is an interesting
+example. It's another platformer. It's
+another rogike platformer, but there is
+an option in this game to lock the
+layout of the castle. you can sort of
+pay some of your gold income to keep the
+castle in the same structure and you can
+do that for as long as you want. At
+which point you basically change the
+mode of the game into a Metroid vania
+because the castle becomes a big kind of
+set expanse for you to explore and every
+time you die it's the same and you can
+just keep exploring it. Right? So that
+is an example of a game that has a a
+major mode of being a rogike game and
+then it has an optional mode of being a
+Metroid vania. Let's look at some more
+historical examples. If we think of the
+uh rogike or rogue light over here with
+the pink text, these are kind of classic
+rogue likes. And from these, you could
+argue that in these cases, rogike is a
+genre, right? We can look at these
+games, we immediately know what they
+are. But with some modern rogue likes
+and with rogue lights, rogue has become
+the mode because we look at these games
+that actually we see a platformer or a
+top- down action game. And the rogue
+elements are actually to do with the the
+metag game progression of this game.
+When we talk about rogue based games in
+general, we are talking about something
+that could be a genre or it could be a
+mode, right? And Caves of Cood is an
+interesting example. It's not on here,
+but that is a game that is generically
+like a rogike where it's this very asy
+art looking down from above turn-based
+movement type thing, but it actually has
+kind of different modes you can play it
+in and you can even play it without the
+perma death. Deck builders are another
+example. Now, when someone tells you
+they're making a digital deck builder,
+you tend to think of slay the spire and
+you think that someone is playing cards
+to complete some sort of task or some
+sort of battle and then between rounds
+they build their deck. But that is an
+example of deck builder functioning as a
+mode. Because what we're doing in a
+combat in Slay the Spire, what we're
+spending 80 or 90% of our time doing in
+this game is not building a deck of
+cards. It's using cards. Whereas these
+kind of traditional deck builders on the
+left are games where every turn of the
+game you are building your deck. So in
+this case, deck builder is the genre
+because it's what you're doing all the
+time in the game. But in these games on
+the right, like Slay the Spire and Loop
+Hero, you are playing a game and the
+long-term progression of that game is
+about building a deck. But the moment to
+moment gameplay isn't building a deck.
+If you want an example of a digital
+game, which I would put in the deck
+builder as genre category, then Party
+House from the UFO 50 collection is an
+example of that, cuz it's it's a game
+where you are building a deck of cards
+every turn you play. Now, I hope at this
+point what I've said so far has helped
+you to understand why as a game designer
+this kind of stuff is important to
+understand. Now, I'm going to go back
+over some of the common issues that you
+can avoid if you focus on the core genre
+of your game instead of the mood or
+mode. Right? You focus on the bottom of
+the pyramid and you can think about the
+other layers of the pyramid, but you
+don't put loads of work into them until
+you've actually built the bottom of the
+pyramid. And from my perspective, these
+common issues are number one, creating
+mashups without a good design reason. So
+the the Derek you spelunk example is a
+really good example of putting things
+together in a in a thoughtful way where
+you're actually trying to solve a design
+problem. You're not just putting things
+together because you like them and you
+haven't seen someone put them together.
+Right? The second one I've already
+alluded to, prematurely adding
+procedural generation systems. Right? If
+you're making a rogike, uh if it's a
+top-own shooter, if it's a platformer,
+whatever type of game it is, you do not
+need a level generator to make the game
+fun to play 100 times until you know
+that it is fun to play once. This is
+particularly important if you're a new
+developer, you're working on your first
+game or your first couple of games, you
+haven't really made anything you're
+super proud of yet. You don't want to be
+sinking months into making things like
+procedural level generators when you
+don't know that the actual game you're
+making is fun. This is building the
+middle of the pyramid when you haven't
+built the bottom yet. And this leads
+onto the next point which is less to do
+with programming systems and more to do
+with making levels and other type of
+content like you know extra locations,
+extra enemies, extra weapons. This again
+is all tying into that middle section.
+If you decide to make a Metroid vania
+and you're like, I've got to make this
+big world or you decide to make a
+Soulslike and that's makes you think
+you've got to make all these levels and
+areas, but you haven't focused on the
+bottom of your pyramid, you're going to
+end up again wasting a lot of time
+churning out content that you don't need
+to do yet because you haven't proven
+that you've got an activity that people
+want to do more than once. And that
+applies to other types of content like
+stories and characters. Now, if you're
+making the type of game that is only
+stories and characters, like you're
+making a visual novel or something, then
+that is the base of your pyramid because
+interacting with characters is your game
+mechanic, right? But if you're adding
+story, dialogue, character interactions
+to a game that is meant to be a game
+about exploring or shooting or strategy
+or any of these things, you need to make
+sure that those things work because
+again, all of this stuff is not
+foundational. It is not the bottom of
+the pyramid. Again, if we think back to
+this really strict definition of a genre
+being, you know, where is the camera?
+What is the character doing? How is the
+player controlling the character or the
+characters or the world in some way?
+None of that is deter. None of that
+really requires there to be a story or
+characters or any of that stuff. That
+stuff is really important to have
+eventually. It can really kind of make
+your game different, give it a different
+appeal. It can help to explain
+particular things in the game, but it is
+not necessarily part of that genre base.
+And then the last one is starting a game
+based on mood. So that's things like
+cozy or horror or mode, which is things
+like, you know, rogike or deck builder
+or vania or whatever which you are not
+equipped to make in terms of technology
+or art. And what I mean here, if you
+haven't worked out what your core genre
+and your main mechanics of your game
+are, and instead you decide, I'm going
+to make a horror game, or I'm going to
+make a cozy game, it may be that making
+a horror game or a cozy game is so
+dependent on you being able to do
+particular types of things as a
+programmer, an artist that you just
+can't do it. If you start with mode and
+you start with something like rogike or
+something that is to do with the
+structure of the game, again, you might
+end up with a bunch of challenges to do
+with your art or your programming which
+you just can't do yet. And I think this
+bottom bullet point is particularly
+important if you're a new developer
+because what you really need to do is
+make things and see what works and see
+what fun you are able to get out of your
+tools because there's no point setting
+out to make a platformer and then
+sitting down and finding out that
+actually you hate programming making a
+little guy run around, right? There are
+other types of games you can make that
+do not require you to program or animate
+a little guy who runs around. Yet,
+that's where so many people start
+because they think, "Oh, that would be
+easy. I I'll do one of those." Now, the
+the point here is if you start at the
+bottom of the pyramid and you start with
+your core mechanics, you can quickly
+work out whether or not that is a game
+you want to make because you will work
+out whether you have the required art
+skills or programming skills to make the
+core mechanics of the game. If you think
+back to the rogike example, yeah, it's
+great to sit down and follow a bunch of
+tutorials on how to procedurally
+generate a dungeon and then at the end
+of that you're like, what do I do with
+this now? Oh, now I have to learn how to
+make a character move around and so on.
+If you always start with the basic
+mechanics, with the basic genre of what
+is the camera doing, what is the
+character doing, what is the player
+doing, then you're not going to back
+yourself into a corner where you
+suddenly need to do animations or you
+suddenly need to program features that
+are just going to be beyond what you can
+do at this moment. Now, I'm interested
+to see what you have to say about any of
+this. So, leave your thoughts in the
+comments. If you've stayed all the way
+through this, then I would hope you have
+reasonable thoughts and you're not just
+going to moan about what genre you think
+Hollow Night is or not. Because if if
+you're still feeling pedantic about
+putting things in particular genres,
+then perhaps you haven't got the point
+of this video, in which case I will work
+on expressing myself better next time.
+Uh, if you're new to this channel and
+you found this video helpful or
+insightful in some way, there are lots
+of other ways that I can potentially
+help you get better as a game developer.
+I do private coaching. I do design
+consulting where, you know, maybe
+someone's been working on a game for a
+while and they're a bit stuck with it
+and they want someone else to come in
+and redesign parts of it. And I also do
+a series called Indies Under the Knife
+where every week I stream four games
+submitted by you guys and I give my
+feedback as a game designer. all of
+that. You can find out more about it on
+the Indiegame Clinic website,
+indiegamecl clinic.com. I also have a
+Patreon on
+patreon.com/indygamecl clinic. Everyone
+who donates to that is helping to
+support this channel. I do make some
+money from YouTube from AdSense, but
+it's not very much. So, the Patreons are
+really the reason why I keep doing this.
+So, if you found this video helpful, by
+all means, subscribe to the channel, go
+and watch some of the other videos, and
+if you find them helpful and you want
+more of this kind of content, please do
+support on Patreon. It's really helpful,
+goes a long way. The perks of supporting
+on the Patreon are that you get access
+to our Discord, which is an active
+community that has a very strong culture
+of very productive mutual feedback. And
+again, remember, I've been a university
+lecturer for games for 5 years. I've
+worked in the games industry for 10
+years. I've done lots of different types
+of teaching and coaching. So, this isn't
+just a random Discord community. It is
+like a virtual classroom that is aimed
+at intermediate to professional level
+game developers. and that's what you get
+access to by being part of our Patreon.
+I hope this video has helped you think
+of the concept of genre more like an
+analytical developer who wants to make
+good games and less like a nerdy gamer
+who just likes putting things in
+categories cuz it's fun.
+[Music]

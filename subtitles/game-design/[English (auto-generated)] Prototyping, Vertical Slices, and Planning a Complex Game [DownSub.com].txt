@@ -1,0 +1,603 @@
+hello I put a video up a few days ago
+about game design and creative Direction
+and how you use game design to make sure
+your game is engaging and you use
+creative direction to make sure that
+your game is appealing and how those
+things can be interrelated but not
+necessarily the same thing and and they
+require different skills and they
+require you to kind of care about and
+focus on different things and one of the
+things I suggested in the video is
+that the thing you should be aiming to
+make when you are initially making a
+game if you've got a working prototype
+and you think it's okay then the next
+thing you should be aiming to make is a
+vertical slice and not a full game and
+what we mean by vertical slice if you
+imagine a sort of timeline of everything
+that a player is going to experience in
+your game and then you take a slice out
+of that it's not necessarily the
+tutorial it doesn't have to be the very
+start of the game that you're trying to
+model but you are trying to
+show people what a certain amount of the
+game experience is going to be like
+could be 5 minutes it could be an hour
+but the point is that you are at this
+point trying to show people what the
+final quality and the final style of all
+the art and stuff like that could be and
+someone asked a really useful
+interesting question in this regard uh
+Byron moley said how do you build a
+vertical slice for a city Builder game
+where the core Loop is the complex
+economy system so planning a complex
+game like a a management game or a
+strategy game probably two of the more
+complex genres of games you could build
+in terms of being very systems driven
+and and very interface driven as well
+and I don't have experience of building
+one of these from the ground up but I
+can tell you how I would do it and and
+and that's what I want to do here cuz I
+I gave Byron a reasonably short response
+here and I think I can give a a more
+helpful one that will help more people
+so if you're making a game in this
+category of like heavier more kind of
+management based games like City
+Builders or strategy games and hopefully
+this is going to be helpful to you but
+I'm going to try and explain my thought
+process sort of visually cuz this is
+what I would do based on my sort of
+general knowledge about game development
+and and everything else so what the
+process normally looks like in game
+development I've called this stages of
+early game development or proving
+whether we should even keep making this
+game because what you're trying to do is
+get from here from a gameplay prototype
+which sort of proves that your game is
+fun and you can do the thing that you
+need to do whatever that technical
+element is of the game you're trying to
+make and you're trying to get to full
+development and then vertical slices is
+the thing in in the middle here it's the
+thing you do before you do this and a
+lot of Indie developers don't do this
+they they sort of start building a game
+they don't really prototype in the way
+that I would understand it which is
+about kind of trying things
+experimenting and testing they might do
+some of that informally like just kind
+of by accident but they don't set out to
+do it um and then and then sort of just
+start adding stuff until you get
+something that looks more and more like
+a video game and hope that things turn
+out to the best but this is kind of the
+process that you would take in industry
+and this is the process that kind of
+more commercially Focus small game
+studios take and bigger game studios
+whether it's in AAA or sort of mobile
+games or whatever you prototype the game
+to test if the game play works and then
+before you go from that into sort of
+full production or full development and
+like okay we've got a game let's make
+100 levels for it let's make 20 enemies
+let's make 50 weapons before you get
+there and start going in that direction
+you then do a vertical slice and I think
+the important thing to understand here
+in terms of this this kind of question
+that we were asked earlier by byon about
+how how would you do this for like a
+complex game with a complex economy is
+that at the start you should have your
+gameplay prototype which is to test the
+game mechanics and basically to test
+anything that you're unsure of but you
+should also have these other things
+feeding into your vertical slice so
+you're going to have you would have your
+game design document you would also have
+your kind of art style guide I guess
+whatever you want to call it sometimes
+it's called an art Bible on on kind of
+media projects where you have aook book
+that is like here is how we're doing the
+art and the important thing is that this
+is separate from this right because your
+your prototype probably should be ugly I
+saw a really good video about ugly
+prototypes I will link it in the
+description below whenever I mention a
+video in one of these videos I'm going
+to give you links in the description so
+always check the description afterwards
+and there might be other stuff that that
+you'll find useful but ideally your
+gameplay prototype is to test the
+interactive elements of your game and if
+you start dressing it up and making it
+pretty too early on you're going to
+cause yourself problems because you're
+going to lock in a lot of things and
+then you'll be maybe reluctant to change
+those things because you spent time on
+them or that it will kind of get in the
+way of your prototyping cuz a prototype
+is meant to test certain Concepts like
+you know do do these game Mechanics Work
+do they kind of create the kind of
+behavior and emotional response that we
+want from a player and if the player is
+sort of blinded by beautiful Graphics
+then you can't really do a fair test on
+your game mechanics and that is why one
+of the things you would do in the early
+stages of a project is have a gameplay
+prototype and it's specifically called a
+game play Prototype here not a game
+Prototype because it's not all of the
+elements of a game and then you'd be
+developing other things like your story
+and your art style in parallel
+separately as as a different thing and
+the idea there is that you can test
+these things out individually and
+obviously these things all need to come
+together and they need to work together
+and and you know depending on the style
+of game you're going to have different
+art requirements of like oh this is a
+game where you're really close up to the
+characters so we need them to have
+different faces or whatever versus a a
+game where the characters are very small
+all sorts of considerations where the
+art and the gameplay overlap but
+generally speaking in a bigger team and
+especially a team that is working on
+multiple projects you would prototype
+the gameplay first you would develop the
+art style as a sort of separate task not
+necessarily integrating the art or much
+of the art and then the vertical slice
+is the point at which all of this stuff
+comes together which is why I've got all
+of these arrows pointing towards the
+vertical slice so the vertical slice
+should be like showing people 30 minutes
+of your game or an hour of your game
+whatever is appropriate for the type of
+game you're making and saying this is
+representative of the final
+quality then from there as I said if
+people like that and they're excited by
+it then you know that it's worth going
+from here into here but until you know
+that it's a big waste of time for
+yourself to be making loads and loads of
+levels loads and loads of additional
+content for this full development of the
+game before you've been through these
+stages of testing that's sort of the
+principle behind doing these stages now
+in relation to Barron's question
+specifically I get where you're coming
+from because a city Builder is a game
+where there are so many things and if
+you have like different levels like
+different scenarios in a in a Sim City
+game and it says hey you can build Tokyo
+or you can build London or whatever when
+I choose that scenario and I start
+playing it I'm going to have access to
+the entire Tech tree right and and that
+makes it difficult to do something like
+a vertical slice because well in order
+to do a vertical slice we need to show
+people everything because every kind of
+City you can build in this game contains
+everything so that does present a unique
+Challenge and FY here pretty good
+response your vertical slice is some
+systems not all the systems remember
+that even a city Builder has to be good
+when you start building the city Not
+Just 2 hours in so I think this is
+already a good piece of feedback but I
+would go one step further and again if
+you think of this idea that every stage
+of Designing a game we are testing
+things right we are testing ideas we are
+testing Concepts and it's very easy to
+forget about this if the game you're
+building is like a a technical learning
+project for you like you are learning a
+game engine as you go it's very easy to
+fall into the Trap that you know
+everything you do is good because you
+spend time on it and you learn a new
+thing right which is not really how game
+design Works game design works on the on
+the basis that if players understand it
+and they find it fun and they find it
+engaging then it's good it doesn't
+really matter how much time it took you
+to do that thing and from a production
+standpoint the more fun you can get out
+of the least work for you that's that's
+the best approach so to try and directly
+answer this question of like how would
+you build a vertical slice for a city
+Builder game what I would do
+you know working on the basis that a
+vertical slice is still testing the game
+idea out it's it's like a checkpoint
+before we go into full development and
+we make everything else then what I
+would do is I would take everything in
+the game and I would separate into these
+two categories and one would be genre
+standards right so things that people
+expect from this genre of game so my
+first category of kind of features or
+things I want to put in my game are
+genre standards and my second category
+is going to be Innovations right
+now anything that you can think of that
+you're planning to put in your game is
+probably going to fall into one of these
+two categories so if I'm making a city
+builder then one of my one of my sort of
+standard things in my genre will be
+something like uh I don't know producing
+resources right so having buildings that
+produce resources and do something and
+then I might have um I don't know
+transit systems or something like this
+now on my Innovation side this is going
+to depend on your game isn't it it's
+going to it's going to depend like what
+sort of game you're making what the
+theme is and all of this kind of stuff
+but you're going to have some Innovative
+features over here so yeah let's take
+let's take the game Frost punk as an
+example and let's imagine that Frost
+Punk doesn't exist and we're trying to
+design Frost Punk there's a list of
+things in Frost Punk that are genre
+standards for a city building or a
+colony management game right there's
+building roads there's building uh
+different types of
+resource buildings there's like managing
+health care of like units and stuff like
+that these are all things they don't
+exist in every single game in the genre
+but they're quite standard features that
+we would expect and there are things
+that this game does that are pretty
+unique right so you have to manage the
+the warmth of your Colony you know you
+have these um you have these heating
+devices that will have a kind of radius
+right so if you've never played it it's
+a great concept because it takes the
+steampunk genre and and it's like okay
+we're going to do a city Builder with
+steampunk but they've actually made
+steam a mechanically useful resource
+because you're in a frozen Wasteland and
+you need to heat that to to keep your
+people alive keep them healthy and so on
+so that is the sort of thing that I
+would put under the under the category
+of innovation so warmth heating system
+uh and then there's like a Choose Your
+Own
+Adventure
+style narrative elements right so
+another thing in Frost Punk when you go
+out onto the map your characters have
+like little adventures and they and they
+sort of report back every so often and
+stuff happens so that's a thing that is
+not common within the genre so put it
+over here why am I doing this well to
+try and answer Byron's question about
+how to do a vertical slice with a
+complex game like this what I would do
+is to make these two lists of every
+feature you want to do in your game and
+categorize them in this way you've got
+your genre standards on one side and
+you've got your Innovations on the other
+and then when you set about to build
+your vertical slice which you should be
+building before you build a massive game
+because otherwise you're going to waste
+loads of time and resources on something
+that people might just not Vibe with for
+whatever reason and once you've got
+those two lists you can then use those
+two lists to prioritize
+now if you make that prioritization and
+everything on that list is a genre
+standard then you're not really testing
+anything with your vertical slice
+because the game that you are making is
+basically then just City skylines but
+not very good right your game should
+never set out to be oh here's another
+game in the genre and my game is
+basically the same and the only thing to
+differentiate it is that it is worse in
+a bunch of ways right you need to think
+about how a player is going to receive
+that and if your game doesn't have any
+Innovation doesn't have a unique hook
+what the point in making it because all
+you're doing is making a worse version
+of something that already exists and
+that is why you're going to need to
+stack your vertical slice with stuff
+from this column and the reason for
+doing that as well is that again your
+vertical slice it's it's still following
+the same logic of prototyping you're
+still trying to show people an idea and
+and prove the idea right to work out if
+people like this idea if they want it
+and in order to do that you need to show
+them new stuff now this is a balancing
+act of course of course because if you
+don't include enough of the genre
+standards then people are going to be
+completely confused and not understand
+your game right if we made Frost Punk
+and it didn't have producing resources
+and building roads and managing health
+care and we just had the warmth and the
+venturing out onto the map it would no
+longer be a game in the genre it
+wouldn't be a colony management game or
+city Builder or however you want to
+categorize it so here what you really
+need to do is I would say maybe it's
+about 60% of the genre staple genre
+standard features and 40% of your
+Innovations and maybe it tips slightly
+the way but you need that kind of
+balance I think you need to build the
+basis of of a game that fans of that
+genre will understand and leave out some
+stuff that you perhaps know you're going
+to do but you don't need to test right
+so in a city builder for example the
+plumbing system the water on under the
+ground maybe it's something that you
+want to have in for realism or or to
+have another thing to manage or
+whatever but it's not necessarily
+something you need to have in at a
+prototype stage and it's not necessarily
+even something you need to have in at a
+vertical sliide stage because it's
+already proven to work right we've seen
+other games do it we know that it works
+it provides some extra layer of detail
+that people like but we don't
+necessarily need to test it and it's
+also not the sort of thing that people
+will get excited about right so we leave
+out at the vertical slice stage because
+it doesn't add much we need to test a
+certain amount of Innovations otherwise
+we're not really doing game design we're
+just copying another game and making a
+worse version of it so there's that
+Balancing Act I can't help you with the
+specifics of that Balancing Act but I
+would say aim for like a slight majority
+of features that people know and
+understand and then test your most
+outlandish ideas at the same time right
+because
+as I was talking about in the last video
+when I talked about you know survival
+crafting games and Pacific drive if
+you've got a unique theme like Pacific
+drive has a unique theme for a survival
+crafting game it's a Sci-Fi game that's
+all about a retro car right Frost Punk
+has the same thing it's steampunk it's
+in a a frosty environment and what
+happens in the case of both of these
+games is the unique theme which is
+coming from the creative Direction side
+of things rather than the game design
+side of things the unique theme in forms
+the game design and gives it these
+Innovative features right the Innovative
+features of Pacific Drive kind of
+emanate from the fact that it is a game
+about driving a car in this weird place
+the unique features of frost Punk which
+make it stand out in its genre they
+emanate from the theme of managing a
+colony in a particular time period in a
+particular type of environment with
+particular types of threats and how the
+kind of Technology plays into that and
+so on so all of this is to say that your
+game needs to have some sort of
+innovation and that Innovation needs to
+make sense to the user which means it
+needs to kind of come from the theme of
+the game right if you say I'm going to
+make Prison Architect but I'm going to
+make it be kind of Science Fiction right
+I'm going to make the same thing but
+it's going to be like a a prison on the
+moon okay that that's pretty cool I've
+I've played Sci-Fi games in prisons
+before like Chron of Ric and stuff like
+that what does that theme now give us
+that we can look at the original set of
+mechanics we get from a game like Prison
+Architect and we can start to twist them
+and come up with these Innovations and
+stuff because cuz that's the kind of
+stuff that your vertical slice should
+test and it should test it both on on a
+does this work kind of play testing
+level and also just to see if people get
+excited about it if you've got these two
+stacks of standard features and
+Innovative features and you've picked
+like three features from your Innovation
+stack and you're showing people or
+you're talking to people about them and
+no one's getting excited about it maybe
+take those out pick some different
+features I do think that sort of complex
+strategy and management kind of focused
+games are very difficult to prototype
+for this very reason and and one of the
+reasons I bring up Prison Architect
+earlier is that in this sort of early
+days of steam Early Access it was one of
+the first games I played through Early
+Access and previously I'd played like
+Dungeon Keeper when that first came out
+in like the late '90s and stuff like
+that those games were so well structured
+you would have a tutorial that was a
+campaign and you would get introduced to
+new things you could build every place
+you moved and went to a different
+dungeon and so on and it was just so
+well structured and even though the game
+came with a manual this thick it didn't
+need it right and then I had this
+experience of playing The Early Access
+version of Prison Architect when it
+first came out and it was just it was
+just a Sandbox it was a massive sandbox
+with so much stuff in and it had never
+been properly structured into something
+that sort of tricked you into learning
+it right which I think is the old school
+sort of pre Indie boom way of teaching a
+strategy game like a a Warcraft or a or
+a Starcraft the campaign doesn't give
+you all of the buildings and units right
+away and I know there are some hardcore
+players will say we want everything
+straight away but those people are never
+actually going to be representative of
+the vast majority of people who play
+your game and even people who play these
+games for a long time and and get really
+hardcore and go on to become like
+Esports players and stuff they still
+started out playing that single player
+campaign that teaches you little bits
+but that that that's kind of another
+aside but I would say in the context of
+this question you know trying to build a
+vertical slice for a very kind of
+strategic e economically driven game I
+would say think about what these
+elements are that you should have in
+place before you do a vertical slice and
+that might be things like balancing
+documents like balancing the game in a
+spreadsheet it could be a paper
+prototype it could be that you have
+found it helpful to make a board game
+version of your of your citybuilding
+game or something first it does help to
+do that stuff I know a lot of us think
+well I'm not touching a game engine so
+that's not a useful use of my time but
+the the trouble is when you're
+programming and you're putting features
+into a game it sort of puts you in a
+very different mindset to S kind of
+sitting there imagining being a player
+and going oh if I've got five factories
+and and three Farms like what am I doing
+next what what's like the my income and
+so on it's very hard to kind of think in
+that way when you're building the thing
+at the same time so there might be other
+types of things you can do before you
+even go to Vertical slice that are kind
+of giving you more to work with to help
+you make these decisions about like what
+is important to prioritize what is
+important to put in but I think these
+two this kind of concept here of having
+these kind of two stacks is probably the
+most helpful thing I can give you at
+this stage is come up with a feature
+list of everything that a hardcore
+player of your genre would expect to
+have right that is your standard list of
+stuff and your intention at the start is
+to try and fulfill most of that list
+right and if there's anything on that
+list you're leaving out it's for good
+reason it's cuz it doesn't fit your
+theme it's not just because you don't
+have time right it needs to be a game
+design reason and then once you've got
+that list you come up with your list of
+your Innovations and if you don't have
+any Innovations stop making the game now
+because it's pointless if your game has
+a unique theme that will be a good place
+to draw on for your Innovations and I'm
+going to quickly plug one of my other
+videos which I did a few months ago I
+played a game called the hell which was
+a city Builder based in hell and I think
+this game had the issue of too much
+Innovation at once it was like maybe
+missing some Core Concepts that make the
+genre go and it was trying to innovate
+too much and it was a little bit
+confusing and it often at times felt
+like I didn't know what I was doing so I
+think that might be worth watching if
+you're interested in this genre of games
+or you're kind of working in this area
+um I'll put again I'll put a link in the
+description and hopefully you find that
+helpful let me know what you think if
+you've worked on a game in the shamra
+before like feel free to to drop some
+science in the comments drop some
+science drop some game design science
+let us know what you think if if what I
+said earlier made sense and yeah hope
+that's been useful to you if this is a
+genre you're working on
+[Music]

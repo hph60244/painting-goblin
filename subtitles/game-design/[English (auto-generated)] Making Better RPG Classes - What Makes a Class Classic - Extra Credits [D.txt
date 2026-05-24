@@ -1,0 +1,246 @@
+Mages, thieves, clerics, warriors. When
+most people think of tabletop
+role-playing games, they usually think
+of these kind of iconic character roles
+or classes. Now, of course, RPGs come in
+all flavors, so those specific
+archetypes can change to suit the game
+setting. Everything from psychics,
+vampires, robots, superheroes, or any
+concept in between can be packaged up
+and presented as an easy-to-grasp
+template. But whether you're working on
+a cool homebrew option or designing your
+own system from scratch, what are some
+of the best design philosophies to
+follow when crafting classes for your
+players to enjoy?
+Thanks so much to Ting Mobile for not
+playing games with our phone bills.
+Since our friend Eddie Webb has been
+designing RPGs for more than 20 years,
+heck yeah, we wanted to pick his
+industry brain about how he designs
+character classes. Because a lot of his
+work on games like Realms of Pugmire and
+Vampire the Masquerade have been focused
+on not only creating character classes,
+but also modifying and updating old
+ones. So, he's thought a lot about makes
+a good class and how a designer can
+adjust a lackluster one into something
+that really pops. Plus, he's just a
+class act in general. Hey-o!
+Eddie likes to define a character class
+as a pre-packaged character concept or
+archetype. And this can take a lot of
+forms, even if they're not explicitly
+called classes. It might be a playbook
+in a game like Monster Hearts, where you
+can pick a few options from an
+established list. Or it could be a
+character type you select, such as your
+clan in Vampire the Masquerade, which
+presents a strong personality archetype
+that you build your character within.
+But really, if it's a predetermined
+profession or character role that
+impacts your gameplay, we're calling it
+a class for the purposes of this
+discussion. So, what are the elements
+you need to think about when designing a
+class that could one day become a
+classic? Well, the first step is coming
+up with a variety of interesting roles
+for your characters to play in your
+game. And you can think of each class as
+a slice of that anticipated gameplay. In
+team-based games, some roles will be
+obvious. There's the person who damages
+things, the person that gets damaged by
+things, the person who heals things, and
+so on. But, keep in mind, basing a class
+solely on the role the character
+performs on a team is only one way to
+divvy up class concepts. In Vampire: The
+Masquerade, for example, each of the
+vampire clans is actually based on a
+style of vampire movie. The anarchistic
+Brujah are like the punk vampires in
+Lost Boys, whereas the aristocratic
+Toreador kind of channel some Lestat
+vibes from Interview with the Vampire.
+And sure, there's some overlap. For
+instance, both kind of vampires are
+supernaturally fast, but describing a
+kind of vampire you saw in a movie once
+can sometimes be a clearer hook to
+players rather than simply outlining the
+individual powers you get. It also works
+when you do both. When Eddie was
+reworking the Dungeons & Dragons system
+for Pugmire, he had to reskin the
+narrative flavor around each class into
+something that would work in his
+pet-centric world. For instance, wizards
+typically cast spells they've memorized
+or otherwise learned. However, his dogs
+don't cast spells so much as they use
+abandoned technology and believe it to
+be magic. So, his wizards, called
+artisans, need to carry a physical
+object which actually cast a spell to
+reflect that shift. The role of wizards
+on the team is still clearly defined,
+but there's some additional narrative
+texture to explore. And once you throw
+players a bone like that, they'll be
+psyched to sink their teeth into it.
+Wait, what? Oh, cuz bone, teeth.
+Next, you'll need to focus on each
+class's play style. Specifically, making
+sure each class has some things the
+player knows their character is designed
+to do well mechanically while they play.
+Because if each class doesn't have a
+clear focus, players simply won't know
+what to do when it's time for the dice
+to hit the table. If you're playing a
+guardian in Pugmire, even the name tells
+you a lot of what you're going to be
+doing, guarding and protecting others.
+Even though there's a lot of narrative
+room inside that idea, ranging from a
+disgruntled city guard to a noble knight
+of the realm to an aloof mercenary with
+a taste for the finer things. But, no
+matter where your player lands, each of
+those characters is probably going to
+know how to throw a punch or two.
+Because good mechanics encourage the
+player to shape their play style toward
+that related concept. Now, sometimes
+these mechanics are obvious. A healer
+needs healing abilities after all, but
+other times they can be more subtle.
+Stemming from either exclusive abilities
+that only a specific class has access to
+or bonuses to common abilities that the
+class should naturally be better at. And
+one of the coolest things you can do
+with your classes is actually make that
+play style come from a mechanical
+weakness. When Eddie was working on
+Vampire for its 20th anniversary
+edition, he and his collaborator, Justin
+Achilli, agreed that the Tremere, a clan
+of blood mages, needed a better, or
+worse I suppose, clan weakness. And
+after discussing it for several days,
+they hit on an incredibly simple idea.
+See, in the game, vampires usually
+become emotionally enthralled to another
+vampire after three drinks of their
+blood, you know, like you do. But what
+if these blood mages, who were always
+dealing with blood, get enthralled after
+only two? And right there, the full
+scope of the Tremere snapped into focus.
+All from an interesting push and pull
+between needing to drink blood and being
+terrified of drinking too much. Also,
+every class needs some element of niche
+protection so that their distinct
+concept can shine through. Granted, some
+games do this through exclusivity, such
+as only letting vampire blood magicians
+use vampire blood magic. But remember
+that it doesn't mean that each class has
+to be the only ones able to do a thing.
+It just means that they should generally
+be the best at a thing. For instance,
+anyone can pick a pocket if they try
+hard enough, but a thief or a ratter in
+Pugmire should simply have more
+opportunities to succeed at pocket
+picking. And finally, remember, classes
+are at their best when they not only get
+out of each other's way, but actually
+harmonize together. And you can think of
+this kind of like being in a band. Each
+person in a band has a clear role, and
+they focus on doing their role as well
+as they can. And the variety of skills
+each player brings to the table enhances
+their music. I mean, there's a reason
+there's not too many bands that are made
+up of all bassists. You know, funkiness
+aside. Also, what can be neat is
+sometimes people can switch around, like
+when the lead singer picks up a guitar
+or a drummer sings backup vocals.
+Because despite their specialties, they
+can all assist each other in making
+loud, glorious, kick-ass music. Or go
+kill the frost troll or whatever it is
+they're doing. I'm getting my metaphors
+mixed up, but it's the same thing, trust
+me. So, when designing a class, remember
+to think about potential interesting
+roles, play style, mechanics, niche
+protection, and weaknesses. And if you
+can balance that variety along with your
+flavorful details, you'll ensure that
+your players will feel like their
+characters are an important, and dare I
+say, classy part of your game world.
+That wasn't meant to be a joke. Do you
+just live on those drums now?
+And speaking of unfunny things, how's
+all your phone bills looking these days?
+Ooh, that's a yikes. Well, luckily we're
+back with a money-saving deal from the
+new and improved Ting Mobile. They've
+got a plan that can work on anybody's
+budget. For instance, if you just need
+unlimited talk and text, they've got you
+covered for only 10 bucks a month. Or
+depending on your data needs, Ting has
+plans starting at 15 bucks all the way
+to the mighty unlimited talk, text, and
+data for just 45. Meaning there's a
+perfect plan for you and your family.
+Oh, and speaking of families, oh Jeff,
+yeah, how much have you saved in the
+last 3 months on your family's two
+phones and an iPad?
+Over $230.
+Wait a minute, that means you're on
+track to save like more than 900 bucks
+this year. Looks like someone's getting
+a new PlayStation and an Xbox. What's
+really neat though is the only thing
+that actually changes is you getting a
+lower monthly phone bill. You still get
+robust nationwide LTE and 5G coverage,
+not to mention access to Ting's
+award-winning customer service. Plus,
+and this is my favorite, no contracts
+ever. Not to mention, switching has
+never been easier. Just head to extra
+credits.ting.com to check your phone's
+compatibility, create an account, and
+pick the plan that's right for you. Oh,
+and if you bring your phone, you'll also
+get a $25 service credit to try Ting
+with no strings attached. And because
+using our link, again, that's extra
+credits.ting.com, helps support the
+shows you love while lowering your phone
+bill at the same time, there's really
+never been a better time to try Ting.
+A legendary thanks to Ahmed Ziad Turk,
+Joseph Blade, Alicia Bramble, Kyle
+Murgatroyd, Casey Muscha, Orioles 1, and
+Dominic Valenciana for all of their
+support.

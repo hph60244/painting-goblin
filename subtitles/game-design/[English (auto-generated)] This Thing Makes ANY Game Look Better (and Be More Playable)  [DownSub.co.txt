@@ -1,0 +1,162 @@
+I think the the developer has a good
+sense of how to make sure that there is
+a visual hierarchy where the things that
+it's important to pay attention to are
+obvious a visual hierarchy is a term
+that comes mainly from graphic design
+it's a really important concept for
+doing any kind of graphical thing in a
+game when people are playing a game
+they're not just looking at your art and
+thinking about how nice it looks or
+whether it looks like a realistic
+animation they're also using your art to
+try and interpret what's happening in
+the game and what they should be doing
+that's where this concept comes in handy
+now visual hierarchy my definition would
+be the way that different elements of an
+image are designed and arranged so that
+some appear more important than others
+and by important here I guess we mean
+urgent and something that the players
+need for the game play you might make a
+beautiful background for your game that
+really adds to the immersion and just
+kind of the sense of being in a luxury
+ious High budget game because it's got a
+beautiful background but that's not
+important to the game play because it's
+it's not conveying as much information
+that's going to help the player to play
+the game so just to go through some
+examples of things that you considered
+the sort of things that might make
+something stand out in a visual
+hierarchy you can think of things like
+size the relative size of different
+things how big are different things on
+the screen and how does that impact what
+the player pays attention to it could be
+looking at things like contrast and
+color and one of the things that you can
+already see in this game it's doing very
+well is although some of these kind of
+bullet hell projectiles that are moving
+around the levels part of the traps
+although they're quite small they are
+often very very bold colors and they are
+on a very cool and sort of Darker
+looking background which means that they
+really stand out so even though they're
+smaller the contrast and color helps
+them to pop out the order of the visual
+hierarchy could also depend on things
+like proximity like how close things are
+together and one that we don't often see
+as much in graphic design but is very
+relevant to games is movement now one
+example of this that happens a lot in
+games is uh kind something like coins
+going up in the corner of the screen so
+if you are playing a game where you're
+running around collecting coins and you
+collect 100 coins in one go it's
+generally good practice to instead of
+just adding that 100 on in one go you
+let the number cycle up what that does
+is it creates a movement out the corner
+of the eye suddenly the player knows
+that that piece of information is more
+important and they look up there and
+they can see that their coins are
+increasing it's not just cuz it's a
+pretty effect I mean it does look nice
+it also helps the player to recognize
+that something is happening and and look
+up out of the corner of their eye and
+see it if they want to if you just
+change it in one frame they won't notice
+so that's an example of how movement can
+push something higher up the visual
+hierarchy to say something is higher in
+the visual hierarchy it basically just
+means it's doing something to grab our
+attention whatever art style you're
+using whether you're making a 2d game or
+a 3D game or whatever the visual
+language that you develop as a game
+artist is going to impact this sort of
+stuff so you're going to have to work
+out ways to make items stand out and
+that might be something like oh your
+characters are more saturated and more
+colorful than and the environment there
+in I think a really good game to look at
+from Indie Games for this is The Binding
+of Isaac look at the way the outlines
+are used the characters and the most
+important objects like the projectiles
+or things we can pick up all have a
+thick black outline they also have kind
+of a higher interior contrast so the
+lighter and darker colors on these
+characters are kind of further away from
+each other in terms of brightness and
+and so on the other things in the scene
+do have outlines but they are picked out
+in much more subdued colors so these
+rocks in the level they are blockers you
+can interact with them so they are kind
+of medium priority on the visual
+hierarchy but these kind of more
+decorative objects like the rocks and
+some of the detailing around the edge it
+doesn't use the thick black outlines the
+black outlines are reserved for the
+important characters projectiles
+anything dangerous anything that's a
+treasure or a reward and the things in
+the UI so that pushes them to the top of
+the information hierarchy so in the game
+I've been looking at today in robot
+Templar I think the the game developer
+is already doing a really good job of
+this of building the information
+hierarchy so that you know you've got
+this cool dark background that allows
+the dangerous objects to pop out um
+there's a just a lot of good stuff going
+on there already in terms of of making
+this make visual sense because that's
+ultimately what visual hierarchy is
+about making the image the player is
+looking at make immediate sense and one
+of the tests you can actually do with a
+game um to see if it has a decent visual
+hierarchy is something I call the squint
+test and we can do it here digitally
+just by blurring something but if I blur
+this image slightly you can still pick
+out where the key things in the image
+are in both of these cases in both the
+of Isaac and and Robo Templar I see
+quite a strong sense of this kind of
+need to make sure the the image is easy
+to read if you've made it all the way to
+the end of this video and you found it
+useful or helpful in any way please do
+take a look at the other stuff on my
+channel one of the things I do is I
+handpick the suggested videos or
+playlists that come up at the end of a
+video to try and make them as relevant
+as possible to whoever the viewer of the
+current video is so so if you found this
+really relevant do click on the links
+that come up at the end because they are
+likely to be relevant to the types of
+questions that you have or the type of
+interest you have thanks for joining if
+it's your first time and hope to see you
+around again

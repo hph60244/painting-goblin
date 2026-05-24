@@ -1,0 +1,265 @@
+Throughout your gaming adventures, I'm
+sure you have some memories of exploring
+lush jungles, venturing through the
+ruins of otherworldly civilizations, or
+climbing high mountains and witnessing a
+sprawling fantastical world below you.
+But, have you ever wondered what makes
+some levels and game spaces more
+memorable than others? Well, part of
+that comes from level designers, the
+architects of these virtual worlds. And
+today, we get to peek inside one of
+their brains and learn some
+world-building secrets.
+Thanks so much to One Day University for
+helping us get smarter.
+Real quick up top, please welcome
+today's guest writer, senior level
+designer on The Division and Cyberpunk
+2077, and the host of the podcast Level
+Design Lobby, Max Pierce. Thanks, Max.
+While we've discussed level design
+before, we've never really dove
+headfirst into the digital building
+blocks of what exactly a level designer
+does, or the skills they need to be one.
+For the uninitiated, level designers are
+game designers who specialize in
+crafting the spaces in games where
+players explore, fight, and overcome
+challenges. You know, basically any
+digital space where the player plays.
+And these areas they design can take a
+ton of different forms, from the
+bombastic islands of Fortnite, to the
+sneaky pig bill towers found in Angry
+Birds, to the massive sprawling open
+worlds like in Breath of the Wild, or
+the more linear levels you see in The
+Last of Us. But, when we say design, we
+don't just mean geometry, though of
+course that is certainly a major
+component of the job. While building,
+level designers must also take into
+consideration the game's pacing, forms
+of combat, types of puzzles, methods of
+movement, and story beats, all while
+creating a visually compelling
+environment that keeps the players
+hooked as they explore. However, these
+lively locales aren't created in a
+vacuum. In order to forge levels that
+drive games forward, level designers
+need to work closely with their
+interdisciplinary teammates, balancing
+the needs of narrative design, game
+design, environmental art, lighting,
+effects, audio, and others into their
+own plans. Because nobody wants to have
+to rebuild an entire area because they
+forgot to integrate core mechanics or
+important gameplay principles. So,
+there's a lot of communication and
+information collection through design
+docs, pacing, flow diagrams, mood
+boards, and more before level designers
+even begin planning out their levels in
+earnest. Then, once all the info is
+collected and everyone's on the same
+page, the level designer begins blocking
+out their level in a variety of
+different ways depending on their game.
+Sometimes using 3D software such as 3D
+Studio Max or more modular kit pieces in
+commercial game engines like Unreal or
+Unity. And you can think of this
+blocking step as a sort of rough draft,
+something that can be made and edited
+quickly, which is important because a
+level designer will iterate on their
+blockout a lot. It'll constantly be
+reviewed not just by themselves, but
+also by their team to ensure it meets
+everyone's needs. After the blockout has
+been approved, they can move on to
+crafting the finer details within the
+level, weaving together any puzzles,
+narrative, and combat scenes, or
+whatever other finishing touches the
+game calls for. And as development
+progresses further, a level designer's
+work shifts to testing the pacing, feel
+of the encounters, and clarity of player
+goals until finally the game locks and
+goes live, ready to have their levels
+experienced and explored by players all
+over the world. Now, you might be
+saying, "Dang, that sounds neat. I want
+to be able to harness the power of my
+imagination to craft exciting worlds
+that players will never forget, that
+push their skills to the max while
+making them wish to never return to the
+lackluster realms from whence THEY
+CAME."
+UM WELL, YOU'RE IN luck because Max
+wanted to share a few fundamental skills
+he's found to help great level designers
+rise above the rest. The first and often
+overlooked fundamental is that while
+it's extremely tempting to jump right
+into the editor and start working on
+your level blockout, the best practice
+as a level designer is to research key
+elements of your levels first. You need
+to study the types of environments where
+your levels are based, gathering photo
+and video references, and looking at
+your team's concept art. Max's rule of
+thumb is to gather around 50 references
+for himself as this not only fuels his
+inspiration for what ideas to pursue,
+but also helps keep them in line with
+the project's overall vision. And
+because your job as a level designer is
+to make sure your levels feel right,
+you'll find that key aspects of said
+research will center around architecture
+and geology. Be they from a fictional
+realm like Middle-earth or somewhere
+real like New York City. Additionally,
+through your research, you'll build up a
+repertoire of architecture and geology
+that you can use to communicate emotions
+to your players. For example, based on
+your previous tone of excitement, let's
+say you want to instill your players
+with a feeling of dread. Well, you might
+start by researching brutalist
+architecture. Or if your aim is to
+overwhelm your players with awe, Art
+Nouveau might have you covered.
+Remember, your goal is to make something
+believable, but not necessarily
+realistic. Part of your job as a level
+designer is learning how to take
+creative liberties with the source
+material to make spaces that best suits
+gameplay. Next, remember to always
+conceptualize and build your game with
+its specific metrics in mind. Things
+like required environment dimensions,
+polygon and texture budgets, and NPC and
+player movement abilities. Because these
+allow you to plan for things like how
+wide a corridor needs to be in order to
+facilitate combat in it in conjunction
+with the size of character models. Or
+how large to make a chasm so that the
+player can or cannot jump across it. Or
+that you'll need to design side paths
+for your players to utilize via
+different skills that they unlock in
+your game. Understanding your game's
+specific metrics allow you to create an
+environment perfectly tailored for your
+game's desired experience. And once
+you've nailed that down, you can more
+easily design your levels with side
+intention. For example, designing
+smaller corridors to make the player
+feel timid and weak. Or panoramic ledges
+that funnel players in a desired
+direction. Also, strong communication
+skills are another important
+fundamental. Since as a level designer,
+you'll be working closely with members
+of different departments and disciplines
+to produce a fantastic level. So you'll
+need to be able to communicate your
+ideas and sell your vision, while also
+listening to your team's thoughts and
+needs as well. Because you never know
+where the next bolt of inspiration may
+strike from to make the game even
+better. And finally, one last
+fundamental Max has found crucial in his
+level design is learning how to provide
+players with guidance. A ruined tower or
+a well-placed torch revealed as a player
+turns a corner can give the player an
+indication which direction they should
+head next, helping to ensure they aren't
+frustrated as they traverse their levels
+and aren't completely beholden to maps
+for navigation. Luckily, you have many
+tools at your disposal for helping guide
+your players through your levels. Things
+like landmarks, signposts, shapes and
+color, lighting, visual language, and
+composition. These and more, in the
+hands of an experienced level designer,
+provide subtle nudges of clarity and
+direction that make even complex
+environments easy to navigate. And they
+can help ensure that players are engaged
+by the game's intended challenges and
+not distracted by poorly planned game
+space. Of course, we realize there's a
+lot more we could say about level
+design. But we hope that you enjoyed
+this 101 overview. And if this element
+of game design has awakened your inner
+world builder, you can get a deeper look
+into all of these concepts in Max's
+latest book, Let's Design Exploration.
+Just promise me all this reality
+crafting power won't go to your head.
+Oh, boy.
+But let's say for the sake of argument
+that you aren't a megalomaniacal cat
+with a penchant for world domination and
+you just want to quickly beef up your
+brain for the betterment of mankind
+without busting your budget. Well then,
+you're going to feel right at home with
+One Day University. One Day U brings
+top-rated professors from incredible
+universities together to present
+fascinating lectures which you can watch
+live or on demand. Seriously, this is a
+pretty cool resource. Members get access
+to a library of over 500 talks with new
+additions being added every single week.
+So you can experience the joy of
+learning something new from awesome
+professors talking about history,
+politics, art, science, music,
+psychology, and much, much more. But
+with no homework or tests. Though you do
+get access to live Q&A sessions with
+professors. Just flipping through their
+catalog, we were super keen to check out
+6,000 years of religion in 60 minutes by
+Saul Goldman of Tufts University, the
+women who ruled the world 3500 years ago
+by Kara Cooney of UCLA, and four films
+that changed America by Mark Lapadula of
+Yale University. And all this high-level
+know-how can be yours for just $8.95 a
+month or $89 a year. Oh, wait, what's
+that? Yeah, you in the back. Oh, wow.
+Right now you can enjoy a full year of
+One Day U for 50% off the regular price?
+Dang, that's a good deal. Okay, then,
+just visit onedayu.com/extracredits
+and sign up for an annual plan using the
+code extracredits. Then you'll be
+getting smarter, not working harder, and
+helping support our channel while you do
+it. Aw, you're the best.
+A huge thanks to our legendary patrons,
+Orioles 1, Kyle Mergatroid, Joseph
+Blame, Dominic Valenciana, Casey Muscha,
+Alicia Bramba, and Ahmed Ziad Turk.

@@ -1,0 +1,221 @@
+as you are working on your game your
+number one job above everything else is
+making sure that your game is fun but
+there's a problem fun is subjective and
+fun tends to diminish over time you the
+Creator will play and test your game
+hundreds and hundreds of times and you
+will lose
+objectivity so if fun is objective it's
+hard to have really concrete goals in
+terms of how much fun your game actually
+is and if we can't be objective then
+it's really difficult to measure how fun
+our game is so if we can't pinpoint what
+actually makes a game fun and we can't
+measure the level of fun then how the do
+we design a game that's actually fun so
+let's start at the beginning to try to
+Define funds specifically for games Tim
+schaer the designer behind Psychonauts
+and Brutal Legend says that all good
+games provide wish fulfillment they
+should make players feel something that
+they aren't in the real world powerful
+smart sneaky skillful successful rich
+bad heroic I like this quote and it
+rings true for me for a lot of my
+favorite games when I was younger Final
+Fantasy 7 and Ocarina of Time made me
+wish that I could be the characters in
+those games or just that I could live in
+those worlds but I've also played games
+that I loved that didn't evoke that
+response in me at all so I kept digging
+and that's when I came across a
+framework called the MDA framework short
+for mechanics Dynamics and Aesthetics
+this framework divides fun into eight
+different categories number one is
+sensation meaning players enjoy
+memorable audio or visuals number two is
+fellowship where players have to work
+together to complete an objective number
+three is challenge where players get to
+feel a sense of Mastery when they
+overcome those challenges number four
+fantasy a player gets to imagine that
+they are a character in that world
+number five is narrative there's a
+really strong story which makes the
+player want to keep coming back six
+Discovery where players have fun finding
+hidden collectibles items powerups other
+playable characters or just new content
+seven expression where players are given
+the freedom to be able to express
+themselves in the game maybe it's
+through customizable characters or skins
+or maybe they can shape the entire world
+and number eight is submission where the
+player can just unwind relax and play
+with very little thought or effort
+involved now this framework was designed
+specifically with games in mind so this
+is eight different ways that players can
+have fun while playing video games and
+at this point I feel like it's really
+important to note we're talking about
+fun throughout this video which sounds
+all happy and positive but what about
+games that evoke negative emotions from
+players should we be trying to avoid
+those this video here which I highly
+recommend to anyone familiar with the
+Zelda franchise we show you how there's
+an undertone of Sadness and Sorrow to
+the Zelda games where sorrow is almost
+infecting the world and Link plays the
+role of healer that's a strong narrative
+fear is a key ingredient used for fun in
+almost all good horror games and I've
+been playing Through The Dark Souls
+series with my son and frustration is
+definitely something I've been
+experiencing while playing that game
+same with the first time I played Hollow
+Knight I remember I counted the first
+time I encountered nightmare King Grim I
+died died over 60 times that was
+frustrating but as a player I got to
+feel a sense of huge accomplishment when
+I overcame that challenge and now I find
+it easy so you don't need to shy away
+from negative emotions just because they
+sound negative there's often an
+accompanying sense of Happiness Triumph
+and relief following those negative
+emotions which will make your game
+memorable by the way if you're enjoying
+the video then thank you if you leave a
+like or a comment so back to our eight
+categories of fun let's come up with a
+couple of examples Ocarina of Time I
+would say they do a good job using
+sensation challenge fantasy narrative
+and Discovery Celeste sensation
+challenge fantasy narrative and
+Discovery okay let's go with Hollow
+night sensation challenge fantasy
+narrative and
+Discovery I think I just figured out why
+those are some of my favorite games okay
+let's do one more stardew Valley
+sensation fellowship if you play it
+online fantasy Discovery expression and
+submission all right we found a
+different one there so using this
+framework can be a really interesting
+exercise and I think giving these some
+thought before creating Your Design
+document can be really helpful but with
+gamedev there can be a huge discrepancy
+between what you think might be fun on
+paper and what actually plays out being
+fun once you have it working in your
+engine you might think that putting an
+enemy around every single corner to jump
+scare the player is fun on paper but in
+practice it can just end up being really
+frustrating I'm talking to you from
+software so in moving from a design on
+paper or even just a design that's in
+your head to actually executing that and
+getting it to to work in your engine an
+inevitable part of that process is
+iteration testing and tweaking you're
+going to have to test and you're going
+to have to tweak now again you will lose
+objectivity to your own game but if you
+put your designer head on and you try to
+think like a designer or maybe even
+better yet think like a player and play
+your game with a critical eye what's fun
+in your game may or may not stand out to
+you if it doesn't there is one thing
+that will stand out to you above
+everything else and that is things that
+are not fun Scott Rogers the designer of
+Pacman and the author of level up which
+is a book I highly recommend by the way
+if you want to get into the heads space
+of a designer he says start with a fun
+idea and then as you develop your game
+as you come across things that are not
+fun or they're unfun remove them and
+then after you have removed all of the
+unfun all that should be left is fun if
+your character took damage because of
+poor camera placement or enemies don't
+Telegraph their attacks well enough or a
+few sound effects just feel really off
+or out of place or you consume your this
+flask way too slow you'll know it and
+that should be fixed so what do you do
+if you can't find the unfun maybe you're
+play testing your game for the
+thousandth time and you just can't tell
+anymore or maybe there is nothing that's
+glaringly bad you're just playing the
+same polish level that you've played
+hundreds of times before if that's where
+you're at then this is where other
+people are going to help you more than
+you can help yourself you need play
+testers and it's obviously ideal if you
+can get play testers that are within
+your target audience what is the age
+range for your game are you going after
+c casual gamers or hardcore Gamers you
+do not want your mom to play test your
+soulslike game unless she's an
+incredible gamer and can be really
+objective with her feedback I would also
+say that getting feedback from a few
+other designers is a good idea but not
+exclusively I've noticed something
+interesting with game devs giving advice
+to other game devs when a designer gives
+another designer a game with the
+intention of critique my game that other
+designer is going to really put on their
+critique hat and they're going to play
+it like a designer and not like a player
+they're going to specifically be looking
+for Flaws and this is not a bad thing at
+all but it's not 100% objective either
+if you were a painter and you wanted to
+know if people liked your paintings
+asking only other painters if they liked
+your painting is not really the best way
+to go go to the people go to other
+painters for advice about painting but
+go to people to see what they like and
+what they don't like that's why I say
+don't exclusively get feedback from just
+other game devs so get your feedback and
+then make changes based on that feedback
+and then get new feedback to make sure
+that the changes you made are good ones
+and then move on to the next thing and
+this is really really important be
+prepared and willing to throw out bad
+ideas or good ideas if they don't fit
+with your game last tiny tiny little tip
+make stuff breakable seriously look at
+enter the gungeon you don't even need to
+shoot things you just mow down pots and
+stuff by walking on them I'm a little
+biased I love games that have a lot of
+breakable items that's all I got guys
+see you in the next one bye

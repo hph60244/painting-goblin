@@ -1,0 +1,1960 @@
+Let's talk about how to make anything
+fun in games, in education, and in life
+as a whole. I'm a full-time indie game
+developer. I make indie games for a
+living quite successfully. So, people
+think my games are quite fun. And I also
+made this video about 6 years ago where
+I talk about fun, which almost got a
+million views. Let's see how my theories
+have changed since 6 years ago. So, what
+I think now is that fun is essentially
+the reward for making good use of your
+brain. Your brain is very expensive.
+While it only makes up 2% of your body
+weight, it uses up 20% of your energy.
+No matter how hard you're thinking or
+what you're doing, it's always roughly
+the same. If you're not making good use
+of the brain, then all of that energy is
+essentially going to waste. There's
+boredom on one side, which means you're
+not making good use of your brain, and
+there's frustration on the other side,
+which also means you're not making good
+use of your brain, just in a different
+way. This is basically through
+underwhelm, and this is through
+overwhelm. and they prompt you towards
+seeking out more fun essentially. Right
+now, this entire framework is not
+exactly new. There's already someone who
+summarized it quite well in 1990 um
+which is in the book Flow by Mihi
+Chicken Mihi. So, a lot of what you're
+going to hear in this video is going to
+be based on this book plus a bunch of my
+own theory crafting on top. So, even if
+you already know this book, you're going
+to hear a bunch of new things in this
+video. No worries. And in particular, I
+want to talk with you about games, about
+education,
+and about life. How to make those more
+fun. All right, you're fully set up.
+Let's dive right in. So fun is making
+good use of your brain. But what does
+that mean exactly? What exactly does
+good use mean? And I think there are two
+useful things you can do with your
+brain. One is learning and one is
+executing. So learning would be gaining
+skills and knowledge and executing would
+be applying skills and knowledge. And
+these map very cleanly to a very common
+dilemma that once you know it, you kind
+of see it everywhere. And that is the
+explore versus exploit dilemma. So
+explore means you eat the strange
+looking berry that you have never seen
+before. And exploit means you eat the
+familiar berries that you already know
+taste well. Exploitation means you
+immediately get something tasty. You
+fill your tummy with something that you
+know is good. explore is more risky.
+It's a potential reward later. This is
+either going to taste well or or it's
+not. If the explore activity goes well,
+then it's essentially moved over to the
+exploit pile, right? Then if we play the
+exploit strategy in the future, then we
+have more berries to eat because we we
+now know this tastes well, this tastes
+well, and there's always going to be
+some new berry we can try and explore.
+and maybe we'll throw up or maybe we'll
+add it to our exploit pile. And now you
+can already see that in order to
+maximize what you get out of it, you
+have to play some mixture of those
+strategies. If you never explore, you're
+not going to have a lot of food to
+choose from. If you only explore, you'll
+end up throwing up way too often. So
+some some mixture between those two is
+the sweet spot. Exploitation is useful.
+An explorer is kind of indifferent about
+being immediately useful and that's what
+makes it useful. Fun does not care about
+being useful. That is what makes it
+useful. And that is because of course
+fun is an explore activity. Explore and
+exploit maps very cleanly to learning
+and executing. For example, as a game
+developer, you can either choose to keep
+using the game engine and the tools you
+already know or you can take a little
+bit of a risk and try learning something
+new. Maybe it will maybe it will pay
+off, maybe it will not pay off. Explore
+and this is exploit. And both of them
+are useful ways to engage your brain.
+Both of them them can be quite fun. But
+especially learning I would say is
+particularly fun. It's also not always
+possible to draw this line here.
+Sometimes they mix a little bit, right?
+Often when you apply your skills, you
+improve them, you learn new things and
+vice versa. Also, now if learning is
+supposed to be so fun, then why is it
+that I don't like learning? Learning I
+don't think learning is very fun. Uh I
+think your theory is just completely
+wrong. I I hate learning.
+So, well, fun doesn't care about being
+useful or being immediately useful, but
+it does care about one thing and that is
+a good learning environment. Believe it
+or not, I don't think school is a very
+good learning environment. I just look
+at it. You have a grumpy teacher
+teaching you silly things in like a
+cramped classroom where it's hard to
+focus. It's it's not not a very good
+learning environment. Let's let's be
+honest here for a second, okay? And
+let's compare that to video games. You
+have your peace and quiet. You have the
+ability to focus. You have a good
+learning environment. You can restart
+easily. You can adjust the difficulty to
+your needs. These are much much better
+learning environments and that's why
+they're more fun. Let's think about
+learning an alien language. For example,
+you have one book that's just completely
+written in alien language. Uh it's not a
+good learning environment. Not very fun
+to learn the language with that, right?
+Then maybe you have another book that
+has translations
+in it already. That's okay. That's an
+okay learning environment. That already
+makes it a little more fun. But then
+check out this game, Chance of Sennar.
+It's a really nice game. And essentially
+what it does is it teaches you a bunch
+of alien languages and you also have to
+figure out the languages yourself.
+Essentially, you have to figure out what
+each word means. This was by far my
+favorite way to learn a language ever.
+Um, you can kind of see you have to
+figure out the language from the context
+in the world. Here you have a bunch of
+depictions and some writing below and
+you have to basically decipher what all
+of these words mean. A good learning
+environment is the best predictor for
+fun. If you would take away one thing
+from this video, then let it be this. If
+you have a good learning environment,
+that is the best predictor for fun. Ew,
+bad learning environment.
+Okay, learning environment, best
+learning environment, therefore most
+fun. Understand? Very good. Very good.
+So, I was on a podcast where I basically
+already pitched this theory and this was
+one of the comments. I love Jodis and
+the pure German answer about fun. If I'm
+learning efficiently, I'm having fun.
+Um, yeah, that's basically what it comes
+down to. But also I was uh very curious
+to see that I'm not the only one who
+came up with this theory before. There's
+also seems to be a book by Ralph Costa,
+a theory of fun for game design and his
+central thesis is essentially also that
+fun equals learning. So obviously I
+bought the book. I had a look and indeed
+that seems to be the main point. Even
+though it's described maybe a little
+differently than from what I would
+describe it, but still um I only found
+out about this while I was already
+working on this video. Still very fun to
+see that I'm not the only one who
+connected the dots there. Cuz also in
+the original book that this video is
+based on, Flow by Mihi Chicken and Mihi,
+what I noticed is that everything he's
+describing in in the book Flow is
+essentially just a good learning
+environment. And we'll get to more more
+into depth about that later, but this
+interesting observations right here. One
+thing that pisses me off about um
+education, let's gamify education to
+make it more fun. Let add unlocks,
+rewards, and mechanics. Yes.
+And then they figure out it's still not
+fun. And I think the problem is that
+they fail to realize that learning is
+already fun in a good learning
+environment. So it's not like you have
+to gamify education. It's already fun if
+you do it well. Well, they're like, "We
+need to gamify education." uh but always
+has been always has been fun. You just
+need to do it well enough. So learning
+is already fun in a good learning
+environment. No need to gify for that.
+Okay. And one thing that adds to that
+confusion is that I think people often
+mix up fun and motivation. And it's it's
+difficult because people have different
+definitions for everything. But I think
+it's very useful to differentiate
+between fun and motivation. I think fun
+maps to the explore strategy whereas
+motivation maps more to the exploit
+strategy. Fun is something you do for
+the sake of it and without the need for
+an immediate reward whereas motivation
+is something usually you do to seek out
+an immediate reward. So to exploit what
+you already know. So fun maps to
+learning and motivation maps more to
+execution. And usually everybody who
+talks about gamification
+is usually talking about this side of
+the equation about motivation,
+exploitation, and basically creating an
+incentive for people to execute on what
+they already know. But I I think the
+real treasure trove is actually over
+here. Gamification people, why are you
+so focused on this? Have a look this
+way. Just make a better learning
+environment and that will automatically
+make it more fun. Now, obviously fun and
+motivation, they kind of go together.
+For example, video games, they typically
+make good use of both. They're fun, but
+they're also motivating. And often
+times, for example, when there's a
+little bit of a drought in fun, maybe
+you can make up for it with motivation.
+For example, if like the game is getting
+a bit stale, maybe you can motivate
+people through that dip with by saying,
+"Oh, look, you're going to unlock this
+and that." So, the two can definitely
+dance together. and they probably
+should, but it's still important to
+realize that they're different things.
+However, one thing that you can say
+maybe is that fun is perhaps an element
+of motivation, right? So that fun is
+basically a bubble inside motivation. So
+there are a bunch of different
+motivation sources and fun is one of one
+of them. That I think would be fair to
+say. So the same way hunger prompts you
+to eat, thirst prompts you to drink,
+lust prompts you to reproduce, fun
+prompts you to learn. So there are a
+bunch of different motivations that want
+you to do different things and fun is
+one of them. What we're mostly going to
+talk about in this video though is fun.
+Motivation is a little bit of a
+different thing and we could definitely
+fill an entire video just about that.
+Probably that would be too much for this
+video. A good learning environment is
+the best predictor for fun. This raises
+the question, what is a good learning
+environment? And this is where we get to
+the book flow by mihi. This is basically
+what he describes in his book. One
+requirement is frequent and fast
+feedback. One is deep focus and one is a
+challenge that matches your skill. And
+there's another one. I think it was
+clear goals. However, um I think that's
+more of a sub point of something else.
+First of all, let's have a look at
+frequent and fast feedback. Feedback
+means you input actions and the world
+returns some kind of feedback. Data in,
+data out. Basically, if you want the
+abstract version of that and then the
+world processes the data in some way and
+then you in your brain process the data
+in some way and you are in interaction
+with the world and you exchange
+information input and output or from
+your perspective I guess this the input
+whatever this is this is the feedback
+this is the feedback you get from the
+world this is what you want to be
+frequent and plentiful so that you can
+learn efficiently.
+Learning means improving your ability to
+predict world outputs based on specific
+inputs. That's a technical way to put
+it, I guess. Or to predict the best
+input based on a desired output. So it
+all comes down to basically learning the
+world, understanding the world, building
+an internal world model so that you can
+make predictions about which input data
+you need to give to receive the output
+data that you want or to just predict
+the output data even without you doing
+anything. So you're building a world
+model to make predictions. Explore means
+you're improving your world model.
+Exploit means you're making useful
+predictions about the world. How do you
+build a world model efficiently? Well,
+you need frequent and fast feedback.
+That that's what it comes down to. And
+that data needs a good signal to noise
+ratio. This is incredibly important. So
+noise means basically junk information,
+junk data that's not useful for
+learning. And then the signal is
+basically the actually useful part of
+the data that you can use to learn from.
+And that's I think exactly where goals
+come in. Clear goals help you to cut
+through the noise. So if if you're
+receiving a bunch of noisy feedback data
+from the world, then a goal is what
+basically helps you identify what you
+should pay attention to. So the goal
+says this is what you should care about.
+This is the feedback you should care
+about. At the same time, it also helps
+you receive better feedback from your
+world model because you can estimate the
+distance from the goal if there's a
+goal. And that gives you very frequent
+feedback because you always have roughly
+an idea of how far you think you are
+from the goal. And that is extremely
+dense and frequent feedback that you
+receive from that.
+Do we need the input at all? So the
+input to the world that is do you need
+to give the world any data at all? I
+think that's actually not the case. This
+is fine, right? cuz you can still try to
+predict what data you're going to
+receive and then confirm it. This like
+an internal game that you're playing
+with yourself. And for example, large
+language models also learn this way. If
+you only take the pre-training, right,
+we basically consume the entire internet
+and we try to just predict the next
+token, the next verge that comes in. And
+I think this is also kind of how humans
+learn. Um, when you watch a video like
+this one, for example, you kind of maybe
+predict what I'm about to say and then
+the things that most surprise you are
+the things that you remember most and
+that most impact your world model. And
+otherwise, you just confirm and you're
+like, "Yeah, I knew that. I was right
+about that." And that's sort of how you
+build your world model, right? Watching
+videos passively doesn't require you to
+input anything. It's just a passive data
+stream that reaches your brain. And if
+it's engaging enough, then it's kind of
+fun to just model in your brain. So I
+think fun would be this two directional
+thing. Fun is when you input data and
+you receive feedback from the world.
+Whereas engaging, engagement is this one
+directional way of fun where the world
+gives you data and you play the game
+internally in your head essentially. If
+you want to copy my definitions because
+as mentioned people define things very
+differently but if you want to copy my
+definitions then this would be engaging.
+Fun is a good active learning
+environment and engagement is a good
+passive learning environment if you
+will. So that covers frequent and fast
+feedback aka fun or frequent and fast
+data you receive from the world aka
+engagement. And the next point would be
+deep focus. There are four requirements
+you need to focus. I would say one is to
+reduce distractions. One is to reduce
+disruptions and task switching. So if
+you're playing and mom comes in and asks
+you what you want for dinner or if
+you've done your homework already, that
+is a disruption.
+Whereas your phone and clutter and
+whatever, that is a distraction. And
+then there's also another term that's
+sometimes used which is extraneous load.
+So that means all of the noise and
+clutter and the in the way the data is
+presented itself essentially. And then
+last but not least we have a bunch of
+physical chemical health factors like
+are you getting enough oxygen and water
+and sleep and sunlight and so on. And
+that's the only outlier. All of the
+other ones can basically be summarized
+as the same thing. All of the other ones
+are essentially just improve signal to
+noise ratio. Right? that you have a
+bunch of noise, a bunch of unnecessary
+data that doesn't isn't really useful
+for you. The signal is the actually
+useful information and you want to get
+rid of the noise and keep the signal.
+That that is what focus really means
+having a goal maybe so that you can um
+better filter through the noise. If you
+have a look here, distractions,
+disruptions, extraneous load, all of
+those are about signal to noise ratio
+essentially. And last but not least, you
+need a challenge matching your skill.
+This is where our famous flow chart
+comes in. I use the words flow and fun
+pretty interchangeably. I think they're
+more or less the exact same thing. It's
+kind of like think that naming your book
+flow sounds a bit more fancy than naming
+your book fun. I think they're pretty
+much the same thing. Here we have a
+graph where skill is on one side and
+challenge is on the other. So this is
+the skill of the player or the skill of
+the person and this is the challenge
+they're presented with. And if the
+challenge matches the skill perfectly,
+then we're in the flow channel in the
+middle here. If the skill is much larger
+than the challenge, then we're in this
+boredom section. This is when we're
+bored. And if the challenge is much
+greater than the skill, then we are
+frustrated. And the quality of this flow
+channel is that this is basically the
+channel where we're learning
+efficiently. But why is that? Why is it
+that we're only learning efficiently
+here? Uh why are we not learning
+efficiently when we're bored? Or why are
+we not learning efficiently when we're
+frustrated? This nobody has ever
+properly explained to me. So I had to
+come up with my own theory. And I think
+I think I came up with a pretty
+reasonable one. Why is the flow channel
+the flow channel? Why is this most fun?
+Why is this uh where we learn the most?
+I think the answer is it has the best
+signal to noise ratio. Once again, if
+you think about being frustrated,
+basically the feedback you're receiving
+from the world is you are doing poorly
+poorly poorly poorly poorly poorly
+poorly poorly poorly poorly. And so no
+matter which action you take, no matter
+what you do, you're always receiving the
+same feedback. And as as you can see,
+there's nothing to learn from. So if
+you're taking different actions but
+everything has the same outcome that is
+the definition of frustration
+essentially and it means you're not
+receiving any useful data from the world
+and your brain is telling you what the
+heck I'm not learning anything useful
+from this stop it. And the same goes for
+boredom. Boredom means you're so good or
+you're so far ahead that no matter what
+you do, no matter what you try,
+everything kind of works. So you're
+doing well well well well well well. So
+this is kind of like having a chess
+opponent that intentionally tries to
+lose and so no matter what you do you
+always win and your brain gets very
+bored by that because anything you do
+leads to a win. Everything works and as
+you can see there's like also there's no
+data to learn from. So the only way to
+learn is actually in this flow channel
+in the middle here where some of the
+actions you take don't work and some of
+the actions you take do work. And now
+from that you can learn which actions
+work and which actions don't work. That
+is why the flow channel exists and that
+is why here we have the most fun. It's
+as simple as that. It's I think it's a
+really good explanation for for why the
+flow channel is the flow channel. you
+want want to be here and the flow
+channel is basically like an elevator.
+It carries you up up upwards definitely
+carries your skill upwards and then
+hopefully the environment uh increases
+the challenge appropriately so that you
+stay in the flow channel and can keep
+climbing this ladder. Now the brain's a
+bit more complicated. It can either be
+underwhelmed, overwhelmed or it can be
+in flow. It's like managing your mental
+load. But your brain is not just one
+container. It has a bunch of smaller
+containers for a bunch of different
+skills. I think this is partially even
+biologically correct, right? So, the
+brain does have different brain regions
+that are responsible for different
+tasks. But I think even if it's not bi
+biologically exactly correct, it's still
+useful to think about it this way. Your
+brain has capacity for different skills
+at the and doing different skills at the
+same time. Maybe those are a little
+flexible. Maybe sometimes brain regions
+overlap and can do different things and
+so on. Like reality is more messy, but
+as an abstraction, I think this is a
+good way to think about it. And for
+example, your eyes can be in flow when
+there's like the correct amount of
+challenge for them, whereas some other
+part of your brain can be overwhelmed
+where some other part of your brain can
+be bored. And this can all happen at the
+same time, right? Your your hands might
+be bored, but your eyes are engaged and
+your ears are engaged, but your
+navigation skills are unused and sitting
+there idle and bored. This is kind of
+the way I would think about it. So
+sometimes, uh, I sing in the shower.
+Just being in the shower is kind of too
+boring, right? Just being in the shower,
+it uses up a bunch of my skills, but
+none of them enough to properly get into
+the flow state. So, by singing in the
+shower, I get to add an extra challenge
+on top that gets some of my skills into
+flow state. And for example, sometimes
+when I go for a walk, I pick up little
+sticks and play around with them in my
+hand and so on. And this is all to
+basically increase the challenge and get
+me closer to flow state and to engaging
+my brain fully. A good signal to noise
+ratio makes for a good learning
+environment. Unless, and there's one
+very interesting exception, unless
+filtering through the noise is what you
+are trying to learn. And this is
+particularly true for your eyes and your
+ears or more more precisely your the
+brain regions in your brain that are
+responsible for u analyzing that
+incoming data from your eyes and ears
+and senses and so on. They receive a lot
+of noise, your eyes and ears especially,
+right? And that is why for video game
+development, the early prototype
+blockouts, they look boring because
+there's not enough noise to filter
+through. Like filtering through the
+noise is the challenge for the eyes. And
+this is this is so easy to make sense of
+this, so easy to filter through that
+your eyes are just utterly bored by
+looking at it. where something like this
+is like complete AI generated chaos
+mumbo jumbo nonsense. You know, this is
+an ex segoration, but some games get
+very close to that. That is very
+frustrating for your eyes to look at
+because you have you can't really
+understand all of this. There's so much
+noise that cutting through the noise
+becomes extremely extremely difficult.
+So something that would look very
+pleasant would be somewhere in between
+where your eyes are perfectly in flow,
+where there's like some noise to filter
+through but not too much. Similar thing
+for your listening skills, right? When
+you're young, when you're a kid, you
+like listening to songs like Five Little
+Ducks,
+whatever. And that's like super flowy,
+engaging for you. Uh, but then as you
+get older, your skill increases. And so
+now you want to listen to more
+complicated things that have more noise,
+more patterns to make sense of. So then
+you want to listen to maybe something
+more complicated like
+So the challenge for your senses is very
+much to cut through the noise to make
+sense of the noise and that can be very
+fun. All right. So, we have our brain
+with a bunch of different skills, and
+each of them can independently be bored,
+frustrated, or in flow. Maybe you've
+seen this in movies recently where
+characters spell everything out. I am so
+angry. I'm literally shaking right now.
+Shh, quiet. I'm calling Hannah right
+now. And we can see what you're doing,
+but you're still spelling it out, right?
+And then the other person spelling
+everything out again. They even Yeah,
+you get the idea. And the reason for
+this is because um the people who make
+these shows and movies, they assume that
+you're watching them while you're doing
+something else. They assume you're
+watching this while you're doing your
+laundry. And they know that doing your
+laundry is already taking up a bunch of
+your brain capacity and you're already
+using up that brain capacity. So the
+only thing they do is they fill up what
+they think might be missing from that.
+So they give you a little bit of
+listening skill, a little bit of
+language skill, and hope that that gets
+you into flow state. And if you're doing
+both things at the same time, then
+there's a good chance it will indeed get
+you into flow state. But that leads to a
+strange phenomenon that once you're
+watching these TV shows on their own
+without doing anything else, you're
+quite bored by them because there's not
+much left. It's not challenging enough
+on its own. So now you need to start
+doing something else. Maybe you need to
+scroll on your phone at the same time to
+get back into flow state because the
+film on its own is just not enough.
+You're always trying to fill up these
+containers. That's what you do.
+Obviously a lot of people also watch
+YouTube like this, right? Maybe you are
+watching this YouTube video while doing
+something else to get you into flow
+state while doing the dishes or or
+whatever, right? That's how it works.
+You want to be in flow state. And one
+very interesting thing in the case of
+like films and movies in particular or
+stories in general is that if you're
+bored, you're confused like where
+where's the challenge? Where's the
+challenge? And the funny thing is that
+if the challenge is too high, then you
+might not even realize where the
+challenge is. So if the challenge is too
+large, you might also be uh bored. You
+might feel bored even though it's too
+difficult because you don't understand
+the challenge. you don't even know that
+there is a challenge. So, if you watch a
+film that's way over your head and you
+you just don't just don't get it, you
+might be bored even though it's actually
+um too difficult for you, not too easy.
+That's an interesting phenomenon. You
+see this in other ca in other scenarios
+as well. I think I'll have another
+example for this later, but this is
+interesting that sometimes this can
+happen. Understanding the challenge is
+also a challenge. So if the challenge of
+understanding the challenge is too
+difficult, that means you don't see the
+challenge. And misunderstanding the
+challenge often ruins the experience.
+This is an interesting phenomenon and
+answers one question that I know you're
+interested in cuz you've asked in the
+comments and that is like what's going
+on with um rage games and like really
+difficult games like Souls games or like
+like literal rage games like Getting
+Over It and so on. Why do people play
+those? Clearly, those are not fun,
+right? It's like they ask you for way
+more mechanical skill than you have. So,
+they're deep into frustration territory
+for almost every player. Why do people
+play them?
+Why? And I think um if you're thinking
+about the games this way, then you're
+probably not going to like them.
+Actually, if you think they're about
+mechanical skill, chances are you're not
+really going to like these games very
+much cuz I think they're actually about
+something else. I think they're about
+perseverance. Personally, I think um you
+need to reframe the challenge to
+perseverance
+and to being able to learn in a hostile
+environment. So being able to learn in a
+hostile environment is the skill that
+you are trying to master in these kinds
+of games because let's be honest they
+are very they're not good learning
+environments. For example in getting
+over it if you make one mistake you fall
+all the way back to the bottom. That's
+not necessarily what I would describe a
+good learning environment like right a
+good learning environment would have a
+lot of checkpoints or you can retry
+exactly the parts that you failed on and
+so on. So these intentionally are not
+very good learning environments. But if
+you reframe the challenge as a
+perseverance challenge and a challenge
+about learning and persevering despite
+the hostile environment, then I think
+these games are actually quite fun. Um,
+if they meet your skill level and
+they're much more likely to meet your
+skill level with this challenge than
+they are with your mechanical skill, if
+that makes sense. So, I do think these
+games are fun and I think people play
+them for fun. And obviously, some
+streamers and so on don't play them for
+fun. They play them for clicks. That's a
+different story, right? Sometimes the
+streamers you see playing these, they
+they suffer quite a lot. They dig
+through a lot of frustration. But then
+once again, persevering through the
+frustration is kind of the fun here. So,
+who knows? The point I'm trying to get
+at is that enduring discomfort is also a
+skill that you can kind of try to
+master. Let's say you go swimming with
+your friends on a lake. There's like the
+boring guy who's like swimming at the
+top and he's like just chilling here.
+One guy is trying to hold his breath
+under water just for fun. It's
+uncomfortable, right? That that's
+something to take note of here. Holding
+your breath underwater is definitely not
+comfortable. it's uncomfortable and you
+can still do it for fun because learning
+to be uncomfortable is a skill that you
+can try to master. But then if somebody
+comes along and just holds you under
+water, then that's definitely
+frustrating. If they hold you,
+especially if they hold you for longer
+than you're comfortable being
+uncomfortable with. Similar thing for
+exercise. Exercise is quite fun even
+though it's not comfortable, right? You
+can be the boring guy on the couch. You
+can go for a run, put yourself into flow
+state, or you can way overdo it and make
+it like very frustrating for yourself.
+Or you can eat something spicy. Yeah,
+right. You can be Tim. You can not touch
+the chili pepper. You can be the boring
+guy. You can be Toby. You can eat
+something very, very spicy and kind of
+have fun with it and kind of challenge
+yourself. Or you can be Fred and you can
+way overdo it and basically fear for
+your life after you swallowed all of
+those chili peppers whole. So that would
+be frustration territory. So basically
+all of these examples what I want to get
+at is discomfort can indeed be fun. You
+need to practice discomfort and nature
+wants you to practice discomfort because
+um you will not always be comfortable
+and you need to be able to be uh you
+need to be able to deal with discomfort
+in real life and exploration is always
+doesn't have to be immediately lo use
+useful but exploration is a way still to
+prepare you for potential situations to
+come right. Yeah. But the good news is
+discomfort can indeed be fun. That is
+fantastic. So fun does not need to be
+comfortable and it also doesn't need to
+be directly useful. That's what we
+already talked about about earlier. Uh
+fun not being directly useful is is what
+makes it useful. And now what we added
+is it also doesn't need to be
+comfortable. Fun just needs a good
+learning environment for whatever.
+That's literally all it cares about. So
+if we add discomfort to our vin diagram
+here and would sit somewhere like here,
+right? A lot of motivations have to do
+with discomfort. For example, being
+hungry is a kind of being dis
+uncomfortable or being thirsty is being
+is a way of being uncomfortable. A lot
+of things you do are based on being
+uncomfortable, but this a discomfort
+blob does overlap with a fun blob.
+There's quite a bit of overlap here, I
+would say. So, when you go for a run,
+then your skill of being uncomfortable
+is in flow state, maybe. and all your
+other skills, they might still be bored.
+Of course. Yeah. The interesting
+question is if you have a bunch of
+separate skills in your brain and they
+can be inflow or in frustration or bored
+at the same time, then what is the
+overall feeling you get out of it?
+And I think good way to think about it
+is to think of flow as positive. I gave
+this two plus signs. Frustration is more
+negative than flow is positive though.
+So I gave it three negative signs. So if
+one part of your brain is in flow and
+one is frustrated, then the frustration
+will be the overpowering feeling.
+Frustration beats out fun. And then
+boredom is only slightly negative. So if
+you are having fun, if you're in flow
+state and another part of your brain at
+the same time is bored, then the fun
+part will prevail. So you can kind of
+think of this as negative, this is
+positive. And if you want, you can think
+of boredom as kind of neutral. But if
+everything is bored, then you're going
+to be bored. So now, if this is our
+current brain stage, then we could
+assign numbers to it like so. The bored
+skills give couple of minus points. Fun
+gives us quite a bunch of plus points,
+and the frustrated skill gives a lot of
+minus points. So overall, this would
+probably not feel very fun. We would end
+up somewhere in the negatives there. So
+why is frustration more frustrating than
+boredom? Like why is frustration
+perceived as worse than boredom? I think
+that frustration is just more the more
+of a panic state essentially. Boredom at
+the very least it's a relaxed state and
+frustration is kind of a panic state. So
+if you have to choose between the two, I
+think you'd rather be uh bored than
+frustrated. Right now the interesting
+question, how do you get someone into
+flow? The problem you have if you want
+to get someone into flow is that you do
+not know how skilled they are. Do you do
+not know if they have this level of
+skill or this level of skill or this or
+this? You have literally no freaking
+idea where they are on the skill
+spectrum. And now the problem gets even
+worse because there are multiple people
+probably that you have to deal with.
+whether you're making games or whether
+you're an educator, you're dealing with
+multiple people and every single one of
+them has probably a different skill
+level and you don't really know where
+any of them are on the skill spectrum.
+And to make matters even worse, there's
+not just one skill. There are multiple
+skills that your game or that are
+relevant for your education or or
+whatever. There are multiple skills you
+have to worry about. There are multiple
+people you have to worry about. It gets
+very very complex, very hard to get all
+of them into flow. So here you can see
+if we choose a fixed challenge um I kind
+of drew a faint line here like everybody
+gets the same challenge but everybody
+has a different outcome depending on
+their skill. So if this girl here is
+like not very skilled then she'll end up
+frustrated but these two nerds here
+they'll end up bored even though it's
+the exact same challenge for everyone.
+You can see that right the challenge is
+the same for everyone just the skill for
+everyone is different and they will
+impact how they perceive it. And the
+same is true for all of the other
+skills. And this one might be fun. This
+one might be frustrating. And this goes
+on and on and on cuz there are more
+people you have to worry about and there
+are more skills you have to worry about.
+And if we zoom out even further, then we
+get something like this. So we have
+people on one axis and skills on the
+other axis. And then we can color in the
+squares based on whether that skill is
+inflow, bored, or frustrated. So for a
+game that would maybe look something
+like this. I'm not entirely sure what to
+call this. Maybe a flowgram or a
+fungram.
+I don't know. But I feel it's a useful
+framework to think about your games. I
+think normally games would look
+something like this if you do it well. I
+think you would want to go target only a
+few skills, but target those well cuz
+there are too many skills. You cannot
+get every single skill into flow state.
+I would say it makes sense to pick a
+couple of skills. Try to get those into
+flow state for as many people as
+possible. Intentionally leave a lot of
+the skills unchallenged or neutral
+because it's better for them to be in
+bored state than to be in frustrated
+state. We intentionally don't introduce
+so much challenge as to make relatively
+sure that they're not going to end up
+frustrated. Does that make sense? I hope
+it does. And then for example, if you do
+a play test and you notice something
+like this, one of the skills that you
+were hoping would be fun, everybody
+finds frustrating, then you know you're
+doing something wrong and that the
+difficulty is probably too high. And
+even worse, if you were not even
+targeting the skill and everybody still
+finds it frustrating, then you know that
+something's really, really wrong. So
+this is my advice. Only target a select
+set of skills, but do those well.
+Intentionally keep other skills
+unchallenged. If you can't do them well,
+boring is better than frustrating. And
+then which skills you target, I think
+depends mostly on genre. The genre
+basically communicates to the player
+which skills they're going to need to
+play your game. Now, to the main
+question, how do you make a skill fun
+for people with varying skill? Cuz um
+that's still a problem we haven't really
+solved yet, right? If you target a
+specific skill, how do you make it fun
+for people despite all of their
+different skill levels? And I think you
+have four methods for this. One is to
+let people choose their own difficulty.
+So this will especially be pick your own
+pace is like super powerful. So not even
+picking your difficulty but just picking
+your own speed. This is something we
+desperately need in education. And this
+is also super useful in video games. For
+example, turnbased games are like that
+by design. You can take as much time as
+you want to finish your turn or to
+complete your turn. So turn turn-based
+games are great for this. A lot of other
+games do this as well. You can you
+choose the pace that you go through the
+world. This is really fantastic for um
+letting players adjust their difficulty
+basically, but you can also let players
+pick their own path and like have
+different parts of the world that have
+different difficulties. You have can
+have difficulty settings. So very
+directly letting players pick their own
+difficulty or you can have optional
+challenges or collectibles that are
+spread around in the world and in order
+to collect them you have to increase the
+challenge or you have to do something
+that's more difficult than normal. All
+of those are good options but they're on
+their own they're not enough. You also
+need to choose the correct difficulty
+for people for players for your
+students. You need to serve it on a
+silver platter to them. They're not
+always going to pick the correct
+difficulty for them. you need to help
+them with that. So, there are some
+players or some students that are smart
+enough to follow the fun themselves, but
+some of them need to be tricked into
+having fun. So, you need to dangle some
+other rewards in front of their face
+like they're like, "Look, you can get
+some rewards or recognition or social
+status or whatever." And then with that,
+you trick them into having fun. For
+example, in Mega Bonk, in order to
+unlock the cursed tome, you need to beat
+the stage boss in under 5 minutes. This
+is dangling a reward in front of your
+face. It's like here here's the reward.
+And then in order to get the reward, you
+need to do something that's fun. So this
+is uh tricking you into having fun. This
+is the way to do it. But more
+specifically, how can you choose the
+correct difficulty for people? Um first
+of all, you need to have a smooth
+difficulty curve. This is the base, the
+main thing you need to get right. So the
+challenge needs to slowly increase over
+time. And usually people just rush
+through the game until they meet the
+point that's has the correct difficulty
+for them. And hopefully from that point
+on your game has the correct difficulty
+curve for players to stay in the flow
+channel. And there are always kind of
+two different types of difficulty.
+There's the difficulty of learning
+something entirely new. It's like the
+blue tan curve here. And there's the
+skill of mastery. Mastering what you
+already know. That's kind of the orange
+curve here. So you have the mastery
+challenge and the novelty challenge. And
+a lot of games work like this where they
+have a lot of the novelty challenge
+frontloaded. So you have to learn a lot
+of the new stuff at the very beginning
+and then you have to learn to master it
+afterwards. For example, chess. First
+you have to learn the rules of chess and
+then you still have decades of mastery
+in front of you. There's one other model
+that video games like to use, which is
+like this saw shape um architecture
+where they basically split the learning
+into multiple chunks. You don't learn
+all of the mechanics of the game in the
+beginning, but you learn the mechanics
+like one after another throughout the
+game. And in case you want to do that,
+what you do is you use a saw shape for
+the mastery difficulty curve. So the
+mastery difficulty should go up slowly
+over time, but every time you introduce
+something new, you intentionally drop
+the mastery difficulty back down so that
+there's um enough capacity to do
+efficient learning for the new stuff.
+It's all about efficient learning. You
+just want to just want to create a good
+learning environment and this makes for
+the best learning environment. This is
+why this difficulty curve looks the way
+it looks. So one is the front-loaded
+discovery approach and one is the spread
+out discovery. There was the difficulty
+curve. Matchmaking fills a similar role.
+You pick the correct opponents for
+players. Automatic difficulty
+adjustment. So instead of the players
+picking the difficulty, you pick the
+difficulty for the players. Either uh
+telling them or not telling them. This
+exists in very different variations. And
+also intentional skill gates. So that
+means basically locking parts of your
+world off until players have the correct
+skill to have fun in those areas. If you
+think somebody doesn't have fun in a
+certain or can't have fun in a certain
+area of a game yet because they're not
+skilled enough, then what you can do is
+you can make the entrance to that area a
+little more challenging than it's
+supposed to be. And that will just stop
+players from going in there if they're
+not skilled enough. It's a little bit
+risky because they might not know that
+there are other paths and then get stuck
+and frustrated. But in a lot of games,
+this is still a very effective method.
+Thirdly, you can expand the flow channel
+or suck people into the flow channel
+with soft success and failure states.
+So, if you're thinking about the
+feedback you're receiving from the
+world, it doesn't necessarily just have
+to be well well well poor poor poor poor
+or well well poor well poor whatever. It
+can be more nuance. It can be there can
+be more soft interpolated
+victory and failure states. So for
+example, if you think about a high
+score, a high score game gives more
+nuanced feedback because it tells you a
+score instead of just win or lose,
+right? So that is already more nuanced.
+And there are a lot of ways to do this
+like soft win and fail states that give
+you more nuanced feedback about what
+went well and what went wrong. The more
+feedback and the more nuance the
+feedback you're providing, the better.
+Rubber banding is interesting and also
+catch-up mechanics. So both of those,
+the point is basically to help you out
+if you're behind and to maybe slow you
+down if you're ahead. So rubber bending
+is the wording I would use for single
+player games and catch-up mechanics is
+the term I would use for multiplayer
+games, but they're still essentially the
+same thing. Artificial support if you're
+behind and artificial hindrance if
+you're ahead. And what it does is it
+makes it actually improves the signal to
+noise ratio. Cuz if you're very far
+behind, then you're in a situation where
+everything you do doesn't work anymore.
+And if you're very far ahead, then
+everything you do works no matter what.
+And as we've already discussed, that
+leads to poor signal to noise ratio. So,
+rubber bending and catch-up mechanics,
+they get you back into a spot where if
+you're behind, you can get positive
+feedback from positive actions, and if
+you're ahead, you can get negative
+feedback from negative actions. And if
+you're too far ahead or too far behind,
+that's actually not the case. So, rubber
+bending and catch-up mechanics fix that.
+And then you can also have other means
+of frustration avoidance like hints,
+skips, etc. So, anything that helps
+avoid frustration is usually a good
+thing. Last but not least, have natural
+layers of difficulty. And this is
+actually more about what you learn than
+about how you learn because this is
+about the content of what you learn
+itself and the difficulty that provides.
+So if there are layers of meaning in
+your story and that would be one example
+right there there are a lot of stories
+that can be enjoyed by children but can
+also be enjoyed by adults and that is
+because there are layers of meaning. So,
+the story then has the correct
+difficulty for the kids, but it also has
+the correct difficulties for the
+grown-ups because there are layers of
+meaning that the younger people might
+not notice or take note of. But if
+you're old enough and if you can see
+that the challenge is there, then the
+challenge is there for you. You're
+basically digging deeper into those
+layers. And emergent complexity is very
+good and good with this. So if you have
+simple rules that make for complex
+systems like the game of Go, Go has
+extremely simple rules, but it has very
+a lot of layers of difficulty that you
+can dig through after you've learned the
+rules. And that is not about how you
+learn it. That is just about the rules
+itself. There is a lot of emergent
+complexity and that is why there are so
+many layers for you to dig through. And
+the same similar to emergent complexity
+is combinatorial complexity. or if you
+have a lot of different objects in your
+game that can combine with each other in
+interesting and unique ways, that is a
+very similar effect to to this one.
+Hidden challenge is exactly this
+phenomenon of you only notice that there
+is a challenge once you're good enough
+to see the challenge. Like to give a
+little bit of an example, for example,
+when you play start playing our game
+Islanders, Islanders is a city builder
+where you just place buildings and then
+you get points depending on which
+buildings are around the building. When
+you start playing the game, you're
+basically just dragging the buildings
+from your inventory to the map. You get
+points and you're just dragging them
+around to see where you get the most
+points. And you don't even really see
+that there's a deeper planning
+challenge. But then as you keep playing
+and as you internalize the system, this
+hidden challenge, these this layer of of
+depth basically reveals itself to you.
+And it's like, okay, if I want to
+maximize my points, then I actually need
+to plan my city ahead of time. need to
+plan where I want to do place my city
+centers, where I want to place my towers
+and my farms and so on. And that type of
+challenge is not apparent when you start
+playing, but the longer you play, the
+more apparent it becomes. That would be
+an example for layers of difficulty or
+difficulty hidden challenge that reveals
+itself over time basically. So this is
+how you get people into flow state even
+if they have different skill levels. And
+this is the answer to the question that
+we asked. How do you make a skill fun
+for people with varying skills? This is
+the most important question to wonder
+about. And of course, the biggest answer
+is always just make it a good learning
+environment. Everything we just talked
+about is making a making it a good
+learning environment. Just different
+tips and tricks to achieve that. And all
+of that you should only do for a couple
+of select skills cuz you cannot possibly
+do this for every single skill that
+exists. You choose a couple of skills
+and you give them this treatment.
+And that's the best you can do. Games
+are full of decisions, like choosing
+upgrades, choosing different upgrades,
+choosing which perks you want to start
+into a level with, choosing your weapon,
+choosing where to send your units,
+choosing where you go yourself, which
+buildings to place in which order, where
+to place them, which upgrades to choose.
+And even like platformer games, when to
+jump, that is basically a decision. But
+also which route through the level you
+want to take, that is a decision. In
+puzzle games, which solution you want to
+try next, which solution approach you
+want to try next, all of those are
+decisions. How to build your factory,
+how to lay it out, how to optimize it,
+like programming games, which solution
+you want to take to a problem, which
+direction to explore, if you want to
+explore down or if you want to go back
+up, which weapon to choose for. an
+encounter. A lot of the skills you have
+in a game are decision-m skills. A very
+very big portion of skills are
+decision-m skills. Different kinds of
+decision-m skills, tactical decision-m,
+fast decision-m, slow decision- making,
+all kinds of decision-m. And that leads
+to a very interesting question and that
+is what makes a decision fun. How do you
+create decisions for others that are
+perceived as fun? Oh, the the same
+answer is always you want them to be a
+good learning environment. And what you
+need for that is a balance. Well, let's
+have a look at a quick example. Let's
+say you have to choose between the sword
+of powerness which deals 50 damage and
+the stick which deals one damage. Then
+this is a boring decision because it's
+very obvious what you should pick.
+Right? If there at least if this
+information is complete and there are no
+secrets hidden within then this is a
+very very boring decision to take. Why?
+Because it's too easy. It's boring
+boring decision. like we have capacity
+to take more difficult decisions than
+that. Now, if you have to choose between
+the twisted gnome core and the quantum
+spook module with like really
+complicated effects, then you're
+probably going to be frustrated or
+overwhelmed. Or even worse, you're going
+to find it boring because it's so
+complicated that you're not even sure
+what the point of this decision is at
+all. But hey, maybe you play the game
+for a little more and then later on you
+find out that the quantum spook module
+is actually the sword of powerness in
+disguise. It's just completely
+overpowered. It's completely broken. And
+so now the decision becomes boring
+again, right? Cuz now it's obvious what
+you should pick. You should always pick
+this one. It's overpowered. You should
+always pick it when you see it boring.
+So now it's boring again. The tricky
+thing is to find a decision that's going
+to stay interesting for long. like
+between the poison boomerang and the
+lightning spear, something like that
+with like fair effects that are easy to
+understand and to reason about, but
+still complicated enough that they're
+not going to get boring. That is tricky
+though. But that is what balance is
+indeed for. So the point of balancing is
+to make your decisions non-trivial, not
+boring, predictable, not frustrating,
+and challenging even after repetition.
+And this is in particularly difficult,
+the third one here. Yeah, that that is
+why balancing is difficult. And I think
+the key is that if you want your
+decisions to be replayable, then they
+kind of must be different each time. I
+think this is also why the the cards
+that you have to choose from started
+becoming so popular because they kind of
+mix things up. They randomize your
+decisions more, which makes for
+interesting decisions more often. But
+decisions at the same time still have to
+be non-trivial and predictable. This is
+hard. I think one good way to think
+about this is to think of it like a
+toolbox. You're providing the player
+with a bunch of different tools. Those
+tools could, for example, be abilities
+or or just things you can do, units you
+can build, buildings you can build,
+weapons you can use, just different
+tools you give to the player. Depending
+on your game, those will mean different
+things. And I think the problem is that
+a lot of people think about balancing in
+like this comparing power levels kind of
+way. It's like the drill has 80 power,
+the screwdriver has 60 power, and if
+everything just has a certain skill or a
+power level, that's boring. It's super
+boring. Maybe you've seen this meme. It
+goes in the square hole. That's right.
+It goes in the square hole. Just like a
+dude putting all of the shapes into the
+same hole because everything fits into
+the square hole. Classic meme. And the
+problem is that no matter how well you
+balance your game, even if you get
+everything to the same power level,
+one's always going to be slightly better
+than the others, and now you have
+unfortunately created a square hole. And
+this can now solve every situation you
+have in the game. And people will be
+like, "That's right. It goes in the
+square hole." Actually, I think square
+hole is definitely a term we should
+adapt for balancing in video games. I I
+definitely like that. Oh, I think your
+balancing has a square hole. The
+solution for that is to make all of your
+tools multi-dimensional.
+So, a tool should never just be have
+like a straight up power level. It
+should have should be differently good
+at different things. It should solve
+different problems. Duh. And what this
+allows you to do is it allows you to
+pres present the player with different
+problems that will then require
+different solutions. And the more varied
+the problems, the more replayable it's
+probably going to be in the long run
+because that means the decision of which
+tool to use is going to stay interesting
+for longer. But in order for even for
+you to be even able to create those
+situations, you need this kind of
+balancing approach where all of the
+tools you give to the player have
+different advantages and disadvantages.
+And now you still need to be careful
+that you don't end up in a with a
+situation where it's like very obvious
+always which tool to use. It's like,
+yeah, if there's a screw, you need the
+screwdriver. If there's a nail, you need
+the hammer. That That's also boring.
+What you want is you actually want to
+create a bunch of interesting edge cases
+so that the player needs to make an
+interesting and nuanced decision about
+which tool to choose. That that would be
+the best case scenario. And the more of
+these interesting edge cases you can
+create, the better. What makes a
+decision fun? Balance.
+Balance. That's why people complain
+about balance so much. It's because if
+the balance is off, it's not a good
+learning environment and it makes the
+game boring or frustrating. Remember,
+decisions need to be non-trivial, not
+boring, predictable, not frustrating,
+and challenging even after repetition.
+Everybody said, "My game is fun. Why is
+it not successful?" This is just a quick
+disclaimer that I need to give here is
+success of your game is also a lot about
+marketability of your game and stuff
+like that. Your game should be fun, but
+it's not the only thing that your game
+needs to be. It It needed to be said. It
+needed to be said. All right, that's all
+I had for games. I would now like to
+move on to the next point, education.
+What's very interesting is that we're um
+slowly increasing our difficulty as we
+move along here. Games are sort of the
+most easy environment, the easiest
+environment to create fun in. Education
+is more difficult because what we're
+working with has more limitations and is
+more difficult. And then doing the same
+for life is basically the most
+difficult. For example, games are
+tailored to taste whereas life is kind
+of random. Games have clear goals.
+Education is kind of more vague goals.
+Life has no explicit goals at all.
+Everything gets more difficult in this
+direction. We're now moving on to
+education. Let's have a look. Frequent
+and fast feedback. I I think we already
+have a problem here. As far as I
+remember when I was in school, it was
+neither fast. oftentimes when you wrote
+a test or something you were waiting for
+it for weeks nor was it frequent because
+there are a lot of other students and
+you know teachers have limited amount of
+time it wasn't fast nor frequent it was
+neither fast nor frequent problem number
+one deep focus I don't think school is a
+particularly great place to focus it's
+usually noisy lots of distractions and a
+challenge matching your skill it's very
+difficult for one teacher for one
+educator to present a challenge that
+matches the skill of every student at
+all times so that leads to you being
+either bored or overwhelmed like 80 to
+90% of the time. So first of all, what
+can what can educators do? I think the
+first thing to look at is what we had a
+talk about earlier, right? Getting the
+difficulty right. Let students choose
+their own difficulty. Help them choose
+the correct difficulty for them. expand
+the flow channel by um with catch-up
+mechanics, rubber banding, antif
+frustration and having natural layers of
+difficulty. Here we have a little bit of
+good news because most of the things
+education tries to teach us already has
+lots of that. For for example, math is a
+great example for that. Math already has
+tons and tons of layers of natural
+difficulty and most actually most
+subjects do biology, chemistry. It goes
+deep. It goes deep. Now, the main
+limitation of why most of these things
+aren't possible is because we don't have
+enough of these alo called educators.
+They I'm know they're trying very hard.
+They're doing usually doing as best as
+they can. If you have to deal with so
+many students at once, it's not going to
+be easy. So, one thing I'm always
+wondering about is in the age of
+technology, why do all of these students
+need to listen to live performances
+of a teacher explaining something?
+Wouldn't be much more efficient to
+basically have one godlike educator like
+the best educator in the world is like
+completely on fire and completely
+superhuman explanation skills. Have them
+record a video and then just play that
+to the students cuz I think that's
+already what's what you see a lot
+nowadays, right? You completely don't
+get it at school and then you watch a 5
+minute YouTube video about it and it
+immediately clicks. Why is it that not
+everybody can just benefit from the best
+educators in the world and just learn
+more efficiently that way? Are attention
+spans getting shorter? Like if I make a
+suggestion like that? A lot of people
+will be like, "Oh no, should education
+just be 5 minute videos? Oh, that's so
+sad. Attention spans are getting short.
+Oh man, we're all screwed." Or is it is
+it something else? Is it that patience
+for inefficient learning is getting
+lower? Because from the perspective of
+the student, if you have to listen to a
+2hour explanation of something that
+could be explained in 5 minutes, I think
+um you'd be right to be impatient about
+that. I think the truth is somewhere in
+between. I think attention spans are
+probably getting shorter. Let's not
+let's let's not ignore that. But I also
+think this is also true. patience for
+inefficient learning is getting lower.
+If you have to sit there for hours and
+you know there are some more efficient
+way to learn the same thing, you're
+going to be pissed, rightfully so.
+Another thing that I want to point out
+is um that video games are just more
+multi-ensory, multi-dimensional, if you
+will. Whereas, for example, learning
+vocabulary from a vocabulary book only
+challenges one skill, which is like your
+language skills. A video game challenges
+a lot of your skills or at least many
+many more of your skills. As we've
+talked about earlier, no video game will
+challenge or should aim to challenge all
+of your skills. But at the very least,
+it's going to cover more senses and more
+skills than the vocabulary book, right?
+You're going to have something to look
+at. You're going to have a word to
+understand. Going to have to use your
+hands, your ears, your coordination,
+like your navigation skills. So from the
+perspective of the brain, I think what's
+happening here is just this is perceived
+as inefficient and this is perceived as
+efficient cuz the brain doesn't care
+about what it's learning. It's just just
+cares about learning. And here here it's
+just learning more to be honest, just
+learning more at once. If the only thing
+you care about is learning vocabulary
+efficiently, maybe this is better. But
+if you care about learning independently
+of what exactly you're learning, then
+obviously this is better. And I think
+this is something that we could perhaps
+try to acknowledge in education a bit
+more is maybe not overly focus on just
+the one thing that we want to get into
+people's brains but also let some
+adjacent skills in there for the sake of
+making it more fun and more enjoyable
+for the students. I I personally think
+the brain is sport training only one
+skill at a time and I think the brain is
+like I can do better than that. So the
+main limitation of only having one
+educator is something that I think we
+can overcome also with other technology
+like for example I personally find that
+AI is honestly really great teacher if
+you ask the correct questions and I
+think this is going to improve in the
+future. So while I still want humans to
+be involved in the loop while I want
+students to talk with each other and
+socialize and so on I think I I like
+learning much better now than I used to
+before AI. So the interesting divide
+that you can sort of look at here is
+that games are learning useless
+information efficiently and education is
+about learning useful information
+efficiently. Both of those in quotation
+marks because not everything you learn
+in games is useless and not everything
+you learn in education is useful. Like
+already that distinction is not as
+strong as some people think it is. But
+at the very least this is sort of what
+we're aiming at, right? Education is
+specifically aiming to teach useful
+information and games is specifically
+aiming to just teach some information
+for for the sake of fun. Now the
+interesting thing here is that this is a
+thought experiment. If the robots if AI
+takes all of our jobs then what does
+useful information or what does useful
+skills even mean? Doesn't it all become
+useless? Then does the border between
+games and education disappear at that
+point? As mentioned, a bit hypothetical
+thought experiment. But if we end up in
+a future where AI ends up doing pretty
+much everything better than humans can,
+then I think this is exactly where we're
+going to end up. There's not really
+going to be a difference between games
+and education anymore because they're
+both they're both teaching useless
+information. there there's not going to
+be anything that you have to learn in
+that future. Uh some things maybe right
+social skills so on but you you know
+what I mean. So at that point maybe the
+two will merge into one and the divide
+will disappear completely. It it'll all
+be the same no matter what no matter
+that's going to happen or not. I think
+seeing learning as something fun is
+something I I want back. I want teachers
+to understand that learning is supposed
+to be fun because a lot of teachers
+don't seem to understand that and I also
+want students to understand that
+learning is in fact supposed to be fun
+and also a lot of students don't seem to
+understand that and I just hope we get
+this understanding back. This is the
+main this is my main point. This is the
+main thing honestly that bothers me when
+I look at the whole thing is that we
+lost this understanding for that
+learning is actually supposed to be fun.
+The teachers are like oh my god how do
+we make education more like games? like
+look at those children. They're playing
+games so much. Why can't why can't they
+invest as much energy into education?
+And the reason for that is actually just
+that you that we need to do a better job
+at creating good learning environments
+and not that we need to gamify with
+strange rewards or whatever. It's like
+just just make it good. Just make it a
+good learning environment. That's all
+you need need to do. And then for the
+student side of things, don't let school
+discourage you. learn on your own terms
+things that you're interested in. And
+that way hopefully you will realize that
+learning is indeed fun when you do it
+efficiently. And the reason school
+doesn't feel fun is not because learning
+isn't fun because um inefficient
+learning isn't fun. Also, I don't want
+to crap on educators too much. You're
+you're doing a great job given the
+environment you have. Like as game
+developers, it's easy to ramble about
+cuz we have have a much easier time than
+you have. Let's just try to get this
+understanding back. That would be really
+nice. Learning is fun. Especially if my
+thought experiment turns out to be true
+and AI does end up taking all of the
+jobs, then this is even more true. Last
+but not least, I have a couple of
+thoughts about how to apply all of this
+to your personal life as well. I think
+the main challenge like the lifedefining
+challenge I would almost say for anyone
+is taking responsibilities.
+Taking responsibilities that is the
+challenge that once you start your life
+you you don't have the ability to take
+any responsibility but as you get older
+you get the ability to take on more and
+more responsibility. and the ability to
+take on responsibility that's that's a
+skill of course that in increases or
+improves as you get older. What is a
+responsibility? In short, a
+responsibility means expectations. A
+responsibility means someone could be
+someone else could also be yourself
+expects something from you. If nobody
+expects anything from you, life feels
+very pointless and boring. Um it feels
+like there's no meaning. You you there's
+nothing. You're not needed essentially,
+right? And if you have too many
+responsibilities, more responsibilities
+than you can handle, then it feels very
+frustrating and your life also doesn't
+feel great. So I think this is the main
+thing and the first thing that I would
+try to balance out very carefully. If
+we're talking about making your life
+more fun is responsibilities. Take take
+on the correct amount of
+responsibilities. If you feel like
+you're here, take on more
+responsibilities. If you feel like
+you're here, take on less
+responsibilities. Try to stay in this
+flow channel. And with responsibilities
+in particular, remember that it doesn't
+have to be comfortable, right? Taking on
+even taking on the correct amount of
+responsibilities, it's going to feel a
+little bit uncomfortable. It's not going
+to be as comfortable as taking on no
+responsibilities. But eventually, if you
+take on no responsibilities, your
+self-worth is going to go down and it is
+going to bore you in a way that's
+difficult to describe. Everybody knows
+if you take on too many
+responsibilities, it very much feels
+like drowning. It's also not very good.
+It's okay to be a little uncomfortable
+with your responsibilities. That's
+actually great. Try to be there. Some
+very funny misunderstandings with this
+can happen in real life when somebody's
+talking about how they're uncomfortable
+with their life situation and then the
+other person misinterprets it as them
+complaining about their discomfort and
+they're like, "What the hell? Why are
+you not just chilling on the surface?
+Why are you trying to hold your breath
+under water? What What's wrong with you?
+Why are you doing that? And then the
+other person gets mad like, "Aren't you
+listening? I'm describing what I'm
+doing." And uh I want some recognition
+for my skill to hold my breath. What?
+Why are you telling me not to do this?
+And then they're like, "They must be
+crazy. They're intentionally making
+themselves uncomfortable. Why the hell
+are they doing that?" Pay attention to
+this in your own life. very interesting
+misunderstandings with that. Remember
+this explore versus exploit dilemma?
+I've noticed that I'm going to
+intentionally do something useless every
+now and then because this will allow me
+to do useful things later on if I'm
+lucky. But this this itself does not
+have to be useful. This only needs a
+very very small chance to be useful
+later in order to already be useful.
+Right? This is learning something new,
+trying out a new tool, doing something
+you've never done before, cooking
+something new, just trying out new
+things in life. That's exploration.
+And then exploit exploitation means
+taking advantage of all of the things
+you've learned already. Or it might even
+mean chilling on the surface for a bit,
+taking a bit of a break, right? And you
+need the correct mixture of both of
+these. One interesting thing I've heard
+a while ago is that in relationships
+there's usually one explorer and one
+exploiter and then together as a couple
+you end up doing the correct mix of
+both. Interesting. Interesting. No
+matter what find the correct mix between
+the two. Follow the fun. I think this is
+more powerful than it sounds. If
+something is fun, that means your brain
+is probably fully engaged in multiple
+brain regions. If something's very fun,
+that means you're learning a lot of
+things at once. So, if something's fun,
+that probably means it's worth your
+time. Actually, fun means you're
+learning. Doesn't mean you're learning
+something useful. It just means you're
+learning. So, there's a small caveat,
+but in general, good rule of thumb. So,
+how do you deal with boredom in life? If
+something's boring, kind of feel
+underwhelmed in every single way, what
+what do you do about it? One option is
+to increase the challenge or to add more
+stimulation. So this could be internally
+or externally. This could be singing
+under the shower. This could be um
+turning on a YouTube video, turning on a
+podcast or internal could be thinking
+about something else, right? You can
+also create challenge by thinking about
+stuff. You can think about problems even
+if you're currently doing something very
+boring. And then the other way to solve
+the problem is actually exactly the
+opposite which is mindfulness. And that
+means pay closer attention to what's
+already there. These are very opposite
+solutions to the same problem. So for
+example, when doing the dishes, one
+thing you can do is you can turn on a
+YouTube video, you can turn on a
+podcast, you can listen to something
+while doing the dishes. There would be
+more stimulation.
+And the other option would be the
+opposite would be just paying closer
+attention. Just paying attention to your
+breathing, to how the water feels on
+your hands, trying to do every movement
+like very intelligently. appreciating
+the challenge of what's already in front
+of you basically. So there would be
+appreciating the natural layers of
+difficulty because almost everything in
+life already has those layers and the
+way I interpreted mindfulness is
+basically a way to dig into those layers
+and find fun that way. Like when I first
+heard like the terms mindfulness and so
+on, I my immediate reaction was like
+boring. But I think I didn't really
+understand that it's actually not
+supposed to be boring. It's actually
+supposed to be fun. How do you deal with
+overwhelm? Uh, this is more tricky and
+it's also bigger problem because if
+you're overwhelmed in any area, then
+you're definitely going to feel it. So,
+the best thing you can do is to stop to
+do something else, practice in an easier
+environment, decelerate, simplify, or
+reframe the challenge. So, all of those
+are all only sometimes possible, right?
+Life life is messy. You're not always in
+full control. But one thing you can
+always try to do is you can always try
+to reframe the challenge into something
+that feels more manageable. Kind of like
+Dark Souls or Getting Over It if you
+think about them as challenges about
+mechanical skill aren't so fun, but if
+you think about them as challenges of
+perseverance, they actually are a lot
+more fun. I think you can do the same um
+in real life. For example, I really hate
+filling out cryptic forms. Uh, in
+Germany we have like a lot of
+bureaucracy and I find it very
+frustrating to deal with sometimes or
+when I have to deal with it. But I can
+um somehow soften the blow by reframing
+the challenge from filling out cryptic
+forms to um not letting minor annoyances
+get to me. And all of a sudden if I
+reframe it like that then it's not that
+big of a problem. I'll just fill it out
+in a couple of minutes and be done with
+it. It's okay. that some people only
+seem to have fun when they're winning.
+It's like a very strange phenomenon to
+me. Like families play a board game and
+only after only the winner is happy,
+everybody else is like, "No,
+my day is ruined." And I think that is
+because losing is also a skill. One
+thing I definitely wish for is for
+people to become better at losing so
+that you can play board games together
+without throwing a tantrum. Yeah,
+there's just there's just a little side
+note that maybe you need to reframe this
+challenge um of it's actually not about
+winning the game. Maybe it's better
+about getting about getting better at
+losing. H how about that? And definitely
+what I want to see in general is that we
+stop looking at fun as something
+disgusting cuz deep down this is the
+feeling I get every now and then. This
+is obviously exaggerated but it's like
+ew fun. Ah, we don't have time for that.
+It's like um why why are we looking at
+fun like that? I don't like it. Like
+Timmy is playing with his bricks here
+and mom's screaming, "Can't you do
+something useful?" Like once again, this
+is obviously highly exaggerated. Nobody
+would do that with a kid. But this is
+still as a grown-up, this is kind of how
+you feel like you're just playing with
+your toys and somebody's screaming at
+you uh why you can't do something
+useful. But you are you are exploring.
+They want you to exploit because they
+don't understand the value of exploring.
+I just want to bring this back into our
+common understanding of how the world
+works. That would be fantastic. So,
+little Timmy is here playing. I don't
+want him to be disturbed. Um, I want us
+all to collectively build a protective
+bubble around it and to appreciate the
+flow state, to appreciate the fun he's
+having and be like, let's not disturb
+Timmy unless it's absolutely necessary,
+unless there's like an emergency fire
+alarm or something like that. And he's a
+metaphor for also grown-ups, of course.
+Look at flow, state, and fun as
+something precious, valuable, and as
+something that's worth preserving and
+creating more of. Follow the fun,
+everybody. I hope you enjoyed my
+insides.

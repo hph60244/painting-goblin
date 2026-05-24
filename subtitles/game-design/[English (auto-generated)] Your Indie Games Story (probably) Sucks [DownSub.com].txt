@@ -1,0 +1,445 @@
+if you're a game developer like me and
+you're trying to make a game centered
+around a story balancing gameplay and
+plot is a lot harder than you might
+think I learned this the hard way this
+past year when I started development on
+my own Game reality box the idea that
+sparked everything was a very simple
+storyline 10 college students find
+themselves stuck inside a reality TV
+show death game simple enough but
+figuring out the gameplay was shockingly
+difficult at first I tried making a
+speedrunning platformer similar to neon
+white but over time I realized just how
+much that style of game takes away from
+my original vision of finding alliances
+and making enemies so I had to change it
+then I tried making a classic turn-based
+RPG something that would leave a lot of
+flexibility for the story after
+prototyping for a few weeks I realized
+that turning these average college
+students into borderline action heroes
+was not at all the way I wanted things
+to go eventually I did end up on what we
+have now combat in the form of a game
+show which is a lot more fitting in
+pretty much every way but it took a very
+long time to get there so how can we
+approach balancing gameplay with story
+if you're making your own game maybe you
+already have a story but you want to
+find the best way to fit it into the
+game play maybe you have a really fun
+game already but you're not sure how to
+make something more out of it I put
+together a list of five tips that I
+think are pretty substantial in creating
+a story for your game I'm sure some of
+these tips will apply to any form of
+Storytelling but I tried my best to pick
+for my own experience es the ones that
+will really help you find the magic in
+your game and by the way if you're new
+here I'm apox Fox and I make game design
+videos every week if you learn something
+new in this video and want to see more
+consider subscribing we'd love to have
+you now on to the list of five tips that
+I truly believe are key for creating the
+best possible story for your
+game and to kick things off tip number
+one is to start with gameplay I might as
+well finish my ear earlier point that
+building a game off of gameplay instead
+of story makes things a lot easier in
+the long run hear me out it's not the
+end of the world if you start with the
+story first obviously because that's how
+I did it but I truly believe that things
+probably would have gone a lot smoother
+if I started with gameplay and I feel
+like most successful games do this
+anyways Nintendo is the biggest example
+of favoring gameplay over story at least
+early on in development of their games
+mamoto himself has some pretty strong
+opinions on how story should only be
+there to supplement gameplay a lot of
+these opinions I do not fully agree with
+but I do think this design philosophy is
+also part of what makes Nintendo game so
+great when Zelda tear of the Kingdom
+came out it faced a lot of design
+problems for the fact that it's a sequel
+to breath of the wild using the same map
+and most importantly continuing the same
+story to keep things fresh the
+developers decided to make a cool new
+mechanic where link can now craft his
+own weapons the problem is that breath
+of the wild had a a lot of really strong
+weapons already so why would the player
+waste time crafting weapons when they
+could just go back and find the old ones
+that are just as powerful well there's
+two options here option one they could
+say hey this mechanic is fun but it
+doesn't fit in our story so let's not do
+it it's a shame to lose a cool mechanic
+but if you want to put story first you
+just have to accept that you're also
+limiting gameplay ideas the second
+option would be to change the story add
+some sort of plot device that makes this
+mechanic work maybe G 's powers are so
+evil that it rusts every weapon in the
+game and now the only way to get
+stronger weapons is to craft them
+yourself and that's exactly what they
+did yeah this solution is a little
+stupid but it's a prime example of what
+it's like to build gameplay around a
+pre-existing story they could have found
+another lore accurate way to resolve
+this situation by changing the gam
+playay but stories are a lot more
+flexible and in the end I do think that
+deciding to put gameplay first made for
+a better game my Point here is that
+starting your game with the story can
+restrict things a lot you can definitely
+still make it work but at some point you
+have to accept that your story will need
+to change in order to better fit the
+game side of things I really don't want
+to come off like I'm saying gameplay is
+more important than the story you want
+to tell but you have to be really
+careful how you approach storytelling
+and if you start creating all these big
+events and plot points you're really
+locking yourself into something that
+might not even work when you get to it
+start with a solid foundation by making
+a really really fun game then build upon
+that foundation with a story that fits
+like a puzzle
+[Music]
+piece the next tip is to hook players
+with your story as soon as possible it
+might sound obvious as a general
+storytelling guideline it's advice
+you've probably already heard before but
+when it comes to video games hooks are
+handled very differently let's set the
+stage a little bit say you're making an
+RPG about a knight who on a quest to
+save a princess from a dragon based on
+that description alone there's a very
+low chance that someone's going to want
+to play this game it's a game that we've
+seen a thousand times before you could
+secretly have an amazing story with lots
+of twists and great characters but if
+there's no real hook to your game right
+out of the gate no one's going to play
+long enough to see all that because they
+probably won't play it in the first
+place but if you add a unique hook
+that's never been done before maybe
+instead you play as the dragon who is
+framed by the night for kidnapping the
+princess so that he can save her and
+become king it's already 10 times more
+interesting I think that newer indie
+game developers have a possibly
+unwarranted confidence when it comes to
+their games don't worry I'm definitely
+included in this we believe so deeply in
+the story we're trying to tell that we
+end up forgetting that we still need to
+prove ourselves to our players no matter
+how good you think your story is you
+can't just assume that everyone's going
+to go into your game expecting that same
+greatness and if they're not expecting
+greatness they're probably not going to
+play your game so you have to hook them
+right away before they get through the
+tutorial and honestly preferably before
+they even buy the game to begin with but
+this is still pretty Baseline
+storytelling advice so let's translate
+it to video games in Hades you play as
+the god of the underworld's rebellious
+and angsty son zagas who's trying to run
+away from home at first glance it's
+already pretty intriguing but very
+quickly the game gives you so many
+reasons to want to see the world above
+from your a and uncles explaining how
+much fun they're having on Olympus to
+the mystery of zagas his mother is
+impossible to not be at least curious
+what's up there no matter how
+challenging the journey to get there may
+be this hook not only serves as a
+glimpse of what to expect in the game
+but also provides a motivation to see it
+through to the end which is really key
+for getting someone to play your game
+the goal here is to find that one thing
+that makes your game special and put
+that right at the Forefront time for a
+bonus tip there's actually a really
+awesome class by Daniel Jose older
+called storytelling 101 and although he
+dives into some of the broader topics of
+fiction storytelling I think he does a
+great job of explaining this idea of
+balancing different elements in your
+stories you can actually find this class
+on skillshare the sponsor of this video
+skillshare is the largest online
+learning community for creatives with
+thousands of classes led by industry
+experts across film design productivity
+and you guessed it even game development
+want to learn how to make pixel art like
+I do in my videos skillshare has dozens
+of classes for that there's also classes
+on game engines programming VFX 3D
+modeling music basically everything you
+could possibly need to make a game
+personally my favorite aspect of
+skillshare are the learning paths which
+are collections of curated classes that
+focus on mastering a specific skill
+which can be anything from UI design to
+3D animation the first 500 people to use
+my link in the description will receive
+a 1 month free trial of skillshare it's
+a great opportunity to check it out see
+if it works for you and learn a lot
+completely free for 30 days some of you
+might not know this but I actually
+started on YouTube as a gaming
+journalist and a lot of the skills I
+learned for understanding the ins and
+outs of game design came from diving
+deep into these topics online so whether
+you're an aspiring game developer or
+just really like video games go ahead
+and check out the skillshare link down
+below for a one- Monon free trial browse
+a little bit and find out if skillshare
+is right for you again that's the link
+down below to join skillshare completely
+free for 30 days thank you skillshare
+for sponsoring this video now back to
+some more storytelling
+[Music]
+tips let me ask you this what separates
+a video game story from say a book the
+only way to experience a book is by
+reading it and no matter how you choose
+to read the book nothing in the story is
+going to change you experience it the
+way it's intended and that's it video
+games are obviously a little different
+because instead of there being just one
+way to experience a game telling a story
+is just as much the players's
+responsibility as it is the developers
+it's more like a collaboration the
+developer sets the stage and presents
+obstacles and events and the player
+decides how everything unfolds within
+those events now I'm not saying at all
+that every game needs to have branching
+paths and unique endings what I'm trying
+to say is that every player is different
+and it's a developer's responsibility to
+make those differences count for
+something don't act like a writer or
+director act like a dungeon master let
+me give you an example very early on in
+Elden ring you come across marget the
+first major boss of the game no matter
+how you play defeating marget is the
+only way to progress the story or is it
+if you're stuck fighting marget over and
+over again with no luck you might decide
+to instead go somewhere else and level
+up find some stronger gear and weapons
+by just allowing the player to turn back
+and experience something else you're
+also actively letting the player choose
+their own adventure shaping the story
+around their own experiences when they
+finally return to fight marget it'll be
+a lot easier and that feels earned
+another great example of this is Persona
+5 persona's story revolves around a
+deadline system you're given a certain
+amount of days to complete a dungeon but
+you can also spend those days doing
+whatever you'd like spending time with
+friends watching a movie getting massage
+from your teacher the only
+responsibility you have is to make sure
+the dungeon is complete by that deadline
+once the deadline is reached the story
+continues on like normal but every
+player will leave with a different
+experience which is what makes these
+game so special the point is don't be a
+control freak let your players
+experience the story in their own way in
+whatever form that might be because
+otherwise you might as well just be
+writing a book embrace the fact that
+you're making a game
+over the past 10 years I feel like The
+Gaming Community has become obsessed
+with this idea of environmental
+storytelling the first place I remember
+hearing about it was in Skyrim sometimes
+while exploring the world you'd come
+across these small landmarks like camps
+or shrines which really didn't have
+anything to do with the overall story
+but it was still really cool to find
+stuff like this and try to piece
+together how these landmarks came to be
+in reality though I think environmental
+storytelling goes much deeper than you
+might think these aren't just random
+landmarks for storytelling purposes
+they're actually incredibly
+sophisticated and intentional design
+choices that bring all elements of the
+game to the Forefront in order to
+support the story using Skyrim as a
+shining example let's talk about
+everything that happens when you come
+across an abandoned campsite sometimes
+there are enemies an opportunity to get
+some XP or maybe some loot sometimes
+there's an MPC there to give you a new
+Quest usually there's also a cooking
+station for making some food or maybe an
+alchemy table for making potions you
+could also risk using some of these
+tents to sleep through the night
+something that might make traveling a
+little easier by allowing the player to
+engage with gameplay mechanics this
+seemingly random Encounter of a campsite
+becomes a memorable moment in their own
+story this is all to say that a video
+game story isn't just something that you
+write a well-designed game writes itself
+think of your game as a recipe each
+ingredient represents a different
+element of your game you've got the main
+ingredients like gameplay story artart
+and music which are really your meat and
+potatoes and then you've got the spices
+that enhance the whole experience these
+are your characters the theme and
+atmosphere of your game anything that
+takes those main ingredients to the next
+level if any of these ingredients are
+missing it could ruin the entire dish
+but when all these ingredients work
+together in tandem you end up with
+something that tastes really good I'm
+kind of hungry now my point is that
+story works best when all elements are
+equally important if you want your
+player to become fully invested in your
+story that means more than just having
+good writing when every ingredient is
+just rights the story doesn't just
+unfold it simmers builds and leaves a
+lasting taste that's a recipe for a
+story players won't just remember but
+save her
+so we've already gone over all the
+essentials how to hook your player and
+keep them invested but there's just one
+thing missing how can we make sure that
+all these promises we set forth in the
+beginning come to a satisfying
+conclusion let's start by understanding
+endings from a purely narrative
+standpoint in my opinion an ending needs
+to achieve three things in order to feel
+like it was fully worth the journey one
+the climax of the story needs to feel
+like a climax every plot thread needs to
+come to a head making it feel like wow I
+was warned about this but I was not
+prepared winter finally came in Game of
+Thrones but it's worse than expected in
+more ways than one but let's not get
+controversial here two all Loose Ends
+need to be tied up in a nice bow any
+character arcs and Mysteries reach their
+natural closure making you feel like all
+that buildup was worth it and three you
+got to leave your audience with
+something to think about this could be a
+reflection on their own life or an
+open-ended question of what happens
+after the curtains close these are three
+things that are essential for making an
+ending feel genuinely satisfying the
+problem with video game storytelling is
+that it's almost impossible to achieve
+all three of these like I mentioned
+earlier video game stories are told by
+both the developer and the player
+everyone's going to have a different
+experience so how can we make an ending
+that satisfies everybody the honest
+answer you can't even if you made a
+hundred different endings that Suited
+aund 100 different players experiences
+there's still going to be some people
+who are left unsatisfied and that's okay
+because at the end of the day
+storytelling is subjective you and I
+probably have very different ideas of
+what makes a perfect story and that's
+totally fine we've both lived different
+lives experienced different emotions and
+connect with different stories our
+differences are what makes our lives
+mean something so even if we're playing
+the same game no matter what we're still
+going to come out with a different
+experience all that that said the
+perfect way to write your game is to
+embrace those differences and share your
+perspective a great story is one that
+comes from a place of honesty and
+vulnerability by trusting your own
+instincts not everyone will connect but
+for the ones who do it's going to really
+mean something a story that satisfies
+everyone is good but one that is deeply
+personal has far greater power maybe you
+disagree but you know that's also kind
+of the point at the end of the day the
+magic of video game storytelling comes
+from your own creativity if you fall in
+love with a story you want to tell I'm
+sure someone out there will fall in love
+too my name is apox Fox subscribe to the
+channel for more game design videos I'll
+see you next week peace

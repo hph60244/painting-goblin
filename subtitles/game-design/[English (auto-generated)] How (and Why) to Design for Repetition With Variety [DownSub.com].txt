@@ -1,0 +1,850 @@
+Hello. It's been a little while since I
+did one of these longer video essays on
+some aspect of game design theory. Today
+I want to talk about repetition and
+variety in games [music] and the
+importance of these two things. And
+we'll talk about them from a general
+kind of theory point of view. And then
+towards the end of the video, I'm going
+to give some kind of practical uh not
+exercises, but approaches you can use in
+your game to kind of getting this
+balance right. Inside of your game,
+there are two forces at work, and they
+are repetition and variation. Repetition
+is [music]
+the thing that makes your game a game in
+the first place. Really, [music] the
+more repetitive your game is, the easier
+it's going to be for players to learn
+because they need to sort of take in all
+these rules about how your game world
+and your controls work and then use them
+and they need to be able to operate them
+consistently in order to even consider
+what they're doing to be a game and not
+just button bashing. Repetition can also
+give us these emotional elements of
+playing games like familiarity and
+comfort. And that's why you might have a
+really strange comfort game that other
+people don't think is a comfort game
+because you're just so used to the
+repetitive elements of it that it gets
+you into a particular kind of state. And
+then variation is the force in the game
+that provides these opposing or
+complimentary uh emotional things like
+surprise and delight. But it's also
+important from a mechanical perspective
+because it kind of stops players uh
+resting on their laurels and getting too
+comfortable. If you've got any type of
+game that is about exercising a skill,
+whether that's an action game or a
+strategy game, the variety in those
+games is going to provide variations on
+the core skill. Right? If the only way
+that your game ramps up in difficulty is
+to like add health to enemies and, you
+know, reduce a time limit and stuff like
+that, um the player is going to be
+tested a little bit more on their core
+skill, but they're not going to be
+required to actually think differently
+about the game. types of variation like
+levels with different stuff [music] in
+them, encounters with different kinds of
+enemies that actually do different
+things. [music]
+All of these things add up to a game
+that stops getting stale over time
+because over time you're going to be
+tested in slightly different ways. One
+of the things I would say specifically
+in relation to the indie space and
+people making smallcale solo games is
+[music]
+you do need to find a way to be generous
+with the variety in your games because I
+think this is fundamentally why in a lot
+of cases people choose one game over a
+similar game. You can pick any genre of
+games that is popular and the one that
+is most popular out of those is usually
+just really generous with the types of
+kind of content variation it has in it.
+Whether those things are, you know,
+different levels or different
+unlockables or strategic elements like
+cards in a card game that allow you to
+do different things. From a practical
+point of view as a small indie, the
+thing you should be thinking about is
+where is the best place to spend your
+time to give fans of the genre you're
+doing the kind of variety that they care
+about. because you could spend loads of
+time making lots of different hats. And
+if you're making a grand strategy 4X
+game, those type of players maybe aren't
+going to care so much about the hats. I
+don't know.
+[music]
+This is a talk about why you should try
+and balance these two forces. And I'm
+also going to give some advice on how to
+practically achieve this in terms of a
+production workflow. And [music]
+we'll start off with game loop theory. A
+lot of game design theory at the intro
+level focuses entirely on the repetition
+side. And that is because the repetitive
+[music]
+rules-based part of a game is what makes
+the core gameplay. It's what makes that
+game what it is. You will often hear
+this quote about Halo from one of the
+designers of Halo 1 and 2, 30 seconds of
+fun that happened over and over and over
+again. Uh Jamie Griezmer, the person
+that said this initial quote, they said
+that they were misqued. There was a
+whole second half of that quote that was
+about taking that 30 seconds of fun
+playing in different environments with
+different weapons, different vehicles,
+against [music] different enemies,
+against different combinations of
+enemies, sometimes against enemies that
+are fighting each other. No 30-cond
+stretch of Halo is ever repeated. The
+missions are constantly changing the
+context on you. Right? This is how Halo
+was actually designed. And then this is
+how [music] the Halo formula is often
+presented to people when it's edited
+down into a sound bite. So we emphasize
+the repetition and we forget to talk
+about the variety. All of this is why
+recently I did a video where I yelled at
+you about game loops and some
+programmers got very upset that I wasn't
+talking about their game loops. That's
+not what game loop means. Game loop is
+when every frame you draw something to
+the screen. I know it means something
+different in programming, but game
+design isn't actually a subset of
+programming. It's its own discipline,
+and sometimes we have different uses for
+the same word. So, if you're still
+struggling with what a game loop is to a
+game designer, I will tell you in a
+minute. Some game design theory people
+got very upset that I was being flippant
+and I didn't seem to understand what
+game loops are in game design. So, let's
+just run through that first.
+>> [music]
+>> Games have loops in them. And what I
+mean by this is strings of behavior that
+are repetitive and go over and over
+again. So you don't really need to think
+of them as a circular loop, but is you
+do ABC. Maybe it varies sometimes. You
+go ABC D ABC, but generally you're doing
+sets of things over and over again. And
+that's broadly what we mean when [music]
+we talk about a game loop. A basic game
+loop has this set of elements in it. So
+the bit that most of us are familiar
+with will be the challenge that the
+player is actually doing, right? They're
+doing that to get a reward and before
+the challenge they anticipate the
+challenge so they can see it coming,
+right? This is an important distinction
+with anything mechanical in games is
+that the player sort of needs to
+understand what's going on because the
+game play isn't just what's happening on
+the screen, it's also what's happening
+in the player's head. But this is the
+most basic game loop. So, if you imagine
+a dungeon crawler, it could be we're in
+a dungeon and we approach a new room in
+the dungeon. Because we've played this
+game for a while and we've played other
+games like it, we anticipate that
+there's going to be a challenge in that
+room, which will probably be an enemy
+encounter, but it could be other things
+like traps. And then we take on the
+challenge and we expect to get some sort
+of reward, even if it's just like little
+bits of XP from clearing the room. But
+the thing is, a more detailed
+understanding of game loops actually has
+them nested. So to go back to the
+dungeon crawler example, if you imagine
+these red circles are someone clearing
+out a room and then the blue circle is
+someone clearing out a dungeon, right?
+So there's one slower, longer repetitive
+cycle of go to a dungeon, clear out the
+whole dungeon, move on to the next
+dungeon, and then within that there are
+loops of clearing out specific rooms.
+So, uh-oh, it is fractals. Because games
+aren't just one looping thing repeating,
+unless they're a really, really simple
+game like Flappy Bird. Most modern
+games, even relatively small indie
+games, made by one or two people, are
+not just one set of of repetitive things
+happening over again. They're multiple.
+And some of them are happening inside
+each other, like kind of gears moving
+around in a complex machine. And this is
+kind of why we use the term mechanics to
+talk about the interactive parts of
+games. because they're all interrelated
+and they're all moving around together.
+It can be quite daunting to think of the
+repetitive elements of games when you
+get down to this fractal level of
+understanding stuff like, okay, I have
+an encounter with an enemy, and that
+happens within the loop of entering
+rooms, clearing them out, collecting all
+the treasure in the rooms, and then that
+happens within the loop of clearing out
+a level, and then maybe that happens
+within the loop of exploring all the
+stuff in a region and then unlocking the
+next region. Right? This is not really
+as complicated as it sounds. Nested
+loops can be confusing when we think of
+them as circles rather than in terms of
+the player's linear experience over
+time. We design them as circles cuz we
+think, I want the player to do this,
+this, this over and over again, and then
+maybe they take a break and do this,
+this, and this. So, we tend to visualize
+them as loops. But there are other
+things in our culture that are loops
+that we do not visualize in this way.
+And I will draw an example from music
+that some of you have probably heard me
+use before. But you can visualize a loop
+from the side and then it just becomes a
+representation of the player's linear
+experience over time. This is already
+how music software visualizes loops. You
+see the loop from the side. Each of
+these little golden yellow things on
+here is a loop of drums. Four bars of
+drums. And then maybe these purple
+things are, I don't know, like 16 bars
+of piano chords or something. But they
+are loops. They happen over and over
+again, but we view them from the side.
+And this allows us to see that they are
+stacked on top of each other or inside
+each other. And it's really not that
+complicated. But this is closer to how
+most games work because most games do
+not just have one simple anticipation
+and challenge loop or reward and
+investment loop. They have multiple of
+them sitting on top of each other. And
+so before we even get into thinking
+about variation by sort of changing the
+elements of the game like the levels and
+encounters and stuff like that, we can
+think about how you get some organic
+variation just from having multiple
+loops that sit on top of each other and
+start and stop at different times, just
+like pieces of music in a song. [music]
+>> [music]
+>> Playing a game is a person performing
+over a period of time. That is why
+you'll often hear game designers or game
+studies theorists pull from other
+disciplines, whether it's music or
+sports. Musical metaphors can help us to
+think about gameplay as performance over
+time. So an example of this would be
+Swink's book game feel which uses attack
+sustain decay is actually from
+synthesizer design. So when uh you look
+at the controls on anything that
+generates sound it uses these terms.
+This is just one example of this, but
+you can use any theory from anything to
+do with performance [music] over time
+and you can apply it to game design in
+in some cases. You know, you can think
+of as a game as a song. It has certain
+things that we do over and over again
+and we do them very quickly. Hitting an
+enemy until they fall down and then
+moving on to the next one is a
+repetitive thing that only takes a few
+seconds. Whereas like clearing out a
+whole room or a whole dungeon is a
+longer repetitive thing that contains
+lots of those smaller things. So it's
+kind of like this model I've got here
+where you know the drum loops are
+sitting above the guitar chords and they
+take less time to go around because it's
+a shorter loop. Right? So a game is kind
+of like a song in that respect. If
+you're not interested in music stuff,
+don't worry. We're going to move on from
+it now. But the reason I think it's
+helpful to think of it this way is that
+a lot of us have a better innate
+understanding of music and how pop songs
+are structured than we do of games. And
+I think some of that is because uh music
+is just a much more normalized art form
+across the whole of society. And it's
+also because games take so long to play
+that it's often hard to really perceive
+what's happening as you play them.
+Unless you're like really good at
+discussing them with friends and like
+verbalizing your experience, you might
+not really notice how they're
+structured. The other reason I think
+it's helpful to think of a game as a
+song is you can think of the way that a
+song is structured to go repetition,
+repetition, repetition. Oh, something
+different. Repetition, repetition,
+repetition. Oh, something different.
+That's generally what we're trying to
+produce in a in a game as well. And if
+we were to think of like what makes a
+small indie game a bad game, it usually
+comes down to going too far into one
+extreme. It's a game that is absolutely
+repetitive, is not very generous with
+its content, is basically just asking
+you to do the same thing over and over
+again with no development, no surprises,
+and so on. Or it's a game that is such a
+weird mish mash of stuff that doesn't
+fit together and doesn't cohhere because
+the developer has chucked loads of stuff
+in before they've actually worked out a
+solid core of repetitive action that the
+core players of that genre are going to
+like and enjoy doing.
+So we've got these two extremes and
+we've got a kind of goldilock state in
+the middle. [music] We've got absolute
+repetition, which is going to be quite
+dull, just doing the same thing again.
+We've got absolute variation, where
+every part of the game is different,
+which can work in some cases, and this
+is what miniame libraries like Wario
+wear are like, but that is kind of a
+case where they're doing it deliberately
+to make something funny, right? The game
+is not coherent. It's not cohesive. It's
+asking you to do a different thing every
+30 seconds. And that works because it's
+a party game that's supposed to make you
+laugh at how silly it is. But in most
+cases, we do not want absolute variation
+in a game because it stops us being able
+to learn it. It makes it confusing. So
+the kind of ideal uh Goldilocks this
+one's just right type thing is going to
+be repetition with variation. It's it's
+might be balanced differently for
+different games. It might be, you know,
+70% repetition, 30% variation, or 9010
+even. But there's going to be some mix
+of these two things. I think it's
+helpful to think about this in relation
+to flow theory. When the thing we're
+doing is too easy for our skill level,
+we get bored. When the thing that we're
+doing is too challenging for our skill
+level, we get anxious. And generally, we
+try and design games so that people stay
+in the middle of this range and get into
+a flow state. And a flow state is
+usually used to describe that kind of
+point where you stop feeling like you're
+playing a game and you're you're kind of
+one with the controller, that kind of
+thing. There is a very good episode on
+Chick Set Me High's theory in game
+studies study buddies, which is a
+academic podcast about game studies.
+They get into some criticisms of flow
+theory that I don't really hear anywhere
+else when people bring this up
+uncritically, but we're not going to
+delve into that now. The bored state is
+going to arise from a game that is
+totally repetitive because it never
+throws any new challenges your way. It
+is basically just asking you to do the
+same thing over and over again. And even
+if the developer, you know, turns the
+enemies into bullet sponges or whatever,
+it's not really requiring you to
+exercise any new skills or think
+differently. So, a totally repetitive
+game is going to keep us down in the in
+the boredom corner. A game that is just
+impossible to learn cuz it keeps
+changing too much is going to keep us up
+in anxiety. And uh a game which induces
+a flow state is going to be a repetitive
+game with variation.
+And just a side note, you'll often hear
+people talk about this when they bring
+up flow theory in relation to games. We
+usually don't actually want that green
+line at the bottom right. We usually
+don't want to be perfectly in the flow
+channel the entire time or we get bored.
+We probably want to occasionally find
+the game a little bit too difficult and
+we probably want some downtime so that
+we can rest. The ideal flow channel in a
+video game is probably more wobbly and
+up and down. And this is why if you read
+any of the literature on balancing or if
+you watch people give GDC talks on
+balancing their games, they usually
+don't aim for perfectly smooth balancing
+because you actually want some points
+where the player is pushed a little bit
+harder. This all comes back to the idea
+of the ideal thing being a repetitive
+thing with these moments of difference
+where something stands out and provides
+us with a surprise, a shock, a slightly
+different thing to think about or react
+to. And I said at the start that this
+applies to pretty much any kind of video
+game. So, let's compare two very
+different genres of games. And I'm using
+Vampire Survivors and Dream Daddy here,
+but they could be standings for
+basically any action game and any game
+that is predominantly a story game
+rather than a action or strategy game.
+So in both cases, we've got elements
+that provide repetition and comfort. In
+Vampire Survivors, that is the player
+[music] movement, the attack patterns,
+item collection, and enemy logic, the
+standard weapon loadouts, the grinding
+loop with the visible [music] rewards
+that you see every level. This is the
+stuff that basically happens every game
+of Vampire Survivors and doesn't change.
+And then to get variety and surprise
+within that game, we have [music] uh
+non-standard weapon loadouts. So, you
+get used to using a set of things and
+then you get a different set of things
+to use and they genuinely feel different
+and require you to move around slightly
+different. So, you have to adapt. Again,
+this is the game pushing us in different
+directions on that flow channel so that
+we don't get bored.
+>> [music]
+>> uh we have unlocks that are occasionally
+hidden in the progression and and aren't
+obvious at the start of the game and we
+have levels with different gimmicks,
+different hidden things in them [music]
+or different rules within those levels.
+So, you can already see here this is a
+very popular game and many of the games
+that copy it do not have this stuff in
+the second category because they try and
+just do the bare minimum of the
+repetitive stuff. they're not generous
+enough with these other features or
+content that are kind of secrets that
+are something to unlock or be surprised
+by as you move through the game. Now,
+Dream Daddy is a reasonably formulaic
+dating sim. You meet a series of
+characters. You choose who you want to
+go on dates with. You go on a sequence
+of dates with them to get to know them,
+and then you have kind of debriefs with
+non-romantic characters. So, in some
+games, this might be a friend. In Dream
+Daddy, it's your daughter. So, you have
+these kind of sidebar conversations with
+uh a non-romantic character, and that
+lets you kind of discuss the other
+characters with them. So, even though
+it's a story game, the thing that makes
+it a game is kind of that it has this
+repetitive format where you sort of know
+what to expect. And then the game
+provides variety by having these
+humorous one-off mini games like when
+you do sort of proud dad Pokémon
+battling with someone and plot twists
+which you would probably expect from any
+sort of story. So hopefully everything
+I've said so far
+has convinced you that these two things
+are important. And if you already knew
+this then great, that's good to hear.
+But I do see lots of developers when
+they're at the start of their career
+putting out games, like I [music] said,
+things tend to fall into one of these
+extremes. They make too much stuff and
+too much variety before the core of the
+game is engaging and fun, or they never
+make all that variety, and they just do
+a game that is basically doing the same
+thing over and over again. And sometimes
+there is a place for games like that,
+but it depends on genre. It depends on
+players expectations. If you take a type
+of game that normally has 100 types of
+enemies and 100 levels and you say,
+"Well, I'm only going to do 10." You
+better have a really good reason or some
+other kind of hook cuz players are going
+to bring their own expectations of how
+much variety they expect in that type of
+game from other games. In most cases,
+you probably can't just go, "Well, uh,
+I'm going to charge half as much and
+have half as much stuff in my game." Cuz
+that's not really how people's buying
+decisions work. But let's not get too
+far into that today.
+How do we actually practically achieve
+this as game developers? How do we keep
+people wobbling around in the middle of
+the flow channel, not in a straight
+line, occasionally being anxious,
+occasionally being bored? I want to give
+you a model for how you put together a
+game, how you compose a game. Kind of
+ended up using a musical term here
+again, based on which project stage
+you're at. So, you're going to start off
+with an idea, a loosely thoughtout idea,
+and you're eventually going to get to a
+coherent video game by launch, ideally.
+And the point here that really relates
+to what we've been talking about about
+these two forces of the repetitive part
+of your game and the variety is that I
+think there are different stages of the
+project where it's better to focus on a
+different thing. And I will tell you why
+as we go through. So when you first
+start making your game, you are probably
+going to start with some sort of
+mechanical [music] prototype. And this
+is going to be a simple and repetitive
+thing. It is going to provide us with a
+single unit of fun or play. So this is
+very close to [music] that Halo model or
+the misqued version of the Halo model
+where it's just [music] 30 seconds of
+fun. And maybe at this point we think a
+little bit about variation like what
+could there be in terms of levels,
+[music] weapons, different enemies, all
+of that kind of stuff. but we don't
+implement it because the prototype is
+about testing the core, the repetitive
+action, the main thing you do in the
+game. There are lots of games I get sent
+on this channel where they have
+basically not spent enough time in this
+stage. They have moved directly from
+this stage to making loads of content
+and they haven't actually done testing
+and validation on their mechanical
+prototype. And I can tell that because
+there are loads of levels or loads of
+guns or loads of abilities or whatever
+the content variation is in that game.
+And there are things that are
+fundamentally wrong with the controls
+with the way that the interactions in
+the game work which they would have
+noticed if they'd given the game to two
+or three play testers at this early
+stage. So the mechanical prototype is
+there for you to test and validate
+whether the core repetitive action of
+the game works with players. You need to
+go through that testing and validation.
+You shouldn't just assume that the core
+of your game is fine and plow on. The
+repeat issue that I see over and over
+again is people think of a prototype as
+just feasibility testing. Like can I do
+this thing? Can I program a character
+that jumps and climbs over things? I'
+I've done it. I've made my prototype. A
+prototype is for testing. That's what
+prototyping means. Your mechanical
+prototype needs to check that this
+simple repetitive set of mechanics,
+works well, engages people, the
+controller mapping or whatever works for
+people, all of that stuff nailed before
+you move on in the project at all. If
+you've already jumped ahead in your
+project and your mechanical prototype
+hasn't been tested [music] by people, go
+back. Don't put the game into
+production. Don't make all this varied
+content until you've tested that bit.
+Once you've validated the core mechanics
+of the game, it's still not necessarily
+time to go straight into full production
+because now you need to work out [music]
+where the variety in your game comes
+from. So, you're going to be doing
+experiments again now. And this means we
+need to go from that more repetition
+focused, how do I make a core set of
+mechanics [music] that are going to be
+good to do over and over again to how do
+we come up with different stuff? What is
+different in this game? So, you're going
+to be experimenting. And this is [music]
+where you need to let yourself get
+messy. Uh let yourself overcope
+temporarily, right? I'm not saying over
+scope the entire project, but have have
+your few weeks or whatever you give
+yourself as a deadline to go in every
+direction you could think of because
+this is the time to experiment. This is
+the time to try out different stuff and
+work out where the variety in your game
+emerges from. And then even more
+important thing, what tools are you
+going to need as a developer to produce
+that varied content? It might be level
+editors. It might be to do with how you
+manage the data in your game. But we're
+still not going into full production.
+We're still not making things and going,
+"Yes, this is definitely a level in this
+game. This is definitely what this gun
+is going to be." We're experimenting
+before we lock stuff in. So, we've done
+one round of testing and validation with
+the mechanical prototype. Now, we're
+doing an almost separate round of
+prototyping that is to do with content
+and content variety so that we can come
+up with a strategy for how we make the
+rest of the game. And then once you've
+done all of that, now you've got a
+blueprint for how the rest of your game
+works cuz you now know, okay, this is
+the core repetitive thing of the game
+and we know that people find it [music]
+fun. These are the ways in which players
+are going to get variety in this game.
+Be it different levels, different things
+to unlock, whatever it is. And now we
+can have a set of tools that actually
+allow us to deliver that. And and the
+big takeaway here is if you're newer to
+game development and you're newer to
+project management is that your game
+shouldn't be going into full production
+until you're at this point. You
+shouldn't have a Steam page. You should,
+you know, you might need to do a little
+bit of pre-arketing to get those initial
+play testers, but you shouldn't be going
+to everyone like, "We're making this
+game. It's going to be on Steam in the
+second quarter of next year until you've
+done all of these stages of validation."
+And then you can go into full
+production, which is the stage at which
+we start to build something which is
+repetition with variety. And we can do
+this now and we can do it much more
+easily [music] because we have a clear
+vision of the game and how it provides
+an experience which is repetitive. So a
+learnable comfortable experience and
+which has variety which is appropriate
+to the genre and market niche of that
+game. At this stage we should also have
+an understanding of what the variety is
+for in the type of game you're making.
+So is there kind of a story element that
+is there to reward players for
+completing an area? If it's not there
+for that, what is your story there for?
+Do you need a story at all? All of this
+kind of thinking needs to be done before
+you go into full production. And then
+when you're in full production, the game
+is going to be easier to make because
+you'll just have a very clear northstar
+of what it is in the first place.
+Bearing in mind, I run a Discord for
+game developers. I see lots of people
+working on their games in there,
+hundreds of people in fact. And then I
+also do one-to-one mentoring. And I've
+been a university lecturer before. You
+will be surprised at how much the rate
+of progress on a game relates to this
+underlying understanding of what the
+game is. [music] When people have a
+clear idea of what their game is, you
+know, what is the base thing that you're
+doing over and over again in the game
+and what is the variety, they speed
+through their projects. The projects
+that slow down and just sort of p along
+are the ones where the developers never
+really have a clear vision of what
+they're trying to do. This is all coming
+back to this process of validation. If
+you've validated your idea and you know
+that the core gameplay works and you
+know what the kind of limits of the
+variety in your game are and you have a
+strategy for the content in your game
+and how you're going to vary it
+throughout the game, then the game will
+sort of design itself after that point
+to some degree. I hope this model helps
+some of you. I hope if you're in full
+production with your game and you still
+don't really feel like the mechanics
+[music] are an interesting repetitive
+thing to do and you haven't actually
+tested those with people, I hope you go
+back and do some of that testing. If
+you've got a good mechanical [music]
+toy and you think this could be a full
+game and it's it's quite a solid thing
+that people [music] like to play around
+with, I hope you allow yourself that
+time to do those messy experiments in
+variety to kind of work out what's all
+the different things I could do with
+this before you go into full production
+because those are the things that are
+going to enable you to have a coherent
+game at launch. and the coherence of
+your game is the closest thing that we
+have to a universal sort of quality
+metric for games. If I ever talk about
+good game design on this channel, I'm
+not necessarily trying to take my own
+tastes in games and what I like and
+don't like and say that's good game
+design and if I don't like it, it's not
+good game design. Generally, for me,
+when I talk about good game design, I'm
+talking about coherence and [music]
+having some sort of vision that is clear
+in what you're doing with the game. And
+sometimes that's going to produce games
+I don't like. But if your games are
+coherent and they're trying to do a very
+specific thing and they make sense in
+how all of these things relate to each
+other, and like I say, it's not the the
+Forex strategy game where you unlock
+hats, then you're going to have a better
+chance at making a game that other
+people like because they'll be able to
+understand it. Uh, but it won't just be
+[music] this boring drudgery of doing
+the same thing over and over again,
+which I hope is not something that any
+of us aspire to as developers. [music]
+So, repetition is what makes your game a
+game in the first place. The starting
+prototype of your game, the little
+mechanical toy should capture the joy of
+repetition in your game, the thing that
+is enjoyable to do over and over again
+within the game. If repetition is what
+makes a game a game in the first place,
+then [music] variation is what makes
+that game into a special game or a
+better game than another game. You
+should experiment with variation after
+you've nailed the core mechanics. You
+can be thinking about it in that early
+prototype. You can be like making notes
+of like how you could put all this
+variation into the game, but you
+shouldn't rush straight from the
+mechanical [music] prototyping to
+developing lots of content variation
+until you know that the prototype is fun
+to play.
+And when you're doing those messy
+experiments with variation, do not be
+afraid to go too far. The scope of your
+project and what you intend to do with
+it should be based on what's good for
+the game and not just you arbitrarily
+going, "Oh, what can I do in 3 months if
+I work on my game for 4 hours a week?"
+You know, that that there has to be a
+element of that in it. But this
+variation stuff of like how many levels,
+how many unlockables is a big part of
+the scope. And that's why it's important
+to kind of factor it in early and think
+about whether you can provide enough
+variety for the type of game you're
+making. Thanks for watching. Now go and
+make a good game or I'll set these
+wolves [music] on you.
+[music]
+>> [music]
+[music]
+>> Heat. Heat.
+Heat. Heat. N.
+[music]
+>> [music]
+[music]
+>> Heat. Heat.
+[music]
+Heat. Heat.
+[music]
+>> [music]
+[music]
+>> Heat. Heat.
+>> [music]

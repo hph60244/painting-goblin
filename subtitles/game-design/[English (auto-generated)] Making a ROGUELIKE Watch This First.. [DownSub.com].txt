@@ -1,0 +1,391 @@
+hi today I want to talk to you a little
+bit about a term that comes up a lot in
+the indie game space at the moment and
+has done for a while and that is Rog
+likee now I'm not going to be talking
+about the debate about what is a rogue
+like and what is a rogue liked that is a
+whole thing that's been going on for
+ages ultimately I think these kind of
+conversations about genre and putting
+things into categories are only useful
+if they are pointed at a particular
+problem and the problem I currently see
+with Rog likee is I see a lot of games
+that are tagged as Rog likes but do not
+fulfill the basic thing that people
+often go to Rog likes for so the
+question that this video is really
+aiming to answer is why do we enjoy
+Rogue lies or what are the main reasons
+for that and I think when people start
+developing these games they often go a
+route that is not helpful and they kind
+of sink a lot of time into something
+that they think is the most important
+part of a Rog like and it's not at least
+in my opinion as a designer it is not
+the most important part now the problem
+that I see and I see this in
+commercially released games I see it in
+games that people send me to to look at
+on the channel is that procedurally
+generated levels do not automatically
+make a game into a Rog like or more
+specifically they are not the secret
+source that makes Rog likes compelling
+and makes people want to play them over
+and over again they're an important part
+of it but I would argue that if you are
+starting on a game in this genre it is
+not the important thing to nail and get
+down first and I'll tell you what that
+is in a minute but to give you an
+example apout is a top- down action game
+the levels are different each time that
+performs a function it means you can't
+just learn the layout of the level and
+speedrun it you have to play in a way
+that is reactive and adaptive to the
+environment you go through but apal does
+not Market itself as an action Rogue
+like and that is because it's not steam
+has an action Rog like tag for games
+like vampire survivors or Rogue Legacy
+or Spelunky and apout is not in that
+category and there is a reason for that
+and this reason is going to tie directly
+into this thing that I think you should
+be focusing on if the game you're making
+is is a Rog likee or wants to appeal to
+people who like those games now there is
+a concept that we use a lot in board
+game design and people who play heavier
+board games will be familiar with this
+terminology and people who play
+collectible card games will be probably
+be familiar with this and people who
+play video games that have any element
+of like strategically building up a
+character so this applies to mobas it
+applies to sort of loot grindy games
+like Diablo and Path of Exile but it's
+the concept of engine building right so
+in an engine building game you are
+making strategic decisions to build up a
+thing whether it's it's a character it
+doesn't have to be a character it could
+be a vehicle it could be something more
+abstract like a business but you are
+gradually building up a thing and then
+you are piloting it through a situation
+and all of the Strategic decisions that
+you've made to create that thing are
+then paying off as you pilot it through
+that dungeon or whatever tests are in
+the game it doesn't necessarily have to
+be a combat game but obviously in combat
+games like mobas we can like think about
+how oh you can build a DPS build or you
+can build a tank build you are building
+an engine that is then piloted and
+operated in a particular way and the
+ideal payoff is seeing that engine work
+in a great way when you put it into that
+environment engine building exists in
+loads and loads of types of games we see
+it in Auto Battlers we see it in like
+deck builders it doesn't necessarily
+have to be a Rog likee game but a lot of
+the Rogue likes that have been really
+successful and that have players that
+are really devoted to them have this
+quality to them and that is in my mind
+the central thing that a Rog likee needs
+to have so I've had this situation
+multiple times on this channel now where
+someone has sent me a game and it's got
+a procedurally generated level and they
+think that is enough to call it a Rog
+likee now this isn't about just putting
+things in categories to be pedantic
+right it is making sure that you are
+like targeting the Right audience with
+your game because people who like Rog
+likes they like them because of the
+engine building and the procedural
+generation the the you know stuff where
+it's going to be different every time
+that is more there so that you know
+every time you go in you might try a
+slightly different build and you can
+never fully anticipate what is going to
+be used to test that build because of
+the randomization and and the algorithm
+kind of determining you know the layout
+of levels or the the types of enemies or
+traps you're going to encounter or
+whatever it is again it doesn't
+necessarily need to be a combat driven
+game it could be some other type of game
+but the point is that the the loop that
+makes up a rogue like where you kind of
+try and fail and try and fail it's only
+really made compelling by the fact that
+the player can make a different thing
+each time and see how it fares in that
+environment right this is why apal is
+such a good example it's a fantastic
+game it's a really fun action game and
+it's beautiful but it is not a rogue
+like the levels change but the player
+character never changes monkey is just
+monkey monkey no change and one of the
+things that a lot of the successful
+Rogue likes do and this applies across
+sub genres so this applies to like Rogue
+Legacy which is like a action platform
+or Rogue like based on things like
+Castlevania uh it applies to slay the
+spire and card driven games and it even
+applies to a bullet Heaven game like
+vampire survivors where there's very
+little in the way of a level in the
+first place but what these games all do
+is they take the typical experience of
+an RPG which is leveling up a character
+and making decisions about their
+progression and their skill development
+and taking that experience which might
+take 200 hours and squashing it down to
+something that you can play in like 10
+to 90 minutes I love RPGs you know I've
+grown up playing all sorts of RPGs I
+love TableTop RPGs and I love investing
+in a character but they always end up in
+this paradoxical situation where you
+either need to make your game a lot
+shorter and lock players out of choices
+so that they have a reason to play it
+again and experience you know how it
+feels different to be a wizard versus
+how it feels to be a rogue or you go for
+the kind of kitchen sink approach which
+a lot of Bethesda games do where you can
+play a single playthrough and do
+everything and be everything and you can
+be like the head of the Thieves Guild
+and also the head of the Town guard and
+be good at everything and those games
+tend to feel like you're going to have a
+distinct route through the game at the
+start and then towards the end it's just
+like well you have enough skill points
+to do everything and you can basically
+do everything in one playthrough of the
+game Big RPGs always end up in this
+situation of having to go that way or
+having to sort of do the other route of
+making players decisions more permanent
+and like locking them out of a bunch of
+stuff so when you join the Thieves Guild
+you can no longer be in the Wizards
+Guild or that kind of stuff a lot of
+bigger RPGs don't like to do that kind
+of stuff and what that means is you do
+tend to end up with this experience
+where every big RPG or action RPG has
+you playing this sort of Swiss army
+knife character that doesn't feel
+Specialized or interesting anymore the
+great thing about the loop of a rogue
+like is you can take that and compress
+it into a game that takes you know less
+than an hour or maybe just over an hour
+and that means that you can play the
+game and be a rogue and then play the
+game again and be a wizard and play the
+game again and be a fighter you're not
+investing loads of time in that thing so
+it gives you more space to experiment
+with things that you wouldn't typically
+do whereas when we sit down to play 100
+two 100 hour RPG we tend to like fall
+into the type of character we like to
+play because we we know we've got to
+invest all of that time and effort into
+playing that character for a long period
+of time all of this is to say that slay
+the Spire Rogue Legacy uh vampire
+survivors there're three examples of
+different types of Rog likee games which
+are all compressing that long form RPG
+progression into what we call a run
+right it's it's a different game
+structure it's a run and the thing about
+having a game that is based on runs
+rather than single long playthroughs is
+it forces players to experiment more and
+that is really the heart of what people
+love about these games if you're
+currently working so if you're currently
+working on a game and you think it's a
+Rog like please take on board everything
+I've just said for a number of reasons
+one is it it will stop you marketing the
+game to the wrong sort of people because
+if it's just a action game with some
+random elements in that's fine I love
+apal but people who love Rogue likes do
+not just love them because of the
+procedurally generated levels the other
+thing I would say is that you need to
+design the the kind of strategic heart
+of your game the the different kind of
+engines or builds that you can make
+before you worry about the environment
+that that is taking place in so
+personally if I was sitting down and I
+was trying to make the next slay the
+Spire or I was trying to make the next
+vampire survivors or whatever the way I
+would approach it is to think about the
+Extremes in my engine and I might pick
+two classes or whatever is the
+equivalent of classes in your game's
+world I might say the the the Wizard and
+the thief and design those first and I
+would test them out in a set dungeon
+that does not have the procedural
+generation in because the thing about
+prototyping games is you need to test
+the unknowns right we know that
+procedurally generated levels do a
+particular thing that's like a uh a
+given right we understand that it's good
+for players to have a slightly different
+experience each time and things to be in
+a different place it stops things
+getting stale that is not a concept that
+you as a designer need to test by
+prototype typing it you may feel an urge
+to build that algorithm for for
+designing your dungeons because you
+don't know how to do it yet at a
+technical level but at a design level it
+is not really something you need to test
+early on what you need to do early on is
+test the engine building and you do that
+by picking a few extreme examples of
+very different types of builds someone
+might build and then you design those
+test them in the environment and then
+later on you can start adding the
+procedural generation to the environment
+and you can start adding more classes
+and things that could be mixed together
+to make different types of builds or
+however your game is structured but
+remember that the engine building is the
+thing that you need to design first
+because that is what your game actually
+is the procedural generation for the
+levels is just a kind of way of dealing
+with a Content problem and as far as
+design goes it's already solved we know
+what function that performs you don't
+need to test it until later on in your
+game when you know that you actually
+have a game and to give you an example
+of this from a a wildly successful big
+commercial game that is not a Rog likee
+but has had a Rog likee mode when
+Hearthstone was being prototyped for a
+very very long time I think even for
+like 2 or 3 years the original prototype
+only had two classes that number went up
+to 8 9 10 eventually over the last few
+years but they prototyped the whole game
+with two classes and what that helps you
+to do is to Define Your Design space of
+what the rest of the game is meant to be
+this this is how commercial game
+designers do something they don't just
+kind of look at a game they want to make
+and go right what does this game have in
+it I'm going to build all of those
+things in my game engine you start from
+the stuff that you need to work out
+that's what prototyping is like
+prototyping isn't just a sloppy early
+version of a game it is like a a test
+product where you specifically focus on
+the things that you're not sure about
+the ideas you want to test the stuff
+that's new this is why I keep harping on
+about how the procedural generation of
+your levels is not the important thing
+you can test a prototype with a set of
+pre-made levels and then build the
+procedural generation later on in the
+example of the Hearthstone prototype
+they would have built what we in
+collectible card games call a control
+deck and an aggro deck right a control
+is usually like some sort of tanky
+character that is based on defense and
+based on just taking as much as possible
+until they can build up to some big
+finishing spell or some type of play
+that that wipes loads of stuff out at
+once and and an aggro deck is is a much
+more aggressive deck that is based on
+just going fully attack as quickly as
+possible right if you are making a Rog
+like and you're not familiar with those
+terms of like aggro and control then
+they're really good terms to get your
+head around because they tend to define
+the like extreme different ends of the
+spectrum when it comes to Building
+engines in engine building games you
+have types of player that like to play
+control and you have types of player
+that like to play aggro and you can look
+at any build based game like a Diablo or
+any of the action Rog likes that I've
+mentioned in this video and you can
+start to see how putting particular
+items or skills together adds up to a
+control based build or an aggro based
+build I hope that's all made sense I
+hope this has been helpful to you if
+you're working on games or you just want
+a better understanding remember what I'm
+interested in is helping you to
+understand what Gamers like about a
+particular genre I'm sure some clever
+person in the comments is going to be
+able to find examples of Rog likes that
+don't have engine building in or or
+whatever but by and large this is what
+appeals to people about this genre and
+if you want to design games that's
+successful if you want to make games
+that people actually want to play then
+you need to pay attention to that
+element is like the thing that makes
+most Rog likes fun is the feel of
+building a character and being able to
+experiment because you are probably
+going to die in the next half hour
+anyway and have to start again right the
+the experimentation that comes out of
+that is the part that makes the game
+interesting and if you don't have
+anything to experiment with then the
+game is failing at at providing what
+people want out of that genre of games
+[Music]
+h
+[Music]

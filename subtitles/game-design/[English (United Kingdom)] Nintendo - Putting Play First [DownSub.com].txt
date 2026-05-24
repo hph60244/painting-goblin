@@ -1,0 +1,263 @@
+So let's say you want to make a video game. Where do you even begin?
+Some developers start with a story
+they want to tell, or a premise they want
+to explore. Others start with some emotion
+they want the player to feel, like terror
+or accomplishment.
+Others still start by using the technology
+to simulate something, like a planet, or a
+universe. And, of course, plenty of developers
+start by taking a game that already exists,
+and adding in a few extra features.
+But Nintendo is, predictably, quite different.
+Whether it's making a brand new game or the
+latest entry in the long-running Super Mario
+series, Nintendo always starts with the same
+goal: coming up with a new way to play.
+So what you do in the game, and how you do
+it, is used as the catalyst to drive everything
+else - from the design of the main character,
+to the way you deal with enemies, to the genre
+of music on the soundtrack.
+"That’s how we make games at Nintendo,"
+says Shigeru Miyamoto - creator of Mario,
+Zelda, Pikmin, and more. "We get the fundamentals
+solid first, then do as much with that core
+concept as our time and ambition will allow".
+And so, in this episode of Game Maker's Toolkit,
+we're going to look at how one of the world's
+greatest game developers finds success by
+prioristing play.
+In many of its games, Nintendo starts by coming
+up with some interesting new action for the
+main character to perform. The late Gunpei
+Yokoi,
+said "I first take the character which you’re
+going to control and replace them with a dot
+as a placeholder, then I think about what
+kind of movement would be fun".
+The most famous outcome of this way of thinking
+is this guy. You might know him as Mario,
+but when he arrived on the scene he was simply
+known as Jumpman because this portly Italian
+plumber is defined by his leap.
+Not only does he have the most dynamic and
+expressive jump in all of gaming - 2D or 3D
+- but his breakout game, Super Mario Bros,
+is all about the jump.
+Mario leaps onto platforms and over pipes.
+He jumps into bricks to break them and blocks
+to unleash power-ups. And that includes the
+fire flower which shoots at an annoying 45
+degree angle meaning you have to jump to get
+a good shot. And the flagpole is always one
+brick off the ground, so you have to jump
+to finish the level.
+Miyamoto toyed with other ideas, including
+a shoot 'em up stage, but dropped them because
+"we wanted to focus on jumping action".
+Oh, and don't forget about jumping on enemies
+to kill them. That might seem like an obvious
+way to dispatch foes as that's how Sonic,
+Aladdin, and scores of other platformer heroes
+do it but - get this - no one did it before
+Mario.
+Miyamoto came up with that by asking: what
+is the logical way to defeat an enemy in a
+game about jumping?
+There's a real advantage to forging a game
+around a strong main mechanic.
+When you can interact with almost everything
+in the game by using this mechanic, Nintendo
+can make a game where the player's range of
+actions is very small and easy to learn - but
+the number of things they can interact with
+is huge.
+When talking about Pikmin, Miyamoto said "the
+basic action that you conduct is very simple.
+It's a matter of simply throwing the Pikmin
+at tasks and calling them back. And yet with
+the Pikmins’ abilities and the breadth of
+strategies available, it opens up broad possibilities
+of how you can approach the gameplay".
+Other examples of unique actions include shooting
+a water gun, firing ink, turning into a painting,
+plucking things out of the ground, and using
+a vacuum cleaner.
+In Luigi's Mansion for Gamecube, Luigi interacts
+with the world almost exclusively through
+his vacuum cleaner. He can't even jump but
+where his brother overcomes every challenge
+with a big springy leap, Luigi uses his hoover
+to solve puzzles, suck up ghosts, collect
+loot, check for booby-trapped doors, and more.
+So while some developers might say their game
+is about prejudice or ideology or the decline
+of the American frontier, how many games are
+literally about using a vacuum cleaner?
+And when Nintendo needs to add in extra mechanics,
+it can attach them to those main actions.
+For example, Splatoon is primarily about shooting
+ink and swimming in ink - and so, you can
+reload your gun or climb up a high wall by
+shooting ink on the floor and then swimming
+in it. No extra buttons required.
+God that's good.
+Of course, not every game is built around
+some brand new mechanic. Nintendo is, after
+all, not exactly known for making entirely
+new games and characters - or new IPs as the
+industry calls them - and there are only so many things you can strap to the back of a Mario brother
+But Nintendo games are still driven by new
+ways to play and so sometimes it's about putting
+a new twist on an already established mechanic.
+That might involve reinventing 2D gameplay
+in a 3D world, as we saw in Mario 64 and Zelda:
+Ocarina of Time. It might be about putting
+those old mechanics in an interesting new
+context, like Super Mario Galaxy which is
+still fundamentally about jumping - but now
+in micro gravity. Or how Pikmin 3 is still
+about commanding Pikmin, but now with the
+added stress of juggling three heroes.
+And sometimes, Nintendo looks to come up with
+an interesting new system that governs how
+you play - like the three day timer in Majora's
+Mask or the interconnected map of Metroid.
+Whatever the case, there's got to be some
+new gameplay that can help drive things - or,
+Nintendo says there's no point making the
+game.
+When Miyamoto was told that fans wanted to
+see a new F-Zero game, he said "I’d like
+to ask those people: Why F-Zero? What do you
+want that we haven’t done before". To Miyamoto,
+the thought of just making another racing
+game with more attractive graphics is unfathomable.
+Nintendo designers are big fans of the design
+principle "form follows function", which basically
+means that how something looks is determined
+by how that thing works. It's something that
+Miyamoto likely picked up when studying industrial
+design at college.
+And it's why boos blush when you look at them,
+and why enemies that charge at you in Super
+Mario World look like quarterbacks, and it's
+why whenever Nintendo re-releases the original
+Mario Bros it swaps turtles for Spinies because
+everyone keeps trying to jump on the damn
+turtles.
+But Nintendo goes further than that, and uses
+the new gameplay at the heart of a game, to
+determine almost every aspect of the presentation.
+Once Splatoon's mechanics had been developed,
+producer Hisashi Nogami says "we then conceived
+the characters and the world vision to match
+perfectly with the gameplay".
+So if you ever got to play Splatoon during
+the prototyping phases, you would have controlled
+a big white block. The designers came up with
+the squid kids afterwards, when they needed
+to find a character that could swim in ink,
+and would clearly separate the inking and
+swimming mechanics.
+And entire characters can come about as extensions
+of the mechanics themselves - like Navi, who
+is a personification of the z-targeting system
+in Ocarina of Time. Or this Lakitu, who carries
+the new-fangled camera in Super Mario 64.
+Or the Luma who hides in Mario's hat and shows the player when Mario's spin move is recharged.
+In this way, gameplay needn't be abstract systems but organic parts of the game world.
+Splatoon's producer also revealed that because
+shooting ink is a bit like spraying graffiti,
+the game got its punk rock music and 90s aesthetic.
+Similarly, the only reason Super Mario Sunshine
+is set on a tropical island is because the
+water pistol gameplay made the designers think
+about summer.
+The mechanic can even drive the narrative.
+Sorry to burst your bubble but the story in
+the Zelda games isn't part of some grand overarching
+narrative but it's simply there "to bring
+out the best of the fun and interesting gameplay
+elements", according to late Nintendo president,
+Satoru Iwata.
+A Link Between Worlds has a mad artist for
+an antagonist because Nintendo needed some
+reason for why Link can turn into a painting.
+And even Ocarina of Time's beloved story came
+from a process like this. Miyamoto wanted
+both young and teenage Link in the same game
+so the writers had to come up with a time
+travel plot to make it happen.
+This might seem like a crazy way to come up
+with a story, but it can help ensure that
+there's a deep connection between what you
+do in the game, and what happens in the story.
+Consider Yoshi's Island, which has a narrative
+about protecting baby Mario, and gameplay
+mechanics about protecting baby Mario.
+Most developers come at the other
+way round. They dream up stories, characters
+and worlds, and then work backwards to figure
+out what gameplay mechanics might fit. It's
+no surprise that they're rarely very successful.
+But, okay, I shouldn't paint Nintendo as some
+game design gods and every other developer
+as just getting it completely wrong. Though,
+maybe...
+No, no. Nintendo gets it wrong sometimes.
+And other developers get it oh so right - indie
+developers, for example, are particularly
+good at building their games around unique
+gameplay. And I loved how the new Doom completely
+orbits around the melee mechanic - it's at
+the heart of the combat system, it gives you
+health, and it ties into movement. You even
+use the melee button to open doors, just like how Samus
+opens doors by shooting them. Doom might
+be the most Nintendo game that Nintendo would
+never, ever make.
+And then you get a game like Portal, which
+is so beautifully built one super smart bit
+of interactivity that it's no surprise Miyamoto
+has said that game was "amazing".
+Because for Nintendo, the way you play a game
+is simply more important than anything else.
+So it's not just the jumping off point for
+a new project, but every other element - the
+enemies, graphical style, locations, music,
+stories, and characters - are picked and produced
+to frame the most fundamental aspect of a
+game.
+And when every aspect of the game is suggesting
+the way you play it, it becomes effortless
+to pick the game up and get stuck in. And
+so this is one big reason why Nintendo's games
+often feel quite different to everything else
+on the market.
+They're more playful and toylike than most other games.
+They're more accessible and inviting - but no less
+complex. And, quite frankly, they're some
+of the most elegantly designed games ever
+made. And so, even after missteps and miscalculations,
+we're there. Ready and waiting for whatever
+this iconic Japanese developer comes up with
+next.
+Hey there, thanks so much for watching. This
+episode was a pretty big undertaking but I
+hope it sheds some new light on what makes
+Nintendo such a fascinating game developer.
+I wanted to say a huge thank you for helping me reach
+100,000 YouTube subscribers, and extend another
+thank you to everyone who has taken the time
+to translate the subtitles on these videos
+into other languages.
+Game Maker's Toolkit is proudly funded by
+its fans, over on Patreon. Who don't just
+get a fuzzy feeling in their tummy for helping
+support independent games criticism but also
+tonnes of goodies like bonus videos, video
+recommendations, game reviews, and more. And
+those donating 5 bucks get to see their name
+at the end of the video like... this!

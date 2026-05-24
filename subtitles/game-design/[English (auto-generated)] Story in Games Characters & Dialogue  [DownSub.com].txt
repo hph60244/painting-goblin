@@ -1,0 +1,1107 @@
+The structure of this talk is going to
+be I'll take you through a bunch of
+things that you should probably think
+about if you're making a game with
+characters and dialogue in. And then
+there's an exercise at the end that you
+can take away and do which will help you
+build up some skills in this area if you
+don't already have them. So we're going
+to go through a bit of theory. We're
+going to go through some practical
+considerations in this area when we talk
+about characterization and dialogue and
+then a little exercise at the end and
+then kind of an open Q&A like like we
+always do on a stream really. Um, and
+we're also thinking about narrative
+design here. So, if you haven't heard
+this term before, it's a term that sort
+of games writers have taken on in the
+last sort of 10 or 20 years to help us
+think about the relationship between
+game design and writing and it not just
+being someone says there will be cut
+scenes and then a writer comes in and
+writes the cutscenes. It's thinking
+about the the narrative as a bit more
+integrated with the game design. So,
+that's where this term comes from. terms
+of like my background and experience
+with this. My first studio job in my
+late 20s, I did a bunch of the writing
+on Amateur Surgeon 4, which was kind of
+writing cutscenes. I've done a bunch of
+weird experimental narrative stuff
+before. There used to be a bot on
+Twitter called Strange Voyage. It was
+like a generative story bot that I made
+and some weird Twine games like this one
+down here, which was like a cyberpunk
+game where you're scanning people's
+brains and then interpreting haiku that
+came out of their brains. and deciding
+uh what brain disease they had based on
+that. Uh during my sort of more academic
+teaching career when I was at Christ
+Church, I developed the narrative design
+module there. So when students have
+finished their first year and they got
+to choose their electives and if they
+chose narrative, they got a module with
+me where we did narrative for a whole
+semester. Um so that's kind of my
+background. I won't go into this too
+much but you know sometimes when
+someone's new they want to go who's this
+person and why are they teaching me this
+stuff? But because we are indie game
+developers, I'm going to be going
+through some of the literature on
+narrative and some of the stuff that
+comes from books about game narrative
+and then making sure we think about it
+in a kind of practical sense of what's
+actually practical to do as a small-time
+developer cuz I feel like that's an
+element that often gets missed out. we
+kind of use AAA examples or we analyze
+high indie games and then we don't think
+about whether it's like a relevant uh
+example for us to use as a
+developer. So, we're going to be
+thinking about characters and
+characterization. Um, what sort of
+things do we need to think about in
+order to make characters who feel
+believable? And maybe believability
+isn't always the goal. Maybe there are
+other goals that we have for our
+characters depending on what sort of
+game we're making and that sort of
+thing. So, lots of things to sort of
+take away and think about in relation to
+your own work. And the second one, the
+exercise I'm going to give you towards
+the end is writing an argument. So, I
+think this is a really good exercise to
+do if you are making a dialogue driven
+game. Um, it's also a good exercise to
+do to help you figure out stuff about
+your game world, even if you don't
+intend to put the argument in the game
+itself. This is quite a helpful
+exercise. You don't have to do it. I've
+always found it kind of helpful and and
+people have found it helpful with their
+own projects when they've done it. So,
+um that will come up at the end of this.
+Before we get on to the specifics to
+talking about characters, there are
+obviously a bunch of different things to
+think about in terms of game narrative
+design. And we're focusing mostly on
+characters today. Who are they? What do
+they think? Why should we care about
+them? If you're making characters in a
+game, you want players to have some sort
+of emotional reaction to them. You want
+players to care about them and want to
+protect them or hate them and want to
+destroy them. You don't want a bunch of
+beige characters that don't provoke some
+sort of feelings. And then we've got
+locations. And we're going to tie these
+together a little bit when we come to
+that argument exercise at the end
+because we're going to think about what
+do characters think about the world
+they're in and stuff. But obviously the
+whole idea of environmental storytelling
+and the history of a world is a whole
+other topic that we can do a whole other
+workshop on at some point. So we're
+going to be less focused on this today.
+And then the last category here that I
+think is perhaps one of the most
+important ones for game designers to
+think of uh but maybe not the focus for
+today is you know you should always be
+thinking about all of the ways that your
+game can tell a story that don't involve
+these things. Right? Films have
+characters and locations. Radio plays
+have characters and locations. Books
+have them. But games have a bunch of
+different narrative devices that don't
+exist in other media like flavor text
+and and things like that. So, we're
+going to talk in a minute about the
+practicality of adding characters and
+dialogue to a game and the sort of
+issues it can raise for a developer,
+particularly if you're not a writer as
+well. And that's why it's always
+important to be thinking of like what
+other storytelling tools and techniques
+can you get out of your game's mechanics
+and its interface. And this third thing
+is not really the focus of this talk,
+but by the time we finished talking
+about characters and writing characters
+and writing dialogue, it might kind of
+push you away from writing characters
+and thinking more about this kind of
+stuff or like how can I tell a story
+mainly through my gameplay and my
+location rather than, you know, adding
+dialogue where I don't feel confident in
+in adding dialogue and so on. Then we've
+got these more practical
+considerations that everyone needs to
+think about really if you're thinking of
+making games or you're making games
+currently. The first one, and this is
+the stuff they often don't really cover
+in books on narrative design, is the
+implementation workload. So when you
+come up with a narrative approach of
+saying, "Oh, we're going to have text
+boxes that come up and dialogue options
+or whatever," how much work does that
+make for you, right? in terms of
+technical implementation. Having
+characters that speak to you is one
+level of complexity. You know, being
+able to answer them back is another
+layer of complexity. Being able to
+answer them back and then have them
+remember stuff and have them care and
+respond to what you said, that's another
+layer of complexity, right? And we might
+just be at a stage of using our game
+engine or whatever where the thing we
+want to do with narrative is is not
+there for us. And it might be that you
+end up looking up uh like middleware or
+you know modules people have written. So
+I've worked with some people on a Unity
+game recently and they wanted a visual
+novel section and we ended up kind of
+buying a license for a pre-created set
+of UI and stuff for visual novels within
+Unity. So those are considerations. you
+know, if you're if you're dreaming up a
+game and you haven't really sat down and
+programmed it yet, all of the stuff
+about your narrative approach and how
+you tell your story is going to create
+you more work as a as a developer. So,
+that's worth thinking about. And then
+over here in the pink text, we've got
+your storytelling career. By this, I'm
+thinking how many times have you written
+down a story, whether it's for a game or
+anything else. Have you written anything
+before? And do you know how to write a
+story? Are you making use of skills
+you've practiced before, or are you
+learning completely new ones? Because if
+you're suddenly having to write or write
+in a mode you've never written in
+before, that could be a really fun thing
+to learn. But the fact that it's a new
+thing to learn could also be something
+you want to consider and maybe uh limit
+how much of it is because this is going
+to sound very negative. But let's say
+you're very good at programming action
+games and you make a fantastic action
+game and you decide to inject all this
+story in it. you've never really written
+a story before. You've never really
+written dialogue or whatever it is. And
+maybe you don't have the skills to judge
+whether it's good or not. And all of
+that effort you put into adding that
+element might make the thing you're
+making worse in some way, introducing
+more problems to your games or making it
+weaker in one area. So these are these
+kind of five things are like the broad
+things about storytelling in games I
+think everyone should consider before
+they even decide that their game's going
+to have a story, you know. And then
+there's this other aspect of like you
+know the relationship between the
+technology and the storytelling is the
+tools that you use or the tools that
+you're learning to use are going to
+shape what type of story it's easy to
+tell. So examples here I've got Twine
+which is a pros engine. I've got ReMI
+which is mostly for writing interactive
+dialogue. And then uh the Unreal Robot
+man standing in a field. If I'm using
+something like Unreal or Unity and I'm
+using a 3D engine and I'm making a game
+set in an environment, then it feels
+like the the storytelling in my game is
+naturally going to lean towards
+environmental storytelling and put
+putting things in the environment to
+tell a story. The difference between
+Twine and Rempire is an interesting one.
+I don't know if anyone in the chat has
+used either of these before. A lot of
+narrative design courses will start
+people off off on Twine because they
+think it's simpler cuz it doesn't have
+art. But in order to be able to make a
+good twine, you basically have to be
+able to write quite well because it's in
+pros. You wake up in the morning and the
+sunlight streams through the window and
+you think about your life, blah blah
+blah. The kind of textbased interactive
+fiction sort of assumes that that's the
+main thing you're doing, right? When I
+used to teach this course at university,
+I started students off in REMI because
+then they would be focusing entirely on
+making characters and making them speak
+to each other and to the player. And
+that is an easier place to start because
+you can just think about how real people
+speak. You're not having to think about
+like the narrative voice of a book,
+which is kind of what you have to do if
+you're writing in Twine. And the other
+thing is if you focus first on writing
+character dialogue, that is a form of
+writing that is much more transferable
+to other forms of games, right? Because
+nearly every game with characters in has
+characters speaking to each other. But
+most games do not have like book style
+pros in unless it's a very specific type
+of game. These are all again just broad
+things to consider that aren't
+necessarily to do with the main topic
+today, but I thought it might be worth
+thinking about them up front. So part
+one, what even are characters? When we
+look at a piece of fiction and we see
+characters in it, it's just like, oh,
+there's a there's a little guy and he's
+in the screen. There's there's a person
+in the screen that's a character, right?
+What I want us to focus on here is
+characterization as a process. Because
+when we talk about
+characterization, the idea behind that
+is that the author or authors have made
+deliberate choices to create a
+character. And the more that we pay
+attention to those deliberate choices,
+the easier it will become to make them
+for ourselves. Great quote by Mik Bal
+2009 book on narratology, the study of
+narrative. character is not a human
+being, but it resembles one. It has no
+real psyche, personality, ideology, or
+competence to act, but it does possess
+characteristics that make readers assume
+it does. As creatives, making narrative
+media with characters in, we are doing
+characterization in order to make our
+readers or our audience feel like this
+character on the screen has these
+qualities of a real person, right? We
+want them to feel like this is a person
+with a psyche, their own brain and
+personality, their own belief system,
+their own kind of desire to do things,
+an ability to do things. But we have to
+do that through a process of
+characterization. Video games put us in
+a weird situation when it comes to
+characters cuz we have these things that
+look like humans, but they are missing
+lots of the qualities of characters.
+You've got characters like uh Trevor
+from GTA 5 over here. He has his own
+sort of behaviors and personality that
+are completely independent from anything
+the player does. And that means he's a
+character in the narrative sense that we
+would call a character in a movie or a
+book or whatever. And then at the other
+end of the scale, we've got they walk
+around like a person, but we don't
+really know anything about their
+personality or anything like that. So
+I've put Chell from Portal as an example
+of this. you know, we would call it a
+character because that's generally what
+we call people in media, but it doesn't
+have a personality and it's it's there
+for us to sort of move around as a
+vehicle. And then in the middle, you've
+got someone like Shep from Mass Effect
+where you've got a bit of both
+qualities. You know, they have a bit of
+their own personality, but it's a kind
+of a bit defined by players choices.
+There's a bit of a limitation on that
+where they say, right, you know, this
+character is not going to do anything
+massively evil. That's kind of within
+the limits of what a good space captain
+should do, right? You get some choices,
+but none of them really take you outside
+of this kind of rough idea of what they
+have for the character. So, it's it's a
+continuum. And that means that we have
+characters with a high level of
+characterization. Characters where we
+have this sort of flexible
+characterization where the player picks
+and chooses different traits. And then
+characters where there's not actually
+much characterization of them in the
+game. And if we want it, we sort of have
+to make it up in our own head. This
+actually was taken from like a a teen
+English literature syllabus. I got this
+from in the UK. Elements of
+characterization we've got here. We've
+got physical appearance, the background,
+like where the character comes from, and
+then if you think of Shepherd in Mass
+Effect, we get to choose their
+background. We get some different
+background choices, and we can decide if
+they're like a street kid or I can't
+remember what the other ones are, but
+that's going to define something about
+the character. If you are making like a
+fantasy game or a sci-fi game, the
+background of the character is going to
+tie into your world building in some
+way, right? They are a a dwarf who hates
+elves, that kind of thing. And that's a
+good way to sort of tie the things the
+characters care about to the world that
+you want players to invest in. We've got
+personality,
+uh, which is, you know, their psyche,
+how they how they respond to different
+things, how they feel about different
+things, the kind of patterns of how they
+think that come out through their speech
+and behavior, which is down here as
+another point. We got their
+relationships with other characters. Uh,
+their motivation, what they want, what
+they're trying to do. And the the
+motivations of characters are often what
+lead us into conflicts and interchange
+as well. You'll often hear writers talk
+about how, you know, car characters need
+to change throughout stories or they
+need to at least be trying to change in
+some way. Uh because that is where we
+get the conflict that makes the story
+interesting. And one of the things you
+can do to make your story most
+interesting is have characters that
+share some motivations and clash on
+others. Right? So a classic example of
+this would be a Dungeons and Dragons
+party where everyone is agreed that they
+need to go and stop the evil baron, but
+members of the party have different
+approaches or different ideas about what
+is the correct way to do that. So we've
+got our eight elements of a character
+and one of the things I want us to think
+about is this stuff in relation to
+player characters. We've got four types
+of player character here. And if you're
+wondering how useful is this to a game
+developer, and I would say a useful way
+to use this framework, I'm going to go
+through and describe what these mean in
+a minute, but a useful way to think of
+this is, you know, in your game with,
+have you actually nailed down what your
+player character is out of these four
+categories? Because if you're making a
+game with a player character in at the
+moment and you're sort of hovering
+between these categories, you might find
+that your game is confusing because it's
+not uh consistent about its approach to
+the player character and do they have a
+personality? Do they speak or are they a
+Gordon Freeman? So, are four types of
+player character that you can have. The
+first one is a cipher. It's a character
+that has no discernable personality.
+They're a blank slate. And you might
+look at little foxy pants from Tunic and
+think, well, they have a personality.
+They they have personality in their
+animation and how they're presented and
+stuff, but really we mean in terms of
+the narrative and like how they talk
+really. You can have an animation that
+has personality in it, but still have a
+character that doesn't necessarily have
+a personality. These characters have no
+clear motivations or desires, or if they
+do, we have to infer them. They're not
+stated in any way and players bring them
+to life with their own imaginations.
+Here, I think it's really important to
+understand that when we say these
+characters have no personality, it's not
+a criticism. It's just a sort of
+classification of how these work in the
+narrative. I think in any other medium,
+we would think that saying a character
+has no personality would be a bad thing,
+but we can probably think of how Tunic
+and Halflife are improved by this fact
+in some way. I haven't played Tunic. I
+know it has a lot of puzzling in it and
+I know Halflife has a lot of puzzling in
+it and I think the fact that the uh the
+character doesn't do what the characters
+in God of War do and sort of go hey I
+think this is a puzzle and I think that
+kind of adds to how these games feel
+right because HalfLife has a lot of sort
+of environmental physics puzzles in and
+stuff and Tunic has a bunch of puzzles
+and these are games that want you to
+work things out for yourself and feel
+smart. So I think when we think about
+the relationship between the style of
+game and the choices about the
+protagonist, we can start to think that
+well no personality or at least no voice
+actually does something positive in the
+context of this game because it allows
+the voice that's in the head of the
+player as they're working things out to
+be more important than a character on
+the screen. The main point here is you
+can have a main character with no
+personality and that can be a good thing
+if it's in the right game context.
+Then we've got the fixed character,
+which is almost like the opposite end of
+the spectrum from the cipher, right?
+This is a character where the character
+is written by an author and whatever you
+do in the game as a player is not going
+to change the personality of that
+character. You control them in action
+segments of the game, but the player is
+not controlling their personality. The
+player is not making decisions about who
+this person fundamentally is. If you're
+going to pull this off, if you're going
+to make a meline or an Alan Wake, uh,
+and you're going to do it well, you
+probably need to be a really good writer
+because you're not leaving much up to
+the imagination of the player. This
+route requires like a higher level of
+attention to the stuff we talked about
+earlier, like the different ways you
+characterize a character. And then we've
+got two more types. We've got the
+customizable character. Everything that
+this character does is a product of
+players choices. And you can already
+start to think about how each of these
+categories has different things you have
+to do as a developer if you want to do
+it right because this means we don't
+necessarily have to write a convincing
+character cuz the player is going to
+make up their own character, but we do
+have to give them loads of options for
+how the character looks or how the
+character uh speaks or whatever. And
+then and you've got to this where you
+have a customizable character with a
+fixed background. So, this is a
+character that has some predefined
+achievements, probably a name and a role
+like captain in Mass Effect, but players
+define how they look and behave, right?
+This is the one that Boware does a lot.
+There's like a mix of stuff here in
+terms of how much of it is written and
+how much of it is up to the player to
+decide. But to think about these in a
+practical
+sense, each of them kind of requires
+different stuff from us as game
+developers. If we make a character who's
+a cipher, I think if you go down this
+route of having a a voiceless
+protagonist in your game, you can
+totally do that, but you need to think
+about what's appealing about them and
+the visual communication around that cam
+character and what that character
+represents. You know, is it a cute
+character we're supposed to care about?
+Is it like a edgy character that's
+supposed to feel cool to move around and
+destroy stuff with? there's so much more
+weight on that stuff because the
+character doesn't have a voice, right?
+So again, just going through these four
+categories that are quite abstract and
+instead of just treating them as a
+taxonomy, trying to think about the pros
+and cons of using them as a developer.
+Uh the fixed character, we need them to
+be appealing and we need these
+characters to be well written because
+we're asking the player to stop playing
+for a couple of minutes while they talk
+and they say stuff that the player has
+nothing to do with. having this kind of
+character where they speak in cutscenes
+and everything and that is not something
+where the player is getting to intervene
+and make choices, then there needs to be
+something inherently entertaining or
+moving about that character performance
+in some way. So again, this is going to
+be the most intensive one in terms of
+like traditional writing skills and
+being able to write good dialogue that
+makes people care about the character.
+So these are very very opposite to each
+other and you can almost say like hey if
+you can already write write a game with
+a fixed character. If you can't write
+but you can make cool looking stuff
+maybe make a game with a cipher
+character. And then as you can imagine
+these these two categories are going to
+need customization systems and content.
+So you remove some of the need for the
+character to be well written because the
+player is choosing dialogue options
+instead of the character speaking for
+themselves. But now you need to have
+like different trees of uh like
+backgrounds or whatever the system is in
+the game in order to support this sense
+of the the player making choices about
+the character. So every one of these
+different protagonist types we can
+choose has pros and cons in terms of
+what you need to do as a developer to to
+achieve it and make it work. Miraculous
+said in customizable character games,
+the dialogue options still need to be
+well written. Yeah. And it's not
+something we're going to focus on today.
+And I'll probably do another session at
+some point in the future about player
+choice in game narrative. But good
+writing when it comes to player choices
+in games comes down to this thing. It's
+like player expression. You will see
+patterns in games of dialogue choices
+where you know in a Fallout game it
+might be a lot of situations give you a
+nice option, a absolute [ __ ] option
+and then a like pragmatic option that's
+like give me more money and they will
+just kind of stick to that framework a
+lot of the time. And that is kind of
+helpful to players cuz they sort of know
+what to expect from those options. But
+depending on the type of game you're
+making, you want might want like higher
+or lower levels of predictability. And
+if you're really going for social
+realism, for example, you might have
+characters that don't want you to keep
+asking them questions all the time,
+right? Whereas a a traditional RPG, the
+dialogue trees are just there to sort of
+teach you about the world and the
+situation. cuz most RPGs have quite
+predictable dialogue trees where it's
+like you get given a quest, you get the
+option to ask some questions about it.
+Most of those questions aren't really
+going to do anything except give you a
+bit more context around it. And there's
+usually an option that's just like,
+"Yeah, yeah, let's get on with it type
+thing." Whereas a game that's going for
+like more of a detective kind of
+scenario or more social realism might
+sort of reward or punish you for
+exploring the the dialogue trees in
+different ways. It's definitely a a
+whole topic for us to to think about in
+a in a future workshop. I think I'm
+going to do the midpoint plug now. This
+is the 2 minutes where I advertise some
+stuff. Midpoint plug. Midpoint plug. If
+you want me to help you onetoone with
+anything to do with your game, I've got
+a new website, indiegamecl clinic.com,
+where you can find out about my private
+coaching services, where you can find
+out about my design consulting. So,
+private coaching is you make your game
+and I help you. Design consulting is you
+make your game and also I make part of
+your game. And you can also find out
+about other stuff we do on this channel
+there like Indies Under the Knife and
+you can submit your game to that. We've
+also got a Discord community that you
+can join uh either through the Patreon
+or by supporting this channel as a
+channel member. And by doing that, you
+help support this channel so I can do
+more stuff like this. We have a very
+active Discord community with a very
+strong culture of mutual feedback. I'm
+on there most days and most questions
+that people have about their games, I
+chip in and answer them if and when I
+can. We've built up a really nice
+culture in there of people feeding back
+on each other's uh games. People have
+like threads where they just come in
+every couple of days and post their prog
+progress and so on. And it's just nice
+to have a slightly more closed community
+than a subreddit or or whatever because
+you get to know people. And also, I do a
+monthly play test of just games from the
+Discord community. The next one of those
+is on April 29th. So, if you're in the
+chat and you're already part of our
+Discord, maybe your game is going to be
+showing up in this one on April 29th.
+That's the midpoint plug. We can get on
+to part two. How do characters speak?
+Let's think about dialogue in game. So,
+when characters speak, how do they
+speak? And one of the first things I'd
+encourage you to think about is the
+overall tone of the game that you're
+going for and what the dialogue is for.
+Right? So, these are kind of three modes
+that I think games operate in a lot of
+the time. We've got something like Night
+in the Woods where we're going for
+social realism and naturalism, which is
+like characters speaking like real
+people. They've got their own little
+quirks to how they speak. They've got a
+sort of kind of uh in-group language of
+how the young people speak to each other
+and stuff like that. They don't speak
+like characters in an epic quest or I
+guess the opposite of that in terms of
+tone. You get this a lot in high
+fantasy. You get it a lot in dark
+fantasy and in epic sci-fi. the sort of
+theatrical melodramatic register where
+you've got a character who is talking
+like they are in a sort of Saturday
+morning kids TV show, right? Very over
+the top. Uh not not at all modeled on
+how people speak in the real world, more
+modeled on things like how characters
+speak in Shakespeare or Star Wars or
+anything like that. And of course, you
+can go between these and it's often a
+source of great comedy to have like a
+character that is speaking in this
+theatrical melodramatic mode and then
+who sort of dips into saying something
+really normal and down to earth, right?
+You can jump between these modes and
+sometimes that's very effective and very
+funny to do that. It's worth thinking
+about these sorts of things of like does
+your game have an overall tone where
+everyone is always speaking like they
+are in a in a play or is this like a
+distinction between characters? Like
+maybe you've got a character that speaks
+more like they're in Night in the Woods
+and they're very down to earth and then
+you have a character that speaks more
+like they're in Darkest Dungeon and
+they're completely over the top. That
+can be an interesting like distinction
+between characters as well. The other
+thing that complicates games
+specifically is we have this kind of
+stuff. This is a character that speaks,
+but they're not really a character. They
+are a tutorial being. So, it introduces
+this other weird type of language that
+isn't really narrative. And that that's
+why we need to think about the purpose
+of the dialogue because this guy is just
+here to tell us how to play the game and
+to give us tips. Like since I started
+doing reviews on this channel, I've
+definitely seen some situations where
+someone has tried to make the
+functional, informative tutorial text
+have a bit more of a voice, and it just
+makes the game confusing cuz you can't
+tell when it's being tutorialized. And I
+think Darkest Dungeon is a good example
+of this. Uh, a lot of the tutorial text
+and the pop-ups and stuff are not
+actually written in uh this guy's voice,
+right? So you have a very dramatic kind
+of uh uh voice for all the narrative
+stuff in the game. But when the game is
+just telling you how to do combat or
+giving you strategic advice, it is in
+functional language. It's not in this
+kind of flowery dramatic language
+anymore. Another thing to think about is
+dialogue directionality. I've called it
+here. So played Moonsh a couple of weeks
+ago. This is a really good example of
+one-way dialogue where the player
+character doesn't speak, right? And we
+see this loads in old school JRPGs. You
+go up to characters in the world and the
+characters have stuff to say. This
+basically means, and if again, if we
+think about it in terms of like
+development practicality, this means you
+get to write a little bit of dialogue
+for loads of different characters and
+your player character can be a blank
+slate. And then in Celeste, player
+character does speak, but the player
+doesn't impact that in any way. The
+player character just speaks to
+characters in the world, and we don't
+have anything to do with that. And then
+in Mass Effect, we've got two-way
+dialogue between the player and
+characters in the world, and the player
+is actually sort of choosing how that
+plays out. And again, these are all
+going to give you a different feel.
+These are the two modes I guess of uh
+player character dialogue in sort of
+action adventure games. We can have a
+player character that speaks to
+characters in which case again they have
+to be likable in a particular way or we
+can go the moonshere route of silent
+protagonist
+uh which is actually the Zelda route as
+well. Silent protagonist and characters
+in the world speak at them. So, I'm not
+going to go through every single one of
+these things and say here's how you can
+make sure your character speaks about
+their relationships, but you can kind of
+use it as a checklist, right? And
+imagine that that a dialogue has, I
+don't know, 12 uh clicks in it in terms
+of like text boxes coming up. How many
+of these text boxes are doing more than
+one thing at once? Cuz that can be a
+good sign that you're packing a lot in.
+Jazz just mentioned that you can use the
+character text HUD and text speed to
+show personality for the characters.
+Yeah, and that's a really good example
+of like what I was talking about right
+at the beginning about making sure
+you're thinking about your game and
+genre and you know the affordances of
+video games that allow you to tell
+stories in different ways compared to
+other media, right? Because that kind of
+text animation thing gives us a sense of
+like a speech pattern. Um, you can even
+have a different font for different
+characters, right? I wouldn't recommend
+doing it too much. Terry Patchet used to
+do it in Discworld where death speaks in
+capital letters, right? And that kind of
+makes you read his voice in a particular
+voice in your head even though you're
+you're just reading a book. This is a
+good exercise I've seen people uh
+describe for any kind of script writing.
+If you've got a script for a scene of
+dialogue in a game or any other kind of
+media, if you can redact the names of
+the characters and still tell who is
+who, then that's a that's a good sign
+that the characters have different
+voices. This is an example from friends.
+I don't think this is a very good
+example. The idea is that your
+characters will have different ways that
+they speak. you know, car. You might
+have one character that uses filler
+words more and says
+uh kind of a lot, right? Like I do. I
+think uh My Little Pony: Friendship is
+Magic is a very good example of
+characters that speak very differently
+according to their personality. Welcome
+to Indie Brony Clinic, the channel where
+you can learn narrative design through
+My Little Pony. Uh what's the really shy
+one? Fluttershy is the really shy one,
+right? talks like Eeyore from Winnie the
+Pooh. Uh those are examples of
+characters that have very different
+speech patterns. So if you redacted the
+the names in the script of Friendship is
+Magic, you'd very quickly be able to see
+who was speaking at which point.
+Okay, this is the exercise that I want
+you to do. And I can almost guarantee
+that by doing this, you will come away
+with a better sense of what you're
+trying to make and how it works. Now,
+you can actually do it in the game if
+you think it will be beneficial to do
+it, but this is a very particular type
+of exercise, and it may be that it's not
+actually relevant to your game in terms
+of the thing it produces. Lots of
+writing exercises are not about creating
+a scene to put into your movie, right?
+Like when you do character interviews
+for a book, that's not for you to use.
+It's just for you to understand the
+character. But let's say you're in a
+situation where you're not currently
+making a game and you want to
+practically do this. There are a couple
+of different approaches. You can do it
+as a traditional script where you write
+the characters names down and then write
+out what they say. Uh I know people that
+do this in spreadsheets now cuz it's
+just quicker and easier. Or you can use
+it as an excuse to go and dabble in
+Twine or Rempire and have your first dip
+into one of those things. If you're
+currently not working on a game and
+you're interested in making narrative
+games, I would say this is a really good
+excuse to just have your first hour of
+messing around in Twine or Rempeni. You
+can use any of these media or you can
+just sit on the public transport and
+talk to yourself out loud and keep
+changing voices like Gollum and you can
+freestyle it in a public place and
+people will back away from you slowly or
+they'll arrest you and put you in some
+sort of secure facility. It's up to you.
+So the
+exercise sounds deceptively simple. It
+is to write a disagreement between two
+characters in your fictional
+world about your fictional
+world. Okay? So, two characters in your
+world are arguing and they're arguing
+about something in your fictional world
+and they should be arguing about some
+interesting thing in your fictional
+world. They probably shouldn't be
+arguing about whether or not pineapple
+goes on pizza, right? cuz that's not
+going to help you in the context of this
+exercise. Two characters from your world
+having an argument about something
+specific to your world, something
+defining about your world, something
+about your world that's different from
+our world. And I think you can probably
+already guess how this would be a
+helpful exercise cuz it's going to make
+you think about a bunch of stuff. And
+what I want you to think about is all of
+these overlaps. Like the easy version of
+this task is just writing this
+conversation as if there's no player
+there, right? So, the characters are
+arguing about something in the world.
+And through that argument, we're going
+to learn about these two characters and
+their relationship. And we're going to
+learn about the world and a disagreement
+that these characters have about the
+world. Right? Cuz we've all had this
+experience of playing a game with a big
+law dump. And we just think, I don't
+care about this world. Why are you
+telling me all this stuff? Right? One of
+the best ways to make players care about
+your fictional world is to show how it
+matters to the characters. And one of
+the ways you can show how it matters to
+the characters is having them disagree
+on it. Right? Some things to consider.
+How can we learn about the game world
+through the characters and their
+disagreements, right? So maybe our world
+has some big historical event that
+happened in the past and our characters
+disagree on it. Or
+maybe we have a character that just
+cares a lot about that and a character
+that doesn't and wants to move on. Or it
+could be something that's going on
+currently in your game world, the big
+war, or uh I guess if we go into cozy
+games territory, the uh the big uh
+corporate supermarket moving into town,
+some big thing going on in the game
+world and two characters disagreeing
+with that. Or it could be about the
+future of the world. It could be about a
+uh course of action. So the example that
+I gave earlier from a Dungeons and
+Dragons campaign where you got
+characters who are on the same side,
+they loosely agree about what needs to
+be done, but they don't agree on how to
+do it. Right? That's another example
+about of two characters disagreeing
+about something in the world. Right? We
+want two characters that are different
+from each other and we want their
+personality to come out in this
+argument. So how do these characters
+argue differently? Right? uh you you you
+know you might find this particularly
+cathartic if it gives you an opportunity
+to think about like how different people
+uh in your life uh communicate in
+different kinds of dysfunctional
+manners. How do these characters argue
+differently? How do they approach this
+conflict differently? And what is their
+existing relationship? What are their
+relationships with like with other
+characters? You know, what type of
+language does each character use? And
+the easy way to have characters that
+speak differently is just to have them
+have such different backgrounds that
+naturally they speak differently. Like a
+wizard is going to speak differently
+from a barbarian, right? You're doing
+this exercise to work out what those
+characters are what what about those
+characters do they share? Uh and what
+about those characters is is different
+from each other and then sort of
+expressing their different viewpoints on
+the world through this argument as well.
+And like I said, the output of this, it
+could be game content, but it's more
+like the this is like the writing
+equivalent of doing concept art. You're
+writing a scene, and you might not even
+be making a game that has these kind of
+scenes in it where characters speak to
+each other. But by writing this scene,
+you would kind of get to a better
+understanding of who your characters
+are, who what's going on in your world.
+When you've got like a fantasy or sci-fi
+world that you've come up with, the law
+or the big thing that's going on in the
+world is often not as inherently
+interesting to players as we'd think.
+And what tends to be more interesting in
+it in about it is like the different
+interpretations of it available that the
+characters represent. So if you imagine
+X-Men, right? Think of X-Men. You've got
+a world conflict in that between humans
+and mutants, right? And that's a big
+point of the story. But the major
+conflict is really like the mutants
+internal conflict about how do you
+approach that? There are different
+approaches. One is the kind of
+isolationist let's go away from the
+world and we'll prove to the humans that
+we're safe and that we're helpful, which
+is what Professor Xavier represents. And
+then the sort of uh I guess is it kind
+of fascist? I don't know what Magneto
+wants to do, which is to say actually
+we're better than humans and we
+shouldn't let them oppress us and we
+should fight them. Right? If we think
+about the relationship between the world
+building there and the characters, the
+world building of there are mutants with
+superpowers is not inherently
+interesting. It's not where the
+narrative conflict comes from. The
+narrative conflict comes from the
+characters disagreeing about what to do
+about the world, right? And that's
+that's where we get that interesting
+dynamic. So, I hope this sort of makes
+sense as an activity you could go off
+and do because I do think like
+regardless of what sort of game you're
+making, doing this sort of activity can
+really help give you a handle on the
+kind of world you're building as well as
+the characters that inhabit it. You can
+make your disagreement about pineapple
+pizza if you want, but it's not going to
+teach you as much about your game world,
+right? And like like I said, this this
+workshop was really focused on
+characters and what are characters and
+all the weird things we have to think
+about to make good characters in video
+games. And and sometimes, you know, that
+that idea of the cipher, sometimes you
+want a character that doesn't talk and
+just gets out of the way so the player
+can inhabit them, you know. Uh but this
+this exercise gets you to start thinking
+about the relationship between the
+characters and the world and how do the
+characters fit into

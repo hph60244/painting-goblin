@@ -1,0 +1,1069 @@
+Most people who make games, and even
+those who play games, if they talk a lot
+about games and how they're designed,
+have some sort of understanding of what
+we mean by game mechanics. When we talk
+about a game's mechanics, we're talking
+about how it works, how the game play is
+produced by the game. I'm Joe Baxter
+Webb. In this video, I'm going to define
+game mechanics, talk about the
+usefulness of game mechanics as a
+concept. I'm just going to be telling
+you how I personally think about them
+and that may be useful to you if you are
+making games. Now, this video is going
+to get a bit philosophical in places and
+it's probably going to be longer than
+some of my other videos. So, you know,
+watch it in multiple sittings or speed
+it up, whatever you need to do to get
+through it. Just don't tell me in the
+comments like this person did cuz that's
+really weird. Why would you do that?
+Why? So, to start with, let's just
+define what game mechanics are. One of
+the issues that I often have when I look
+for definitions of mechanics is that
+they jumble up mechanics, rules, and
+systems. So, we're going to come up with
+a definition of game mechanics which
+disambiguates these things a little bit.
+Let's start with rules because rules are
+the underlying logic of a game. Any game
+has rules. Whether it's ice spy or
+soccer or chess, a game is made up of
+rules. Now, the thing that
+differentiates a video game from other
+types of games is that in a video game,
+you can hide rules. When you sit down
+and you play a board game with someone
+else, the players usually need to be
+cognizant of all of the rules, unless
+there's like a games master behind a
+screen with their own set of rules that
+the players don't know about. A video
+game allows us to hide some of the rules
+from the player. The rules are all of
+the logic that make up the game. Any
+statement where you could say, "When
+this happens, then this happens. and if
+this happens then this happens is a
+rule. It's the stuff that you turn into
+code when you sit down with an idea for
+a game and you think when the player
+does this I want this to happen. That's
+the logical rule and you're just
+converting it from human language into
+computer language and and that's what
+programming is. Mechanics are made of
+rules. Rules are the raw material that
+mechanics are made up of. But mechanics
+are more to do with producing gameplay
+itself. Mechanics are the game's
+interactions, the things that the player
+can do, the player actions, and their
+goals. In game design theory, we usually
+talk about them in terms of verbs.
+Things like jumping, uh finding, uh
+avoiding or escaping. Those are verbs
+that are kind of more related to the
+goal of the player. They are things that
+the player can do. They're also things
+that the game can do to the player,
+which kind of gets us to thinking, well,
+is everything a game mechanic then? And
+really I would say the game mechanics
+are the tools that the players in the
+game use to act on the game world in
+some way. So if you imagine that your
+game has a game master and that game
+master that is in the game, whether it's
+like a difficulty system or some sort of
+enemy AI or something, it's like another
+player pushing back against the the
+player in the single player game. Both
+of those sites are using game mechanics.
+They're using their verbs like attack or
+collect to change the the simulation or
+the game world that they're operating
+in. Mechanics are made up of sets of
+rules. When you do this, this happens.
+[music] If you do this, but this, then
+this happens. But not all rules are
+necessary mechanics because your game is
+going to contain other rules that don't
+really relate to gameplay per se. When
+we're thinking in game design terms,
+mechanics are not about the code of the
+game or every part of the game. They're
+just about the game play, the the kind
+of interactive element of the game. A
+mechanic is going to be defined by the
+rules that make it up, just like you or
+I are defined by our genetics or the
+cells in our body. But the specifics of
+those rules are going to change the
+mechanic considerably. Right? If you
+imagine the mechanic of collecting
+something, in one game, you're going to
+like run into them and your character
+just steps on them and then you've got
+the coin and it plays a sound effect.
+You've collected the coin. In another
+game, you might press a button to pick
+up a little bag. Uh, in a VR game, you
+might use a totally different interface.
+So that's an example of like the same
+player verb to collect things, but at a
+lower level, the rules that make up that
+player verb are different. And that
+leads to a fundamentally different
+feeling in the game. And it's more or
+less appropriate depending on what type
+of game you're making and what the kind
+of overall creative direction of that
+game is, right? Like running into big
+floating coins in the environment is
+going to feel weird if you do it in like
+a hardboiled detective game. A thing I'd
+like to emphasize here is that how
+mechanics feel is really fundamental to
+the character of a game. If it's a core
+interaction in the game, if it's one of
+the main things the player is doing all
+the time, like a jump, or it could be
+just clicking on buttons in an interface
+in a very interface heavy game, if it's
+the main thing the player is doing over
+and over again, then refining that
+thing, it's integral to the game. So
+don't treat that stuff as something
+superfluous. Because if you're making a
+game about jumping, then locking in the
+final quality of the jumping very early
+on is probably quite important.
+Likewise, if you're making a game that
+is all about interacting with interfaces
+or clicking through dialogue options in
+a story, the feel of that is part of the
+mechanic. It's part of the character of
+the game, and it's important to think
+about it early on. Subtle changes in a
+rule can change how a mechanic feels
+quite dramatically. And this is why when
+you are early in prototyping a game, you
+need to be open to like switching things
+and changing them. You might have heard
+this quote from Sid Meer. When you are
+testing a variable in a game, double or
+have it. It's basically easier to see
+the difference that a change in the
+rules makes if you make larger
+adjustments. When you're making small
+tweaks, it usually betrays the
+assumption that the rule is close to
+perfect when that's often not the case.
+It's like prematurely fine-tuning
+something when you should actually be
+really cranking it in different
+directions to feel the change. A system
+is a larger set of rules. It can contain
+mechanics. The mechanics are usually how
+the player interacts with the system.
+Right? So, if we imagine a progression
+system in a game, like the way that you
+collect resources in order to level up,
+there are elements of that that are
+player mechanics. like gathering XP or
+gathering some sort of resource is a
+thing that the player can actively try
+to do. Opening the menu and looking at
+the system and seeing like the skill
+tree or whatever it is they're unlocking
+their progression through is a mechanic.
+There's like an informationbased
+mechanic there of the player can go and
+look at the thing and understand it. And
+then there's also the activation
+mechanics of like what does the player
+do to actually spend the resources to
+unlock another thing. And again, you can
+think of all the variations of that,
+like forcing a level up at a specific
+point in the game, like survivors likes
+do, where the game pauses and it's like
+now you must choose the next thing.
+That's a different way of approaching
+the same mechanic which in another game
+might say, "Oh, you're ready to level
+up. You can do it when you want." Right?
+Again, it's going to be more or less
+appropriate depending on the game that
+you're doing it. Now, when we talk about
+systems in games, we're usually talking
+about a feature set like progression
+system like I just mentioned, traversal
+system, how does the player move around?
+Can they jump? Can they fly? Can they
+climb on walls? But we also need to
+factor in all of theformational aspects
+of that as well because the way
+something is communicated
+is part of that system, right? So, the
+the menu with the information about how
+you level up is part of the system. Like
+any interface is part of the system. In
+a traversal system, the way that you
+decorate a wall to let the player know
+that it is climbable, that is part of
+the climbing mechanic and it's part of
+the traversal system. Another way to
+think about it in sort of grammatical
+terms is if the game mechanics are the
+verbs, what can be done in the game,
+then the systems are usually there to
+provide the game objects or the nouns
+for the player to do those verbs to. So,
+the player attacks and defeats a wave of
+enemies, right? So attacking and
+defeating are mechanics. Uh you attack
+by doing particular button presses and
+and so on. And you defeat by attacking
+with a degree of efficiency, but the
+wave of enemies is a an an object within
+the game or a set of objects within the
+game that comes from a system. And that
+system might be regularly spawning
+enemies in a wave-based game. Or it
+could be the way that the levels are
+designed, right? Because your level
+design approach within a game, if it's
+set levels and it's not procedural,
+that's still a system. It's just [music]
+more of a human system than a
+procedurally generated one. The example
+I gave before, the player unlocks an
+upgrade. The player is doing something.
+They are making a decision. They're
+doing some interactions by giving inputs
+to the game, and it is operating a
+system that exists within the game. A
+practical thing here about the
+development of systems is that you
+probably don't need to build as much of
+them as you think you do early on. We
+can usually prototype a game by just
+pretending the systems there or creating
+a sort of mockup of it. So, if we're
+making a deck builder, there are certain
+systems that we may not need early in
+development to do that first stage of
+prototyping. We might not actually need
+the player to have a different deck
+every time. We might not need the
+scenarios or situations they're
+responding to with their cards to be
+different each time. We have an idea of
+what the system will eventually be, but
+we don't build it prematurely because we
+[music] haven't actually felt what it
+would be like in action yet. Now, that
+will be counter to some good programming
+practices. And there's not an easy way
+out of that problem. It really comes
+down to your own priorities and working
+out at any given moment whether the good
+engineering is [music] more important or
+whether the finding the fun of the game
+is more important. Another example that
+we see all the time [music] is people
+who know they want to make a rogike with
+procedurally generated levels and they
+pour dozens or hundreds of hours into
+learning procedural generation
+algorithms and creating a level
+generator and they don't actually have a
+game yet. They're creating systems
+before they know what the mechanics are
+which will interact with those systems.
+Usually that's quite foolish. There's
+probably examples you can find of games
+which have been developed in that order
+where it worked out. Generally speaking,
+if you're doing that, you're not really
+developing a game. you are using gamedev
+as a technical hobby and you're learning
+procedural generation algorithms and
+that's fine if that's what you want to
+do but it's not how you would develop a
+game. A procedural generation system is
+part of the machine of a game which is
+meant to respond to the problem of how
+do we make levels. If you don't have
+game mechanics, you don't have a reason
+to have levels yet. So [music] again,
+it's just about thinking about the the
+game as a as a holistic machine and
+thinking about which of these parts do
+we need to manufacture first before we
+see what the other parts need to be. You
+know
+>> mechanics
+[music]
+[music]
+[music]
+things
+do see you
+[music]
+see me do [music]
+>> [music]
+>> overcoming.
+[music]
+[music]
+Why do we use the metaphor of a machine
+in the first place? Because mechanics,
+like any theory, are explanatory
+metaphor. They are a way of using one
+thing that someone already understands
+to explain the workings of another thing
+that they might not understand. We have
+an idea of what machines are and what
+they're for. So, we use the metaphor of
+a machine to explain video games. That's
+good, isn't it? It's good that we can do
+that cuz humans are clever and stuff.
+One of the issues with thinking of video
+games as machines is that it's easy to
+make the assumption that it's because
+video games are a technology. But every
+game or really anything that you play
+has game mechanics. Board games have
+game mechanics. Tabletop role playing
+games have game mechanics. Sports have
+game mechanics. You can have verbal
+games like I Spy and those have game
+mechanics. So the machine metaphor is
+not really to do with the fact that
+video games are technology. And that
+might seem obvious to some of you, but
+to others it it might not be. I don't
+know. I don't know every single one of
+you and what's in your brain. If I knew
+that, I would be a very wealthy man.
+People use mechanics to talk about how
+something works. Like political analysts
+will talk about the mechanics of an
+economy or government. People talk about
+body mechanics if they work in sport
+science or medicine or other body stuff.
+Talking about something as if it's a
+machine encourages systems thinking and
+that's one of the reasons why we use it
+in game design. It encourages you to
+think of the intended outcome. Now you
+can have a useless machine that doesn't
+have an intended outcome like a Rube
+Goldberg machine or the government. Am I
+right? But most of the time machines are
+created to do a particular thing like a
+car engine produces forward motion and a
+coffee machine produces coffee. So
+applying the same thinking to games, we
+can say, okay, there's a thing that we
+want a player to get out of this, which
+could be being scared if it's a horror
+game. It could be feeling clever if it's
+a puzzle game. It could be feeling
+excited and adrenaline and all of that
+stuff if it's an action game. And then
+we need to think about which mechanics
+or mechanisms are likely to lead to an
+interaction that produces that outcome.
+Those of you who are already familiar
+with MDA theory will know this. This is
+what MDA theory is about. You have game
+mechanics. They interact dynamically
+when the player actually plays with
+them. The game exists as a piece of
+software, but the play produced by the
+game doesn't exist until the player is
+doing it. And then that leads to an
+aesthetic experience, which means the
+player's emotional responses to the
+game. Now, MDA theory dates back to a
+paper from 2004. But the idea that a
+game is a machine that is meant to
+produce a particular emotional outcome
+is sort of inherent to any time anyone
+has ever talked about game mechanics or
+game mechanisms. A game mechanic is a
+unit of interactivity, a piece of
+interactivity within a game. And when
+game mechanics are combined, they lead
+to specific outcomes. And that is just
+like your coffee machine producing
+coffee. The horror game produces fear.
+The sports game produces excitement and
+uh Fiero, the feeling of like triumph
+when you beat an opponent and so on. One
+of the problems that new developers
+often have as well is that because video
+games are multimedia,
+it's hard to think about the game play
+as its own thing. If you don't have this
+broader systemic view of like what type
+of engine are we trying to build and
+what type of experiences it's supposed
+to produce, you can fall into a lot of
+traps. One of them is the realism trap.
+Oh, we're going to make this jump this
+high because that's how high a human
+could jump. That that doesn't have
+anything to do with making a player feel
+good or making the player feel like a
+particular type of character. One of the
+reasons why I personally really like
+stylized, less realistic games like
+Blood Thief is that the fun is driving
+everything else in the game. All of the
+decisions about the art. All of the
+decisions about how the interaction
+should work are driven by the fun and
+the particular fantasy of this being
+like a very fast like medieval ninja
+type scenario. It's all based around
+what feels good mechanically. And
+generally speaking, as a smaller indie
+dev, that's the practical way to make a
+fun game. Make a fun set of interactions
+and then build a game around it. Don't
+create a fictional world and then try to
+cram it with mechanics based on, you
+know, simulating a life in that world
+because you don't know that that's going
+to be satisfying to do. Rather, you make
+a few mechanics that feel good and let
+the art style and the setting all coales
+around those mechanics. One small
+personal bug bear I have with how we
+speak about game mechanics is that we
+often talk about them in isolation.
+Often when we talk about mechanics in
+video games, we talk about a game
+mechanic. Like a single game mechanic,
+which is kind of detracting from the
+usefulness of the metaphor. You know,
+like a screw or a bolt or a nut is not a
+machine. Just cuz we look at it and we
+can see that it's a machine part. It
+only starts to gain the kind of
+usefulness or sense of purpose that we
+associate with a machine by being part
+of a machine. You could take a steering
+wheel from a factory and say this is a
+car part, but it doesn't really become
+part of a car until it becomes part of a
+car. This is all very like minute
+linguistic stuff, but I think it's worth
+thinking about. In the tabletop and
+board game space, it's much more common
+to hear designers and players talk about
+mechanisms as the individual units of
+gameplay and then mechanics as like the
+whole mechanics of a game. It's just
+something to think about cuz it will
+frame your thinking. some of the most
+common things that we see that sort of
+lead to a bad game or a game that's not
+interesting, copying mechanics and not
+really understanding how they work or
+the the role they play in the system
+they're in. So, you could take mechanics
+you like from different games and put
+them together and you might end up with
+something really good, but you have to
+think about the role that the mechanic
+is playing in that particular system. To
+think of a really dumb example, you have
+lots of systems that are to do with
+progression in games, like leveling up.
+And if you take loads of them and put
+them in the same game, they're all sort
+of fighting for their role. They're all
+trying to occupy the same space in the
+design and they don't all need to be
+there. Just taking mechanics or systems
+you like from other games and mashing
+them together doesn't work because you
+haven't thought about the role that they
+play in those games and the role that
+they're meant to play in your game.
+Another one that I see quite often is
+people taking mechanics from other games
+and changing one quite arbitrarily or
+because they find it restrictive or they
+don't like it in the original game, but
+they haven't really understood the
+function that it performs. So, one that
+I've seen a few times here would be the
+deck builder where you don't discard
+your hand at the end of the round. Now,
+it's probably totally possible to make
+that design work, but most of the cases
+where I've seen it implemented, it
+seemed more like the designer didn't
+understand why it's necessary for the
+player to discard their hand at the end
+of their turn. In most deck builders,
+the game really depends on you getting
+through all of your cards very quickly.
+one set of five cards on one turn and a
+different set of five cards on one turn
+and then a different set of five cards
+and then you've exhausted your deck and
+now all of the same cards come around
+but in different configurations again
+and then in six turns you've been
+through your deck twice and each time
+you've been through your deck it comes
+out in a different order. If you don't
+discard your hand at the end of the
+turn, then the rest of that system falls
+apart. This is kind of how genres work.
+[music]
+The [music] game shows like systems of
+mechanics inside
+they let play [music]
+so game.
+We can experiment, but don't do it for
+the sake of [music] no. It's like
+cooking up a meal for a guest. Just
+throwing [singing] it around.
+A video game genre is a prepackaged set
+of mechanics that we already know work
+together and that we know that a certain
+group of players already understand. So
+every time you say I'm going to make a
+game in this genre, you're kind of
+making a promise to the audience of that
+genre that they are going to understand
+certain parts of the gameplay. If you
+take something out, you need to
+understand the effect it's going to have
+on the whole of the rest of that
+machine, right? You can make a
+firsterson shooter without shooting it.
+But if you do that, the shooting needs
+to be replaced with something of equal
+value, like a really intriguing kind of
+puzzle or some sort of narrative to
+uncover. That's where I think the really
+practical stuff around understanding
+mechanics and how they fit into a game
+or how they fit into a genre really
+lives. It's one of the reasons why it's
+so important to play the types of game
+you want to make because playing them
+gives you the literacy of understanding
+how the thing works and how it produces
+a particular type of experience. I know
+it sounds really simple, but of all the
+people that I speak to, they're actually
+actively making games and using game
+engines. Not playing enough games or not
+playing the type of game they're making
+is one of the most common problems.
+Chasing a particular type of project
+because they think it'll be easy or
+because they think that type of game is
+popular right now, but they're not
+really cognizant of how that game genre
+works cuz they haven't embedded
+themselves in it as a player. One of the
+things about making the transition to
+doing game development as a career is
+understanding that play is a big part of
+that. Appreciation is a big part of
+that. That's the reason why there are so
+many people working in the indie space
+who either were or still are games
+critics or journalists. Having that
+appreciation of being able to like
+deeply engage with a particular game or
+a particular genre of games and pick it
+apart and think about, you know, why you
+like this one and not this one or where
+the most fertile soil is in that genre
+for experimenting and innovating. You
+get that by playing. You don't get that
+by hours spent in a game engine. It's a
+different set of skills. Another thing I
+would like to mention here which is
+relevant at pretty much every level of
+the games industry from like teams of
+500 people to like one person working
+alone in their bedroom. Another kind of
+element of the machine metaphor we can
+think of here that might be useful is
+that different studios and different
+game developers are like factories which
+are attuned to making different kinds of
+machines just like factories in the real
+world. The reason why a game studio sets
+up and then makes lots of sequels of the
+same game or makes similar games that
+have the same genre formula but are
+reskins of the same idea with like
+different settings and themes. It's
+partly due to the technical debt of like
+building a game engine or adding tools
+to an existing game engine, setting up
+particular asset workflows for making a
+certain type of game. But it's also
+based on the skills and preferences of
+that team. you know, the the creatives
+that work on that particular team are
+going to be attuned to making a
+particular type of game. A lot of the
+advice aimed at indie developers on
+YouTube specifically about what game
+they should make based on the market is
+not how game development works and it's
+not how business works in most other
+sectors either. When you're starting a
+small business, you don't usually just
+pluck ideas out of raw air for something
+that you have no experience with, right?
+You're usually trying to align a
+perceived gap in the market with
+something you know that you can actually
+do. The thing that you're most capable
+of achieving has very little to do with
+like what genre seems to be trending in
+the in the slop charts right now. You're
+going to have a specific set of
+mechanics that you are more aware of how
+they work. You wouldn't hire a plumber
+to fix your car. Different creatives are
+toolled for creating different types of
+machines. That's just one other way of
+looking at this metaphor of a game being
+a machine is that you know different
+types of developer or different studio
+setups are built for making different
+types of engine. Hopefully this has
+given you some helpful stuff to think
+about about what we mean when we talk
+about mechanics and why it's even useful
+to think about games in those terms in
+the first place. Now, I want to explain
+gameplay, which is the thing that our
+engine or machine of a game is supposed
+to be producing. And I want to explain
+game play through the metaphor of
+driving a car. Look, I know we don't all
+drive, but it's about as close as I can
+get to a universal metaphor for how this
+all works. Playing a game involves using
+controls to achieve a goal. You're doing
+a thing to try to get somewhere. When
+you play a game, there are some things
+that you have direct control over.
+They're kind of player verbs in the
+game. and there are other things that
+you respond to and the game play emerges
+out of the relationship between those
+things. Likewise, when you drive a car,
+there's direct control of the vehicle,
+but you're doing it within systems and
+circumstances you don't really control.
+You don't control the weather. You don't
+control the layout of the town. You
+don't control the traffic [music] laws
+of the country. If you've ever been to a
+country that drives on the other side of
+the road or has very different traffic
+laws, you probably [music] have had this
+experience. the first day you're there,
+you're like very anxious about not being
+able to drive in this new set of rules
+and then driving becomes more exciting
+because it's kind of harder than driving
+at home, but you've got comfortable
+enough with it that it feels fun again.
+In in game design terms, you can think
+about this in terms of like trying to
+vary the systems and content around a
+player so that they never get bored of
+it just being the same thing all the
+time, which would be like driving the
+same route to work every day. It stops
+being a challenge. It stops being
+interesting. You just sort of switch off
+and it's automatic. We don't really want
+our games to get like that. Game play
+doesn't begin and end with the verbs and
+inputs of the player. Just like it's
+insufficient to think of driving as what
+the driver is doing within the car, the
+experience of driving or going for a
+drive is modified very heavily by all of
+the things outside of the car. All of
+the things that are beyond the driver's
+control. Driving is about the thing the
+driver is doing within the car and the
+things that they respond to. All of
+those things [music] impact what it
+means to drive or to go for a drive and
+what the driver is thinking or feeling
+as they do that. Making something for
+people to play is about both the
+controls that you give them, i.e. the
+players inputs into the game and the
+context that you put that in, the
+levels, scenarios, [music] stories or
+systems which the player needs to
+navigate and respond to and learn. When
+you recognize that gameplay is the
+totality of all of that stuff, it starts
+to become clearer why it's such a
+challenge to make a good game in the
+first place and why it's important to
+start off small and try and make simpler
+machines with fewer components to start
+with as well. This is also probably one
+of the reasons why so many game makers
+start out creating content for other
+people's games. Whether it's like level
+design using level editors or making
+mods or homebrew adventure modules for a
+tabletop role playing game that they
+play, fanfiction and lore analysis of
+existing games. It's simply much easier
+to practice a smaller set of skills at a
+time than it is to [music] bring every
+possible skill together to bear on one
+solo developed video game. When you
+develop a game, it's like you're
+designing a vehicle for a driver to
+control, but you're also defining all of
+the surrounding laws and geography which
+determine how they can drive it and the
+destinations they might want to go to.
+Whether those are literal environments
+or emotional destinations like number
+get really really big. This is also why
+it's usually a bad idea to try and make
+a game which is totally new and unique.
+Players don't necessarily want to learn
+to do a totally new thing. They want to
+take skills they've acquired in other
+games they've played and apply those in
+a slightly novel context. Take existing
+small games in genres that you
+understand, clone them to the best of
+your ability, add a twist, and then
+reflect on whether or not that twist
+worked in the way that you might have
+expected it to.
+Mechanics. So, there's a little bit more
+to this driving a car metaphor that I'd
+like to explore here. Certain types of
+game mechanics which are perhaps
+underutilized, misunderstood, and I
+would call those expressive [music]
+mechanics. There are mechanisms within
+the car that you can operate which serve
+the primary function of driving, right?
+They are to get you to the other place.
+You can turn the wheel, you can do the
+foot pedals, you can turn the lights on
+and off. All of those things are
+necessary in order to safely drive the
+car from A to B. You also have things on
+the dashboard that are more to do with
+just modifying how it feels to drive the
+car, like turning the radio on, changing
+the AC, winding the window down, and
+those are comparable to what I would
+call expressive mechanics in video
+games. Expressive mechanics are things
+that don't need to be in the game in
+order to play the game. So, they're the
+sort of mechanics that you might not
+need to include at the prototype stage,
+but what they often add really boils
+down to the kind of I'm going to sound a
+bit cheesy here, but the soul of the
+game, the sense of frivolity or
+playfulness that that game is about.
+This is stuff like, can I pet the cat?
+If I roll around in the environment, am
+I going to smash boxes even if they
+don't have anything in? It's not even
+just about game feel, cuz game feel
+applies to everything in the game.
+applies to the more functional mechanics
+as well. You know, like how your jump
+and attack and picking something up
+feels is really important to the core of
+the game. I'm talking about things you
+can do as a player which do not help you
+win the game in any shape or form. Being
+able to change your character's
+hairstyle or make them emote or any of
+those types of things are comparable to
+being able to put the radio station that
+you want on in a car. It doesn't
+directly impact whether or not you reach
+your goal, but it's going to massively
+change how you feel about it. In all of
+the time I've been running this channel,
+reviewing and critiquing work in
+progress indie games, I've tended to
+find that these little kind of more
+frivolous expressive mechanics like can
+I whack the bobblehead in the car tend
+to be the things that make up the
+difference between a game which is quite
+good and a game which is excellent. In
+game studies, we often use the theorist
+Kwis to steal his spectrum of play,
+which ranges from Ludus to Pa. And Ludus
+is types of play according to strict
+rules. Like when you're playing a board
+game or a sport, there's a strict set of
+rules to how the game is played. Whereas
+pa is more the free form kind of play.
+So pa is what we're thinking about when
+we use phrases like messing about or
+playing around. Most video games contain
+the possibility of both of these types
+of play, probably to the point where
+most players expect them to. [music] So,
+if your game feels a bit bare bones, it
+might be because there's too much play
+and not enough playing around. I'm not
+necessarily saying that you should make
+a a game with no goals and no rules and
+no challenge that is purely cosmetic and
+all dress up and has no player agency in
+it. I also wouldn't suggest going for
+these expressive mechanics before you've
+worked out what the core mechanics of
+your game are, like the the main things
+the player is doing, but it's those
+small expressive elements that often
+make a game appealing or memorable.
+Those are the sorts of things that when
+you show your game to an audience, they
+are going to stick out and and remember
+your game by letting players be a bit
+goofy, be a bit silly, jump around on a
+desk, those are the things that make one
+game particularly more memorable than
+another game. Anything that lets the
+player leave some sort of mark on the
+world or customize something. Anything
+that lets the player role play or make a
+taste based decision or leave a mark on
+the world in some way that is not
+acknowledged by the game systems or
+doesn't need to be acknowledged in the
+game system can really help to make the
+player feel involved and to give the
+game that sense of playfulness and
+frivolity which makes the player want to
+come back to it, draws them back to it.
+On a more pragmatic level, thinking
+about marketing games is those small
+things that players are likely to
+recognize as attention to detail. If
+your game seems quite bare bones, then
+players will look at that and they'll
+think, "This developer isn't very
+technically skilled. They just did this
+because that was what they could do." If
+they look at your Steam page and they
+look at your socials and they see that
+you're filling your game with
+delightful, silly little interactions
+that are functionally meaningless in
+terms of the game play, that kind of
+builds trust because it shows them that
+doing those little things is no big
+effort to you. Building an audience for
+anything is about the little things.
+It's about how much effort and energy
+you put in to the little things that
+kind of intrigue and delight people.
+Building a relationship with an audience
+is just like building any kind of human
+relationship. And by that I mean it's
+about the little things and it and it's
+also about the big things. It's about
+all of the things of different sizes.
+Maybe it's not about the medium things,
+but it's definitely about the small
+things and and the big things.
+I hope that clears things up.
+The last type of underrated game
+mechanic that I really want to call out
+quickly here would be mechanics of the
+mind or cognitive mechanics. We have a
+genre now called walking sims. It's a
+silly name. I would prefer to call them
+something like environmental narrative
+games. You go around in a place and you
+learn about what happened there by
+picking up objects and reading things
+and so on. The name sarcastically given
+to [music] these games implies that they
+are games about walking. As an observer,
+you look at these games and you think
+that is all the player is doing here.
+But what the player is doing is [music]
+just a lot of it is in their own head
+and it doesn't translate to button
+presses or events that you can see on
+the screen. That doesn't necessarily
+mean that nothing is happening. The
+player is doing something. It's just
+they're [music] doing it in their head.
+That is the experience that is coming
+out of the game. So the thing that the
+player is doing in their head is a game
+mechanic because it's a thing that the
+game designer gave the player to do. The
+player is doing something. They are
+judging or deducing something about a
+situation presented to them in the game
+world. They're just not doing that by
+like running up and pressing loads of
+buttons and trying to decipher a code
+and unlock a door, which is how we
+normally think of video game puzzles.
+But they are doing an activity given to
+them [music] by the game designer and
+that is producing their experience. So
+it's a game mechanic. This is the reason
+why so many visual novel type games
+position the player character as a
+detective or a journalist or someone
+like that. It's to prime you to observe,
+investigate, and to make judgments.
+These are still game mechanics because
+they're the things that the designer
+gives the player to do. So, if you're
+making a game which is mostly or
+entirely about story, I'd encourage you
+to still think about the player verbs
+that you're designing for, even if
+they're not represented in in-game
+actions. A dating sim is about judging
+characters in order to ascertain which
+one you like the most and then
+navigating the conversations around
+that. If you're making a very story
+focused game, you still [music] need to
+think about what is the player doing.
+Even if the thing that they're doing is
+predominantly a cognitive verb like
+noticing things, remembering things,
+judging people and situations, the
+player is still doing something. And how
+good your story game is going to be will
+be based on how well it encourages
+players to do that thing and the kind of
+interesting situations you throw at them
+which get them to do those cognitive
+verbs. More broadly, what I'm saying
+here is that some game mechanics are
+much more heavily weighted to what is
+going on in the player's head than what
+is going on in their hands or on the
+screen. Lots of puzzle and strategy
+games involve a much higher ratio of
+thinking to doing. Consider a strategy
+game. You might look at stuff in the
+game and make loads and loads of little
+judgments and then that all culminates
+in one click in the interface. Strategy
+games encourage players to put a lot of
+thought into a single action. That
+that's historically why we use clocks
+for chess. We want to limit the amount
+of time that players get to think about
+their next move or it will just go on
+forever. The top level game design thing
+to think about here is that some of the
+most powerful verbs in your game might
+not be ones which directly map onto a
+specific set of button presses. There
+are going to be stuff going on in here.
+I hope this has given you lots of things
+to think about or encourage you to think
+about things in some new ways. I don't
+make video essays like this to give you
+neatly actionable advice on what to do
+with your career or how to approach your
+hobby projects. If you're making an
+indie game, that's fundamentally a an
+entrepreneurial activity and one that
+requires you to think like a leader and
+not a follower. And that is precisely
+why a video like this is more a kind of
+set of thought exercises. Here's some
+things to think about about this topic
+rather than 10 top tips to make your
+mechanics more good cuz I know that
+would be better for the algorithm, but
+it's not what I'm interested in doing.
+And I don't think it's the sort of thing
+that produces good game design thinking.
+YouTubers are encouraged by the
+algorithm and encouraged by the fact
+that the largest audience is the
+beginner audience to [music] wrap game
+design theory up as neatly packaged
+advice on exactly what to do because
+that's what the largest possible
+audience wants. It's not the most
+algorithm friendly thing. I'm never
+going to be able to retire purely on ad
+revenue from YouTube because what I'm
+doing here is aimed at intermediate
+learners and and people that really want
+to learn how a game designer thinks.
+Thanks for staying to the end. I hope
+you got something useful for it. And if
+you're new to the channel and you'd like
+to see or hear more of this kind of
+thing, please subscribe and maybe even
+consider supporting us on Patreon. And
+in the meantime,
+please drive safely.
+[music]
+Heat. Heat.
+[music]
+>> [music]
+>> Black.
+[music]
+[music]
+[music]
+>> [music]
+[music]
+>> Heat.
+Heat.
+[music]
+>> [music]
+[music]
+>> Heat. Heat.
+[music]
+Heat.
+[music]
+[music]
+Heat. [music]
+>> [music]
+[music]

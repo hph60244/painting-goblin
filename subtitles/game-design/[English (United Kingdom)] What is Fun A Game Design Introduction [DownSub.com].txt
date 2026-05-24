@@ -1,0 +1,543 @@
+What is fun? Where does it come from? Why do
+blondes have more of it? Biology can explain
+to us how and why we've evolved to seek dopamine,
+but that kind of scientific thinking can only get
+us part of the way to understanding the role
+of fun in game design. Engaging and grappling
+with the concept of fun is essential to what
+game designers do. But when we use the term on
+its own without any qualifiers, it often just
+leads to confusion. Human beings are a diverse
+bunch and we don't all enjoy quite the same
+things. In this video, I will explore a bunch
+of different definitions and uses of the word
+bun and think about what each one practically
+means for us as game designers. And along the
+way, I'll probably say the word fun so much that
+it loses all meaning. Fun fun funny fun. Is this
+hat fun? Is that fun? A big wheel? I don't know.
+If you've ever looked for a book on fun by an
+actual game developer, then chances are you've
+already encountered Raph Koster's theory of fun
+for game design. This is a book which came out
+originally in 2004, authored by someone who had
+then been a professional game designer for at
+least a decade. At the time of writing, Koster's
+most notable work had been on Ultima online,
+which is a sort of Runescape, for really old
+people. The titular theory in Koster's book,
+is that humans experience fun as a reward for
+learning and practicing new skills. Fun is the
+emotional name we give to the sensation of
+dopamine. We've evolved this kind of reward
+system which is there to encourage us to
+behave in ways which make us more likely
+to survive and thrive in the big bad world.
+This is what's at work every time we exercise
+curiosity or take on a challenge. In the olden
+days, we would have had to strategize and plan
+ahead in order to well not die. And that's why
+nowadays we play thinky games like this, this,
+and this. We might also need to react quickly
+to danger or go and look for berries. And that's
+why nowadays we play games based on reaction
+and situational awareness like this, this,
+and this. To this day, games are usually still
+about the thinky skills like strategy, puzzles,
+and navigation, social skills like cooperation and
+bluffing, or reactions and situational awareness.
+All of this makes perfect sense, and Costa
+leaves open the idea that in our current world,
+there might be new problems worth exploring rather
+than just making video games that are so clearly
+tailored towards the evolutionary needs of this
+handsome chap. There's nothing wrong with this
+definition of fun, and I think for the more hard
+science among you, it will probably do. It's very
+common to hear people in the games industry talk
+about reward loops involving dopamine. But where I
+think this book falls down is in the second part
+of the title. We get quite a solid idea of what
+fun is, but we don't necessarily get a sense of
+how you functionalize that as a game designer into
+making games which are fun. And the thing that
+I dislike most about Costa's book is just how
+dismissive it is of types of pleasure that we get
+from games which don't directly relate to learning
+a new skill. And this includes things like the
+enjoyment that you might get from being surprised
+by something or being scared by something
+or something comedic happening. There's also
+the problem of general usage when you take a word
+with a very broad way that it is used in everyday
+life and try to make a very specific academic or
+craft-based meaning for it, which then is so far
+removed from how most people use it that it may
+as well be a different word. You know, if you're
+going to use the word fun exclusively to refer
+to dopamine, then you might as well just use the
+term dopamine in the first place. I know a lot of
+you do anyway. You can't help yourself, you little
+science nerds. Other ways that we can think about
+fun tend to focus less on identifying specifically
+what fun is and more on differentiating between
+types of fun. Thinking of fun in terms of a
+taxonomy has a lot more applications for game
+development because if we're able to correctly
+identify the type of fun a game is meant to
+contain or produce, then we can start to make
+design decisions which are more likely to intrigue
+and engage the players of the specific game we're
+making or fans of a specific genre. No game is for
+everyone and it might be that a mechanic which is
+really fun in one context is just downright boring
+or annoying in another. And in the back end of
+this video, I'm going to talk about a process
+for identifying specific types of fun you want
+your game to contain or produce and then using
+those as pillars for the overall design. I would
+encourage you to think of fun more in terms of
+a varied and diverse set of things. kind of like
+different flavors or ingredients in a cuisine or
+notes in a musical scale or colors in a palette.
+[Music] Our first taxonomy of fun was a little
+triplet coined by geologist and mountaineer Dr.
+to Raina Newbury back in 1985, just 3 years
+after the release of ET for the Atari 2600,
+a game which to this day is still broadly
+considered to be the best computer game
+ever developed. Newbury's three types of fun
+include two which are fun, and confusingly,
+one which isn't. Type one fun is enjoyable when
+you do it, like eating a meal or playing on
+your Atari 2600. It's the definition of fun we'd
+normally associate with simple terms like pleasure
+and enjoyment. Type two fun is fun that feels fun
+to remember because of the associated feelings of
+achievement, but might not have been fun while you
+were doing it. It usually involves some degree of
+exertion or peril, either physical or or mental,
+like climbing a mountain or performing in front
+of people. This is the type of fun that maps
+more clearly onto that evolutionary model of
+why we experience fun. Type three fun is a sort of
+sarcastic, darkly humorous term for things which
+are probably meant to be fun but end up not
+being. It's fun gone wrong. At first glance,
+type 3 fun doesn't seem all that relevant to
+game design until you start thinking about
+things like rage games, which are designed to be
+deliberately frustrating. Extreme horror games,
+which often give us situations we never
+want to be in again, and experimental games,
+which are genuinely physically painful to
+play, like the 2001 Pain Station, which was
+developed by, you guessed it, art students in,
+you guessed it, Germany. Oh my god, it's fire.
+Michael Rucker, author of The Fun Habit, notes
+that type three seems out of place in a taxonomy
+of fun because, well, it's not really fun.
+But then he quickly goes on to describe how
+one person's type two could be another person's
+type three, there are those among us who will
+never try surfing because we just see it as
+too dangerous and don't want to drown. Just
+like there are people that really love Dark Souls
+and there are other people that look at the amount
+of grueling failure and repetition involved in
+those games and think that's just not for me.
+Now, Rucker isn't a game designer, but he does
+kind of expand on the evolutionary theory of fun
+that we get in Costa's book, focusing on things
+we do as a community, which end up feeling fun,
+which again might not be fun at the time
+because they're grueling or exhausting or
+scary or whatever. A big part of the fun of
+games is bonding by either playing them with
+other people, watching other people play them,
+or talking about them after we've played them.
+So whether you're berating your housemates for
+their poor culinary performance in Overcooked,
+memeing all over the floor in Elder Ring,
+or co-authoring a massive wiki about some
+obscure survival crafting game, you're doing
+something pro-social. And this means that the
+drugstore of your brain is once again open for
+business and has more to offer you than just
+dopamine. Games are also a site of social
+interaction, whether direct or indirect,
+and that can make things that are ostensibly not
+very fun feel enjoyable and meaningful. [Music]
+This book from 1961 is considered a foundational
+text in game studies despite it being a field
+which didn't really fully start to emerge until
+the late 1990s. also not very gender inclusive,
+but that's because in the 1960s we hadn't made any
+games for women yet. Game studies is a branch of
+academia mostly aligned with the humanities and
+concerned with games, play, and players. Here
+are Cowis's four types of play. He doesn't call
+them fun because he was a French intellectual and
+therefore didn't know the meaning of the word,
+but they might as well be that. They are broad
+categories of play and they give us a sense of
+the diversity of enjoyment that humans seem to
+get out of playing games. Aegon refers to games
+of competition and skill. Aliyah refers to games
+of luck and chance. Mimikree is where games offer
+us an opportunity for role-playing and pretending.
+And illinx is a fancy word for vertigo, which
+refers to the pleasure we get from whooshy,
+dizzying things like roller coasters and dancing
+and getting drunk and falling over. They're still
+kind of compelling categories. If anything, they
+just go to illustrate how complex and rich the
+video games we play today are. Consider the
+differences between a turn-based role playing
+game or an action RPG. In both types of game,
+we're enjoying the mimicry of taking on the role
+of a character and inhabiting a fictional world.
+That is the mimicry element, and it's what makes
+it a role- playinging game. But in an action RPG,
+the Aegon element of trying to beat the game is
+more related to vertigo of like moving the camera
+around and manipulating a character in real time.
+Whereas in a regular RPG, the skills involved are
+more to do with strategy and planning. And ills
+refers to things like moving the camera around
+and being dazzled by VFX, which can occur in
+both types of games. The simpler games that we had
+before computers were invented were often based on
+a single simple type of play. Nowadays, we're used
+to having video games which tick multiple boxes
+for the types of pleasure that they produce.
+Even a digital card game like Hearthstone has
+its fair share of things whooing and flying
+around the screen. So, it's less a question
+of which type of play are we experiencing and
+more the ratios that are at work in each game.
+Now, we don't need to use the specific archaic
+terms that cowwir uses. Absolutely not encouraging
+you to do that. But conceptually, it's still
+useful to think through. Again, what I'm getting
+at here is that it's good to think of fun as a
+bunch of different things because fun is diverse.
+[Music]
+When I was at school and we studied cooking, we
+used to do taste testing using spiderraphs which
+looked a bit like this. You would have all these
+different axes and you would map out things like
+salt, sweetness, umami, bitterness. And this would
+give you a pseudo objective way of comparing two
+different meals or two different iterations
+of the same meal. And I think what I'm trying
+to encourage here is a similar way of thinking
+about games and fun. A game usually can't push
+in every direction at once. And you can make a
+game with any combination of thrilling gambles,
+meticulous strategy, lightning quick reactions,
+and deep roleplay. But making a game that has
+all of those things going at once and does them
+well is really, really hard. You probably could
+make a game that does all of those things, but it
+would be horrifically expensive to include all of
+the relevant features and polish. And as indie
+developers, that's kind of your niche. Instead
+of making a big bloated thing that needs to appeal
+to half a million people to sell enough copies to
+keep the studio a float, you can make something
+with a much narrower and more focused appeal. And
+that's what you should do. That's what successful
+developers do. You might have heard of player
+psychometrics. And these are models that look at
+the tastes and motivations of different players,
+usually within the same game. One of the most
+famous sets of player psychometric profiles
+comes from Richard Bartle's work in online
+multiplayer games in the mid90s. Battle types
+include achievers, explorers, socializers, and
+killers. All of which are types that are still
+relevant to most multiplayer games today. MMOs and
+big openw world singleplayer games are examples of
+game types which can offer a lot of flexibility in
+the types of players that they attract and appeal
+to. But as small-time indie developers, we often
+have to be more focused. Maybe the game you're
+making is just for socializers and achievers.
+Maybe it's just for killers and explorers. Or
+maybe it's even more focused on just one of those
+types of motivation. The psychometric angle again
+points us in the direction of thinking of fun
+not as a single thing but as a set of possible
+elements. Any type of enjoyment that a
+player can derive from a game's design,
+i.e. from the game's interactivity is a type of
+fun. Some types of fun seem to go well together
+and some not so well, just like ingredients
+in cookery or colors in a palette in art.
+When we view fun as a varied and diverse thing,
+this is not necessarily at odds with dopamine,
+our caveman brain drug reward for doing something
+good. It just takes the emphasis off of explaining
+why humans do fun things in general, and more
+onto how we might make games which are fun in a
+specific way, which is really important if you
+want to make a game that anyone ever wants to
+play. Whether we're learning reaction or strategy
+skills required to win a competition, learning how
+to judge odds in a gambling game, or acclimatizing
+to role- playinging as a particular character,
+there's still some sort of system at work, some
+rules to learn, and a feeling of satisfaction as
+we navigate and improve at these activities.
+Even in a game of mimicry, where the roleplay
+and the story elements are the strongest part,
+we're still practicing skills like judgment. The
+enjoyment I get from a game like Disco Allesium
+or a visual novel largely comes from judging
+characters and situations. Not something that we
+normally associate with skill-based video games,
+but a skill nonetheless. Dopamine. [Music]
+There may be some scientific merit to a narrow
+definition of fun. If we're trying to understand
+play in the context of biology or sociology or
+child development, but it doesn't really help us
+to design for that, we probably need to go wider
+identifying and acknowledging lots of different
+types of fun so that we're able to hone in on
+which type we are aiming for when we create a
+game ourselves. It's often better to have a big
+bag of tools that you don't need than to show up
+to every job with just a hammer. even if you do
+usually end up using the hammer. The 14 forms
+of fun actually originate from a 2001 article
+on gamedeveloper.com by French Canadian designer
+and programmer Pierre Andre Garner. For Garner,
+fun was a quality which exists in any activity
+that we find fundamentally entertaining.
+Application of an ability. Advancement.
+Beauty. Creation. Comedy. Competition.
+Discovery. [Music] Immersion. Intellectual
+problem solving. Love. Physical activity. Power.
+social interaction, thrill of danger. Now, some
+of these are self-explanatory while others are
+maybe a bit less obvious. I'm not going to go
+into every form of fun in detail. You can look
+at how they're defined in the article and
+you can disagree with those definitions,
+and I'll also post some other resources which
+add even more forms of fun. The point I want
+to make here is lists like this have much
+more application to real game design because
+they help us to focus on the qualities of games
+and what makes one game different from another
+because that is a central design question for
+every game you make. Why would someone play
+the game I'm making rather than something that
+already exists that is quite similar to it? Game
+design requires emotional literacy. We need to
+be able to play a game, see how it makes us feel,
+and then look at the set of mechanics, systems,
+and the theme and artwork layered on those things
+to be able to reverse engineer the game and
+understand why it made us feel that way.
+Now in the last section of this video I am going
+to talk about how to use the 14 forms of fun or
+any other list of types of fun as design pillars.
+But in order to do that first we need to talk a
+little bit about what design pillars are and what
+they're not. Design pillars are a set of concepts
+which hold up a design. The point of design
+pillars is to provide a foundation for what
+the game or experience is about and how it's meant
+to make players feel. To put this into practice,
+you would pick two or three terms describing the
+type of fun you want players of your game to have.
+Then, as you develop the game, you weigh up every
+decision you make in relation to whether it fits
+with these pillars. It's not just some kind of
+wafty thing of writing a game design document and
+saying this game is about beauty and sadness. It
+is about giving you a set idea of what you should
+and shouldn't include in your game. If you've
+decided that you're making a game that is meant to
+be about creation and beauty and players building
+something lovely that they're proud of, then why
+are you putting so many puzzles in? Design pillars
+help a game to feel focused on a particular type
+of experience, but they also help you to make
+practical decisions about what to implement and
+what not to implement. Design pillars are used
+in various disciplines outside of games like
+marketing, branding, architecture, product design.
+And the important thing to understand is that they
+are fundamentally about the end users emotions and
+experience. This is an area where design pillars
+are often mistaught in game development courses.
+The design pillars for your video game should not
+be things like the game genre or its art style.
+Terms like third person shooter or low poly
+3D. Those are not design pillars. They're simply
+descriptions of a camera controller configuration
+and how things look on a screen. Design pillars
+are meant to describe how the end user of a
+product should feel and what they should be made
+to think about as they engage with it. Let's say
+that instead of working on games, you're now an
+interior designer. You might have a design pillar
+like sophisticated. This might be something you've
+chosen on your own or it could be something that's
+come from your client. The goal of this design is
+to make a sophisticated feeling space which makes
+people feel sophisticated upon entering it. You
+would then go off and explore specific styles like
+the art deco of 1920s New York or 17th century
+French maximalism as different ways of achieving
+that feeling of sophistication. Likewise, someone
+who designs kids playgrounds as part of a wildlife
+park. They might make this tople decision that it
+should be rustic and timeless and not too modern.
+And that would lead to practical decisions to use
+materials and processes which help to create that
+feeling. The point of having design pillars is to
+nail down the intention of the design early on,
+how it's supposed to make people feel so
+that you can make something which serves
+its audience well. They also make it much easier
+to make decisions mid development because you
+can more easily throw away certain ideas which
+don't support the core design pillars. This is
+why if your game development is very mooddriven,
+like you're making a cozy game or a horror game,
+it's sometimes easier to make decisions about
+what to include and what not to include because
+you're already focused on players emotions. If you
+were designing a drinking bottle, you wouldn't use
+must hold liquid as a design pillar. That's just
+a given of what a bottle is in the first place.
+Just like jumping and avoiding danger are
+given elements of making a platformer game.
+That's just part of the original brief your boss
+gives you when they ask you to produce a design.
+Today we're going to design a new bottle or
+car or platformer game. The overall form,
+eg a thing which carries liquid, a four-w
+wheeled vehicle, or a side view game where
+you jump over holes are top level constraints of
+the design, but they are not the design itself.
+Sometimes game design pillars are to do with a
+narrative theme instead. For example, in the 2018
+God of War, the three pillars were exploration,
+combat, and the father-son dynamic. Boy,
+whatever you think about God of War, this leads to
+a tight focused game where the gameplay elements
+of exploration and combat are always working
+to strengthen the narrative theme of father and
+son bonding. Sometimes design pillars are broad
+statements about how a game should be designed.
+For example, when frictional games were working
+on indie horror soma, they had game pillars like
+everything is story and trust the player. Now,
+those don't directly map onto our 14 forms of fun,
+but you can already see how they relate to ideas
+of fun like immersion and intellectual problem
+solving. Those pillars ensured that S's puzzles
+exist naturally within the game story and don't
+feel like contrived escape room gimmicks. And it
+also makes sense that a game that was so heavily
+about atmosphere, environment, and uncovering what
+happened here would have design pillars which is
+so strongly focused on delivering a particular
+type of environmental storytelling and puzzles.
+Design pillars are a really helpful way of
+making sure that you understand what you're
+trying to make. If used properly, they can save
+you a lot of time making decisions because you're
+not constantly changing the basic idea of the
+thing or what it's meant to achieve. Sometimes
+the pillars we use in design are a little bit more
+complicated than a single word label for a type of
+fun. But that doesn't mean that those are not
+a good place to start. The forms of fun aren't
+the only possible game design pillars, but they
+provide a very good start for thinking about it.
+If you can pick two or three of them to orient
+your current game project around, it will make
+all future decision making easier because you
+can evaluate every gameplay decision, every art
+decision based on whether it aligns with those
+chosen experience-based pillars. Sometimes the
+genre we picks our design pillars for us. A horror
+game is going to naturally lead more towards
+immersion and the thrill of danger. But even in
+that instance, thinking these things through more
+openly and explicitly can help you to develop a
+more nuanced perspective on the game you're making
+and the balance of appeals. If you're making a
+horror game, what is the particular flavor of
+horror you're doing and how does it differ from
+other types of horror? How much peril is there in
+your horror game? Is it mostly about combat and
+hiding? Or are there large portions of the game
+that are more about being immersed in a particular
+atmosphere and navigating the environment? And if
+you're anything like me, you probably want to go
+more down the God of War route where you have a
+couple of pillars that are to do with gameplay
+and interactivity and one that is more thematic
+and story related. I personally can't stay
+inspired to work on a game unless at least one
+of my design pillars is something a bit more heavy
+and thematic, even if it's just something in the
+background of the world building. Kind of like how
+Binding of Isaac is thematically about religious
+family trauma. After all, we all know that
+indie games are all secretly about depression.
+Designing a game is mostly about caring what the
+player is doing. the interactivity, the fun, and
+often it's also about thinking about what you're
+trying to make the player think about and feel,
+the themes. And if you can care about both of
+those things and put thought into those things,
+you'll already be off to a better start than 90%
+of the folks releasing games on Steam every day.
+There's an introduction to a bunch of different
+ways of defining fun in game design or choosing
+not to define it because it's actually more useful
+to focus on taxonomy rather than definition. Fun
+is the term we use to define how it feels to learn
+and master systems and mechanics. But there are
+lots of different types of fun which appeal to
+different player psychologies. It's often not
+that helpful to think of fun as a single thing.
+Although that's a perspective that is encouraged
+when we think of fun purely in terms of dopamine.
+It's probably better to think of fun as a pool of
+elements with varying degrees of complimentariness
+like ingredients in a cuisine, colors in a pallet
+or notes in a musical scale. There are probably
+more than one, three or 14 forms of fun. Like I
+said, the map is not the territory. The point
+is to think about the overall feeling a game
+is giving us so that we can then understand how
+the elements work together to get us there. So,
+whatever game you're working on now, take a
+look at the 14 forms of fun and some of the
+other resources that I've left in the description
+of this video, are there two or three which are
+dominant in the game that you're currently making?
+If there are five or six, which seem to be more
+important than the others? Are there any forms of
+fun that seem to be fighting for priority in your
+game? And if they are, is that a problem? Or is it
+leading you somewhere interesting? If you've been
+making games for a long time and you think about
+your entire career as a designer and developer,
+are there forms of fun you naturally lean towards
+and ones that you avoid? Some of you might even
+come to the realization that you have been
+trying to force yourself to work in genres
+that you fundamentally don't understand the
+appeal of to make forms of fun that you don't
+understand and that you don't personally
+think are fun. You wouldn't be the first
