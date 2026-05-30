@@ -311,7 +311,7 @@ def sync_yt_video_task(sqlite_file_path, timeout_minutes, max_video_minutes, coo
                 current_now = now_iso()
                 cursor.execute(
                     "INSERT OR IGNORE INTO dl_yt_video_task (video_id, channel_id, video_name, updated_at, status) "
-                    "VALUES (?, ?, '', ?, 'FAILED')",
+                    "VALUES (?, ?, '', ?, 'PENDING')",
                     (video_id, channel_id, current_now),
                 )
                 if cursor.rowcount > 0:
@@ -368,7 +368,7 @@ def dl_yt_video_task(
         cursor.execute(
             "SELECT t.video_id, t.channel_id, h.talent_name FROM dl_yt_video_task t "
             "LEFT JOIN hololive_channel h ON t.channel_id = h.channel_id "
-            "WHERE t.status IN ('COMPLETED', 'FAILED') "
+            "WHERE t.status IN ('PENDING', 'FAILED') "
             "ORDER BY t.updated_at ASC LIMIT 1"
         )
         row = cursor.fetchone()
@@ -402,8 +402,21 @@ def dl_yt_video_task(
                     f"https://www.youtube.com/watch?v={video_id}", download=True
                 )
 
-            video_title = info.get("title", video_id) if info else video_id
-            video_filename = f"{video_title}.mp4"
+            # 從 yt_dlp 回傳的資訊中取得實際存檔的檔名
+            # yt_dlp 會自動 sanitize 檔名，必須使用它實際產生的檔名
+            actual_filename = None
+            if info and info.get("requested_downloads"):
+                actual_filename = info["requested_downloads"][0].get("filepath")
+            if not actual_filename and info:
+                # fallback: 用 title 手動 sanitize
+                from yt_dlp.utils import sanitize_filename
+                video_title = info.get("title", video_id)
+                safe_title = sanitize_filename(video_title)
+                actual_filename = os.path.join(output_path, f"{safe_title}.mp4")
+            elif not actual_filename:
+                actual_filename = os.path.join(output_path, f"{video_id}.mp4")
+
+            video_filename = os.path.basename(actual_filename)
 
             now_complete = now_iso()
             cursor.execute(
@@ -412,7 +425,7 @@ def dl_yt_video_task(
             )
             conn.commit()
             logger.info(
-                "Downloaded video %s to %s", video_id, os.path.join(output_path, video_filename)
+                "Downloaded video %s to %s", video_id, actual_filename
             )
         except Exception as e:
             logger.error("Download task failed for video %s: %s", video_id, e)
